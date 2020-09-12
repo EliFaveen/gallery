@@ -15,6 +15,8 @@ class CreateHashtagsTable extends Migration
     {
         Schema::create('hashtags', function (Blueprint $table) {
             $table->id();
+            $table->integer('post_id')->unsigned();
+            $table->string('hashtag');
             $table->timestamps();
         });
     }

@@ -16,10 +16,19 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('family');
+            $table->longText('username');
+            $table->bigInteger('phone');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->enum('role',['admin','artist','user'])->default('user');;
+            $table->longText('bio')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->longText('profile_pic')->nullable();
+            $table->string('country')->nullable();
+
             $table->timestamps();
         });
     }
