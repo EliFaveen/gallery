@@ -62,10 +62,46 @@ body{
 }
 /*find a better way for btn*/
 .btn-parent{
-    margin: 57px 15px 0px 0px;
+    /*margin: 57px 15px 0px 0px;*/
+    margin-top: 50px;
 }
 .btn{
     background-color: #1ed5b9;
-    width: 195%;
+    /*width: 195%;*/
+    color: #ffffff;
 }
+
+/*===================================login=======================================*/
+
+
+.forgot-link{
+    text-align: right;
+}
+
+.forgot-link a {
+    text-decoration: none;
+    color: #1ed5b9;
+
+}
+.forgot-link a:hover {
+    color: #ffffff;
+}
+
+/*check box*/
+.checkbox-style input{
+    width: 20px;
+    height: 20px;
+}
+.form-check{
+    text-align: right;
+}
+.login-remember-label {
+    margin-right: -16px;
+}
+/*3 bottom items*/
+.fix-bottom-form{
+    margin-top: 263px;
+}
+
+
 

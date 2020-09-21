@@ -115,8 +115,8 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4 btn-parent">
-                                <button type="submit" class="btn">
+                            <div class="col-md-12 offset-md-4 btn-parent">
+                                <button type="submit" class="btn btn-block">
                                     ثبت نام
                                 </button>
                             </div>
