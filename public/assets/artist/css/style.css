@@ -1,0 +1,16 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
+
+
+body{
+    background-image: url("#");
+    direction: rtl;
+    /*font-family: IRSans;*/
+}
+

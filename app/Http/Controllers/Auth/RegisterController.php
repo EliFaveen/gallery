@@ -51,8 +51,13 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+            'lastname' => ['required', 'string'],
+            'username' => ['required','alpha_dash'],
+            'phone' => ['required','numeric','starts_with:09'],
         ]);
     }
 
@@ -64,10 +69,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //dd('hi');
         return User::create([
             'name' => $data['name'],
+
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+
+            'family' => $data['lastname'],
+            'username' => $data['username'],
+            'phone' => $data['phone'],
+            'role' => $data['role'],
+            //todo: add other fields
         ]);
+
+        return redirect(route('artist.post.index'));
+        //dd('hi');
     }
 }

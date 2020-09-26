@@ -6,10 +6,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/auth/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/auth/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,12 +145,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hMlNSyiIcH0bGfew9Il1jfp6nf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -169,7 +184,13 @@
       <workItem from="1600495003813" duration="1730000" />
       <workItem from="1600497966363" duration="10000" />
       <workItem from="1600504690746" duration="668000" />
-      <workItem from="1600669394146" duration="5837000" />
+      <workItem from="1600669394146" duration="10825000" />
+      <workItem from="1600754869505" duration="1335000" />
+      <workItem from="1600757005149" duration="4112000" />
+      <workItem from="1600792487880" duration="3040000" />
+      <workItem from="1600928762772" duration="1541000" />
+      <workItem from="1600954622295" duration="2477000" />
+      <workItem from="1601104595250" duration="3032000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -199,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600495470532</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ui login #1 design + some changes in register">
+      <created>1600677543580</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600677543580</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,25 +273,31 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit(did starting terminal works)" />
     <MESSAGE value="first DB design(create models and migrations)" />
     <MESSAGE value="2nd DB design(add fields &amp; Interest model &amp; unsigned())" />
     <MESSAGE value="ui register #1 design- want to start login" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui register #1 design- want to start login" />
+    <MESSAGE value="ui login #1 design + some changes in register" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui login #1 design + some changes in register" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1600495469216">
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600495469216" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600758933557" />
+    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1600677541934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600677541934" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496739371" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600192859049">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600795324297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600192859049" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600795324297" />
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600063876495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -272,5 +306,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599832075780" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600759354659">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600759354659" />
   </component>
 </project>
