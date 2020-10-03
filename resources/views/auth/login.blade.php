@@ -88,7 +88,7 @@
         </div>
             {{--    logo    --}}
             <div class="col-md-4 logo-background-img">
-                <img class="" src="{{url('assets/auth/img/logo_with_text.png')}}">
+                <img class="" src="{{url('assets/auth/images/logo_with_text.png')}}">
             </div>
     </div>
 </div>

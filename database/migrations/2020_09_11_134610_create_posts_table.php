@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->longText('description')->nullable();
             $table->integer('gallery_id')->nullable()->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->timestamps();
+            $table->string('color')->nullable();
         });
     }
 

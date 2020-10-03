@@ -29,7 +29,24 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+//    protected $redirectTo = RouteServiceProvider::HOME; // that redirect shit
+
+//    public function redirectTo()
+//    {
+//        if (auth()->user()->is_admin) {
+//            return '/admin/home';
+//        } else if (auth()->user()->is_artist) {
+//            return '/artist/home';
+//        } else if (auth()->user()->is_unartisted) {
+//            return '/user/home';
+//        } else if (auth()->user()->is_user) {
+//            return '/user/home';
+//        } else {
+//            return '/home';
+//        }
+//    }
+    protected $redirectTo = '/artist/home';
+
 
     /**
      * Create a new controller instance.
@@ -76,14 +93,13 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
 
-            'family' => $data['lastname'],
+            'lastname' => $data['lastname'],
             'username' => $data['username'],
             'phone' => $data['phone'],
             'role' => $data['role'],
             //todo: add other fields
         ]);
+        //it redirects to home controller
 
-        return redirect(route('artist.post.index'));
-        //dd('hi');
     }
 }

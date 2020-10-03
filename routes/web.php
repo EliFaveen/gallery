@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 //my routes
 
@@ -31,6 +31,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
     ->group(function (){
         Route::resource('post','PostController');
 
+
         //-------artist        /post---->artist.post.store               //POST
         //-------artist        /post---->artist.post.index               //POST//no it's GET
         //-------artist        /post/create---->artist.post.create       //GET
@@ -41,3 +42,4 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
+Route::get('artist/home', 'HomeController@index')->name('artist.home');
