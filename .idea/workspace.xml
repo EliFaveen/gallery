@@ -9,46 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/fontawesom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/for_char_temp/all.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/for_char_temp/tooplate-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/owl_carousel/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/owl_carousel/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/fonts/IRANSansWeb(FaNum).ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/fonts/leyla.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/posts/image-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/posts/image-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/posts/image-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/posts/image-04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/fontawesom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/for_char_temp/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/owl_carousel/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/owl_carousel/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/artist_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_134610_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_134610_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +147,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../snapmarket" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -234,7 +198,7 @@
       <workItem from="1601276702694" duration="4418000" />
       <workItem from="1601542986936" duration="744000" />
       <workItem from="1601555316912" duration="37000" />
-      <workItem from="1601711087064" duration="1577000" />
+      <workItem from="1601711087064" duration="2551000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -278,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601121848063</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="some changes that i dont remember like artist template &amp; create &amp; change DB to gallery2 for a problem">
+      <created>1601714230540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601714230540</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,25 +302,26 @@
     <MESSAGE value="ui register #1 design- want to start login" />
     <MESSAGE value="ui login #1 design + some changes in register" />
     <MESSAGE value="register error solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="register error solved" />
+    <MESSAGE value="some changes that i dont remember like artist template &amp; create &amp; change DB to gallery2 for a problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes that i dont remember like artist template &amp; create &amp; change DB to gallery2 for a problem" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600758933557" />
-    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1601121845829">
+    <state x="390" y="0" key="CommitChangelistDialog2" timestamp="1601714228617">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601121845829" />
+    <state x="390" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601714228617" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496739371" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601555351027">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601714566033">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601555351027" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601714566033" />
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601196162014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -358,9 +330,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599832075780" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601713677915">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601714323239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601713677915" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601714323239" />
   </component>
 </project>

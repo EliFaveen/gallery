@@ -54,13 +54,13 @@
         <img src="{{url('assets/artist/img/posts/image-04.jpg')}}" alt="Image" class="tm-img-left">
     </div>
 {{--    todo: replace this div with footer--}}
-{{--    <div class="tm-footer" id="tmFooter" data-desktop-seq-no="5" data-mobile-seq-no="9">--}}
-{{--        <img src="img/qr-link-tooplate.png" alt="QR Code" class="tm-img-qr">--}}
-{{--        <div>--}}
-{{--            <p class="tm-mb-small">Copyright &copy; 2018 Company Name</p>--}}
-{{--            <p>Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    <div class="tm-footer" id="tmFooter" data-desktop-seq-no="5" data-mobile-seq-no="9">
+        <img src="img/qr-link-tooplate.png" alt="QR Code" class="tm-img-qr">
+        <div>
+            <p class="tm-mb-small">Copyright &copy; 2018 Company Name</p>
+            <p>Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Tooplate</a></p>
+        </div>
+    </div>
     <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
         <img src="{{url('assets/artist/img/posts/image-02.jpg')}}" alt="Image">
     </div>
