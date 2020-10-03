@@ -42,7 +42,7 @@
             </ul>
         </div>
     @endif
-    @yield('content')
+
 
     @yield('content')
 
