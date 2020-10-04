@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Artist;
 
 use App\Http\Controllers\Controller;
+use App\Photo;
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -35,7 +37,27 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $post=Post::create([
+            'title'=>$request->input('title'),
+            'description'=>$request->input('description'),
+            'user_id'=>1,//todo: take it from auth()
+
+        ]);
+
+        //dd($request->all());
+        foreach ($request->file('photos') as $photo)
+        {
+            $path=$photo->store('postphotos');
+            $fixed_path='storage/'.$path;
+
+            Photo::create([
+                'img_url'=>$fixed_path,
+                'post_id'=>$post->id,
+            ]);
+        }
+
+        return redirect(route('artist.home'));
     }
 
     /**

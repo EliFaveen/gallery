@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->integer('gallery_id')->nullable()->unsigned();
             $table->integer('user_id')->unsigned();
             $table->string('color')->nullable();
+            $table->timestamps();
         });
     }
 
