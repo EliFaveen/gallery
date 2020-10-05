@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     {{--    sidenav col nadarad azad hast   --}}
 {{--    TODO: add to layout with if this is artist who looking at this page show sidenav--}}
     <div class="sidenav">

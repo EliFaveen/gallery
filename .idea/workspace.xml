@@ -9,14 +9,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/stylepages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artistpages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/CategoryPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/CategoryPost.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Photo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_134610_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_134610_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_134953_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_134953_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +206,8 @@
       <workItem from="1601542986936" duration="744000" />
       <workItem from="1601555316912" duration="37000" />
       <workItem from="1601711087064" duration="8340000" />
-      <workItem from="1601793460908" duration="5586000" />
+      <workItem from="1601793460908" duration="10133000" />
+      <workItem from="1601886388859" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -275,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601715654418</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add post &amp; photo to DB basic">
+      <created>1601828119545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601828119545</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,33 +343,34 @@
     <MESSAGE value="add layout for artist.blade.php" />
     <MESSAGE value="add errors to layout  artist.blade.php" />
     <MESSAGE value="layouting /artist" />
-    <option name="LAST_COMMIT_MESSAGE" value="layouting /artist" />
+    <MESSAGE value="add post &amp; photo to DB basic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add post &amp; photo to DB basic" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600758933557" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1601715653605">
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1601828117990">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601715653605" />
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601828117990" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496739371" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601798657705">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601887235450">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601798657705" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601887235450" />
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601196162014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1601196162014" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601797549896">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601916891447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601797549896" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601799337235">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

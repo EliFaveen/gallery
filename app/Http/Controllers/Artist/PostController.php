@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Artist;
 
+use App\CategoryPost;
 use App\Http\Controllers\Controller;
 use App\Photo;
 use App\Post;
@@ -54,6 +55,13 @@ class PostController extends Controller
             Photo::create([
                 'img_url'=>$fixed_path,
                 'post_id'=>$post->id,
+            ]);
+        }
+        foreach ($request->input('categories') as $category)
+        {
+            CategoryPost::create([
+               'post_id'=>$post->id,
+               'category_id'=>$category
             ]);
         }
 

@@ -1,38 +1,5 @@
-/* .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-} */
 
-/* Create four equal columns that sits next to each other */
-/* .col-md-3 {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-} */
 
-/* .col-md-3 img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-} */
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-/* @media screen and (max-width: 800px) {
-  .col-md-3 {
-    flex: 50%;
-    max-width: 50%;
-  }
-} */
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 600px) {
-  .col-md-3 {
-    flex: 100%;
-    max-width: 100%;
-  }
-} */
-/* -------------------------------------------------------------- */
 /*-------------------------------section 1 sidenav----------------------------------------------*/
 .sidenav a {
   position: fixed;
@@ -51,7 +18,7 @@
 .sidenav .all-sidenav:hover {
     color: #a35d40;
     background-color: unset;
-  
+
 }
 .sidenav .plus {
   top: 58px;
@@ -81,5 +48,5 @@
   top: 300px;
   background-color: #a35d40;
   padding: 10px 12px 10px 12px;
-  
+
 }
