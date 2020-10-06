@@ -84,3 +84,80 @@ label img {
     /* box-shadow: 0 0 5px #333; */
     z-index: -1;
 }
+/*-----------------------------------for hashtags-----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #1a284f;
+    color: white;
+}
+
+.wrapper {
+    padding: 20px 28px;
+    margin: 0;
+    width: 580px;
+    background-color: #273c75;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    border: solid 2px white;
+}
+
+h3 {
+    margin: 10px 14px 10px 0;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+p {
+    margin: 10px 10px;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+input {
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 8px;
+    width: 100%;
+    color: #666;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.tag-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tag{
+    pointer-events: none;
+    background-color: #242424;
+    color: white;
+    padding: 6px;
+    margin: 5px;
+}
+
+.tag::before {
+    pointer-events: all;
+    display: inline-block;
+    content: 'x';
+    height: 20px;
+    width: 20px;
+    margin-right: 6px;
+    text-align: center;
+    color: #ccc;
+    background-color: #111;
+    cursor: pointer;
+}

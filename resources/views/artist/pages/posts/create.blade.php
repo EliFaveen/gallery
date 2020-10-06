@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <form class="" method="post" action="{{route('artist.post.store')}}" enctype='multipart/form-data'>
+    <form class="" method="post" action="{{route('artist.post.store')}}" enctype='multipart/form-data' >
         @csrf
 {{--        todo:upload photo--style img--validation error require--crop--}}
         <div class="row">
@@ -54,27 +54,29 @@
                     <label for="Checkbox{{$category->id}}">{{$category->title}}</label>
                 </li>
             @endforeach
-{{--            <li>--}}
 
-{{--                <input type="checkbox" id="myCheckbox2" />--}}
-{{--                <label for="myCheckbox2"><img src="http://tech21info.com/admin/wp-content/uploads/2013/03/chrome-logo-200x200.png" /></label>--}}
-{{--            </li>--}}
-{{--            <li>--}}
-
-{{--                <input type="checkbox" id="myCheckbox3" />--}}
-{{--                <label for="myCheckbox3"><img src="http://www.thebusinessofsports.com/wp-content/uploads/2010/10/facebook-icon-200x200.png" /></label>--}}
-{{--            </li>--}}
         </ul>
     </div>
 </div>
 
 
-        {{--        --}}{{--todo:hashtag--good hashtags--}}
+{{--                todo:hashtag--good hashtags--}}
+
 {{--        <input class="form-control" name="hashtags" id="hashtags" type="text" placeholder="#یک_هشتگ_بنویس">--}}
-        {{--user_id auth--}}
-        {{--color--}}
+
+        <div class="wrapper">
+            <h3>هشتگ های تو</h3>
+            <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
+            <input class="" name="hashtags[]" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
+            <div class="tag-container">
+            </div>
+        </div>
 
 
-        <button class="mt-2 btn btn-success">پست جدید</button>
+        {{--todo:user_id auth--}}
+        {{--todo:color--}}
+
+
+        <button type="submit" class="mt-2 btn btn-success">پست جدید</button>
     </form>
 @endsection

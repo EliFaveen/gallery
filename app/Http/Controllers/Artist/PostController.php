@@ -38,7 +38,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
+        //dd($request->all());
         $post=Post::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
@@ -46,7 +46,7 @@ class PostController extends Controller
 
         ]);
 
-        //dd($request->all());
+        dd($request->all());
         foreach ($request->file('photos') as $photo)
         {
             $path=$photo->store('postphotos');
