@@ -67,7 +67,7 @@
         <div class="wrapper">
             <h3>هشتگ های تو</h3>
             <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
-            <input class="" name="hashtags[]" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
+            <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
             <div class="tag-container">
             </div>
         </div>

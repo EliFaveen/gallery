@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Artist;
 
 use App\CategoryPost;
+use App\Hashtag;
 use App\Http\Controllers\Controller;
 use App\Photo;
 use App\Post;
@@ -46,7 +47,7 @@ class PostController extends Controller
 
         ]);
 
-        dd($request->all());
+        //dd($request->all());
         foreach ($request->file('photos') as $photo)
         {
             $path=$photo->store('postphotos');
@@ -57,11 +58,19 @@ class PostController extends Controller
                 'post_id'=>$post->id,
             ]);
         }
+        //todo:add photo to category
         foreach ($request->input('categories') as $category)
         {
             CategoryPost::create([
                'post_id'=>$post->id,
-               'category_id'=>$category
+               'category_id'=>$category,
+            ]);
+        }
+        foreach ($request->input('hashtags') as $hashtag)
+        {
+            Hashtag::create([
+                'post_id'=>$post->id,
+                'hashtag'=>$hashtag,
             ]);
         }
 
