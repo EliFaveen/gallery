@@ -43,3 +43,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
     });
 Route::get('artist/home', 'HomeController@index')->name('artist.home');//== artist.post.index
+
+//croppie
+Route::get('crop-image-before-upload-using-croppie', 'CropImageController@index');
+Route::post('crop-image-before-upload-using-croppie', ['as'=>'croppie.upload-image','uses'=>'CropImageController@uploadCropImage']);

@@ -9,11 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CropImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/1602256283.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/1602256291.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/1602256501.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/croppie.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Hashtag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Hashtag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -205,6 +208,8 @@
       <workItem from="1601962998594" duration="12377000" />
       <workItem from="1602008080435" duration="6412000" />
       <workItem from="1602057484264" duration="5900000" />
+      <workItem from="1602145632748" duration="1287000" />
+      <workItem from="1602254515970" duration="2874000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -290,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601918349494</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add hashtag to db basic_work with nazgol part 1_broblem on delete js input">
+      <created>1602145723480</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602145723480</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,25 +361,26 @@
     <MESSAGE value="layouting /artist" />
     <MESSAGE value="add post &amp; photo to DB basic" />
     <MESSAGE value="add post_category to DB basic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add post_category to DB basic" />
+    <MESSAGE value="add hashtag to db basic_work with nazgol part 1_broblem on delete js input" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hashtag to db basic_work with nazgol part 1_broblem on delete js input" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600758933557" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1601918348167">
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1602145722035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601918348167" />
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602145722035" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600496739371" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601887235450">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602255936406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601887235450" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602255936406" />
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1601196162014">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -376,10 +389,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602062695325">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602254626657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602062695325" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602254626657" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
