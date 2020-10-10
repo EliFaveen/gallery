@@ -32,7 +32,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
         Route::resource('post','PostController');
 
 
-        //-------artist        /artist/post---->.post.store                     //POST
+        //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET
         //-------artist        /artist/post/create---->artist.post.create       //GET
         //-------artist        /artist/post/{post}---->artist.post.update       //PUT/PATCH
@@ -42,7 +42,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
-Route::get('artist/home', 'HomeController@index')->name('artist.home');//== artist.post.index
+//Route::get('/artist/post', 'HomeController@index')->name('artist.post.index');//== artist.post.index
 
 //croppie
 //Route::get('artist/post/create', 'Artist\PostController@index');

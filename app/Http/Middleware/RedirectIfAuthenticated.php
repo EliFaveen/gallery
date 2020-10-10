@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check()) {
 //            return redirect(RouteServiceProvider::HOME);
 //            todo:redirect dynamic auth session
-            return redirect(route('artist.home'));
+            return redirect(route('artist.post.index'));
         }
 
         return $next($request);

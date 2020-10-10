@@ -42,7 +42,7 @@ class LoginController extends Controller
 //            return '/home';
 //        }
 //    }
-    protected $redirectTo = '/artist/home';
+    protected $redirectTo = '/artist/post';
     /**
      * Create a new controller instance.
      *

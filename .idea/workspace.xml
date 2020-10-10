@@ -10,15 +10,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/stylepages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artistpages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artistpages.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +208,8 @@
       <workItem from="1602057484264" duration="5900000" />
       <workItem from="1602145632748" duration="1287000" />
       <workItem from="1602254515970" duration="9579000" />
-      <workItem from="1602313933060" duration="5064000" />
+      <workItem from="1602313933060" duration="6295000" />
+      <workItem from="1602348954924" duration="709000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -313,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602262637445</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="back to a simple layout and eliminate croppie for now">
+      <created>1602319356345</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602319356345</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,17 +377,18 @@
     <MESSAGE value="add post_category to DB basic" />
     <MESSAGE value="add hashtag to db basic_work with nazgol part 1_broblem on delete js input" />
     <MESSAGE value="croppie test(add upload directory to public)" />
-    <option name="LAST_COMMIT_MESSAGE" value="croppie test(add upload directory to public)" />
+    <MESSAGE value="back to a simple layout and eliminate croppie for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="back to a simple layout and eliminate croppie for now" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600758933557" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1602262635763">
+    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1602319354888">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602262635763" />
+    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602319354888" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -401,9 +405,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602316947564">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602349473676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602316947563" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602349473676" />
   </component>
 </project>
