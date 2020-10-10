@@ -10,6 +10,7 @@
 body{
     direction: rtl;
     font-family: IRSans;
+    overflow:visible !important;
 }
 
 ul{

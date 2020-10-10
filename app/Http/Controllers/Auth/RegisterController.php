@@ -45,7 +45,7 @@ class RegisterController extends Controller
 //            return '/home';
 //        }
 //    }
-    protected $redirectTo = '/artist/home';
+    protected $redirectTo = '/artist/pages/index';
 
 
     /**

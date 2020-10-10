@@ -39,7 +39,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+//        //dd($request->all());
         $post=Post::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
@@ -47,7 +47,8 @@ class PostController extends Controller
 
         ]);
 
-        //dd($request->all());
+
+//        simple multiple photo upload
         foreach ($request->file('photos') as $photo)
         {
             $path=$photo->store('postphotos');
@@ -58,7 +59,24 @@ class PostController extends Controller
                 'post_id'=>$post->id,
             ]);
         }
-        //todo:add photo to category
+//        ---------------------------------------------------croppie
+//        $image = $request->image;
+//        //return view('artist.pages.posts.create');
+////        $image=$request->file('photos');
+//
+//        list($type, $image) = explode(';', $image);
+//        list(, $image)      = explode(',', $image);
+//        $image = base64_decode($image);
+//        $image_name= time().'.png';
+//        $path = public_path('upload/'.$image_name);
+//
+//        file_put_contents($path, $image);
+//        return response()->json(['status'=>true]);
+
+
+
+
+//        //todo:add photo to category
         foreach ($request->input('categories') as $category)
         {
             CategoryPost::create([

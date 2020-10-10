@@ -1,22 +1,4 @@
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:0,
-    nav:false,
-    center:true,
-    autoplay:true,
-    autoplayTimeout:4000,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:7
-        }
-    }
-})
+
 //create.blade.php-----------------------------------------------------------------for hashtags
 let input, hashtagArray, container, t=0;
 
@@ -55,34 +37,18 @@ input.addEventListener('keyup', () => {
 
         //for p tags
         let deleteTags = document.querySelectorAll('.tag');
-        // let deleteTags2 = document.querySelectorAll('.hashtag_input');
+        let deleteInput = document.querySelectorAll('.hashtag_input');
+
 
         for(let i = 0; i < deleteTags.length; i++) {
             deleteTags[i].addEventListener('click', () => {
                 container.removeChild(deleteTags[i]);
+                container.removeChild(deleteInput[i]);
 
 
             });
 
-            // deleteTags2[i].addEventListener('click', () => {
-            //     container.removeChild(deleteTags2[i]);
-            //
-            // });
-
-
             }
-        //for input tags
-        // let deleteTags2 = document.querySelectorAll('.hashtag_input');
-        //
-        // for(let j = 0; j < deleteTags2.length; j++) {
-        //     deleteTags2[j].addEventListener('click', () => {
-        //         container.removeChild(deleteTags2[j]);
-        //
-        //     });
-        // }
-
-
-
     }
 });
 //-------------------------------------------------------------------except enter for texterea

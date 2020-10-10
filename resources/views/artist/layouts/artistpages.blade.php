@@ -3,27 +3,34 @@
 {{--todo:post description--}}
 {{--todo: categories--foreach--}}
 {{--todo:hashtag--good hashtags--}}
-    <!DOCTYPE html>
+    <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>سایت گالری هنری</title>
-    <link rel="stylesheet" href="{{url('assets/artist/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url('assets/artist/css/fontawesom.css')}}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{--    <link rel="stylesheet" href="{{url('assets/artist/css/bootstrap.min.css')}}">--}}
+{{--    <link rel="stylesheet" href="{{url('assets/artist/css/fontawesom.css')}}">--}}
     <link rel="stylesheet" href="{{url('assets/artist/css/stylepages.css')}}">
-    <link rel="stylesheet" href="{{url('assets/artist/css/owl_carousel/owl.carousel.min.css')}}"><!--owl.carousel.min.css-->
-    <link rel="stylesheet" href="{{url('assets/artist/css/owl_carousel/owl.theme.default.min.css')}}"><!--owl.theme.default.min.css-->
-    <link rel="stylesheet" href="{{url('assets/artist/css/for_char_temp/all.min.css')}}"><!--for_char_temp-->
-    <link rel="stylesheet" href="{{url('assets/artist/css/for_char_temp/tooplate-style.css')}}"><!--for_char_temp-->
+    <!-- Bootstrap CSS -->
+{{--    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">--}}
+    {{--croppie head links--}}
+{{--    <title>Laravel PHP - Cropping and uploading an image with Croppie plugin using jQuery Ajax </title>--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{--croppie head links--}}
+    <title>Hello, world!</title>
 </head>
+<body>
 
-<body class="tm-bg-dark">
-<main class="tm-container ">
 
-    {{--    TODO: add errors to messages layout--}}
 
+{{--    TODO: add errors to messages layout--}}
+
+<div class="container">
     {{--    @if(session('success'))--}}
     {{--        <div class="row mb-2">--}}
     {{--            <div class="col-md-12">--}}
@@ -42,117 +49,19 @@
             </ul>
         </div>
     @endif
-
-
     @yield('content')
+</div>
 
 
-</main>
-
-<!-- ------------------------------------------my scripts---------------------------------------------- -->
-<script src="{{url('assets/artist/js/jquery.js')}}"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+{{--<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous"></script>--}}
+{{--<script src="{{url('assets/artist/js/jquery.js')}}"></script>--}}
 <script src="{{url('assets/artist/js/bootstrap.min.js')}}"></script>
-<script src="{{url('assets/artist/js/owl_carousel/jquery.min.js')}}"></script><!--jquery.min-->
-<script src="{{url('assets/artist/js/owl_carousel/owl.carousel.min.js')}}"></script><!--owl.carousel.min-->
 <script src="{{url('assets/artist/js/fontawesom.js')}}"></script>
 <script src="{{url('assets/artist/js/script.js')}}"></script>
-<!-- -------------------------------------------temp script---------------------------------------------------- -->
-<script src="{{url('assets/artist/js/for_char_temp/jquery-3.3.1.min.js')}}"></script>
-<!-- https://jquery.com/download/ -->
-<script>
 
-    let callAdjustLayout;
-    let currentLayout = "desktop",
-        nextLayout = "desktop";
-
-    /**
-     * detect IE
-     * returns version of IE or false, if browser is not Internet Explorer
-     */
-    function detectIE() {
-        var ua = window.navigator.userAgent;
-
-        var msie = ua.indexOf('MSIE ');
-        if (msie > 0) {
-            // IE 10 or older => return version number
-            return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-        }
-
-        var trident = ua.indexOf('Trident/');
-        if (trident > 0) {
-            // IE 11 => return version number
-            var rv = ua.indexOf('rv:');
-            return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-        }
-
-        var edge = ua.indexOf('Edge/');
-        if (edge > 0) {
-            // Edge (IE 12+) => return version number
-            return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-        }
-
-        // other browser
-        return false;
-    }
-
-    // Adjust layout based on the browser width
-    function adjustLayout() {
-        let block1, block2, block3, block4, block5, block6, block7, block8, block9;
-
-        if (window.innerWidth <= 1199) {
-            // Mobile layout
-            nextLayout = "mobile";
-            block1 = $("div[data-mobile-seq-no='1']");
-            block2 = $("div[data-mobile-seq-no='2']");
-            block3 = $("div[data-mobile-seq-no='3']");
-            block4 = $("div[data-mobile-seq-no='4']");
-            block5 = $("div[data-mobile-seq-no='5']");
-            block6 = $("div[data-mobile-seq-no='6']");
-            block7 = $("div[data-mobile-seq-no='7']");
-            block8 = $("div[data-mobile-seq-no='8']");
-            block9 = $("div[data-mobile-seq-no='9']");
-        } else {
-            // Desktop layout
-            nextLayout = "desktop";
-            block1 = $("div[data-desktop-seq-no='1']");
-            block2 = $("div[data-desktop-seq-no='2']");
-            block3 = $("div[data-desktop-seq-no='3']");
-            block4 = $("div[data-desktop-seq-no='4']");
-            block5 = $("div[data-desktop-seq-no='5']");
-            block6 = $("div[data-desktop-seq-no='6']");
-            block7 = $("div[data-desktop-seq-no='7']");
-            block8 = $("div[data-desktop-seq-no='8']");
-            block9 = $("div[data-desktop-seq-no='9']");
-        }
-
-        if (nextLayout !== currentLayout) {
-            // Reorder blocks based on their seq no
-            block1.after(block2.detach());
-            block2.after(block3.detach());
-            block3.after(block4.detach());
-            block4.after(block5.detach());
-            block5.after(block6.detach());
-            block6.after(block7.detach());
-            block7.after(block8.detach());
-            block8.after(block9.detach());
-            currentLayout = nextLayout;
-        }
-    }
-
-    // Adjust layout upon window resize
-    window.onresize = function () {
-        clearTimeout(callAdjustLayout);
-        callAdjustLayout = setTimeout(adjustLayout, 100);
-    }
-
-    // DOM is ready
-    $(function () {
-        if (detectIE()) {
-            alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
-        }
-
-        adjustLayout();
-    })
-</script>
 </body>
 </html>
