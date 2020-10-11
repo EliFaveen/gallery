@@ -18,7 +18,15 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts=Post::orderBy('created_at','desc')->get();
+        foreach ($posts as $post){
+//            if ($photos=Photo::where('post_id',$post->id)){
+                $photos=Photo::where('post_id',$post->id)->orderBy('created_at','desc')->first();
+//            }
+        }
+
+
+        return view('artist.pages.posts.index',['posts'=>$posts,'photos'=>$photos]);
     }
 
     /**

@@ -1,7 +1,7 @@
 
-@extends('artist.layouts.artistpages')
+{{--@extends('artist.layouts.artistpages')--}}
 
-{{--@extends('artist.layouts.artist')--}}
+@extends('artist.layouts.artist')
 
 @section('content')
 
@@ -16,5 +16,19 @@
         <a href="#" class="all-sidenav crown"><i class="fas fa-crown"></i></a>
 
     </div>
+
+    @foreach($posts as $post)
+        <div class="card" style="width: 18rem;">
+            @foreach($photos as $photo)
+
+            <img class="card-img-top" src="{{url($post->img_url)}}" alt="Card image cap">
+            @endforeach
+            <div class="card-body">
+                <h5 class="card-title">{{$post->title}}</h5>
+                <p class="card-text">{{$post->description}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    @endforeach
 
 @endsection
