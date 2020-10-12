@@ -17,18 +17,56 @@
 
     </div>
 
-    @foreach($posts as $post)
-        <div class="card" style="width: 18rem;">
-            @foreach($photos as $photo)
 
-            <img class="card-img-top" src="{{url($post->img_url)}}" alt="Card image cap">
+    <div class="card-body"><h5 class="card-title">پست های من</h5>
+        <table class="mb-0 table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>عنوان پست</th>
+                <th>توضیحات</th>
+                <th>تصاویر</th>
+                <th>ویرایش</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($posts as $post)
+                <tr>
+                    <th scope="row">{{$post->id}}</th>
+                    <td>{{$post->title}}</td>
+                    <td>{{$post->description}}</td>
+{{--                    <td>--}}
+{{--                        --}}{{--                        {{\App\Category::find($product->category_id)->title}}--}}
+{{--                        {{$product->category->title }}--}}
+{{--                    </td>--}}
+                    <td>
+                        @foreach(\App\Photo::where('post_id',$post->id)->get() as $pic)
+                            <img class="img-fluid img-thumbnail" src="{{url($pic->image_url)}}" style="width: 100px; height: 100px;">
+                        @endforeach
+{{--                        @foreach($post->photos as $product_photo)--}}
+{{--                            <img style="width: 100px; height: 100px;" class="img-thumbnail img-fluid" src="{{url($product_photo->image_url)}}">--}}
+{{--                        @endforeach--}}
+                    </td>
+                    <td>
+                        <a href="#"><i class="fa fa-pencil-alt"></i></a>
+
+                        {{--                        <form method="post" action="/delete-type/{{$type->id}}">--}}
+                        {{--                            @csrf--}}
+                        {{--                            <button onclick="return confirm('sure?')" type="submit" class="btn btn-danger">delete</button>--}}
+                        {{--                        </form>--}}
+                    </td>
+                </tr>
             @endforeach
-            <div class="card-body">
-                <h5 class="card-title">{{$post->title}}</h5>
-                <p class="card-text">{{$post->description}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            {{$posts->links()}}
         </div>
-    @endforeach
+    </div>
+
 
 @endsection

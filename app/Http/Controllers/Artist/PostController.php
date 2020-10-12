@@ -18,15 +18,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts=Post::orderBy('created_at','desc')->get();
-        foreach ($posts as $post){
-//            if ($photos=Photo::where('post_id',$post->id)){
-                $photos=Photo::where('post_id',$post->id)->orderBy('created_at','desc')->first();
-//            }
-        }
-
-
-        return view('artist.pages.posts.index',['posts'=>$posts,'photos'=>$photos]);
+        $posts=Post::orderBy('created_at','desc')->paginate(4);
+        //$photos=ProductPhoto::get();
+        return view('artist.pages.posts.index',compact('posts'));
     }
 
     /**
@@ -36,6 +30,7 @@ class PostController extends Controller
      */
     public function create()
     {
+
         return view('artist.pages.posts.create');
     }
 
@@ -47,7 +42,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-//        //dd($request->all());
+
         $post=Post::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
@@ -85,22 +80,22 @@ class PostController extends Controller
 
 
 //        //todo:add photo to category
-        foreach ($request->input('categories') as $category)
-        {
-            CategoryPost::create([
-               'post_id'=>$post->id,
-               'category_id'=>$category,
-            ]);
-        }
-        foreach ($request->input('hashtags') as $hashtag)
-        {
-            Hashtag::create([
-                'post_id'=>$post->id,
-                'hashtag'=>$hashtag,
-            ]);
-        }
+//        foreach ($request->input('categories') as $category)
+//        {
+//            CategoryPost::create([
+//               'post_id'=>$post->id,
+//               'category_id'=>$category,
+//            ]);
+//        }
+//        foreach ($request->input('hashtags') as $hashtag)
+//        {
+//            Hashtag::create([
+//                'post_id'=>$post->id,
+//                'hashtag'=>$hashtag,
+//            ]);
+//        }
 
-        return redirect(route('artist.home'));
+        return redirect(route('artist.post.index'));
     }
 
     /**

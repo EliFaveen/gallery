@@ -37,20 +37,20 @@ class User extends Authenticatable
 
     //------------------------------------------------------------//relation call like product->photos
 
-    //    relation many to many ...
-    public function Categories(){
-        return $this->belongsToMany('App\Category')->using('App\Interest');
-    }
-    //    relation one to many
-    public function posts(){
-        return $this->hasMany('App\Post');
-    }
-    //    relation one to many
-    public function comments(){
-        return $this->hasMany('App\Comment');
-    }
-    //    relation one to many
-    public function likes(){
-        return $this->hasMany('App\Like');
-    }
+//    //    relation many to many ...
+//    public function Categories(){
+//        return $this->belongsToMany('App\Category')->using('App\Interest');
+//    }
+//    //    relation one to many
+//    public function posts(){
+//        return $this->hasMany('App\Post');
+//    }
+//    //    relation one to many
+//    public function comments(){
+//        return $this->hasMany('App\Comment');
+//    }
+//    //    relation one to many
+//    public function likes(){
+//        return $this->hasMany('App\Like');
+//    }
 }
