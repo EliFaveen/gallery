@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        $path=$request->file('category_pic')->store('categories_pic');
+        $fixed_path='storage/'.$path;
+
+        Category::create([
+            'title'=>$request->input('title'),
+            'description'=>$request->input('description'),
+            'category_pic'=>$fixed_path,
+
+        ]);
+        return 'added';
+
     }
 
     /**
