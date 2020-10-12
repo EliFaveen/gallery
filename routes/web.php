@@ -42,6 +42,21 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
+Route::prefix('admin')->namespace('Admin')->name('admin.')
+    ->group(function (){
+        Route::resource('category','CategoryController');
+
+
+        //-------artist        /admin/category---->artist.post.store                     //POST
+        //-------artist        /admin/category---->artist.post.index               //POST//no it's GET
+        //-------artist        /admin/category/create---->artist.post.create       //GET
+        //-------artist        /admin/category/{category}---->artist.post.update       //PUT/PATCH
+        //-------artist        /admin/category/{category}---->artist.post.show         //GET
+        //-------artist        /admin/category/{category}---->artist.post.destroy      //DELETE
+        //-------artist        /admin/category/{category}/edit---->artist.post.edit    //GET
+
+
+    });
 //Route::get('/artist/post', 'HomeController@index')->name('artist.post.index');//== artist.post.index
 
 //croppie
