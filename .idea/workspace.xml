@@ -9,67 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/css/fullcalendar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/css/tooplate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/img/dash-bg-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/img/dash-bg-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/img/dash-bg-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/img/product-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/img/profile-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/AUTHORS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_glass_75_d0e5f5_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_glass_85_dfeffc_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_217bc0_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_469bdd_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_6da8d5_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_d8e7f3_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/images/ui-icons_f9bd01_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/jquery-ui.theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/jquery-ui-datepicker/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/tooplate-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/js/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/admin/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/category/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/create_layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/category/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +210,7 @@
       <workItem from="1602348954924" duration="4945000" />
       <workItem from="1602398223914" duration="11924000" />
       <workItem from="1602484049498" duration="1527000" />
-      <workItem from="1602522486655" duration="1283000" />
+      <workItem from="1602522486655" duration="2731000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -396,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602522663231</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add create category for admin using layout prepare routes and links">
+      <created>1602523859244</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602523859244</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +410,8 @@
     <MESSAGE value="RedirectIfAuthenticated.php is in /middleware where u should say where to redirect after auth" />
     <MESSAGE value="wrote relationship in all models except Interest &amp; CategoryPost" />
     <MESSAGE value="abandon aetist with error&#10;htmlspecialchars() expects parameter 1 to be string, object given (View: D:\zavie\Gallery\resources\views\artist\pages\posts\index.blade.php)" />
-    <option name="LAST_COMMIT_MESSAGE" value="abandon aetist with error&#10;htmlspecialchars() expects parameter 1 to be string, object given (View: D:\zavie\Gallery\resources\views\artist\pages\posts\index.blade.php)" />
+    <MESSAGE value="add create category for admin using layout prepare routes and links" />
+    <option name="LAST_COMMIT_MESSAGE" value="add create category for admin using layout prepare routes and links" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
@@ -472,10 +422,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602436641914" />
-    <state x="351" y="0" key="CommitChangelistDialog2" timestamp="1602522662088">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1602523858173">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="351" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602522662088" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602523858173" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -484,10 +434,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602485985148" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602437098905">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602524216665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602437098905" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602524216665" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1601916891447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
