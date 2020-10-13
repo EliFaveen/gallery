@@ -15,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        //dd('hi');
+        return view('admin.pages.category.index');
     }
 
     /**
@@ -46,7 +47,8 @@ class CategoryController extends Controller
             'category_pic'=>$fixed_path,
 
         ]);
-        return 'added';
+        //return 'added';
+        return redirect(route('admin.category.index'));
 
     }
 
