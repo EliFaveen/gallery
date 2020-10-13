@@ -29,8 +29,12 @@
         @include('inc.admin_nav')
 
         <!-- row -->
-        @yield('content')
+{{--        @yield('content')--}}
+            <div class="row tm-content-row tm-mt-big">
 
+                @yield('content')
+
+            </div>
 
         <footer class="row tm-mt-small">
             <div class="col-12 font-weight-light">

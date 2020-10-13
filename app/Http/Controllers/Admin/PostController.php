@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
 use App\Http\Controllers\Controller;
+use App\Post;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //dd('hi');
-        $categories=\App\Category::orderBy('created_at','desc')->paginate(9);
-        return view('admin.pages.category.index',compact('categories'));
+        $posts=Post::orderBy('created_at','desc')->paginate(8);
+        return view('admin.pages.post.index',compact('posts'));
     }
 
     /**
@@ -27,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.category.create');
+        //empty
     }
 
     /**
@@ -38,19 +37,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        $path=$request->file('category_pic')->store('categories_pic');
-        $fixed_path='storage/'.$path;
-
-        Category::create([
-            'title'=>$request->input('title'),
-            'description'=>$request->input('description'),
-            'category_pic'=>$fixed_path,
-
-        ]);
-        //return 'added';
-        return redirect(route('admin.category.index'));
-
+        //empty
     }
 
     /**
@@ -95,6 +82,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //later--if i delete category then all the posts who have this category their category should delete
+        //soft delete
     }
 }

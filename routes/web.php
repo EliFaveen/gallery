@@ -45,7 +45,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 Route::prefix('admin')->namespace('Admin')->name('admin.')
     ->group(function (){
         Route::resource('category','CategoryController');
-
+        Route::resource('post','PostController');
 
         //-------artist        /admin/category---->artist.post.store                     //POST
         //-------artist        /admin/category---->artist.post.index               //POST//no it's GET
