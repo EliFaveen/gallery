@@ -19,6 +19,11 @@ class PostController extends Controller
     public function index()
     {
         $posts=Post::orderBy('created_at','desc')->paginate(4);
+//        foreach ($posts as $post)
+//        {
+//            dd($post);
+//        }
+
         //$photos=ProductPhoto::get();
         return view('artist.pages.posts.index',compact('posts'));
     }
@@ -52,16 +57,19 @@ class PostController extends Controller
 
 
 //        simple multiple photo upload
-        foreach ($request->file('photos') as $photo)
-        {
-            $path=$photo->store('postphotos');
-            $fixed_path='storage/'.$path;
+        if ($request->file('photos')){
+            foreach ($request->file('photos') as $photo)
+            {
+                $path=$photo->store('postphotos');
+                $fixed_path='storage/'.$path;
 
-            Photo::create([
-                'img_url'=>$fixed_path,
-                'post_id'=>$post->id,
-            ]);
+                Photo::create([
+                    'img_url'=>$fixed_path,
+                    'post_id'=>$post->id,
+                ]);
+            }
         }
+
 //        ---------------------------------------------------croppie
 //        $image = $request->image;
 //        //return view('artist.pages.posts.create');

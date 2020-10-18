@@ -10,9 +10,9 @@ class Post extends Model
     //------------------------------------------------------------//relation call like product->photos
 
     //    relation one to many
-//    public function photos(){
-//        return $this->hasMany('App\Photo');
-//    }
+    public function photos(){
+        return $this->hasMany('App\Photo');
+    }
 //    //    relation one to many
 //    public function comments(){
 //        return $this->hasMany('App\Comment');
