@@ -65,5 +65,6 @@
 <script src="{{url('assets/artist/js/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/artist/js/fontawesom.js')}}"></script>
 <script src="{{url('assets/artist/js/script.js')}}"></script>
+
 </body>
 </html>

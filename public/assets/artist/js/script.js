@@ -51,7 +51,10 @@ input.addEventListener('keyup', () => {
             }
     }
 });
-//-------------------------------------------------------------------except enter for texterea
+//create.blade.php-------------------------------------------------------------------except enter for texterea
 $(document).on("keydown", ":input:not(textarea)", function(event) {
     return event.key != "Enter";
 });
+
+//index.blade.php-------------------------------------------------------------------gallery for show posts
+

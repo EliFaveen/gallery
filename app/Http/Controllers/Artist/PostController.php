@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts=Post::orderBy('created_at','desc')->paginate(4);
+        $posts=Post::orderBy('created_at','desc')->paginate(8);
 //        foreach ($posts as $post)
 //        {
 //            dd($post);
