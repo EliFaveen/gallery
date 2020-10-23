@@ -60,15 +60,6 @@
 .card{
     margin-bottom: 30px;
 }
-/*.post-img-parent{*/
-/*    width: 100px;*/
-/*    height: 100px;*/
-/*}*/
-/*.post-img{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
 .post-img-parent{
     /*width: 300px;*/
     height: 300px;
@@ -77,8 +68,49 @@
     display: block;
     width: 100%;
     height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.a-tag-parent a{
+    text-decoration: none !important;
+    color: #303030;
+}
+.a-tag-parent .show-img-style:hover{
+    color: #737272;
+    background-color: #1b1e21;
+}
+.post-img-parent:hover{
+    opacity: 0.9;
+}
+.card-index:hover{
+    background-color: #f6f6f6;
+
+}
+/*-------------------------------single post showing-------------------------------------------show.blade.php*/
+.single-post-box
+{
+    margin-top: 100px;
+    direction: rtl;
+}
+.single-post-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.single-post-img-parent{
+    /*width: 300px;*/
+    height: 400px;
 }
 
-/*.newspaper{*/
-/*    column-count: 4;*/
-/*}*/
+.custom-like{
+    margin-right: 28px;
+    font-size: xx-large;
+    color: lightgray;
+}
+.custom-dislike{
+    margin-right: 75%;
+    font-size: xx-large;
+    color: lightgray;
+}

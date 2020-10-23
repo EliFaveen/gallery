@@ -114,7 +114,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post=Post::find($id);
+        return view('artist.pages.posts.show',compact('post'));
     }
 
     /**

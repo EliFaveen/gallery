@@ -17,10 +17,11 @@ class Post extends Model
 //    public function comments(){
 //        return $this->hasMany('App\Comment');
 //    }
-//    //    relation one to many
-//    public function likes(){
-//        return $this->hasMany('App\Like');
-//    }
+    //    relation one to many
+    public function likes(){
+//        i thought it's hasMany
+        return $this->belongsTo('App\Like');
+    }
 //    //    relation one to many
 //    public function hashtags(){
 //        return $this->hasMany('App\Hashtag');
@@ -29,8 +30,8 @@ class Post extends Model
 //    public function categories(){
 //        return $this->belonsToMany('App\Category')->using('App\CategoryPost');
 //    }
-//    //    relation one to many revers
-//    public function user(){
-//        return $this->belongsTo('App\User');
-//    }
+    //    relation one to many revers
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

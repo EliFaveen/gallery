@@ -17,6 +17,8 @@ class CreateLikesTable extends Migration
             $table->id();
             $table->integer('post_id')->unsigned();
             $table->integer('user_id')->unsigned();
+//            todo: add value to this table--- 0->dislike 1->like null-> unlike and undislike
+//            i think integer is better than boolean forlike
             $table->timestamps();
         });
     }
