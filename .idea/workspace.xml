@@ -9,12 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_200122_add_like_column_to_likes_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_134744_create_likes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_11_134744_create_likes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +223,8 @@
       <workItem from="1603258223368" duration="617000" />
       <workItem from="1603264833664" duration="847000" />
       <workItem from="1603359247406" duration="3752000" />
-      <workItem from="1603444429038" duration="9229000" />
+      <workItem from="1603444429038" duration="12099000" />
+      <workItem from="1603518474710" duration="3000000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -426,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603184382744</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="do some changes in index.blade.php&#10;add show.blade.php&#10;and some changes in models for adding like to db">
+      <created>1603482713756</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1603482713756</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +483,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ui login #1 design + some changes in register" />
     <MESSAGE value="register error solved" />
     <MESSAGE value="some changes that i dont remember like artist template &amp; create &amp; change DB to gallery2 for a problem" />
     <MESSAGE value="add layout for artist.blade.php" />
@@ -498,7 +507,8 @@
     <MESSAGE value="index.blade.php show posts in cards" />
     <MESSAGE value="index.blade.php remove comments in code" />
     <MESSAGE value="a better way to show posts (1) index.blade.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="a better way to show posts (1) index.blade.php" />
+    <MESSAGE value="do some changes in index.blade.php&#10;add show.blade.php&#10;and some changes in models for adding like to db" />
+    <option name="LAST_COMMIT_MESSAGE" value="do some changes in index.blade.php&#10;add show.blade.php&#10;and some changes in models for adding like to db" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
@@ -509,10 +519,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602528906420" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1603184380957">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1603482712444">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603184380957" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603482712444" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600496739371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -529,9 +539,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603471738417">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603482973611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603471738417" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603482973611" />
   </component>
 </project>

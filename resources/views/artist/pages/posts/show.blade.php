@@ -28,8 +28,14 @@
 {{--                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>--}}
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--           todo: like and unlike                --}}
-                                <i class="fas fa-heart custom-like"></i>
-                                <i class="fas fa-heart-broken custom-dislike"></i>
+                                <div class="interaction">
+                                    <a href="#" class="like"><i class="fas fa-heart custom-like"></i></a>
+                                    <a href="#" class="like"><i class="fas fa-heart-broken custom-dislike"></i></a>
+                                </div>
+{{--                                <div class="interaction">--}}
+{{--                                    <a href="#" class="btn btn-xs btn-warning like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? 'You like this post' : 'Like' : 'Like'  }}</a> |--}}
+{{--                                    <a href="#" class="btn btn-xs btn-danger like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'You do not like this post' : 'Dislike' : 'Dislike'  }}</a>--}}
+{{--                                </div>--}}
 
                             </div>
                         </div>
@@ -65,3 +71,14 @@
 
 @endsection
 
+{{--@section('show.scripts')--}}
+{{--    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->--}}
+{{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--}}
+{{--    <!-- Include all compiled plugins (below), or include individual files as needed -->--}}
+{{--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
+{{--    <script src="{{url('assets/artist/js/like.js')}}"></script>--}}
+{{--    <script>--}}
+{{--        var token = '{{ Session::token() }}';--}}
+{{--        var urlLike = '{{ route('like') }}';--}}
+{{--    </script>--}}
+{{--@endsection--}}

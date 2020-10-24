@@ -42,6 +42,8 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
+//Route::post('/like','Artist\PostController@postLikePost')->name('like');
+
 Route::prefix('admin')->namespace('Admin')->name('admin.')
     ->group(function (){
         Route::resource('category','CategoryController');

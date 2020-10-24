@@ -20,7 +20,7 @@ class Post extends Model
     //    relation one to many
     public function likes(){
 //        i thought it's hasMany
-        return $this->belongsTo('App\Like');
+        return $this->hasMany('App\Like');
     }
 //    //    relation one to many
 //    public function hashtags(){
