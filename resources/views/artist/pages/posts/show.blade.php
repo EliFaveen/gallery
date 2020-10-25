@@ -24,13 +24,13 @@
                                     <img  class="single-post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
                                 </div>
                             @endif
-                            <div class="card-body">
+                            <div class="card-body" data-postid="{{$post->id}}">
 {{--                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>--}}
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--           todo: like and unlike                --}}
                                 <div class="interaction">
-                                    <a href="#" class="like"><i class="fas fa-heart custom-like"></i></a>
-                                    <a href="#" class="like"><i class="fas fa-heart-broken custom-dislike"></i></a>
+                                    <a href="#" class="like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? 'you like this post' :'Like' : 'Like' }}</a>
+                                    <a href="#" class="like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'you don\'t like this post' :'Dislike' : 'Dislike' }}</a>
                                 </div>
 {{--                                <div class="interaction">--}}
 {{--                                    <a href="#" class="btn btn-xs btn-warning like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? 'You like this post' : 'Like' : 'Like'  }}</a> |--}}
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                 </div>
-            </div><!--col-md-4 end-->
+            </div><!--col-md-6 end-->
 
         <div class="col-md-6">
             <div class="card text-center">

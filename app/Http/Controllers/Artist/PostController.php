@@ -7,7 +7,9 @@ use App\Hashtag;
 use App\Http\Controllers\Controller;
 use App\Photo;
 use App\Post;
+use App\Like; //i added this
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -183,5 +185,51 @@ class PostController extends Controller
 //        }
 //        return null;
 //    }
+
+    public function postLikePost(Request $request){
+        $post_id = $request['postId'];
+        //what we getting here is a string not a boolean so we use === but how it's an if
+        $is_like = $request['isLike'] === 'true';
+
+        // 4 cases is possible for like and dislike
+
+        $update=false;
+        $post=Post::find($post_id);
+
+        if (!$post){
+            //if i didnt find the post noting happends
+            return null;
+        }
+
+        $user= Auth::user();
+        //get all the likes this user had
+        $like=$user->likes()->where('post_id',$post_id)->first(); //can we use relations like this?
+
+        if ($like){
+            //already liked this post
+            $already_like=$like->like;//accessing the value
+            $update=true;
+
+            if ($already_like == $is_like){
+                //undo the liking
+                $like->delete();
+                return null;
+            }
+        }else{
+            $like = new like();
+        }
+        // this part is for two case (if we didnt have this record or if we had and we want to change it
+        $like->like = $is_like;
+        $like->user_id = $user->id;
+        $like->post_id = $post->id;
+        if ($update){
+            $like->update();
+        }else{
+            $like->save();
+        }
+        return null;//it's better to show a message but it's ok like this
+
+
+    }
 
 }

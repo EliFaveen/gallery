@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {{--    <link rel="stylesheet" href="{{url('assets/artist/css/bootstrap.min.css')}}">--}}
+        <link rel="stylesheet" href="{{url('assets/artist/css/bootstrap.min.css')}}"><!--this is important dont comment it-->
     <link rel="stylesheet" href="{{url('assets/artist/css/fontawesom.css')}}">
     <link rel="stylesheet" href="{{url('assets/artist/css/style.css')}}">
     <!-- Bootstrap CSS -->
@@ -67,9 +67,9 @@
 {{--    <!-- Include all compiled plugins (below), or include individual files as needed -->--}}
 {{--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
 {{--    <script src="{{url('assets/artist/js/like.js')}}"></script>--}}
-{{--<script>--}}
-{{--    var token = '{{ Session::token() }}';--}}
-{{--    var urlLike = '{{ route('like') }}';--}}
-{{--</script>--}}
+<script>
+    var token = '{{ Session::token() }}';
+    var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
+</script>
 </body>
 </html>

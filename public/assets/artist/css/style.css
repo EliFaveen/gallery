@@ -57,7 +57,7 @@
 .posts-box{
     margin-top: 100px;
 }
-.card{
+.card-index{
     margin-bottom: 30px;
 }
 .post-img-parent{
@@ -105,12 +105,17 @@
 }
 
 .custom-like{
-    margin-right: 28px;
+    /*margin-right: 28px;*/
     font-size: xx-large;
     color: lightgray;
 }
 .custom-dislike{
-    margin-right: 75%;
+    /*margin-right: 75%;*/
     font-size: xx-large;
     color: lightgray;
 }
+.interaction{
+    display: flex;
+    justify-content: space-between;
+}
+
