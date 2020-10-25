@@ -1,5 +1,18 @@
 
-@extends('artist.layouts.artistpages')
+@extends('artist.layouts.artist')
+
+@section('custom-css')
+    <link rel="stylesheet" href="{{url('assets/artist/css/create_style.css')}}">
+    {{--croppie head links--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{--croppie head links--}}
+@endsection
+
+@section('title') create post page @endsection
 
 @section('content')
 
@@ -162,4 +175,12 @@
 
 
 {{--    </script>--}}
+@endsection
+
+@section('custom-js')
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="{{url('assets/artist/js/create_script.js')}}"></script><!--custom-->
 @endsection

@@ -1,11 +1,16 @@
 
 @extends('artist.layouts.artist')
 
+@section('custom-css')
+    <link rel="stylesheet" href="{{url('assets/artist/css/index_style.css')}}"><!--custom-->
+@endsection
+
+@section('title') artist homepage @endsection
+
 @section('content')
+    @include('inc.sidenav')
 
     <div class="row posts-box">
-
-
                 @foreach($posts as $post)
             <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
                 <div class="a-tag-parent">
@@ -49,3 +54,6 @@
 
 @endsection
 
+@section('custom-js')
+    <script src="{{url('assets/artist/js/index_script.js')}}"></script><!--custom-->
+@endsection

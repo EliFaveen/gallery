@@ -1,5 +1,10 @@
 
 @extends('artist.layouts.artist')
+@section('custom-css')
+    <link rel="stylesheet" href="{{url('assets/artist/css/show_style.css')}}"><!--custom-->
+@endsection
+
+@section('title') show post page @endsection
 
 @section('content')
 
@@ -68,7 +73,10 @@
     </div><!--row end-->
 
 
-
+    <script>
+        var token = '{{ Session::token() }}';
+        var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
+    </script>
 @endsection
 
 {{--@section('show.scripts')--}}
@@ -82,3 +90,6 @@
 {{--        var urlLike = '{{ route('like') }}';--}}
 {{--    </script>--}}
 {{--@endsection--}}
+@section('custom-js')
+    <script src="{{url('assets/artist/js/show_script.js')}}"></script><!--custom-->
+@endsection
