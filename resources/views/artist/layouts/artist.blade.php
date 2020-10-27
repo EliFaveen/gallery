@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{url('assets/all_pages/css/fontawesom.css')}}">
     @yield('custom-css')
 
+
     <title>my title-@yield('title')</title>
 </head>
 <body>
