@@ -33,35 +33,10 @@
 {{--                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>--}}
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--           todo: like and unlike                --}}
-{{--                                <div class="interaction">--}}
-{{--                                    <a href="#" class="like heart"> {{Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? 'you like this post' :'Like' : 'Like' }}</a>--}}
-{{--                                    <a href="#" class="like broken-heart">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'you don\'t like this post' :'Dislike' : 'Dislike' }}</a>--}}
-{{--                                </div>--}}
-{{--              nazgol test                  --}}
-{{--                                <div class="interaction">--}}
-{{--                                    <a href="#" class="btn btn-xs  like heart">--}}
-{{--                                        <?php --}}
-{{--                                            if (Auth::user()->likes()->where('post_id', $post->id)->first())--}}
-{{--                                                --}}
-{{--                                        ?>--}}
-{{--                                        {{ --}}
-{{--    --}}
-{{--                                         ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? '<i class="fas fa-heart custom-like" style="color: red"></i>' : '<i class="fas fa-heart custom-like"></i>' : '<i class="fas fa-heart custom-like"></i>'  --}}
-{{--                                        --}}
-{{--                                        }}--}}
-{{--                                    </a>--}}
-{{--                                    <a href="#" class="btn btn-xs  like broken-heart">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? '<i class="fas fa-heart-broken custom-dislike" style="color: red"></i>' : '<i class="fas fa-heart-broken custom-dislike"></i>' : '<i class="fas fa-heart-broken custom-dislike"></i>'  }}</a>--}}
-{{--                                </div>--}}
-{{--                wrong test                --}}
-{{--                                <div class="interaction">--}}
-{{--                                    <i class="fas fa-heart custom-like"></i>--}}
-{{--                                    <i class="fas fa-heart-broken custom-dislike"></i>--}}
-{{--                                    <a href="#" class="btn btn-xs disactive like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? 'You like this post' : 'Like' : 'Like'  }}</a> |--}}
-{{--                                    <a href="#" class="btn btn-xs disactive like">{{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'You do not like this post' : 'Dislike' : 'Dislike'  }}</a>--}}
-{{--                                </div>--}}
+
 {{--                  test 3              --}}
                                 <div class="interaction">
-                                    <a href="#" class="like heart" onclick="myFunction1()" id="heart-id">
+                                    <a href="#" class="like heart">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1)
 
@@ -79,7 +54,7 @@
                                                     like
                                         @endif
                                     </a>
-                                    <a href="#" class="like broken-heart" onclick="myFunction2()" id="broken-heart-id">
+                                    <a href="#" class="like broken-heart">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0)
 
@@ -132,18 +107,6 @@
 
 
 @endsection
-
-{{--@section('show.scripts')--}}
-{{--    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->--}}
-{{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--}}
-{{--    <!-- Include all compiled plugins (below), or include individual files as needed -->--}}
-{{--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
-{{--    <script src="{{url('assets/artist/js/like.js')}}"></script>--}}
-{{--    <script>--}}
-{{--        var token = '{{ Session::token() }}';--}}
-{{--        var urlLike = '{{ route('like') }}';--}}
-{{--    </script>--}}
-{{--@endsection--}}
 @section('custom-js')
     <script src="{{url('assets/artist/js/show_script.js')}}"></script><!--custom-->
     <script>

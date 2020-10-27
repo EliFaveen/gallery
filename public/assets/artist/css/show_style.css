@@ -17,24 +17,18 @@
     height: 400px;
 }
 
-.custom-like{
-    /*margin-right: 28px;*/
-    font-size: xx-large;
-    color: lightgray;
-}
-.custom-dislike{
-    /*margin-right: 75%;*/
-    font-size: xx-large;
-    color: lightgray;
-}
+/*.custom-like{*/
+/*    !*margin-right: 28px;*!*/
+/*    font-size: xx-large;*/
+/*    color: lightgray;*/
+/*}*/
+/*.custom-dislike{*/
+/*    !*margin-right: 75%;*!*/
+/*    font-size: xx-large;*/
+/*    color: lightgray;*/
+/*}*/
 .interaction{
     display: flex;
     justify-content: space-between;
 }
 
-/*--------------test----------------*/
-
-.democlass
-{
-    color: red !important;
-}
