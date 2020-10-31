@@ -45,18 +45,20 @@
                                             @else
 
 {{--                                                <i class="fas fa-heart custom-like"></i>--}}
-                                                    like
+                                                    Like
                                             @endif
 
                                         @else
 
 {{--                                            <i class="fas fa-heart custom-like"></i>--}}
-                                                    like
+                                                    Like
                                         @endif
+                                            <div id="numberOfLikes"></div>
                                     </a>
                                     <a href="#" class="like broken-heart">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0)
+
 
 {{--                                                <i class="fas fa-heart-broken custom-dislike" style="color: red"></i>--}}
                                                 You do not like this post
@@ -71,6 +73,7 @@
 {{--                                            <i class="fas fa-heart-broken custom-dislike"></i>--}}
                                                     Dislike
                                         @endif
+                                            <div id="numberOfDislikes"></div>
                                     </a>
                                 </div>
 

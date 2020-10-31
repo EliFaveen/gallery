@@ -13,7 +13,7 @@ $('.like').on('click' , function (event){
         url: urlLike,
         data: {isLike: isLike, postId: postId, _token: token}
     })
-            .done(function () {
+            .done(function (response) {
 
                 //change the page
                 event.target.innerText = isLike ? event.target.innerText == 'Like' ? 'You like this post' : 'Like' : event.target.innerText == 'Dislike' ? 'You do not like this post' : 'Dislike';
@@ -22,5 +22,12 @@ $('.like').on('click' , function (event){
                 } else {
                     event.target.previousElementSibling.innerText = 'Like';
                 }
+
+                //change the count
+                var like_count = response.like_count;   // num of likes
+                // var dislike_count = response.dislike_count;   // num of dislikes
+                $('.numberOfLikes').text(like_count);
+                // $('.numberOfDislikes').text(dislike_count);
+
             });//--done function end
 });

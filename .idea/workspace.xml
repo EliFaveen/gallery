@@ -9,11 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/hiclipart.com.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/artist/js/show_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/show_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +231,9 @@
       <workItem from="1603781077514" duration="22000" />
       <workItem from="1603781142694" duration="361000" />
       <workItem from="1603781506262" duration="9585000" />
-      <workItem from="1603817274589" duration="2398000" />
+      <workItem from="1603817274589" duration="2739000" />
+      <workItem from="1603866569525" duration="4896000" />
+      <workItem from="1604136968223" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -466,7 +466,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603619180051</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="tried to use icon for like-not successful- so much comments and rollback to text">
+      <created>1603819733837</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603819733837</updated>
+    </task>
+    <task id="LOCAL-00035" summary="remove comments and going to start getting number of likes then hashtags">
+      <created>1603820012099</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603820012099</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,8 +527,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add errors to layout  artist.blade.php" />
-    <MESSAGE value="layouting /artist" />
     <MESSAGE value="add post &amp; photo to DB basic" />
     <MESSAGE value="add post_category to DB basic" />
     <MESSAGE value="add hashtag to db basic_work with nazgol part 1_broblem on delete js input" />
@@ -538,7 +550,9 @@
     <MESSAGE value="trying like with video but it's not going well&#10;console log all true" />
     <MESSAGE value="ajax like and dislike step by step video youtube&#10;(problems font awesom &amp; like counts)" />
     <MESSAGE value="orginazing layouting mostly for artist" />
-    <option name="LAST_COMMIT_MESSAGE" value="orginazing layouting mostly for artist" />
+    <MESSAGE value="tried to use icon for like-not successful- so much comments and rollback to text" />
+    <MESSAGE value="remove comments and going to start getting number of likes then hashtags" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove comments and going to start getting number of likes then hashtags" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600758933557">
@@ -549,10 +563,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602528906420" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1603619178862">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1603820011223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603619178862" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603820011223" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1603636035799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
