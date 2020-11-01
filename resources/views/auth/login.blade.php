@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
+@section('custom-css')      <link href="{{url('assets/auth/css/auth_style.css')}}" rel="stylesheet"> @endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
 
             {{--    form    --}}
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <div class="card card-background-style">
                     <div class="card-header"><h2 class="pt-1">ورود</h2>
-                        <p class="green-comments">سلام دوست قدیمی من!</p>
+                        <p class="gray-comments">سلام دوست قدیمی من!</p>
                     </div>
 
                 <div class="card-body">
@@ -87,9 +89,9 @@
             </div>
         </div>
             {{--    logo    --}}
-            <div class="col-md-4 logo-background-img">
-                <img class="" src="{{url('assets/auth/img/logo_with_text.png')}}">
-            </div>
+{{--            <div class="col-md-4 logo-background-img">--}}
+{{--                <img class="" src="{{url('assets/auth/img/logo_with_text.png')}}">--}}
+{{--            </div>--}}
     </div>
 </div>
 @endsection

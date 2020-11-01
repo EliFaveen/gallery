@@ -61,6 +61,30 @@ body{
     color: gray;
 }
 /*------------------------------------login--------------------------------------*/
+.forgot-link{
+    text-align: right;
+}
+
+.forgot-link a {
+    text-decoration: none;
+    color: #458fff;
+
+}
+.forgot-link a:hover {
+    color: #2f25a2;
+}
+
+/*check box*/
+.checkbox-style input{
+    width: 20px;
+    height: 20px;
+}
+.form-check{
+    text-align: right;
+}
+.login-remember-label {
+    margin-right: -16px;
+}
 /*------------------------------------reset--------------------------------------*/
 /*------------------------------------verify--------------------------------------*/
 /*------------------------------------confirm--------------------------------------*/
