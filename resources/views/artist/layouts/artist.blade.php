@@ -16,11 +16,23 @@
 </head>
 <body>
 
+@if(auth()->check())
+    <a href="{{route('admin.post.index')}}" class="btn btn-success">Admin</a>
+    <form action="{{route('logout')}}" method="post">
+        @csrf
+        <button class="btn btn-danger">Logout</button>
+    </form>
 
+@else
+
+    <a href="{{route('login')}}" class="btn btn-info">Login</a>
+
+@endif
 
 {{--    TODO: add errors to messages layout--}}
 
 <div class="container">
+
 
 
     {{--    @if(session('success'))--}}

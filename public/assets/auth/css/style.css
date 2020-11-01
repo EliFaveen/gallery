@@ -11,7 +11,7 @@
 body{
     background-image: url("../img/background.png");
     direction: rtl;
-    /*font-family: IRSans;*/
+    font-family: IRSans;
 }
 
 
@@ -63,12 +63,19 @@ body{
 /*find a better way for btn*/
 .btn-parent{
     /*margin: 57px 15px 0px 0px;*/
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+    position: absolute;
+    bottom: 10px;
 }
 .btn{
     background-color: #1ed5b9;
     /*width: 195%;*/
     color: #ffffff;
+}
+.radios-parent{
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*===================================login=======================================*/

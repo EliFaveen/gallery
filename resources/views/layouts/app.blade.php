@@ -18,12 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{url('assets/auth/css/style.css')}}" rel="stylesheet">
+    @yield('custom-css')
 
 </head>
 <body>
     <div id="app">
-        @include('inc.navbar')
+{{--        @include('inc.navbar')--}}
 
         <main class="py-4">
             @if ($errors->any())

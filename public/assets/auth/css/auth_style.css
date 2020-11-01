@@ -1,0 +1,67 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
+
+/*------------------------------------register--------------------------------------*/
+body{
+    background-image: url("../img/register_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-left: 50px;
+    padding-right: 50px;
+    direction: rtl;
+    font-family: IRSans;
+    text-align: center;
+}
+
+.radios-parent{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.radio1{
+    margin-right: 15px;
+}
+.radio2{
+    margin-left: 27px;
+}
+.form-control {
+    background-color: #ffffff78;
+}
+.card {
+    background-color: #ffffff7a;
+}
+.radio{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.btn{
+    border: solid white;
+}
+.btn:hover{
+    background-color: #ffffffd9;
+}
+.last-form-input{
+    margin-bottom: 36px;
+}
+.btn-parent{
+    position: absolute;
+    bottom: 8px;
+}
+.gray-comments{
+    color: gray;
+}
+/*------------------------------------login--------------------------------------*/
+/*------------------------------------reset--------------------------------------*/
+/*------------------------------------verify--------------------------------------*/
+/*------------------------------------confirm--------------------------------------*/
+/*------------------------------------email--------------------------------------*/
