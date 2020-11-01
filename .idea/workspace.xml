@@ -9,7 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +233,8 @@
       <workItem from="1603817274589" duration="2739000" />
       <workItem from="1603866569525" duration="4896000" />
       <workItem from="1604136968223" duration="8187000" />
-      <workItem from="1604214724793" duration="2618000" />
+      <workItem from="1604214724793" duration="3959000" />
+      <workItem from="1604237803189" duration="3734000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -492,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604218036743</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="redesign login.blade.php">
+      <created>1604218535418</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1604218535418</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +549,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add hashtag to db basic_work with nazgol part 1_broblem on delete js input" />
     <MESSAGE value="croppie test(add upload directory to public)" />
     <MESSAGE value="back to a simple layout and eliminate croppie for now" />
     <MESSAGE value="RedirectIfAuthenticated.php is in /middleware where u should say where to redirect after auth" />
@@ -564,7 +573,8 @@
     <MESSAGE value="remove comments and going to start getting number of likes then hashtags" />
     <MESSAGE value="a little changes in like to show number of likes but it doesn't work" />
     <MESSAGE value="redesign register.blade.php and locale='fa'" />
-    <option name="LAST_COMMIT_MESSAGE" value="redesign register.blade.php and locale='fa'" />
+    <MESSAGE value="redesign login.blade.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="redesign login.blade.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -575,10 +585,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602528906420" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1604218035199">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1604218534559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604218035199" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604218534559" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1603636035799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -595,9 +605,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603742470778">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604239581196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603742470778" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604239581196" />
   </component>
 </project>
