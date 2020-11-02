@@ -64,3 +64,6 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')
 //croppie
 //Route::get('artist/post/create', 'Artist\PostController@index');
 //Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
+ Route::get('/secret',function (){
+    return 'secret';
+ })->middleware(['auth','password.confirm']);
