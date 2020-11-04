@@ -36,7 +36,7 @@
                             <th scope="row">
                                 <input type="checkbox" aria-label="Checkbox">
                             </th>
-                            <td class="tm-product-name">{{$i++}}. {{$post->title}}</td>
+                            <td class="tm-product-name">{{$i++}}. {{Str::limit($post->title, $limit = 15, $end = '...') }}</td>
                             <td class="text-center">@some_username</td>
                             <td class="text-center">+255</td>
                             <td>{{$post->created_at}}</td>

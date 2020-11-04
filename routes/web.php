@@ -42,9 +42,9 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
-Route::post('/like','Artist\PostController@postLikePost')->name('like');
+Route::post('/like','Artist\PostController@postLikePost')->name('like')->middleware(['auth','isArtist','isUser']);
 
-Route::prefix('admin')->namespace('Admin')->name('admin.')
+Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','isAdmin'])
     ->group(function (){
         Route::resource('category','CategoryController');
         Route::resource('post','PostController');

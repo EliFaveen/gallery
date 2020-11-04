@@ -28,21 +28,23 @@ class LoginController extends Controller
      */
 //    protected $redirectTo = RouteServiceProvider::HOME;
 
-//    public function redirectTo()
-//    {
-//        if (auth()->user()->is_admin) {
-//            return '/admin/home';
-//        } else if (auth()->user()->is_artist) {
-//            return '/artist/home';
-//        } else if (auth()->user()->is_unartisted) {
-//            return '/user/home';
-//        } else if (auth()->user()->is_user) {
-//            return '/user/home';
-//        } else {
-//            return '/home';
-//        }
-//    }
-    protected $redirectTo = '/artist/post';
+    public function redirectTo()
+    {
+        if (auth()->user()->role === 'admin') {
+//            dd(auth()->user()->role);
+            return '/admin/category';
+        } else if (auth()->user()->role === 'artist') {
+//            dd(auth()->user()->role);
+            return '/artist/post';
+        } else if (auth()->user()->role === 'unartist') {
+            return '/';
+        } else if (auth()->user()->role === 'user') {
+            return '/';
+        } else {
+            return '/';
+        }
+    }
+//    protected $redirectTo = '/artist/post';
     /**
      * Create a new controller instance.
      *

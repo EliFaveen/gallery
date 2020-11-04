@@ -33,19 +33,19 @@ class RegisterController extends Controller
 
 //    public function redirectTo()
 //    {
-//        if (auth()->user()->is_admin) {
-//            return '/admin/home';
-//        } else if (auth()->user()->is_artist) {
-//            return '/artist/home';
-//        } else if (auth()->user()->is_unartisted) {
-//            return '/user/home';
-//        } else if (auth()->user()->is_user) {
-//            return '/user/home';
+//        if (auth()->user()->role === 'admin') {
+//            return '/admin/category';
+//        } else if (auth()->user()->role === 'artist') {
+//            return '/artist/post';
+//        } else if (auth()->user()->role === 'unartist') {
+//            return '/';
+//        } else if (auth()->user()->role === 'user') {
+//            return '/';
 //        } else {
-//            return '/home';
+//            return '/';
 //        }
 //    }
-    protected $redirectTo = '/artist/post';
+//    protected $redirectTo = '/artist/post';
 
 
     /**
