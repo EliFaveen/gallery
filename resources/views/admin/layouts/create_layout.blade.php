@@ -23,6 +23,8 @@
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     @yield('custom-css')
 
 
@@ -78,6 +80,7 @@
         $('#expire_date').datepicker();
     });
 </script>
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

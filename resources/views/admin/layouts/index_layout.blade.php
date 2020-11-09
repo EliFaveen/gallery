@@ -21,7 +21,7 @@
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     @yield('custom-css')
 
@@ -38,7 +38,7 @@
         <!-- row -->
 {{--        @yield('content')--}}
             <div class="row tm-content-row tm-mt-big">
-
+{{--                @include('sweet::alert')--}}
                 @yield('content')
 
             </div>
@@ -64,6 +64,7 @@
         });
     })
 </script>
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

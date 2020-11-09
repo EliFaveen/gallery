@@ -96,5 +96,10 @@
                 </div>
             </div>
         </div>
+        <form method="post" action="/post">
+            @csrf
+            <input type="submit">
+        </form>
+        @include('sweetalert::alert')
     </body>
 </html>

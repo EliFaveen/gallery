@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use RealRashid\SweetAlert\Facades\Alert;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -66,5 +66,15 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
 //Route::get('artist/post/create', 'Artist\PostController@index');
 //Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
  Route::get('/secret',function (){
-    return 'secret';
- })->middleware(['auth','password.confirm','verified']);
+     Alert::success('hello');
+    return view('welcome');
+ });//i changed the middlewares here
+
+Route::post('/post',function (Request $request){
+    //validation
+//    $request->validate([
+//        'title' => 'required|min:3',
+//        'body' => 'required|min:3'
+//    ]);
+    return redirect('/')->with('success','here is redirection');
+});//
