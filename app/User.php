@@ -35,6 +35,13 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    //---------------------------------------------------------------------// methods
+
+    public function setPasswordAttribute($value){
+        //dd($value);
+        $this->attributes['password']= bcrypt($value);
+    }
+
     //------------------------------------------------------------//relation call like product->photos
 
 //    //    relation many to many ...

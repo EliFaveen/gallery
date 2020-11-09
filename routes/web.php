@@ -48,6 +48,7 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
     ->group(function (){
         Route::resource('category','CategoryController');
         Route::resource('post','PostController');
+        Route::resource('users','UserController');
 
         //-------artist        /admin/category---->artist.post.store                     //POST
         //-------artist        /admin/category---->artist.post.index               //POST//no it's GET

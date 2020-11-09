@@ -1,4 +1,4 @@
-@extends('admin.layouts.index_layout_category')
+@extends('admin.layouts.index_layout')
 {{--/admin/post/index--}}
 @section('content')
 

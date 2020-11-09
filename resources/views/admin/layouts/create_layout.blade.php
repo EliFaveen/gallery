@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>create category</title>
+
     <!--
 
     Template 2108 Dashboard
@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="{{url('assets/admin/css/bootstrap.min.css')}}">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
+
+    @yield('custom-css')
+
+
+    <title>@yield('title')</title>
 </head>
 
 <body class="bg02">

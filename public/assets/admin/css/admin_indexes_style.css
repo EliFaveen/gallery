@@ -1,0 +1,44 @@
+
+
+body{
+    direction: rtl;
+}
+thead{
+    text-align: center;
+}
+
+tbody{
+    text-align: center;
+}
+
+/*create*/
+.radios-parent{
+    text-align: right;
+}
+.header-style{
+    text-align: right;
+    background-color: #add8e673;
+    padding: 37px 0px 13px 0px;
+}
+.checkbox-style{
+    text-align: right;
+}
+.form-check-label{
+
+    margin-right: 32px;
+    vertical-align: super;
+
+}
+.page-item {
+    /* margin-right: 18px; */
+    margin: 0px 0px 0px 8px;
+}
+
+/*edit*/
+.tm-pen-icon:hover {
+    color: #9f1321;
+}
+.tm-pen-icon {
+    color: #6e6c6c;
+    cursor: pointer;
+}

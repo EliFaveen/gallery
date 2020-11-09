@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="{{url('assets/admin/css/bootstrap.min.css')}}">
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
+
+
+
+    @yield('custom-css')
+
+
+    <title>@yield('title')</title>
 </head>
 
 <body id="reportsPage" class="bg02">

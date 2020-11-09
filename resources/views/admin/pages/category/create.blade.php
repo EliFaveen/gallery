@@ -1,4 +1,4 @@
-@extends('admin.layouts.create_layout_category')
+@extends('admin.layouts.create_layout')
 
 @section('content')
     <div class="row tm-mt-big">
