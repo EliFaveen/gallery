@@ -50,8 +50,12 @@
                                 <td><span class="badge badge-danger">غیر فعال</span></td>
                             @endif
                             <td >{{$user->role}}</td>
-                            <td>
-                                <a href=""><i class="fas fa-trash-alt tm-trash-icon"></i></a>
+                            <td class="d-flex">
+                                <form method="post" action="{{route('admin.users.destroy' , ['user'=>$user->id])}}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete-btn" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt tm-trash-icon"></i></button>
+                                </form>
                                 <a href="{{route('admin.users.edit', ['user'=>$user->id])}}"><i class="fas fa-pen-alt tm-pen-icon"></i></a>
 
                             </td>

@@ -42,3 +42,7 @@ tbody{
     color: #6e6c6c;
     cursor: pointer;
 }
+.delete-btn{
+    background: none;
+    border: none;
+}
