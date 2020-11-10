@@ -76,5 +76,6 @@ Route::post('/post',function (Request $request){
 //        'title' => 'required|min:3',
 //        'body' => 'required|min:3'
 //    ]);
+    Alert::success('hello');
     return redirect('/')->with('success','here is redirection');
 });//
