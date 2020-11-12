@@ -18,8 +18,13 @@
 
                 </div>
                 {{--       TODO: add search instead         --}}
-                <div class="col-md-4 col-sm-12 text-right">
-                    <a href="add-product.html" class="btn btn-small btn-primary">جستجو کاربر</a>
+                <div class="col-md-9 col-sm-12 search-align">
+                    <form action="">
+                        <div class="search-parent">
+                            <input class="search-input" type="text" name="search" placeholder="جستجو کنید" value="{{request('search')}}">
+                            <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="table-responsive">
@@ -30,8 +35,26 @@
                         <th scope="col">نام کاربری</th>
                         <th scope="col">شماره تماس</th>
                         <th scope="col">ایمیل</th>
-                        <th scope="col">وضعیت ایمیل</th>
-                        <th scope="col">نقش</th>
+                        <th scope="col">
+                            <form action="">
+                                <select class="email-state" id="email-state" name="email_verified_at" onchange="this.form.submit()">
+                                    <option value="">وضعیت ایمیل</option>
+                                    <option value="1">فعال</option>
+                                    <option value="2">غیر فعال</option>
+                                </select>
+                            </form>
+                        </th>
+                        <th scope="col">
+                            <form action="">
+{{--                                    <select class="select-role" id="select-role" name="role" onchange="myfunction()">--}}
+                                    <select class="select-role" id="select-role" name="role" onchange="this.form.submit()">
+                                        <option value="">نقش</option>
+                                        <option value="admin">admin</option>
+                                        <option value="artist">artist</option>
+                                        <option value="user">user</option>
+                                    </select>
+                            </form>
+                        </th>
                         <th scope="col">اقدامات</th>
 
                     </tr>
@@ -74,6 +97,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+{{--                        todo: appends--}}
                         {{$users->links()}}
                     </div>
                 </div>
@@ -81,5 +105,40 @@
 
         </div>
     </div>
+
+
+{{--    script   --}}
+{{--    <script type="text/javascript">--}}
+{{--        // if(){--}}
+{{--            document.getElementById('email-state').value = "<?php echo $_GET['email_verified_at'];?>";--}}
+{{--        // }--}}
+{{--    </script>--}}
+{{--    <script type="text/javascript">--}}
+{{--        // if(){--}}
+{{--        document.getElementById('select-role').value = "<?php echo $_GET['role'];?>";--}}
+{{--        // }--}}
+{{--    </script>--}}
+
+{{--        <script type="text/javascript">--}}
+
+            // $(document).ready(function(){
+            //     $('#select-role').change(function(){
+            //         window.location.href = window.location.href + '&role=' + $(this).val();
+            //         this.form.submit()
+            //     });
+            // });
+            // function myfunction(){
+            //     // document.getElementById("select-role").change(function(){
+            //         var newURLString = window.location.href +
+            //             "&role=" + 'user';
+            //
+            //         window.location.href = newURLString;    // The page will redirect instantly
+            //                                                 // after this assignment
+            //         this.form.submit()
+            //
+            //     // });
+            // }
+
+{{--        </script>--}}
 
 @endsection

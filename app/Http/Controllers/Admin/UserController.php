@@ -17,7 +17,37 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users=User::orderBy('created_at','desc')->paginate(8);
+//        todo: search
+        $users = User::query();
+        if ($keyword=\request('search')){
+
+            $users->where('email','LIKE',"%{$keyword}%")
+                ->orWhere('username','LIKE', "%{$keyword}%")
+                ->orWhere('phone','LIKE', "%{$keyword}%");
+
+        }
+        if ($keyword=\request('role')){
+
+            $users->where('role','LIKE',"%{$keyword}%");
+
+        }
+
+        if ($keyword=\request('email_verified_at')){
+            if(\request('email_verified_at') == 1)
+            {
+                $users->whereNotNull('email_verified_at');;
+
+            }elseif (\request('email_verified_at') == 2){
+
+                $users->whereNull('email_verified_at');
+            }
+            else{
+//                return null;
+            }
+
+        }
+        $users = $users->orderBy('created_at','desc')->paginate(8);
+
         return view('admin.pages.users.index',compact('users'));
     }
 

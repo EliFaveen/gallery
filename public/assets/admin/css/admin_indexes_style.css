@@ -46,3 +46,50 @@ tbody{
     background: none;
     border: none;
 }
+
+/*search*/
+.search-align{
+    direction: initial;
+}
+.tm-search-icon:hover {
+    color: #9f1321;
+}
+.tm-search-icon {
+    color: #6e6c6c;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+}
+.search-parent{
+    display: flex;
+    flex-direction: row;
+    height: 37px;
+}
+.search-btn{
+    background: none;
+    border: thin solid #00000070;
+    /*border-radius: 16px 0px 0px 16px;*/
+    cursor: pointer;
+}
+.search-input {
+    border: thin solid #00000070;
+    /*border-radius: 0px 16px 16px 0px;*/
+    padding: 3px 24px 3px 3px;
+    text-align: center;
+}
+.search-btn:hover {
+    border: thin solid #9f1321;
+    background-color: lightgray;
+}
+
+/*select option role*/
+.select-role{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/*select option email*/
+.email-state{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
