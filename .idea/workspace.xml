@@ -10,9 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +151,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../snapmarket" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -246,6 +248,7 @@
       <workItem from="1604902034068" duration="7869000" />
       <workItem from="1604991539597" duration="10399000" />
       <workItem from="1605076545851" duration="9705000" />
+      <workItem from="1605168675093" duration="3858000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit(did starting terminal works)">
       <created>1599830929016</created>
@@ -569,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604998442780</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="simple search for users(some problems i will check with mahsa)">
+      <created>1605168905484</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1605168905484</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +626,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add nav admin to /inc/admin_nav.blade.php for all admin pages" />
     <MESSAGE value="add category index layouted &amp; readdress links" />
     <MESSAGE value="worked in index category &amp; index post..cant show them togeter?" />
     <MESSAGE value="basics compeleted for index post and category for admin" />
@@ -641,7 +650,8 @@
     <MESSAGE value="sweet alert not working" />
     <MESSAGE value="soft delete for users admin and add a simple inline delete confirmation onclick" />
     <MESSAGE value="some useless try for sweetalert" />
-    <option name="LAST_COMMIT_MESSAGE" value="some useless try for sweetalert" />
+    <MESSAGE value="simple search for users(some problems i will check with mahsa)" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple search for users(some problems i will check with mahsa)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -652,10 +662,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604762892329" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1604998441716">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1605168904253">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604998441716" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605168904253" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1603636035799">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -676,9 +686,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601916891447" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605005469826">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605170218063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605005469826" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605170218063" />
   </component>
 </project>

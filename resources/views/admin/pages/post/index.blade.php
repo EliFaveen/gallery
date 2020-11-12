@@ -1,5 +1,12 @@
 @extends('admin.layouts.index_layout')
 {{--/admin/post/index--}}
+
+@section('custom-css')
+    <link rel="stylesheet" href="{{url('assets/admin/css/admin_indexes_style.css')}}">
+@endsection
+
+@section('title') صفحه پست های سایت @endsection
+
 @section('content')
 
     {{--           posts           --}}

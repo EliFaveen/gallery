@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12">
         <nav class="navbar navbar-expand-xl navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="">
                 <i class="fas fa-3x fa-tachometer-alt tm-site-icon"></i>
                 <h1 class="tm-site-title mb-0">Dashboard</h1>
             </a>
@@ -13,45 +13,63 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Dashboard
+                        <a class="nav-link" href="">صفحه اصلی
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            Reports
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Daily Report</a>
-                            <a class="dropdown-item" href="#">Weekly Report</a>
-                            <a class="dropdown-item" href="index.html">Yearly Report</a>
+{{--                    <li class="nav-item dropdown">--}}
+{{--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
+{{--                           aria-expanded="false">--}}
+{{--                            مدیریت صفحات--}}
+{{--                        </a>--}}
+{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                            <a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a>--}}
+{{--                            <a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a>--}}
+{{--                            <a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
+{{--                    <select class="" id="" name="">--}}
+{{--                        <option>--}}
+{{--                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
+{{--                               aria-expanded="false">--}}
+{{--                                مدیریت صفحات--}}
+{{--                            </a>--}}
+{{--                        </option>--}}
+{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                            <option><a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a></option>--}}
+{{--                            <option><a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a></option>--}}
+{{--                            <option><a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a></option>--}}
+{{--                        </div>--}}
+{{--                    </select>--}}
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">مدیریت صفحات</button>
+                        <div class="dropdown-content">
+                            <a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a>
+                            <a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a>
+                            <a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a>
                         </div>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="products.html">Products</a>
+                    </div>
+                    <li class="nav-item disabled">
+                        <a class="nav-link" href="">فعالیت ها</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="accounts.html">Accounts</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            Settings
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="#">Billing</a>
-                            <a class="dropdown-item" href="#">Customize</a>
-                        </div>
-                    </li>
+{{--                    <li class="nav-item dropdown">--}}
+{{--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
+{{--                           aria-expanded="false">--}}
+{{--                            Settings--}}
+{{--                        </a>--}}
+{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                            <a class="dropdown-item" href="#">Profile</a>--}}
+{{--                            <a class="dropdown-item" href="#">Billing</a>--}}
+{{--                            <a class="dropdown-item" href="#">Customize</a>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="login.html">
+                        <a class="nav-link d-flex" href="{{route('login')}}">
                             <i class="far fa-user mr-2 tm-logout-icon"></i>
-                            <span>Logout</span>
+                            <span>خروج از حساب</span>
                         </a>
                     </li>
                 </ul>

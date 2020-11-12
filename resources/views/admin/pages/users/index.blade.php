@@ -121,23 +121,23 @@
 
 {{--        <script type="text/javascript">--}}
 
-            // $(document).ready(function(){
-            //     $('#select-role').change(function(){
-            //         window.location.href = window.location.href + '&role=' + $(this).val();
-            //         this.form.submit()
-            //     });
-            // });
-            // function myfunction(){
-            //     // document.getElementById("select-role").change(function(){
-            //         var newURLString = window.location.href +
-            //             "&role=" + 'user';
-            //
-            //         window.location.href = newURLString;    // The page will redirect instantly
-            //                                                 // after this assignment
-            //         this.form.submit()
-            //
-            //     // });
-            // }
+{{--            // $(document).ready(function(){--}}
+{{--            //     $('#select-role').change(function(){--}}
+{{--            //         window.location.href = window.location.href + '&role=' + $(this).val();--}}
+{{--            //         this.form.submit()--}}
+{{--            //     });--}}
+{{--            // });--}}
+{{--            // function myfunction(){--}}
+{{--            //     // document.getElementById("select-role").change(function(){--}}
+{{--            //         var newURLString = window.location.href +--}}
+{{--            //             "&role=" + 'user';--}}
+{{--            //--}}
+{{--            //         window.location.href = newURLString;    // The page will redirect instantly--}}
+{{--            //                                                 // after this assignment--}}
+{{--            //         this.form.submit()--}}
+{{--            //--}}
+{{--            //     // });--}}
+{{--            // }--}}
 
 {{--        </script>--}}
 
