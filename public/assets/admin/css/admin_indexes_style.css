@@ -66,15 +66,14 @@ tbody{
 }
 
 .search-input {
-    /*border: thin solid rgba(255, 255, 255, 0.44);*/
-    /*border-radius: 0px 16px 16px 0px;*/
-    /*padding: 3px 24px 3px 3px;*/
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
-    border: thin outset ;
-    border-radius: 5px 5px 15px 15px;
     border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #e57777;
+    border-radius: 11px 11px 11px 11px;
 }
 .search-btn{
     background: #e57777;
@@ -95,23 +94,29 @@ tbody{
 
 /*select option role*/
 .select-role{
-    background: none;
-    border: thin outset ;
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 5px 5px 15px 15px;
+    border-radius: 11px 11px 11px 11px;
+    color: #727272;
+    border: solid #e57777;
+    border-left: none;
+    border-right: none;
     border-top: none;
+    box-shadow: black;
 }
 /*select option email*/
 .email-state{
-    background: none;
-    border: thin outset ;
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 5px 5px 15px 15px;
+    border-radius: 11px 11px 11px 11px;
+    color: #727272;
+    border: solid #e57777;
+    border-left: none;
+    border-right: none;
     border-top: none;
+    box-shadow: black;
 }
 
 /*drop down navbar*/
