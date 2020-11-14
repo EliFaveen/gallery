@@ -21,7 +21,7 @@
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{{--    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>--}}
 
     @yield('custom-css')
 
@@ -53,17 +53,17 @@
         </footer>
     </div>
 </div>
-<script src="{{url('assets/artist/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{url('assets/admin/js/jquery-3.3.1.min.js')}}"></script>
 <!-- https://jquery.com/download/ -->
-<script src="{{url('assets/artist/js/bootstrap.min.js')}}"></script>
+<script src="{{url('assets/admin/js/bootstrap.min.js')}}"></script>
 <!-- https://getbootstrap.com/ -->
-<script>
-    $(function () {
-        $('.tm-product-name').on('click', function () {
-            window.location.href = "edit-product.html";
-        });
-    })
-</script>
+{{--<script>--}}
+{{--    $(function () {--}}
+{{--        $('.tm-product-name').on('click', function () {--}}
+{{--            window.location.href = "edit-product.html";--}}
+{{--        });--}}
+{{--    })--}}
+{{--</script>--}}
 @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 

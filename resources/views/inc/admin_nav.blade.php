@@ -17,38 +17,18 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-{{--                    <li class="nav-item dropdown">--}}
-{{--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
-{{--                           aria-expanded="false">--}}
-{{--                            مدیریت صفحات--}}
-{{--                        </a>--}}
-{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
-{{--                            <a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a>--}}
-{{--                            <a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a>--}}
-{{--                            <a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a>--}}
-{{--                        </div>--}}
-{{--                    </li>--}}
-{{--                    <select class="" id="" name="">--}}
-{{--                        <option>--}}
-{{--                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
-{{--                               aria-expanded="false">--}}
-{{--                                مدیریت صفحات--}}
-{{--                            </a>--}}
-{{--                        </option>--}}
-{{--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
-{{--                            <option><a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a></option>--}}
-{{--                            <option><a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a></option>--}}
-{{--                            <option><a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a></option>--}}
-{{--                        </div>--}}
-{{--                    </select>--}}
-                    <div class="dropdown" style="float:right;">
-                        <button class="dropbtn">مدیریت صفحات</button>
-                        <div class="dropdown-content">
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            مدیریت صفحات
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a>
                             <a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a>
                             <a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a>
                         </div>
-                    </div>
+                    </li>
+
                     <li class="nav-item disabled">
                         <a class="nav-link" href="">فعالیت ها</a>
                     </li>
