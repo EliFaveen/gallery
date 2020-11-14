@@ -123,5 +123,34 @@ tbody{
 .dropdown-style-btn{
     background-color: white;
 }
-
+/*-------------------------------------------------category-image style */
+.post-img-parent{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.post-img {
+    /*display: block;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+th{
+    border: none !important;
+}
+td{
+    border: none !important;
+    vertical-align: middle !important;
+}
+.d-flex{
+    justify-content: center;
+}
+/*.flex-style-parent{*/
+/*    display: flex !important;*/
+/*    align-items: center !important;*/
+/*    justify-content: center !important;*/
+/*}*/
+/*.flex-style-parent td{*/
+/*    !*flex: 1;*!*/
+/*}*/
 
