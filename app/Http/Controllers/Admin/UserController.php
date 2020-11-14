@@ -18,24 +18,64 @@ class UserController extends Controller
     public function index()
     {
 //        todo: search
-        $users = User::query();
-        if ($keyword=\request('search')){
+//        $users = User::query();
+//        if ($keyword=\request('search')){
+//
+//            $users->where('email','LIKE',"%{$keyword}%")
+//                ->orWhere('username','LIKE', "%{$keyword}%")
+//                ->orWhere('phone','LIKE', "%{$keyword}%");
+//
+//        }
+//        if ($keyword=\request('role')){
+//
+//            $users->where('role','LIKE',"%{$keyword}%");
+//
+//        }
+//
+//        if ($keyword=\request('email_verified_at')){
+//            if(\request('email_verified_at') == 1)
+//            {
+//                $users->whereNotNull('email_verified_at');;
+//
+//            }elseif (\request('email_verified_at') == 2){
+//
+//                $users->whereNull('email_verified_at');
+//            }
+//            else{
+////                return null;
+//            }
+//
+//        }
+//        $users = $users->orderBy('created_at','desc')->paginate(8);
 
-            $users->where('email','LIKE',"%{$keyword}%")
-                ->orWhere('username','LIKE', "%{$keyword}%")
-                ->orWhere('phone','LIKE', "%{$keyword}%");
+//        todo:multisearch
+        $users=User::orderBy('created_at','desc');
 
+        if (\request()->filled('search-username')){
+            $users=$users->where('username','LIKE',"%".\request('search-username')."%");
         }
-        if ($keyword=\request('role')){
+        if (\request()->filled('search-email')){
+            $users=$users->where('email','LIKE',"%".\request('search-email')."%");
+        }
+        if (\request()->filled('search-phone')){
+            $users=$users->where('phone','LIKE',"%".\request('search-phone')."%");
+        }
+//        if (\request()->filled('search')){
+//
+//            $users->where('email','LIKE',"%".\request('search')."%")
+//                ->orWhere('username','LIKE', "%".\request('search')."%")
+//                ->orWhere('phone','LIKE', "%".\request('search')."%");
+//
+//        }
 
-            $users->where('role','LIKE',"%{$keyword}%");
 
+        if (\request()->filled('role')){
+            $users=$users->where('role','LIKE',"%".\request('role')."%");
         }
 
-        if ($keyword=\request('email_verified_at')){
-            if(\request('email_verified_at') == 1)
-            {
-                $users->whereNotNull('email_verified_at');;
+        if (\request()->filled('email_verified_at')){
+            if(\request('email_verified_at') == 1) {
+                $users->whereNotNull('email_verified_at');
 
             }elseif (\request('email_verified_at') == 2){
 
@@ -44,9 +84,9 @@ class UserController extends Controller
             else{
 //                return null;
             }
-
         }
-        $users = $users->orderBy('created_at','desc')->paginate(8);
+
+        $users=$users->paginate(8);
 
         return view('admin.pages.users.index',compact('users'));
     }

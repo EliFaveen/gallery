@@ -12,21 +12,42 @@
 
     <div class="col-xl-12 col-lg-12 tm-md-12 tm-sm-12 tm-col">
         <div class="bg-white tm-block h-100">
-            <div class="row">
-                <div class="col-md-2 col-sm-12">
-                    <h2 class="tm-block-title d-inline-block">جدول کاربران</h2>
 
-                </div>
-                {{--       TODO: add search instead         --}}
-                <div class="col-md-9 col-sm-12 search-align">
-                    <form action="">
+            {{--            form begins         --}}
+            <form action="">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12">
+                        <h2 class="tm-block-title d-inline-block">جدول کاربران</h2>
+
+                    </div>
+                    {{--       TODO: add search instead         --}}
+                    <div class="col-md-9 col-sm-12 search-align">
+
                         <div class="search-parent">
-                            <input class="search-input" type="text" name="search" placeholder="جستجو کنید" value="{{request('search')}}">
+{{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
+                            <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
+                            <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
+                            <input class="search-input" type="text" name="search-phone" placeholder="شماره تلفن را جستجو کنید" value="{{request('search-phone')}}">
+                            <select class="email-state" id="email-state" name="email_verified_at">
+                                <option value="">وضعیت ایمیل</option>
+                                <option value="1" {{request('email_verified_at') == 1 ? 'selected':""}}>فعال</option>
+                                <option value="2" {{request('email_verified_at') == 2 ? 'selected':""}}>غیر فعال</option>
+                            </select>
+                            <select class="select-role" id="select-role" name="role">
+                                <option value="">نقش</option>
+                                <option value="admin" {{request('role') == "admin" ? 'selected':""}}>admin</option>
+                                <option value="artist" {{request('role') == "artist" ? 'selected':""}}>artist</option>
+                                <option value="user" {{request('role') == "user" ? 'selected':""}}>user</option>
+                            </select>
                             <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
-                    </form>
+
+
+
+                    </div>
                 </div>
-            </div>
+            </form>
+            {{--            form ends           --}}
             <div class="table-responsive">
                 <table class="table table-hover table-striped tm-table-striped-even mt-3">
                     <thead>
@@ -35,26 +56,8 @@
                         <th scope="col">نام کاربری</th>
                         <th scope="col">شماره تماس</th>
                         <th scope="col">ایمیل</th>
-                        <th scope="col">
-                            <form action="">
-                                <select class="email-state" id="email-state" name="email_verified_at" onchange="this.form.submit()">
-                                    <option value="">وضعیت ایمیل</option>
-                                    <option value="1">فعال</option>
-                                    <option value="2">غیر فعال</option>
-                                </select>
-                            </form>
-                        </th>
-                        <th scope="col">
-                            <form action="">
-{{--                                    <select class="select-role" id="select-role" name="role" onchange="myfunction()">--}}
-                                    <select class="select-role" id="select-role" name="role" onchange="this.form.submit()">
-                                        <option value="">نقش</option>
-                                        <option value="admin">admin</option>
-                                        <option value="artist">artist</option>
-                                        <option value="user">user</option>
-                                    </select>
-                            </form>
-                        </th>
+                        <th scope="col">وضعیت ایمیل</th>
+                        <th scope="col">نقش</th>
                         <th scope="col">اقدامات</th>
 
                     </tr>
@@ -89,6 +92,7 @@
                     </tbody>
                 </table>
             </div>
+
 
             <div class="tm-table-mt tm-table-actions-row">
                 {{--       TODO: add soft delete(disable) instead         --}}

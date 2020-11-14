@@ -49,85 +49,69 @@ tbody{
 
 /*search*/
 .search-align{
-    direction: initial;
+    /*direction: initial;*/
 }
 .tm-search-icon:hover {
-    color: #9f1321;
+    /*color: #9f1321;*/
 }
 .tm-search-icon {
-    color: #6e6c6c;
+    color: #ffffff;
     cursor: pointer;
-    padding: 0 10px 0 10px;
+    padding: 10px 10px 10px 10px;
 }
 .search-parent{
     display: flex;
     flex-direction: row;
     height: 37px;
 }
-.search-btn{
-    background: none;
-    border: thin solid #00000070;
-    /*border-radius: 16px 0px 0px 16px;*/
-    cursor: pointer;
-}
+
 .search-input {
-    border: thin solid #00000070;
+    /*border: thin solid rgba(255, 255, 255, 0.44);*/
     /*border-radius: 0px 16px 16px 0px;*/
-    padding: 3px 24px 3px 3px;
+    /*padding: 3px 24px 3px 3px;*/
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: thin outset ;
+    border-radius: 5px 5px 15px 15px;
+    border-top: none;
+}
+.search-btn{
+    background: #e57777;
+    /* border: thin solid #00000070; */
+    border: white;
+    border-radius: 25%;
+    /* padding: 10px; */
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .search-btn:hover {
-    border: thin solid #9f1321;
-    background-color: lightgray;
+    /*border: thin solid #9f1321;*/
+    /*background-color: lightgray;*/
+    background: #f54545;
+
 }
 
 /*select option role*/
 .select-role{
     background: none;
-    border: none;
+    border: thin outset ;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px 5px 15px 15px;
+    border-top: none;
 }
 /*select option email*/
 .email-state{
     background: none;
-    border: none;
+    border: thin outset ;
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px 5px 15px 15px;
+    border-top: none;
 }
 
 
-/*drop down*/
-.dropbtn {
-    background-color: #fafafa;
-    /*color: white;*/
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color:lightgray;}
