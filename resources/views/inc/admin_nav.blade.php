@@ -32,7 +32,10 @@
                     <li class="nav-item disabled">
                         <a class="nav-link" href="">فعالیت ها</a>
                     </li>
-
+                    <li class="nav-item disabled">
+                    {{-- todo:restore from soft deletes --}}
+                        <a class="nav-link" href="">بازگردانی داده ها</a>
+                    </li>
 {{--                    <li class="nav-item dropdown">--}}
 {{--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"--}}
 {{--                           aria-expanded="false">--}}

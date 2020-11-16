@@ -122,5 +122,9 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //later--if i delete category then all the posts who have this category their category should delete
+//        todo: i dont know above
+        Category::find($id)->delete();
+        return redirect(route('admin.category.index'));
+
     }
 }
