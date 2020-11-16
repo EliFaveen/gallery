@@ -1,3 +1,5 @@
+{{--disable--}}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,10 +57,11 @@
             </ul>
         </div>
     @endif
+    <div class="row tm-mt-big">
 
-    @yield('content')
+        @yield('content')
 
-
+    </div>
     <footer class="row tm-mt-big">
         <div class="col-12 font-weight-light">
             {{--            <p class="d-inline-block tm-bg-black text-white py-2 px-4">--}}

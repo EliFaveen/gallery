@@ -1,4 +1,4 @@
-@extends('admin.layouts.create_layout')
+@extends('admin.layouts.index_layout')
 
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/admin/css/admin_indexes_style.css')}}">
@@ -7,7 +7,7 @@
 @section('title') صفحه ایجاد کاربران سایت @endsection
 
 @section('content')
-    <div class="row tm-mt-big">
+{{--    <div class="row tm-mt-big">--}}
         <div class="col-xl-12 col-lg-10 col-md-12 col-sm-12">
             <div class="bg-white tm-block">
                 <div class="row header-style">
@@ -151,5 +151,5 @@
                 </div>
             </div>
         </div>
-    </div>
+{{--    </div>--}}
 @endsection

@@ -145,12 +145,15 @@ td{
 .d-flex{
     justify-content: center;
 }
-/*.flex-style-parent{*/
-/*    display: flex !important;*/
-/*    align-items: center !important;*/
-/*    justify-content: center !important;*/
+/*category same height columns*/
+
+/*.flex-parent{*/
+/*    !*display: flex;*!*/
 /*}*/
-/*.flex-style-parent td{*/
-/*    !*flex: 1;*!*/
+
+/*.flex-child{*/
+/*    !*flex:1;*!*/
 /*}*/
+
+
 

@@ -1,8 +1,11 @@
-@extends('admin.layouts.create_layout')
+{{--disable--}}
+
+
+@extends('admin.layouts.index_layout')
 
 @section('content')
     <div class="row tm-mt-big">
-        <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+        <div class="col-xl-6 col-lg-10 col-md-12 col-sm-12">
             <div class="bg-white tm-block">
                 <div class="row">
                     <div class="col-12">

@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         //dd('hi');
-        $categories=\App\Category::orderBy('created_at','desc')->paginate(9);
+        $categories=\App\Category::orderBy('created_at','desc')->paginate(3);
         return view('admin.pages.category.index',compact('categories'));
     }
 
@@ -39,6 +39,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
+        $request->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'category_pic' => ['required', 'string'],
+        ]);
         $path=$request->file('category_pic')->store('categories_pic');
         $fixed_path='storage/'.$path;
 
@@ -72,7 +77,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //empty
+        $category=Category::find($id);
+        return view('admin.pages.category.edit',compact('category'));
     }
 
     /**
@@ -84,7 +90,27 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //empty
+        //dd($request->all());
+        $category=Category::find($id);
+        $request->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+//            'category_pic' => ['required', 'string'],
+        ]);
+
+        $category->title=$request->input('title');
+        $category->description=$request->input('description');
+
+        if ($request->has('category_pic')){
+            $path=$request->file('category_pic')->store('categories_pic');
+            $fixed_path='storage/'.$path;
+            $category->category_pic=$fixed_path;
+
+        }
+
+        $category->update();
+        return redirect(route('admin.category.index'));
+
     }
 
     /**
