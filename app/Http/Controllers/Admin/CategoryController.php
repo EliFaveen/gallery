@@ -16,7 +16,17 @@ class CategoryController extends Controller
     public function index()
     {
         //dd('hi');
-        $categories=\App\Category::orderBy('created_at','desc')->paginate(3);
+        //        todo:multisearch
+        $categories=\App\Category::orderBy('created_at','desc');
+
+        if (\request()->filled('search-title')){
+            $categories=$categories->where('title','LIKE',"%".\request('search-title')."%");
+        }
+
+
+        $categories=$categories->paginate(3);
+
+//        $categories=\App\Category::orderBy('created_at','desc')->paginate(3);
         return view('admin.pages.category.index',compact('categories'));
     }
 

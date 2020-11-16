@@ -100,7 +100,14 @@
                 <div class="row">
                     <div class="col-md-12">
 {{--                        todo: appends--}}
-                        {{$users->links()}}
+                        {{$users->appends([
+                            'search-username' =>request('search-username'),
+                            'search-email' =>request('search-email'),
+                            'search-phone' =>request('search-phone'),
+                            'email_verified_at' =>request('email_verified_at'),
+                            'role' =>request('role'),
+
+                            ])->links()}}
                     </div>
                 </div>
             </div>
