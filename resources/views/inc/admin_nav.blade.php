@@ -50,10 +50,17 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="{{route('login')}}">
-                            <i class="far fa-user mr-2 tm-logout-icon"></i>
-                            <span>خروج از حساب</span>
-                        </a>
+                        @if(auth()->check())
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <button class="btn btn-danger" style="border: none">
+                                    <i class="far fa-user mr-2 tm-logout-icon ml-1"></i>
+                                    <span>خروج از حساب</span>
+                                </button>
+                            </form>
+                        @else
+                            <a href="{{route('login')}}" class="btn btn-info">ورود</a>
+                        @endif
                     </li>
                 </ul>
             </div>
