@@ -51,42 +51,48 @@
                     <tbody>
                     @php($i=1)
                     @foreach($categories as $category)
-                        <tr >
-                            {{--                            <div class="flex-style-parent">--}}
-                            <td class="table-col-counter td-style">{{$i++}}.</td>
-                            <td >
-                                {{--                image--}}
-                                @if($category->category_pic)
 
-                                    {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
-                                    <div class="post-img-parent">
+                            <tr >
+                                {{--                            <div class="flex-style-parent">--}}
+                                <td class="table-col-counter td-style">{{$i++}}.</td>
+                                <td >
 
-                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                    {{--                image--}}
+                                    @if($category->category_pic)
+
+                                        {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
+                                        <div class="post-img-parent">
+                                            <a class="show-individually" href="{{route('admin.category.show',['category'=>$category->id])}}">
+                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                            </a>
+                                        </div>
+                                        {{--                </div>--}}
+                                    @else
+                                        <div class="post-img-parent">
+                                            <a class="show-individually" href="{{route('admin.category.show',['category'=>$category->id])}}">
+                                                <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                            </a>
+                                        </div>
+                                    @endif
+                                </td>
+                                <td >{{$category->title}}</td>
+                                {{--                                <td >{{Str::limit($category->description, $limit = 30, $end = '...') }}</td>--}}
+                                <td >{{$category->updated_at->format('d/m/Y')}}</td>
+
+                                <td>
+                                    <div class="d-flex">
+                                        <form method="post" action="{{route('admin.category.destroy' , ['category'=>$category->id])}}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="delete-btn" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt tm-trash-icon"></i></button>
+                                        </form>
+                                        <a href="{{route('admin.category.edit', ['category'=>$category->id])}}"><i class="fas fa-pen-alt tm-pen-icon"></i></a>
+
                                     </div>
-                                    {{--                </div>--}}
-                                @else
-                                    <div class="post-img-parent">
-                                        <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
-                                    </div>
-                                @endif
-                            </td>
-                            <td >{{$category->title}}</td>
-                            {{--                                <td >{{Str::limit($category->description, $limit = 30, $end = '...') }}</td>--}}
-                            <td >{{$category->updated_at->format('d/m/Y')}}</td>
-                            <td>
-                                <div class="d-flex">
-                                    <form method="post" action="{{route('admin.category.destroy' , ['category'=>$category->id])}}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="delete-btn" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt tm-trash-icon"></i></button>
-                                    </form>
-                                    <a href="{{route('admin.category.edit', ['category'=>$category->id])}}"><i class="fas fa-pen-alt tm-pen-icon"></i></a>
+                                </td>
 
-                                </div>
-                            </td>
-
-                            {{--                            </div>--}}
-                        </tr>
+                                {{--                            </div>--}}
+                            </tr>
                     @endforeach
 
                     </tbody>

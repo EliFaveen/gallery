@@ -76,7 +76,8 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //empty
+        $category=Category::find($id);
+        return view('admin.pages.category.show',compact('category'));
     }
 
     /**

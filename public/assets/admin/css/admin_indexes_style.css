@@ -155,5 +155,19 @@ td{
 /*    !*flex:1;*!*/
 /*}*/
 
+/*individual show*/
+.post-img-parent-large{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
 
+.individual-title{
+    text-align: center;
+    margin-top: 15px;
+}
 
+.individual-body{
+    text-align: justify;
+    margin: 55px 0px 55px 0px;
+}
