@@ -43,6 +43,12 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
     });
 Route::post('/like','Artist\PostController@postLikePost')->name('like')->middleware(['auth','isArtist','isUser']);
+//---------------------------------------------------------------------------------------------------croppie
+//Route::get('artist/post/create', 'Artist\PostController@create');
+//Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
+//Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@uploadCropImage']);
+
+
 
 Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','isAdmin'])
     ->group(function (){
@@ -62,10 +68,10 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
     });
 //Route::get('/artist/post', 'HomeController@index')->name('artist.post.index');//== artist.post.index
 
-//croppie
-//Route::get('artist/post/create', 'Artist\PostController@index');
-//Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
- Route::get('/secret',function (){
+
+
+
+Route::get('/secret',function (){
      Alert::success('hello');
     return view('welcome');
  });//i changed the middlewares here

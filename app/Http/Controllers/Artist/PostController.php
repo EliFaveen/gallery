@@ -112,6 +112,32 @@ class PostController extends Controller
         }
         return redirect(route('artist.post.index'));
     }
+    public function uploadCropImage(Request $request)
+    {
+        $image = $request->image;
+        //return view('artist.pages.posts.create');
+//        $image=$request->file('photos');
+
+        list($type, $image) = explode(';', $image);
+        list(, $image)      = explode(',', $image);
+        $image = base64_decode($image);
+        $image_name= time().'.png';
+        $path = public_path('upload/'.$image_name);
+
+        file_put_contents($path, $image);
+        return response()->json(['status'=>true]);
+
+//        $image = $request->image;
+//
+//        list($type, $image) = explode(';', $image);
+//        list(, $image)      = explode(',', $image);
+//        $image = base64_decode($image);
+//        $image_name= time().'.png';
+//        $path = public_path('upload/'.$image_name);
+//
+//        file_put_contents($path, $image);
+//        return response()->json(['status'=>true]);
+    }
 
     /**
      * Display the specified resource.

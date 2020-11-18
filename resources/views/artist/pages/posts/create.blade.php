@@ -22,12 +22,13 @@
         @csrf
 {{--        todo:upload photo--style img--validation error require--crop--}}
         {{---------------------------------------------------------------------------------------------image row--}}
-        <div class="row">
-            <div class="col-md-12">
-                <input class="form-control" name="photos[]" id="photos" type="file" multiple>
-                <br>
-            </div>
-        </div>
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                <input class="form-control" name="photos[]" id="photos" type="file" multiple>--}}
+{{--                <br>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        ----------------------------------------------------------------------------------------------------croppie--}}
 {{--        <div class="container">--}}
 {{--            <div class="panel panel-info">--}}
 {{--                <div class="panel-heading">Laravel PHP - Cropping and uploading an image with Croppie plugin using jQuery Ajax</div>--}}
@@ -184,7 +185,7 @@
         <button type="submit" class="mt-2 btn btn-success">پست جدید</button>
     </form>
 
-{{-------------------------------------------------script--------------------------------------------------}}
+{{-------------------------------------------------script croppie--------------------------------------------------}}
 
 {{--    <script type="text/javascript">--}}
 
@@ -229,7 +230,7 @@
 {{--                size: 'viewport'--}}
 {{--            }).then(function (img) {--}}
 {{--                $.ajax({--}}
-{{--                    url: "{{route('artist.post.create')}}",--}}
+{{--                    url: "{{route('croppie.upload-image')}}",--}}
 {{--                    type: "POST",--}}
 {{--                    data: {"image":img},--}}
 {{--                    success: function (data) {--}}
@@ -241,7 +242,7 @@
 {{--        });--}}
 
 
-{{--    </script>--}}
+    </script>
 @endsection
 
 @section('custom-js')
