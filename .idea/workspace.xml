@@ -8,17 +8,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/owl_carousel/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/owl_carousel/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/owl_carousel/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/js/owl_carousel/owl.carousel.min.js" afterDir="false" />
+    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="adding owl carousel for artist/posts/create.blade.php part1(problems: check boxing and margin)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/create_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/create_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,14 +254,7 @@
       <workItem from="1605558650778" duration="1938000" />
       <workItem from="1605598709279" duration="7077000" />
       <workItem from="1605631661364" duration="2670000" />
-      <workItem from="1605682701814" duration="5354000" />
-    </task>
-    <task id="LOCAL-00009" summary="add errors to layout  artist.blade.php">
-      <created>1601715355996</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1601715355996</updated>
+      <workItem from="1605682701814" duration="6677000" />
     </task>
     <task id="LOCAL-00010" summary="layouting /artist">
       <created>1601715654418</created>
@@ -607,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605605232628</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="adding owl carousel for artist/posts/create.blade.php part1(problems: check boxing and margin)">
+      <created>1605688775164</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1605688775164</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +646,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="orginazing layouting mostly for artist" />
     <MESSAGE value="tried to use icon for like-not successful- so much comments and rollback to text" />
     <MESSAGE value="remove comments and going to start getting number of likes then hashtags" />
     <MESSAGE value="a little changes in like to show number of likes but it doesn't work" />
@@ -679,7 +670,8 @@
     <MESSAGE value="done admin category search" />
     <MESSAGE value="done admin category show" />
     <MESSAGE value="logout admin_nav.blade.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="logout admin_nav.blade.php" />
+    <MESSAGE value="adding owl carousel for artist/posts/create.blade.php part1(problems: check boxing and margin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding owl carousel for artist/posts/create.blade.php part1(problems: check boxing and margin)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -690,14 +682,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605517030237" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1605605231120">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1605689145832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605605231120" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605688662349">
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605689145832" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605689656611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605688662349" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605689656611" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605258176440">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

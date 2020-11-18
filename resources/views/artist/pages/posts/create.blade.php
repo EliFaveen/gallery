@@ -82,19 +82,26 @@
 
                             <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
                             <label for="Checkbox{{$category->id}}">
-                                @if($category->category_pic)
-
-{{--                                    <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
                                     <div class="post-img-parent">
-                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
                                     </div>
-{{--                                    </div>--}}
-                                @else
-                                    <div class="post-img-parent">
-                                            <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
-                                    </div>
-                                @endif
                             </label>
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
+        </div>
+{{--        category with title --}}
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    {{--            todo: move DB codes to model--}}
+                    @foreach(\App\Category::get() as $category)
+                        <li>
+
+                            <input class="image-ckeckbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                            <label for="Checkbox{{$category->id}}">{{$category->title}}</label>
                         </li>
                     @endforeach
 
@@ -117,30 +124,24 @@
                     <div class="owl-carousel owl-theme">
 
                         @foreach(\App\Category::get() as $category)
-                            <ul>
-                            <li>
-                        <div class="item">
-                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                            <label for="Checkbox{{$category->id}}">
-                                @if($category->category_pic)
 
-                                    <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">
-                                        <div class="img-father">
-                                            <img  class="image  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
-                                        </div>
-                                    </div>
-                                @else
-                                    <div class="img-father">
-                                        <img  class="image pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
-                                    </div>
-                                @endif
-                            </label>
-                            <div class="overlay">
-                                <div class="text-header">{{$category->title}}</div>
-                            </div>
-                        </div>
-                            </li>
+                        <div class="item">
+                            <ul>
+                                <li>
+                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                                    <label for="Checkbox{{$category->id}}">
+                                            <div class="post-img-parent">
+                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                            </div>
+                                            <div class="overlay">
+                                                <div class="text-header">{{$category->title}}</div>
+                                            </div>
+                                    </label>
+                                </li>
                             </ul>
+
+                        </div>
+
                         @endforeach
 
 {{--                        <div class="item">--}}
