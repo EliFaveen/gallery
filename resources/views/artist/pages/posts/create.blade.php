@@ -4,21 +4,24 @@
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/artist/css/create_style.css')}}">
     {{--croppie head links--}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">--}}
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>--}}
+{{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
     {{--croppie head links--}}
+    <link rel="stylesheet" href="{{url('assets/artist/css/owl_carousel/owl.carousel.min.css')}}"><!--owl.carousel.min.css-->
+    <link rel="stylesheet" href="{{url('assets/artist/css/owl_carousel/owl.theme.default.min.css')}}"><!--owl.theme.default.min.css-->
 @endsection
 
-@section('title') create post page @endsection
+@section('title') صفحه اضافه کردن پست @endsection
 
 @section('content')
 
     <form class="" method="post" action="{{route('artist.post.store')}}" enctype='multipart/form-data' >
         @csrf
 {{--        todo:upload photo--style img--validation error require--crop--}}
+        {{---------------------------------------------------------------------------------------------image row--}}
         <div class="row">
             <div class="col-md-12">
                 <input class="form-control" name="photos[]" id="photos" type="file" multiple>
@@ -51,6 +54,7 @@
 {{--        </div>--}}
 
 {{--        todo:post title--}}
+        {{---------------------------------------------------------------------------------------------title row--}}
         <div class="row">
             <div class="col-md-12">
                 <input class="form-control" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟">
@@ -59,6 +63,7 @@
         </div>
 
 {{--        todo:post description--}}
+        {{---------------------------------------------------------------------------------------------description row--}}
         <div class="row">
             <div class="col-md-12">
                 <textarea class="form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس"></textarea>
@@ -66,38 +71,99 @@
             </div>
         </div>
 
+        {{---------------------------------------------------------------------------------------------category row--}}
+{{--category basic--}}
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+{{--                    todo: move DB codes to model--}}
+                    @foreach(\App\Category::get() as $category)
+                        <li>
+
+                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                            <label for="Checkbox{{$category->id}}">
+                                @if($category->category_pic)
+
+{{--                                    <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
+                                    <div class="post-img-parent">
+                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                    </div>
+{{--                                    </div>--}}
+                                @else
+                                    <div class="post-img-parent">
+                                            <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                    </div>
+                                @endif
+                            </label>
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
+        </div>
+{{--category pro--}}
+
+        <section class="section4 p-0">
+            <div class="container-fluid">
+                <div class="row row4-1">
+                    <div class="col">
+                        <div class="text-painting-style">
+                            <p>سبک های نقاشی</p>
+                        </div>
+                    </div>
+                </div><!--end row4-1-->
+
+                <div class="row row4-2 flex-container">
+                    <div class="owl-carousel owl-theme">
+
+                        @foreach(\App\Category::get() as $category)
+                            <ul>
+                            <li>
+                        <div class="item">
+                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                            <label for="Checkbox{{$category->id}}">
+                                @if($category->category_pic)
+
+                                    <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">
+                                        <div class="img-father">
+                                            <img  class="image  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="img-father">
+                                        <img  class="image pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                    </div>
+                                @endif
+                            </label>
+                            <div class="overlay">
+                                <div class="text-header">{{$category->title}}</div>
+                            </div>
+                        </div>
+                            </li>
+                            </ul>
+                        @endforeach
+
+{{--                        <div class="item">--}}
+{{--                            <div class="img-father">--}}
+{{--                                <img src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="Avatar" class="image pl-0 pr-0 mr-0 ml-0">--}}
+{{--                            </div>--}}
+{{--                            <div class="overlay">--}}
+{{--                                <div class="text-header">از نزدیک ببینید</div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->
+
+                    <!--------------------------------------------------------------------------------------------------------سبک های نقاشی-->
+                </div><!--end row4-2-->
+            </div><!--end container4-->
+        </section><!--end section4-->
 
 
-{{--        کافی برای دفعه اول--}}
-{{--        todo: categories--foreach--}}
-{{--        <div class="form-group">--}}
-{{--            <select class="form-control" name="categories" id="categories">--}}
-{{--                <option value="">دسته بندی</option>--}}
-{{--                <option value="id">1</option>--}}
-{{--                <option value="id">2</option>--}}
-{{--                <option value="id">3</option>--}}
-{{--                <option value="id">4</option>--}}
-{{--            </select>--}}
-{{--        </div>--}}
 
-<div class="row">
-    <div class="col-md-12">
-        <ul>
-{{--            todo: move DB codes to model--}}
-            @foreach(\App\Category::get() as $category)
-                <li>
-
-                    <input class="image-ckeckbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                    <label for="Checkbox{{$category->id}}">{{$category->title}}</label>
-                </li>
-            @endforeach
-
-        </ul>
-    </div>
-</div>
-
-
-{{--                todo:hashtag--good hashtags--}}
+        {{---------------------------------------------------------------------------------------------hashtags row--}}
+        {{--                todo:hashtag--good hashtags--}}
 
 
 
@@ -178,9 +244,13 @@
 @endsection
 
 @section('custom-js')
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+{{--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>--}}
+
+    <script src="{{url('assets/artist/js/owl_carousel/jquery.min.js')}}"></script><!--jquery.min-->
+    <script src="{{url('assets/artist/js/owl_carousel/owl.carousel.min.js')}}"></script><!--owl.carousel.min-->
 
     <script src="{{url('assets/artist/js/create_script.js')}}"></script><!--custom-->
 @endsection

@@ -12,7 +12,7 @@
     @yield('custom-css')
 
 
-    <title>my title-@yield('title')</title>
+    <title>@yield('title')</title>
 </head>
 <body>
 

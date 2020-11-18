@@ -32,7 +32,7 @@ li {
 /*input[type="checkbox"][id^="myCheckbox"] {*/
 /*    display: none;*/
 /*}*/
-.image-ckeckbox{
+.image-checkbox{
     display: none;
 }
 
@@ -85,6 +85,87 @@ label img {
     /* box-shadow: 0 0 5px #333; */
     z-index: -1;
 }
+
+/*-------------------------------------------------category-image style */
+.post-img-parent{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.post-img {
+    /*display: block;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ section 4 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.section4 .row4-1 .col{
+    text-align: center;
+    font-family:Leyla;
+
+}
+.text-painting-style{
+    padding-top: 34px;
+}
+.section4 .row4-1 p{
+    font-size: 37px;/*not working...*/
+    margin:0;
+    color: #66826a;
+}
+.section4 .owl-theme{
+    padding-top: 10px;
+    /*background-color: green;*/
+    direction: ltr;
+    text-align: -webkit-center; /*love you*/
+
+}
+.owl-item{
+    margin: 0 !important;
+}
+.section4 .owl-theme .item{
+    /*background-color: greenyellow;*/
+
+}
+.section4 .img-father{
+    width: 160px;
+    height: 160px;
+}
+.section4 .image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*.section4 .overlay {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}*/
+
+.section4 .item:hover .overlay {
+    /*height: 100%;*/
+}
+.section4 .text-header {
+    color: #66826a;
+    /* border-top: 2px solid #ffc336; */
+    padding-top: 9px;
+    /* font-size: 20px;
+    /*position: absolute;
+    top: 26%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;*/
+}
 /*-----------------------------------for hashtags-----------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400');
 
@@ -92,10 +173,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
     font-family: 'Work Sans', sans-serif;
-    background-color: #1a284f;
+    /*background-color: #1a284f;*/
     color: white;
 }
 

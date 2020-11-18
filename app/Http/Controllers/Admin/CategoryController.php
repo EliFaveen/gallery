@@ -52,7 +52,7 @@ class CategoryController extends Controller
         $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'category_pic' => ['required', 'string'],
+            'category_pic' => ['required'],
         ]);
         $path=$request->file('category_pic')->store('categories_pic');
         $fixed_path='storage/'.$path;

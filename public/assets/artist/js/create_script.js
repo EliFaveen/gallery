@@ -1,5 +1,26 @@
 
-// create.blade.php-----------------------------------------------------------------for hashtags this intrupt my like system Todo:lets seprate scripts
+// create.blade.php-----------------------------------------------------------------for owl carousel
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    center:true,
+    autoplay:true,
+    autoplayTimeout:4000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:7
+        }
+    }
+})
+
+// create.blade.php-----------------------------------------------------------------for hashtags this intrupt my like system
 let input, hashtagArray, container, t=0;
 
 input = document.querySelector('#hashtags');

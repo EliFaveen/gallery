@@ -53,7 +53,8 @@ class PostController extends Controller
         $post=Post::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
-            'user_id'=>1,//todo: take it from auth()
+//            'user_id'=>1,//todo: take it from auth()
+            'user_id'=>\auth()->user()->id,
 
         ]);
 
@@ -90,21 +91,25 @@ class PostController extends Controller
 
 
 //        //todo:add photo to category
-//        foreach ($request->input('categories') as $category)
-//        {
-//            CategoryPost::create([
-//               'post_id'=>$post->id,
-//               'category_id'=>$category,
-//            ]);
-//        }
-//        foreach ($request->input('hashtags') as $hashtag)
-//        {
-//            Hashtag::create([
-//                'post_id'=>$post->id,
-//                'hashtag'=>$hashtag,
-//            ]);
-//        }
+        if ($request->has('categories')){
+            foreach ($request->input('categories') as $category)
+            {
+                CategoryPost::create([
+                    'post_id'=>$post->id,
+                    'category_id'=>$category,
+                ]);
+            }
+        }
+        if ($request->has('hashtags')){
+            foreach ($request->input('hashtags') as $hashtag)
+            {
+                Hashtag::create([
+                    'post_id'=>$post->id,
+                    'hashtag'=>$hashtag,
+                ]);
+            }
 
+        }
         return redirect(route('artist.post.index'));
     }
 
