@@ -10,6 +10,7 @@ use App\Post;
 use App\Like; //i added this
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
 {
@@ -49,7 +50,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-
+//        $fixed_path=Session::get('fixed_path');
+//        dd($fixed_path);
         $post=Post::create([
             'title'=>$request->input('title'),
             'description'=>$request->input('description'),
@@ -111,32 +113,6 @@ class PostController extends Controller
 
         }
         return redirect(route('artist.post.index'));
-    }
-    public function uploadCropImage(Request $request)
-    {
-        $image = $request->image;
-        //return view('artist.pages.posts.create');
-//        $image=$request->file('photos');
-
-        list($type, $image) = explode(';', $image);
-        list(, $image)      = explode(',', $image);
-        $image = base64_decode($image);
-        $image_name= time().'.png';
-        $path = public_path('upload/'.$image_name);
-
-        file_put_contents($path, $image);
-        return response()->json(['status'=>true]);
-
-//        $image = $request->image;
-//
-//        list($type, $image) = explode(';', $image);
-//        list(, $image)      = explode(',', $image);
-//        $image = base64_decode($image);
-//        $image_name= time().'.png';
-//        $path = public_path('upload/'.$image_name);
-//
-//        file_put_contents($path, $image);
-//        return response()->json(['status'=>true]);
     }
 
     /**

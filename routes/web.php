@@ -47,7 +47,8 @@ Route::post('/like','Artist\PostController@postLikePost')->name('like')->middlew
 //Route::get('artist/post/create', 'Artist\PostController@create');
 //Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
 //Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@uploadCropImage']);
-
+Route::get('crop-image-before-upload-using-croppie', 'Artist\CropImageController@index')->name('artist.image-croppie');
+Route::post('crop-image-before-upload-using-croppie', ['as'=>'croppie.upload-image','uses'=>'Artist\CropImageController@uploadCropImage']);
 
 
 Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','isAdmin'])
