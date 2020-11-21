@@ -67,27 +67,29 @@ class PostController extends Controller
             {
                 $path=$photo->store('postphotos');
                 $fixed_path='storage/'.$path;
-
                 Photo::create([
                     'img_url'=>$fixed_path,
                     'post_id'=>$post->id,
                 ]);
+
+                //        ---------------------------------------------------croppie
+//                $image = $request->image;
+//
+////                list($type, $image) = explode(';', $image);
+////                list(, $image)      = explode(',', $image);
+////                $image = base64_decode($image);
+//                $image_name= time().'.png';
+//                $path = public_path('storage/postphotos/'.$image_name);
+//                file_put_contents($path, $image);
+//                Photo::create([
+//                    'img_url'=>'storage/postphotos/'.$image_name,
+//                    'post_id'=>$post->id,
+//                ]);
+//
+////                return response()->json(['status'=>true]);
+//
             }
         }
-
-//        ---------------------------------------------------croppie
-//        $image = $request->image;
-//        //return view('artist.pages.posts.create');
-////        $image=$request->file('photos');
-//
-//        list($type, $image) = explode(';', $image);
-//        list(, $image)      = explode(',', $image);
-//        $image = base64_decode($image);
-//        $image_name= time().'.png';
-//        $path = public_path('upload/'.$image_name);
-//
-//        file_put_contents($path, $image);
-//        return response()->json(['status'=>true]);
 
 
 
@@ -172,12 +174,15 @@ class PostController extends Controller
 
         if (!$post){
             //if i didnt find the post noting happends
-            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
-            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
-            return response()->json([
-                'like_count' => $like_count,
-//                'dislike_count' =>$dislike_count
-            ]);
+            return null;
+
+//            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
+//            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
+//            return response()->json([
+//                'like_count' => $like_count,
+////                'dislike_count' =>$dislike_count
+//            ]);
+
         }
 
         $user= Auth::user();
@@ -192,12 +197,13 @@ class PostController extends Controller
             if ($already_like == $is_like){
                 //undo the liking
                 $like->delete();
-                $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
-                $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
-                return response()->json([
-                    'like_count' => $like_count,
-//                    'dislike_count' =>$dislike_count
-                ]);
+//                $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
+//                $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
+//                return response()->json([
+//                    'like_count' => $like_count,
+////                    'dislike_count' =>$dislike_count
+//                ]);
+                return null;
             }
         }else{
             $like = new like();
@@ -208,20 +214,20 @@ class PostController extends Controller
         $like->post_id = $post->id;
         if ($update){
             $like->update();
-            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
-            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
+//            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
+//            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
 
         }else{
             $like->save();
-            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
-            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
+//            $like_count=\App\Like::where('post_id',$post_id)->where('like',1)->count();
+//            $dislike_count=\App\Like::where('post_id',$post_id)->where('like',0)->count();
 
         }
-        return response()->json([
-            'like_count' => $like_count,
-//            'dislike_count' =>$dislike_count
-        ]);
-        //return null //it's better to show a message but it's ok like this
+//        return response()->json([
+////            'like_count' => $like_count,
+////            'dislike_count' =>$dislike_count
+//        ]);
+        return null; //it's better to show a message but it's ok like this
 
 
     }

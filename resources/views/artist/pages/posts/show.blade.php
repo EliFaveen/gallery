@@ -36,7 +36,7 @@
 
 {{--                  test 3              --}}
                                 <div class="interaction">
-                                    <a href="#" class="like heart">
+                                    <a id="likeBtn" href="#" class="like heart ">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1)
 
@@ -53,9 +53,9 @@
 {{--                                            <i class="fas fa-heart custom-like"></i>--}}
                                                     Like
                                         @endif
-                                            <div id="numberOfLikes"></div>
+{{--                                            <div id="numberOfLikes"></div>--}}
                                     </a>
-                                    <a href="#" class="like broken-heart">
+                                    <a id="dislikeBtn" href="#" class="like broken-heart">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0)
 
@@ -73,7 +73,7 @@
 {{--                                            <i class="fas fa-heart-broken custom-dislike"></i>--}}
                                                     Dislike
                                         @endif
-                                            <div id="numberOfDislikes"></div>
+{{--                                            <div id="numberOfDislikes"></div>--}}
                                     </a>
                                 </div>
 
