@@ -62,34 +62,17 @@ class PostController extends Controller
 
 
 //        simple multiple photo upload
-        if ($request->file('photos')){
-            foreach ($request->file('photos') as $photo)
-            {
-                $path=$photo->store('postphotos');
-                $fixed_path='storage/'.$path;
-                Photo::create([
-                    'img_url'=>$fixed_path,
-                    'post_id'=>$post->id,
-                ]);
-
-                //        ---------------------------------------------------croppie
-//                $image = $request->image;
-//
-////                list($type, $image) = explode(';', $image);
-////                list(, $image)      = explode(',', $image);
-////                $image = base64_decode($image);
-//                $image_name= time().'.png';
-//                $path = public_path('storage/postphotos/'.$image_name);
-//                file_put_contents($path, $image);
+//        if ($request->file('photos')){
+//            foreach ($request->file('photos') as $photo)
+//            {
+//                $path=$photo->store('postphotos');
+//                $fixed_path='storage/'.$path;
 //                Photo::create([
-//                    'img_url'=>'storage/postphotos/'.$image_name,
+//                    'img_url'=>$fixed_path,
 //                    'post_id'=>$post->id,
 //                ]);
-//
-////                return response()->json(['status'=>true]);
-//
-            }
-        }
+//            }
+//        }
 
 
 
@@ -114,7 +97,7 @@ class PostController extends Controller
             }
 
         }
-        return redirect(route('artist.post.index'));
+        return redirect(route('image_cropper',['post_id'=>$post->id]));
     }
 
     /**

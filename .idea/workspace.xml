@@ -9,13 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/ImageCropperController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/5fba2af98f75e.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/CropImageController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/show_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/show_script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CropImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1605728482.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1605728625.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1605728677.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/upload/1605728828.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/croppie.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/croppie.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +159,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/artist/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cropImageUpload" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -262,13 +269,10 @@
       <workItem from="1605717057740" duration="5050000" />
       <workItem from="1605768078406" duration="8870000" />
       <workItem from="1605871033658" duration="15472000" />
-    </task>
-    <task id="LOCAL-00013" summary="add hashtag to db basic_work with nazgol part 1_broblem on delete js input">
-      <created>1602145723480</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1602145723480</updated>
+      <workItem from="1605942861507" duration="1725000" />
+      <workItem from="1606028524362" duration="2863000" />
+      <workItem from="1606031814315" duration="5600000" />
+      <workItem from="1606288793255" duration="6846000" />
     </task>
     <task id="LOCAL-00014" summary="croppie test(add upload directory to public)">
       <created>1602262637445</created>
@@ -606,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605779299621</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="like js with mahsa(just view is working not database)">
+      <created>1605942942046</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1605942942047</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +664,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="redesign register.blade.php and locale='fa'" />
     <MESSAGE value="redesign login.blade.php" />
     <MESSAGE value="password reset compeleted with mailtrap" />
     <MESSAGE value="confirm password example-&gt;i can use it for admin later" />
@@ -678,29 +688,30 @@
     <MESSAGE value="working on owlcarousel" />
     <MESSAGE value="unsuccessful try for croppie image plugin" />
     <MESSAGE value="added croppie image in diffrent controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added croppie image in diffrent controller" />
+    <MESSAGE value="like js with mahsa(just view is working not database)" />
+    <option name="LAST_COMMIT_MESSAGE" value="like js with mahsa(just view is working not database)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1604164354170" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605778394594">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606033983975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605778394594" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1605779298293">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606033983975" />
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1605942940291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605779298293" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605942940291" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605888303094" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605258176440">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606032224262">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605258176440" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606032224262" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605782006626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -713,9 +724,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605882971074">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606293173065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605882971074" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606293173065" />
   </component>
 </project>

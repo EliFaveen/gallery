@@ -43,13 +43,9 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
     });
 Route::post('/like','Artist\PostController@postLikePost')->name('like')->middleware(['auth','isArtist','isUser']);
-//---------------------------------------------------------------------------------------------------croppie
-//Route::get('artist/post/create', 'Artist\PostController@create');
-//Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@create']);
-//Route::post('artist/post/create', ['as'=>'croppie.upload-image','uses'=>'Artist\PostController@uploadCropImage']);
-Route::get('crop-image-before-upload-using-croppie', 'Artist\CropImageController@index')->name('artist.image-croppie');
-Route::post('crop-image-before-upload-using-croppie', ['as'=>'croppie.upload-image','uses'=>'Artist\CropImageController@uploadCropImage']);
-
+//---------------------------------------------------------------------------------------------------cropper
+Route::get('image-cropper/{post_id}','Artist\ImageCropperController@index')->name('image_cropper');
+Route::post('image-cropper/upload/{post_id}','Artist\ImageCropperController@upload');
 
 Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','isAdmin'])
     ->group(function (){

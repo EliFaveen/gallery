@@ -29,31 +29,6 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--        ----------------------------------------------------------------------------------------------------croppie--}}
-        <div class="container">
-            <div class="panel panel-info">
-                <div class="panel-heading">Laravel PHP - Cropping and uploading an image with Croppie plugin using jQuery Ajax</div>
-                <div class="panel-body">
-
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <div id="upload-demo"></div>
-                        </div>
-                        <div class="col-md-4" style="padding:5%;">
-                            <strong>Select image to crop:</strong>
-                            <input name="photos[]" type="file" id="image">
-
-{{--                            <button class="btn btn-primary btn-block upload-image" id="upload-image" style="margin-top:2%">Upload Image</button>--}}
-                        </div>
-
-{{--                        <div class="col-md-4">--}}
-{{--                            <div id="preview-crop-image" style="background:#9d9d9d;width:300px;padding:50px 50px;height:300px;"></div>--}}
-{{--                        </div>--}}
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
 
 
 
@@ -98,56 +73,56 @@
             </div>
         </div>
 {{--        category with title --}}
-        <div class="row">
-            <div class="col-md-12">
-                <ul>
-                    {{--            todo: move DB codes to model--}}
-                    @foreach(\App\Category::get() as $category)
-                        <li>
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                <ul>--}}
+{{--                    --}}{{--            todo: move DB codes to model--}}
+{{--                    @foreach(\App\Category::get() as $category)--}}
+{{--                        <li>--}}
 
-                            <input class="image-ckeckbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                            <label for="Checkbox{{$category->id}}">{{$category->title}}</label>
-                        </li>
-                    @endforeach
+{{--                            <input class="image-ckeckbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
+{{--                            <label for="Checkbox{{$category->id}}">{{$category->title}}</label>--}}
+{{--                        </li>--}}
+{{--                    @endforeach--}}
 
-                </ul>
-            </div>
-        </div>
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 {{--category pro--}}
 
-        <section class="section4 p-0">
-            <div class="container-fluid">
-                <div class="row row4-1">
-                    <div class="col">
-                        <div class="text-painting-style">
-                            <p>سبک های نقاشی</p>
-                        </div>
-                    </div>
-                </div><!--end row4-1-->
+{{--        <section class="section4 p-0">--}}
+{{--            <div class="container-fluid">--}}
+{{--                <div class="row row4-1">--}}
+{{--                    <div class="col">--}}
+{{--                        <div class="text-painting-style">--}}
+{{--                            <p>سبک های نقاشی</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div><!--end row4-1-->--}}
 
-                <div class="row row4-2 flex-container">
-                    <div class="owl-carousel owl-theme">
+{{--                <div class="row row4-2 flex-container">--}}
+{{--                    <div class="owl-carousel owl-theme">--}}
 
-                        @foreach(\App\Category::get() as $category)
+{{--                        @foreach(\App\Category::get() as $category)--}}
 
-                        <div class="item">
-                            <ul>
-                                <li>
-                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                                    <label for="Checkbox{{$category->id}}">
-                                            <div class="post-img-parent">
-                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
-                                            </div>
-                                            <div class="overlay">
-                                                <div class="text-header">{{$category->title}}</div>
-                                            </div>
-                                    </label>
-                                </li>
-                            </ul>
+{{--                        <div class="item">--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
+{{--                                    <label for="Checkbox{{$category->id}}">--}}
+{{--                                            <div class="post-img-parent">--}}
+{{--                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">--}}
+{{--                                            </div>--}}
+{{--                                            <div class="overlay">--}}
+{{--                                                <div class="text-header">{{$category->title}}</div>--}}
+{{--                                            </div>--}}
+{{--                                    </label>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
 
-                        </div>
+{{--                        </div>--}}
 
-                        @endforeach
+{{--                        @endforeach--}}
 
 {{--                        <div class="item">--}}
 {{--                            <div class="img-father">--}}
@@ -158,13 +133,14 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 
-                    </div>
-                    <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->
+{{--                    </div>--}}
+{{--                    <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->--}}
 
-                    <!--------------------------------------------------------------------------------------------------------سبک های نقاشی-->
-                </div><!--end row4-2-->
-            </div><!--end container4-->
-        </section><!--end section4-->
+{{--                    <!--------------------------------------------------------------------------------------------------------سبک های نقاشی-->--}}
+{{--                </div><!--end row4-2-->--}}
+{{--            </div><!--end container4-->--}}
+{{--        </section>--}}
+        <!--end section4-->
 
 
 
@@ -189,68 +165,6 @@
         <button type="submit" class="mt-2 btn btn-success">پست جدید</button>
     </form>
 
-{{-------------------------------------------------script croppie--------------------------------------------------}}
-    <script type="text/javascript">
-
-        // $.ajaxSetup({
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //     }
-        // });
-
-
-        var resize = $('#upload-demo').croppie({
-            // enableExif: true,
-            // enableOrientation: true,
-            viewport: { // Default { width: 100, height: 100, type: 'square' }
-                width: 200,
-                height: 200,
-                type: 'square' //square
-            },
-            boundary: {
-                width: 300,
-                height: 300
-            }
-        });
-
-
-        $('#image').on('change', function () {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                resize.croppie('bind',{
-                    url: e.target.result
-                }).then(function(){
-                    console.log('jQuery bind complete');
-                });
-            }
-            reader.readAsDataURL(this.files[0]);
-        });
-
-
-        {{--$('.upload-image').on('click', function (ev) {--}}
-        {{--    resize.croppie('result', {--}}
-        {{--        type: 'canvas',--}}
-        {{--        size: 'viewport'--}}
-        {{--    }).then(function (img) {--}}
-        {{--        $.ajax({--}}
-        {{--            url: "{{route('croppie.upload-image')}}",--}}
-        {{--            type: "POST",--}}
-        {{--            data: {"image":img},--}}
-        {{--            success: function (data) {--}}
-        {{--                html = '<img src="' + img + '" />';--}}
-        {{--                $("#preview-crop-image").html(html);--}}
-        {{--            }--}}
-        {{--        });--}}
-        {{--    });--}}
-        {{--});--}}
-        // $(document).ready(function() {
-        //     $('#upload-image').on('click', function() {
-        //         $('#image').val('');
-        //     });
-        // });
-
-
-    </script>
 
 @endsection
 
@@ -264,4 +178,6 @@
     <script src="{{url('assets/artist/js/owl_carousel/owl.carousel.min.js')}}"></script><!--owl.carousel.min-->
 
     <script src="{{url('assets/artist/js/create_script.js')}}"></script><!--custom-->
+
+
 @endsection
