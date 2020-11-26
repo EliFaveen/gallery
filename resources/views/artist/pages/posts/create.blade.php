@@ -18,75 +18,59 @@
 
 @section('content')
 
+<div class="form-parent">
     <form class="" method="post" action="{{route('artist.post.store')}}" enctype='multipart/form-data' >
         @csrf
-{{--        todo:upload photo--style img--validation error require--crop--}}
+        {{--        todo:upload photo--style img--validation error require--crop--}}
         {{---------------------------------------------------------------------------------------------image row--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <input class="form-control" name="photos[]" id="photos" type="file" multiple>--}}
-{{--                <br>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+        {{--        <div class="row">--}}
+        {{--            <div class="col-md-12">--}}
+        {{--                <input class="form-control" name="photos[]" id="photos" type="file" multiple>--}}
+        {{--                <br>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
 
-{{--        todo:post title--}}
+        {{--        todo:post title--}}
         {{---------------------------------------------------------------------------------------------title row--}}
-        <div class="row">
-            <div class="col-md-12">
-                <input class="form-control" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10">
+                <input class="form-control input-style" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟">
                 <br>
             </div>
         </div>
 
-{{--        todo:post description--}}
+        {{--        todo:post description--}}
         {{---------------------------------------------------------------------------------------------description row--}}
-        <div class="row">
-            <div class="col-md-12">
-                <textarea class="form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس"></textarea>
+        <div class="row justify-content-md-center">
+            <div class="col-md-10">
+                <textarea class="form-control input-style description-style" name="description" id="description" placeholder="یک کپشن راجبش بنویس"></textarea>
                 <br>
             </div>
         </div>
 
         {{---------------------------------------------------------------------------------------------category row--}}
-{{-------------------------------------------------------category basic--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <ul>--}}
+        {{-------------------------------------------------------category basic--}}
+        {{--        <div class="row">--}}
+        {{--            <div class="col-md-12">--}}
+        {{--                <ul>--}}
 
-{{--                    @foreach(\App\Category::get() as $category)--}}
-{{--                        <li>--}}
+        {{--                    @foreach(\App\Category::get() as $category)--}}
+        {{--                        <li>--}}
 
-{{--                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
-{{--                            <label for="Checkbox{{$category->id}}">--}}
-{{--                                    <div class="post-img-parent">--}}
-{{--                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">--}}
-{{--                                    </div>--}}
-{{--                            </label>--}}
-{{--                        </li>--}}
-{{--                    @endforeach--}}
+        {{--                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
+        {{--                            <label for="Checkbox{{$category->id}}">--}}
+        {{--                                    <div class="post-img-parent">--}}
+        {{--                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">--}}
+        {{--                                    </div>--}}
+        {{--                            </label>--}}
+        {{--                        </li>--}}
+        {{--                    @endforeach--}}
 
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{-----------------------------------------------------------category with title --}}
+        {{--                </ul>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
 
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                <ul>--}}
-{{--                    --}}{{--            todo: move DB codes to model--}}
-{{--                    @foreach(\App\Category::get() as $category)--}}
-{{--                        <li>--}}
-
-{{--                            <input class="image-ckeckbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
-{{--                            <label for="Checkbox{{$category->id}}">{{$category->title}}</label>--}}
-{{--                        </li>--}}
-{{--                    @endforeach--}}
-
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--category pro--}}
+        {{--------------------------------------------------------------------------category pro--}}
 
         <section class="section4 p-0">
             <div class="container-fluid">
@@ -103,33 +87,33 @@
 
                         @foreach(\App\Category::get() as $category)
 
-                        <div class="item">
-                            <ul>
-                                <li>
-                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                                    <label for="Checkbox{{$category->id}}">
+                            <div class="item">
+                                <ul>
+                                    <li>
+                                        <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                                        <label for="Checkbox{{$category->id}}">
                                             <div class="post-img-parent">
                                                 <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
                                             </div>
                                             <div class="overlay">
                                                 <div class="text-header">{{$category->title}}</div>
                                             </div>
-                                    </label>
-                                </li>
-                            </ul>
+                                        </label>
+                                    </li>
+                                </ul>
 
-                        </div>
+                            </div>
 
                         @endforeach
-{{----------------------------------------------------example--}}
-{{--                        <div class="item">--}}
-{{--                            <div class="img-father">--}}
-{{--                                <img src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="Avatar" class="image pl-0 pr-0 mr-0 ml-0">--}}
-{{--                            </div>--}}
-{{--                            <div class="overlay">--}}
-{{--                                <div class="text-header">از نزدیک ببینید</div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        {{----------------------------------------------------example--}}
+                        {{--                        <div class="item">--}}
+                        {{--                            <div class="img-father">--}}
+                        {{--                                <img src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="Avatar" class="image pl-0 pr-0 mr-0 ml-0">--}}
+                        {{--                            </div>--}}
+                        {{--                            <div class="overlay">--}}
+                        {{--                                <div class="text-header">از نزدیک ببینید</div>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
 
                     </div>
                     <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->
@@ -147,21 +131,30 @@
 
 
 
-        <div class="wrapper">
-            <h3>هشتگ های تو</h3>
-            <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
-            <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
-            <div class="tag-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <h3>هشتگ های تو</h3>
+                    <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
+                    <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
+                    <div class="tag-container">
+                    </div>
+                </div>
             </div>
         </div>
 
 
-{{--        todo:user_id auth--}}
-{{--        todo:color--}}
+        {{--        todo:user_id auth--}}
+        {{--        todo:color--}}
 
 
-        <button type="submit" class="mt-2 btn btn-success">پست جدید</button>
+        <div class="row justify-content-md-center">
+            <div class="col-md-3">
+                <button type="submit" class="mt-2 btn btn-outline-success btn-block">پست جدید</button>
+            </div>
+        </div>
     </form>
+</div>
 
 
 @endsection

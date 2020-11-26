@@ -9,11 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/login_logout_btns.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,13 +263,8 @@
       <workItem from="1606031814315" duration="5600000" />
       <workItem from="1606288793255" duration="6899000" />
       <workItem from="1606383054653" duration="1813000" />
-    </task>
-    <task id="LOCAL-00016" summary="RedirectIfAuthenticated.php is in /middleware where u should say where to redirect after auth">
-      <created>1602349898717</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1602349898717</updated>
+      <workItem from="1606384902940" duration="1853000" />
+      <workItem from="1606386785656" duration="306000" />
     </task>
     <task id="LOCAL-00017" summary="wrote relationship in all models except Interest &amp; CategoryPost">
       <created>1602401995788</created>
@@ -609,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606384000909</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="category owlcarousel image checkbox solved">
+      <created>1606384943484</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1606384943485</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +656,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="confirm password example-&gt;i can use it for admin later" />
     <MESSAGE value="confirm email example-&gt;i can use it for creating post or anything else later" />
     <MESSAGE value="a little auth and minddleware and redirecting" />
     <MESSAGE value="half of admin dont-before sweet alert-" />
@@ -681,7 +680,8 @@
     <MESSAGE value="like js with mahsa(just view is working not database)" />
     <MESSAGE value="image cropper worked(problem is reduce image resolution)" />
     <MESSAGE value="resolution cropper is solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolution cropper is solved" />
+    <MESSAGE value="category owlcarousel image checkbox solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="category owlcarousel image checkbox solved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -692,10 +692,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606033983975" />
-    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1606383999563">
+    <state x="31" y="0" key="CommitChangelistDialog2" timestamp="1606384941992">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606383999563" />
+    <state x="31" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606384941992" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -708,17 +708,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605782006626" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605887376186">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606385367815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1605887376186" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606385367815" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605255784950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606293173065">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606385006559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606293173065" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606385006559" />
   </component>
 </project>

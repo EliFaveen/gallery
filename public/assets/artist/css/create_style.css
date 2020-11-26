@@ -19,7 +19,14 @@ ul{
 
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ create.blade.php @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
+/* ------------------------------------for form margin----------------------------------------- */
+.form-parent{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #fffdf8;
+    padding: 50px 0px 50px 0px;
+    border: thin solid #869791;
+}
 /*-------------------------------image checkbox--------------------------------*/
 ul {
     list-style-type: none;
@@ -182,9 +189,11 @@ body {
 
 .wrapper {
     padding: 20px 28px;
-    margin: 0;
+    /*margin: 0;*/
+    margin: 48px 263px 42px 0px !important;
     width: 580px;
-    background-color: #273c75;
+    background-color:#869791;
+    color: #fef4e1;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -225,7 +234,7 @@ input {
 
 .tag{
     pointer-events: none;
-    background-color: #242424;
+    background-color: #505d58;
     color: white;
     padding: 6px;
     margin: 5px;
@@ -240,6 +249,15 @@ input {
     margin-right: 6px;
     text-align: center;
     color: #ccc;
-    background-color: #111;
+    background-color: #505d58;
     cursor: pointer;
+}
+
+/*------------------------------last styling---------------------------------*/
+.input-style{
+    text-align: center;
+    background: none !important;
+}
+.description-style{
+    min-height: 130px;
 }
