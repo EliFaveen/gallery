@@ -105,8 +105,19 @@
 
     $("#crop").click(function(){
         canvas = cropper.getCroppedCanvas({
-            width: 160,
-            height: 160,
+            //--------------------------if i comment them width and height it will be ok
+
+            // width: 160,
+            // height: 160,
+
+            //---------------------------dont need these
+            // minWidth: 256,
+            // minHeight: 256,
+            // maxWidth: 4096,
+            // maxHeight: 4096,
+            // fillColor: '#fff',
+            // imageSmoothingEnabled: true,
+            // imageSmoothingQuality: 'high',
         });
 
         canvas.toBlob(function(blob) {
@@ -128,7 +139,7 @@
                 });
             }
         });
-    })
+    });
 
 </script>
 </body>
