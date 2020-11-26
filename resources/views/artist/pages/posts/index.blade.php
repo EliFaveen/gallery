@@ -9,6 +9,7 @@
 
 @section('content')
     @include('inc.sidenav')
+    @include('inc.login_logout_btns')
 
     <div class="row posts-box">
                 @foreach($posts as $post)

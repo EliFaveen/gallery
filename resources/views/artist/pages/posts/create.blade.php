@@ -28,10 +28,6 @@
 {{--                <br>--}}
 {{--            </div>--}}
 {{--        </div>--}}
-{{--        ----------------------------------------------------------------------------------------------------croppie--}}
-
-
-
 
 {{--        todo:post title--}}
         {{---------------------------------------------------------------------------------------------title row--}}
@@ -52,27 +48,28 @@
         </div>
 
         {{---------------------------------------------------------------------------------------------category row--}}
-{{--category basic--}}
-        <div class="row">
-            <div class="col-md-12">
-                <ul>
-{{--                    todo: move DB codes to model--}}
-                    @foreach(\App\Category::get() as $category)
-                        <li>
+{{-------------------------------------------------------category basic--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                <ul>--}}
 
-                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
-                            <label for="Checkbox{{$category->id}}">
-                                    <div class="post-img-parent">
-                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
-                                    </div>
-                            </label>
-                        </li>
-                    @endforeach
+{{--                    @foreach(\App\Category::get() as $category)--}}
+{{--                        <li>--}}
 
-                </ul>
-            </div>
-        </div>
-{{--        category with title --}}
+{{--                            <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
+{{--                            <label for="Checkbox{{$category->id}}">--}}
+{{--                                    <div class="post-img-parent">--}}
+{{--                                        <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">--}}
+{{--                                    </div>--}}
+{{--                            </label>--}}
+{{--                        </li>--}}
+{{--                    @endforeach--}}
+
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{-----------------------------------------------------------category with title --}}
+
 {{--        <div class="row">--}}
 {{--            <div class="col-md-12">--}}
 {{--                <ul>--}}
@@ -88,42 +85,43 @@
 {{--                </ul>--}}
 {{--            </div>--}}
 {{--        </div>--}}
+
 {{--category pro--}}
 
-{{--        <section class="section4 p-0">--}}
-{{--            <div class="container-fluid">--}}
-{{--                <div class="row row4-1">--}}
-{{--                    <div class="col">--}}
-{{--                        <div class="text-painting-style">--}}
-{{--                            <p>سبک های نقاشی</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div><!--end row4-1-->--}}
+        <section class="section4 p-0">
+            <div class="container-fluid">
+                <div class="row row4-1">
+                    <div class="col">
+                        <div class="text-painting-style">
+                            <p>سبک های نقاشی</p>
+                        </div>
+                    </div>
+                </div><!--end row4-1-->
 
-{{--                <div class="row row4-2 flex-container">--}}
-{{--                    <div class="owl-carousel owl-theme">--}}
+                <div class="row row4-2 flex-container">
+                    <div class="owl-carousel owl-theme">
 
-{{--                        @foreach(\App\Category::get() as $category)--}}
+                        @foreach(\App\Category::get() as $category)
 
-{{--                        <div class="item">--}}
-{{--                            <ul>--}}
-{{--                                <li>--}}
-{{--                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />--}}
-{{--                                    <label for="Checkbox{{$category->id}}">--}}
-{{--                                            <div class="post-img-parent">--}}
-{{--                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">--}}
-{{--                                            </div>--}}
-{{--                                            <div class="overlay">--}}
-{{--                                                <div class="text-header">{{$category->title}}</div>--}}
-{{--                                            </div>--}}
-{{--                                    </label>--}}
-{{--                                </li>--}}
-{{--                            </ul>--}}
+                        <div class="item">
+                            <ul>
+                                <li>
+                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                                    <label for="Checkbox{{$category->id}}">
+                                            <div class="post-img-parent">
+                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                            </div>
+                                            <div class="overlay">
+                                                <div class="text-header">{{$category->title}}</div>
+                                            </div>
+                                    </label>
+                                </li>
+                            </ul>
 
-{{--                        </div>--}}
+                        </div>
 
-{{--                        @endforeach--}}
-
+                        @endforeach
+{{----------------------------------------------------example--}}
 {{--                        <div class="item">--}}
 {{--                            <div class="img-father">--}}
 {{--                                <img src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="Avatar" class="image pl-0 pr-0 mr-0 ml-0">--}}
@@ -133,13 +131,13 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 
-{{--                    </div>--}}
-{{--                    <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->--}}
+                    </div>
+                    <!--------------------------------------------------------------------------------------------------سبک ها نقاشی-->
 
-{{--                    <!--------------------------------------------------------------------------------------------------------سبک های نقاشی-->--}}
-{{--                </div><!--end row4-2-->--}}
-{{--            </div><!--end container4-->--}}
-{{--        </section>--}}
+                    <!--------------------------------------------------------------------------------------------------------سبک های نقاشی-->
+                </div><!--end row4-2-->
+            </div><!--end container4-->
+        </section>
         <!--end section4-->
 
 
