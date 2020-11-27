@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel Crop Image Before Upload using Cropper JS</title>
+    <title>صفحه آپلود عکس</title>
     <meta name="_token" content="{{ csrf_token() }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css" integrity="sha256-jKV9n9bkk/CTP8zbtEtnKaKf+ehRovOYeKoyfthwbC8=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.js" integrity="sha256-CgvH7sz3tHhkiVKh05kSUgG97YtzYNnWt6OXcmYzqHY=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{url('assets/artist/css/cropper_style.css')}}"><!---custom-->
+
 </head>
 <style type="text/css">
     img {
@@ -27,9 +30,30 @@
 </style>
 <body>
 <div class="container">
-    <h1>{{$post_id}}</h1>
+{{--    <h1>{{$post_id}}</h1>--}}
 {{--    <input type="hidden" value="{{$post_id}}" name="post_id">--}}
-    <input type="file" name="image" class="image">
+    <div class="card main-card">
+        <div class="card-header text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>هر تعداد عکس که میخواهید برای این پست آپلود کنید<br>
+                        و بعد روی دکمه ایجاد پست کلیک کنید</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body text-center">
+            <div class="row mt-5 mb-5">
+                <div class="col-md-12">
+                    <input type="file" name="image" class="image">
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-3">
+                    <a href="{{route('artist.post.index')}}" class="btn btn-outline-success btn-block mt-2 btn-style">ایجاد پست</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -134,7 +158,7 @@
                     data: {'_token': $('meta[name="_token"]').attr('content'), 'image': base64data},
                     success: function(data){
                         $modal.modal('hide');
-                        alert("success upload image");
+                        alert("عکس شما با موفقیت آپلود شد");
                     }
                 });
             }

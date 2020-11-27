@@ -1,0 +1,25 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
+
+body{
+    /*direction: rtl;*/
+    font-family: IRSans;
+    /*overflow:visible !important;*/
+}
+
+
+.main-card {
+    margin-top: 112px;
+    box-shadow: 5px 5px 15px 0px #c6c6c6;
+    padding: 20px 20px 20px 20px;
+    border: none !important;
+}
+.btn-style:hover{
+    color: white !important;
+}

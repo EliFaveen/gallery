@@ -23,9 +23,10 @@ ul{
 .form-parent{
     margin-top: 100px;
     margin-bottom: 100px;
-    background-color: #fffdf8;
+    background-color: #ffffff;
     padding: 50px 0px 50px 0px;
-    border: thin solid #869791;
+    /* border: thin solid #869791; */
+    box-shadow: 5px 5px 19px 0px #c2c2c2;
 }
 /*-------------------------------image checkbox--------------------------------*/
 ul {
