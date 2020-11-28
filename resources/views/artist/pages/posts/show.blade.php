@@ -2,45 +2,68 @@
 @extends('artist.layouts.artist')
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/artist/css/show_style.css')}}"><!--custom-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--glyphicon-->
 @endsection
 
 @section('title') show post page @endsection
 
 @section('content')
+    @php($i=0)
+    @php($j=0)
 
     <div class="row single-post-box">
 
-
-
             <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
-                <div class="a-tag-parent">
+{{--                <div class="a-tag-parent">--}}
                         <div class="card" >
+
                             {{--                image--}}
-                            @if($post->photos->first())
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                @if($post->photos->first())
+{{--                                <ol class="carousel-indicators">--}}
 
-                                {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
-                                <div class="single-post-img-parent">
+{{--                                    @foreach($post->photos as $photo)--}}
+{{--                                        <li data-target="#carouselExampleIndicators" data-slide-to="{{$i}}" @if($i==0) class="active {{$i++}}" @endif></li>--}}
+{{--                                    @endforeach--}}
+{{--                                </ol>--}}
+                                <div class="carousel-inner">
+                                    @foreach($post->photos as $photo)
+                                        <div class="carousel-item @if($j==0) active @endif {{$j++}}">
+                                            <div class="single-post-img-parent">
+                                                <img  class="single-post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($photo->img_url)}}" alt="{{$post->title}}">
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                                @else
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="single-post-img-parent">
+                                                <img  class="single-post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
 
-                                    <img  class="single-post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($post->photos->first()->img_url)}}" alt="{{$post->title}}">
-                                </div>
-                                {{--                </div>--}}
-                            @else
-                                <div class="single-post-img-parent">
-                                    <img  class="single-post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
-                                </div>
-                            @endif
+
+
+
+
+
                             <div class="card-body" data-postid="{{$post->id}}">
 {{--                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>--}}
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--           todo: like and unlike                --}}
 
-{{--               test again                 --}}
-
-{{--                                <div class="interaction">--}}
-{{--                                    <a href="#" class="like">Like</a>--}}
-{{--                                    <a href="#" class="like">Dislike</a>--}}
-{{--                                </div>--}}
 {{--                  test 3              --}}
                                 <div class="interaction">
                                     <a id="likeBtn" href="#" class="btn like heart ">
@@ -93,7 +116,7 @@
 
                             </div>
                         </div>
-                </div>
+{{--                </div>--}}
             </div><!--col-md-6 end-->
 
         <div class="col-md-6">
