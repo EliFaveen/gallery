@@ -2,6 +2,7 @@
 @extends('artist.layouts.artist')
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/artist/css/show_style.css')}}"><!--custom-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 @endsection
 
 @section('title') show post page @endsection
@@ -34,47 +35,60 @@
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--           todo: like and unlike                --}}
 
+{{--               test again                 --}}
+
+{{--                                <div class="interaction">--}}
+{{--                                    <a href="#" class="like">Like</a>--}}
+{{--                                    <a href="#" class="like">Dislike</a>--}}
+{{--                                </div>--}}
 {{--                  test 3              --}}
                                 <div class="interaction">
-                                    <a id="likeBtn" href="#" class="like heart ">
+                                    <a id="likeBtn" href="#" class="btn like heart ">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1)
 
-{{--                                                <i class="fas fa-heart custom-like" style="color: red"></i>--}}
+{{--                                                <i class="fas fa-heart custom-like " style="color: red"></i>--}}
+{{--                                                <span class="glyphicon glyphicon-thumbs-up">You like this post</span>--}}
                                                 You like this post
                                             @else
 
-{{--                                                <i class="fas fa-heart custom-like"></i>--}}
-                                                    Like
+{{--                                                <i class="fas fa-heart custom-like "></i>--}}
+{{--                                                <span class="glyphicon glyphicon-thumbs-up">Like</span>--}}
+                                                Like
                                             @endif
 
                                         @else
 
-{{--                                            <i class="fas fa-heart custom-like"></i>--}}
-                                                    Like
+{{--                                            <i class="fas fa-heart custom-like "></i>--}}
+{{--                                            <span class="glyphicon glyphicon-thumbs-up">Like</span>--}}
+                                            Like
                                         @endif
 {{--                                            <div id="numberOfLikes"></div>--}}
                                     </a>
-                                    <a id="dislikeBtn" href="#" class="like broken-heart">
+                                    <a id="dislikeBtn" href="#" class="btn like broken-heart">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0)
 
 
-{{--                                                <i class="fas fa-heart-broken custom-dislike" style="color: red"></i>--}}
+{{--                                                <i class="fas fa-heart-broken custom-dislike " style="color: red"></i>--}}
+{{--                                                <span class="glyphicon glyphicon-thumbs-down">You do not like this post</span>--}}
                                                 You do not like this post
                                             @else
 
-{{--                                                <i class="fas fa-heart-broken custom-dislike"></i>--}}
-                                                    Dislike
+{{--                                                <i class="fas fa-heart-broken custom-dislike "></i>--}}
+{{--                                                <span class="glyphicon glyphicon-thumbs-down">Dislike</span>--}}
+                                                Dislike
                                             @endif
 
                                         @else
 
-{{--                                            <i class="fas fa-heart-broken custom-dislike"></i>--}}
-                                                    Dislike
+{{--                                            <i class="fas fa-heart-broken custom-dislike "></i>--}}
+{{--                                        <span id="action" class="glyphicon glyphicon-thumbs-down">Dislike</span>--}}
+                                            Dislike
                                         @endif
 {{--                                            <div id="numberOfDislikes"></div>--}}
                                     </a>
+
                                 </div>
 
                             </div>

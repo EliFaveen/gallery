@@ -42,7 +42,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')
 
 
     });
-Route::post('/like','Artist\PostController@postLikePost')->name('like')->middleware(['auth','isArtist','isUser']);
+Route::post('/like','Artist\PostController@postLikePost')->name('like');
 //---------------------------------------------------------------------------------------------------cropper
 Route::get('image-cropper/{post_id}','Artist\ImageCropperController@index')->name('image_cropper');
 Route::post('image-cropper/upload/{post_id}','Artist\ImageCropperController@upload');
