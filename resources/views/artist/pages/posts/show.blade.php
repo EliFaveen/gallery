@@ -2,7 +2,7 @@
 @extends('artist.layouts.artist')
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/artist/css/show_style.css')}}"><!--custom-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--glyphicon-->
+{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--glyphicon-->--}}
 @endsection
 
 @section('title') show post page @endsection
@@ -13,6 +13,7 @@
 
     <div class="row single-post-box">
 
+{{--        right      --}}
             <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
 {{--                <div class="a-tag-parent">--}}
                         <div class="card" >
@@ -119,31 +120,34 @@
 {{--                </div>--}}
             </div><!--col-md-6 end-->
 
+
+{{--        left       --}}
         <div class="col-md-6">
-            <div class="card text-center">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش</a>
+{{--                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">حذف</a>--}}
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            </nav>
+            <div class="tab-content text-right" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="title-style">
+                        <h3>
+                            {{$post->title}}
+                        </h3>
+                    </div>
+                    <div class="description-style">
+                        {{$post->description}}
+                    </div>
                 </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2asdasd</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3asdasdsd</div>
             </div>
         </div><!--col-md-6 end-->
 
     </div><!--row end-->
-
 
 
 @endsection
@@ -152,6 +156,21 @@
     <script>
         var token = '{{ Session::token() }}';
         var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
+    </script>
+    <script>
+        // $('#nav-home-tab a').on('click', function (e) {
+        //     e.preventDefault()
+        //     $(this).tab('show')
+        // })
+        // $('#nav-profile-tab a').on('click', function (e) {
+        //     e.preventDefault()
+        //     $(this).tab('show')
+        // })
+        // $('#nav-profile-tab a').on('click', function (e) {
+        //     e.preventDefault()
+        //     $(this).tab('show')
+        // })
+
     </script>
 
 @endsection

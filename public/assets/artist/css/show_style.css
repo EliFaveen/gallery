@@ -1,4 +1,17 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
 
+body{
+    direction: rtl;
+    font-family: IRSans;
+    overflow:visible !important;
+}
 /*-------------------------------single post showing-------------------------------------------show.blade.php*/
 .single-post-box
 {
@@ -32,3 +45,16 @@
     justify-content: space-between;
 }
 
+/*-----------------------------post infos left col-md-6----------------------------------*/
+
+.description-style {
+    text-align: justify;
+    margin: 25px;
+    color: #747373;
+}
+
+.title-style {
+    margin: 25px 10px 25px 10px;
+    color: #869791;
+    font-family: 'Leyla';
+}
