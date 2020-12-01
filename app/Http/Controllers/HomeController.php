@@ -25,4 +25,19 @@ class HomeController extends Controller
     {
 //        return view('artist.pages.posts.index');
     }
+
+    public function comment(Request $request){
+        $validData = $request->validate([
+            'commentable_id' => 'required',
+            'commentable_type' => 'required',
+            'parent_id' => 'required',
+            'comment' => 'required'
+        ]);
+
+        auth()->user()->comments()->create($validData);
+
+        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
+        return back();
+    }
 }
+

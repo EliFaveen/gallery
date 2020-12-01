@@ -18,7 +18,7 @@ class Post extends Model
 //        return $this->hasMany('App\Comment');
 //    }
 
-//instead of above we use polymorphic for comments
+//instead of above we use polymorphic for comments //copy paste this code for other commentable models
     public function comments(){
         return $this->morphMany('App\Comment','commentable');
     }

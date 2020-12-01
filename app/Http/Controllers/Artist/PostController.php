@@ -109,7 +109,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-//        $post=Post::find($id);
+        $post=Post::find($id);
         //return get_class($post);
 
 //                return \auth()->user()->comments()->create([
@@ -119,10 +119,10 @@ class PostController extends Controller
 //                ]);
 
 //        return $post->comments()->get();
-        $comment=Comment::find(1);
-        return $comment->commentable;//it returns post by using comment
+//        $comment=Comment::find(1);
+//        return $comment->commentable;//it returns post by using comment
 
-//        return view('artist.pages.posts.show',compact('post'));
+        return view('artist.pages.posts.show',compact('post'));
     }
 
     /**

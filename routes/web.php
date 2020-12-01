@@ -82,3 +82,6 @@ Route::post('/post',function (Request $request){
     Alert::success('hello');
     return redirect('/')->with('success','here is redirection');
 });//
+
+//---------------->comments
+Route::post('comments',"HomeController@comment")->name('send.comment');
