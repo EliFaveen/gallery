@@ -17,6 +17,11 @@ class Post extends Model
 //    public function comments(){
 //        return $this->hasMany('App\Comment');
 //    }
+
+//instead of above we use polymorphic for comments
+    public function comments(){
+        return $this->morphMany('App\Comment','commentable');
+    }
     //    relation one to many
     public function likes(){
 //        i thought it's hasMany

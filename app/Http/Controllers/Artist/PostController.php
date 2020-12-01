@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Artist;
 
 use App\CategoryPost;
+use App\Comment;
 use App\Hashtag;
 use App\Http\Controllers\Controller;
 use App\Photo;
@@ -108,8 +109,20 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post=Post::find($id);
-        return view('artist.pages.posts.show',compact('post'));
+//        $post=Post::find($id);
+        //return get_class($post);
+
+//                return \auth()->user()->comments()->create([
+//                    'comment'=>'this is my comment',
+//                    'commentable_id'=>$post->id,
+//                    'commentable_type'=>get_class($post),
+//                ]);
+
+//        return $post->comments()->get();
+        $comment=Comment::find(1);
+        return $comment->commentable;//it returns post by using comment
+
+//        return view('artist.pages.posts.show',compact('post'));
     }
 
     /**

@@ -11,9 +11,9 @@
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_11_134809_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_01_075909_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,14 +283,7 @@
       <workItem from="1606550625452" duration="5396000" />
       <workItem from="1606631910517" duration="3657000" />
       <workItem from="1606719474919" duration="593000" />
-      <workItem from="1606804895249" duration="2175000" />
-    </task>
-    <task id="LOCAL-00021" summary="category admin added to db successfuly">
-      <created>1602529430781</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1602529430781</updated>
+      <workItem from="1606804895249" duration="4762000" />
     </task>
     <task id="LOCAL-00022" summary="add nav admin to /inc/admin_nav.blade.php for all admin pages">
       <created>1602573940311</created>
@@ -628,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606549519767</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="comments-table (build a new structure for comments table)">
+      <created>1606809862340</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1606809862340</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +675,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="soft delete for users admin and add a simple inline delete confirmation onclick" />
     <MESSAGE value="some useless try for sweetalert" />
     <MESSAGE value="simple search for users(some problems i will check with mahsa)" />
     <MESSAGE value="admin navbar links(basic)" />
@@ -700,7 +699,8 @@
     <MESSAGE value="create.blade.php artist styling (DONE!)" />
     <MESSAGE value="simple like is working now" />
     <MESSAGE value="add carousel bootstrap for single post showing with multi photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="add carousel bootstrap for single post showing with multi photos" />
+    <MESSAGE value="comments-table (build a new structure for comments table)" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments-table (build a new structure for comments table)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -711,10 +711,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606033983975" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1606549518654">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1606809860972">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606549518654" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606809860972" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -727,10 +727,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606470279555" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606385367815">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606809601255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606385367815" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1606809601255" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605255784950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
