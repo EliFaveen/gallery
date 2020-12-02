@@ -22,4 +22,8 @@ class Comment extends Model
     public function commentable(){
         return $this->morphTo();
     }
+//    a relation between parent comments and it's replies(childs)
+    public function child(){
+        return $this->hasMany('App\Comment','parent_id','id');
+    }
 }

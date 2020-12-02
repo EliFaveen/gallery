@@ -27,12 +27,12 @@ class HomeController extends Controller
     }
 
     public function comment(Request $request){
-        if (!$request->ajax()){
-            return response()->json([
-                'status'=>'just ajax requests'
-            ]);
-
-        }
+//        if (!$request->ajax()){
+//            return response()->json([
+//                'status'=>'just ajax requests'
+//            ]);
+//
+//        }
 
         $validData = $request->validate([
             'commentable_id' => 'required',
@@ -43,12 +43,12 @@ class HomeController extends Controller
 
         auth()->user()->comments()->create($validData);
 
-        return response()->json([
-           'status'=>'success'
-        ]);
+//        return response()->json([
+//           'status'=>'success'
+//        ]);
 
-//        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
-//        return back();
+        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
+        return back();
     }
 }
 
