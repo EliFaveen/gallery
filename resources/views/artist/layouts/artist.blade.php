@@ -7,6 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="{{url('assets/all_pages/css/bootstrap.min.css')}}"><!--this is important dont comment it-->
     <link rel="stylesheet" href="{{url('assets/all_pages/css/fontawesom.css')}}">
     @yield('custom-css')

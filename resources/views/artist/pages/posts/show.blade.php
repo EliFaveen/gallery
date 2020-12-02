@@ -161,7 +161,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="{{ route('send.comment') }}" method="post">
+                    <form action="{{ route('send.comment') }}" method="post" id="sendCommentForm">
                         @csrf
                         <div class="modal-body">
                             <input type="hidden" name="commentable_id" value="{{$post->id }}" ><!--just change here-->
@@ -190,32 +190,40 @@
                     <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment">ثبت نظر جدید</span>
                 @endauth
             </div>
-            {{--                <div class="card">--}}
-            {{--                    <div class="card-header d-flex justify-content-between">--}}
-            {{--                        <div class="commenter">--}}
-            {{--                            <span>نام نظردهنده</span>--}}
-            {{--                            <span class="text-muted">- دو دقیقه قبل</span>--}}
-            {{--                        </div>--}}
-            {{--                        <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="2" data-type="product">پاسخ به نظر</span>--}}
-            {{--                    </div>--}}
+            @foreach($post->comments()->where('parent_id',0)->get() as $comment)
+                <div class="card {{! $loop->first ? 'mt-3':''}}">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="commenter">
+                            <span>{{$comment->user->name}}</span>
+                            <span class="text-muted">- دو دقیقه قبل</span>
+                        </div>
+                        @auth
+                            <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="2" data-type="product">پاسخ به نظر</span>
+                        @endauth
+                    </div>
 
-            {{--                    <div class="card-body">--}}
-            {{--                        محصول زیبایه--}}
+                    @guest
+                        <div class="alert alert-warning">برای ثبت نظر لطفا وارد سایت شوید!</div>
+                    @endguest
 
-            {{--                        <div class="card mt-3">--}}
-            {{--                            <div class="card-header d-flex justify-content-between">--}}
-            {{--                                <div class="commenter">--}}
-            {{--                                    <span>نام نظردهنده</span>--}}
-            {{--                                    <span class="text-muted">- دو دقیقه قبل</span>--}}
-            {{--                                </div>--}}
-            {{--                            </div>--}}
+                    <div class="card-body">
+                        {{$comment->comment}}
 
-            {{--                            <div class="card-body">--}}
-            {{--                                محصول زیبایه--}}
-            {{--                            </div>--}}
-            {{--                        </div>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
+                        <div class="card mt-3">
+                            <div class="card-header d-flex justify-content-between">
+                                <div class="commenter">
+                                    <span>نام نظردهنده</span>
+                                    <span class="text-muted">- دو دقیقه قبل</span>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                محصول زیبایه
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
@@ -225,24 +233,10 @@
         var token = '{{ Session::token() }}';
         var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
     </script>
-    <script>
-        // $('#nav-home-tab a').on('click', function (e) {
-        //     e.preventDefault()
-        //     $(this).tab('show')
-        // })
-        // $('#nav-profile-tab a').on('click', function (e) {
-        //     e.preventDefault()
-        //     $(this).tab('show')
-        // })
-        // $('#nav-profile-tab a').on('click', function (e) {
-        //     e.preventDefault()
-        //     $(this).tab('show')
-        // })
-
-    </script>
 
 {{--    comment   --}}
     <script>
+{{--    for ajax comment box    --}}
         $('#sendComment').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
 
@@ -250,6 +244,46 @@
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $(this)
         })
+    //for ajax form request
+//java script
+document.querySelector('#sendCommentForm').addEventListener('submit',function (event){
+    event.preventDefault(); //form data doesnt sent and stop here with submit
+    let target=event.target;//target is our form
+    // console.log(target.querySelector('input[name=commentable_id]'))
+    let data= {
+        commentable_id : target.querySelector('input[name=commentable_id]').value,
+        commentable_type : target.querySelector('input[name=commentable_type]').value,
+        parent_id : target.querySelector('input[name=parent_id]').value,
+        comment : target.querySelector('textarea[name=comment]').value,
+    }
+    //validation
+    // if(data.comment.length < 2){
+    //     console.error('plz enter comment more than 2 char')
+    //     return ;
+    // }
+//    ajax request with jquery library not axios
+//     console.log(document.head.querySelector('meta[name="csrf-token"]').content) //access in layout blade meta tag
+    $.ajaxSetup({
+        headers:{
+            'X-CSRF-TOKEN' : document.head.querySelector('meta[name="csrf-token"]').content,
+            'Content-Type' : 'application/json'
+        }
+
+
+    })
+
+    $.ajax({
+        type:'POST',
+        url:'/comments',
+        data:JSON.stringify(data),//our data is an object we should send it as json
+        success:function (data){
+            console.log(data)
+        }
+    })
+
+})
+
+
     </script>
 
 @endsection

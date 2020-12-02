@@ -118,9 +118,10 @@ class PostController extends Controller
 //                    'commentable_type'=>get_class($post),
 //                ]);
 
-//        return $post->comments()->get();
+//            return $post->comments()->get();
 //        $comment=Comment::find(1);
 //        return $comment->commentable;//it returns post by using comment
+//        return $post->comments()->where('parent_id',0)->get();
 
         return view('artist.pages.posts.show',compact('post'));
     }
