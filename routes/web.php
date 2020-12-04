@@ -14,6 +14,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 */
 
 Route::get('/', function () {
+//    \alert()->success('welcome','message');
     return view('welcome');
 });
 

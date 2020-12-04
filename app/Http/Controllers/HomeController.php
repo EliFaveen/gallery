@@ -47,7 +47,8 @@ class HomeController extends Controller
 //           'status'=>'success'
 //        ]);
 
-        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
+//        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
+
         return back();
     }
 }

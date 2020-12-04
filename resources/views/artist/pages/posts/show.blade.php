@@ -149,8 +149,6 @@
 
     </div><!--row end-->
 
-
-
     @auth
         <div class="modal fade" id="sendComment">
             <div class="modal-dialog">
@@ -282,7 +280,14 @@ document.querySelector('#sendCommentForm').addEventListener('submit',function (e
         url:'/comments',
         data:JSON.stringify(data),//our data is an object we should send it as json
         success:function (data){
-            console.log(data)
+             // console.log(data)
+            // alert("عکس شما با موفقیت آپلود شد");
+            // Swal.fire({
+            //     title: 'Error!',
+            //     text: 'Do you want to continue',
+            //     icon: 'error',
+            //     confirmButtonText: 'Cool'
+            // })
         }
     })
 

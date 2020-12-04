@@ -10,6 +10,14 @@
     <meta name="csrf-token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="{{url('assets/all_pages/css/bootstrap.min.css')}}"><!--this is important dont comment it-->
     <link rel="stylesheet" href="{{url('assets/all_pages/css/fontawesom.css')}}">
+{{--    sweet alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
     @yield('custom-css')
 
 
@@ -43,7 +51,10 @@
             </ul>
         </div>
     @endif
+
     @yield('content')
+
+
 </div>
 
 <script src="{{url('assets/all_pages/js/jquery.js')}}"></script>
@@ -54,4 +65,6 @@
 
 
 </body>
+<script src="{{asset('js/app.js')}}"></script>
+@include('sweet::alert')
 </html>
