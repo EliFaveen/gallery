@@ -9,9 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gallery.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gallery.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +139,8 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/realrashid/sweet-alert" />
       <path value="$PROJECT_DIR$/vendor/uxweb/sweet-alert" />
+      <path value="$PROJECT_DIR$/vendor/morilog/jalali" />
+      <path value="$PROJECT_DIR$/vendor/beberlei/assert" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hMlNSyiIcH0bGfew9Il1jfp6nf" />
@@ -285,14 +291,7 @@
       <workItem from="1606804895249" duration="4762000" />
       <workItem from="1606829084443" duration="3067000" />
       <workItem from="1606892859919" duration="9415000" />
-      <workItem from="1607065006460" duration="6210000" />
-    </task>
-    <task id="LOCAL-00027" summary="index.blade.php show posts in cards">
-      <created>1603033877676</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1603033877677</updated>
+      <workItem from="1607065006460" duration="8281000" />
     </task>
     <task id="LOCAL-00028" summary="index.blade.php remove comments in code">
       <created>1603033954661</created>
@@ -630,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607069339092</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="comments- n replies">
+      <created>1607072619608</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1607072619608</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +683,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="start admin category index" />
     <MESSAGE value="done admin category index with styling" />
     <MESSAGE value="done admin category edit and update" />
     <MESSAGE value="done admin category soft delete" />
@@ -702,7 +707,8 @@
     <MESSAGE value="comments-send with ajax(and start showing comments in balde)" />
     <MESSAGE value="comments-show in blade single-post-show (but i should refresh the page to see the comments and replies)" />
     <MESSAGE value="sweetalert doesn't show properly yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="sweetalert doesn't show properly yet" />
+    <MESSAGE value="comments- n replies" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments- n replies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -713,10 +719,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606033983975" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607069337384">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607072618685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607069337384" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607072618685" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -729,10 +735,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606470279555" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607065957466">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607074535327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607065957466" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607074535327" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605255784950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

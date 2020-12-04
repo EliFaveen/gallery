@@ -15,7 +15,11 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 Route::get('/', function () {
 //    \alert()->success('welcome','message');
-//    return view('welcome');
+    return view('welcome');
+//    return \Carbon\Carbon::now()->subDay(2);
+//    return \Morilog\Jalali\Jalalian::now();
+//    return jdate()->subDays(2);
+
 });
 
 Auth::routes(['verify'=>true]);
