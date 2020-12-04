@@ -15,7 +15,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 Route::get('/', function () {
 //    \alert()->success('welcome','message');
-    return view('welcome');
+//    return view('welcome');
 });
 
 Auth::routes(['verify'=>true]);

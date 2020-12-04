@@ -188,42 +188,7 @@
                     <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="0">ثبت نظر جدید</span>
                 @endauth
             </div>
-            @foreach($post->comments()->where('parent_id',0)->get() as $comment)
-                <div class="card {{! $loop->first ? 'mt-3':''}}">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="commenter">
-                            <span>{{$comment->user->name}}</span>
-                            <span class="text-muted">- دو دقیقه قبل</span>
-                        </div>
-                        @auth
-                            <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product">پاسخ به نظر</span>
-                        @endauth
-                    </div>
-
-                    @guest
-                        <div class="alert alert-warning">برای ثبت نظر لطفا وارد سایت شوید!</div>
-                    @endguest
-
-                    <div class="card-body">
-                        {{$comment->comment}}
-
-                        @foreach($comment->child as $childComment)
-                            <div class="card mt-3">
-                                <div class="card-header d-flex justify-content-between">
-                                    <div class="commenter">
-                                        <span>{{$childComment->user->name}}</span>
-                                        <span class="text-muted">- دو دقیقه قبل</span>
-                                    </div>
-                                </div>
-
-                                <div class="card-body">
-                                    {{$childComment->comment}}
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            @endforeach
+            @include('inc.comments',['comments'=>$post->comments()->where('parent_id',0)->get()])
         </div>
     </div>
 @endsection
