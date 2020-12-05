@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{csrf_token()}}">
     <link rel="stylesheet" href="{{url('assets/all_pages/css/bootstrap.min.css')}}"><!--this is important dont comment it-->
     <link rel="stylesheet" href="{{url('assets/all_pages/css/fontawesom.css')}}">
-    <link rel="stylesheet" href="{{url('assets/all_pages/css/stylepages.css')}}">
+    <link rel="stylesheet" href="{{url('assets/all_pages/css/stylepages.css')}}"><!--main styles like side nav-->
 {{--    sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 {{--    <script src="sweetalert2.all.min.js"></script>--}}
