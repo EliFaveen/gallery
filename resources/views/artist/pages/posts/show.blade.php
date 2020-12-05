@@ -127,17 +127,20 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
+{{--                    <div class="fa-parent-style">--}}
+                        <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش پست</a>
+{{--                    </div>--}}
                     <div class="d-flex delete-edit-box">
                         <form method="post" action="{{route('artist.post.destroy' , ['post'=>$post->id])}}">
                             @csrf
                             @method('DELETE')
                             <div class="fa-parent-style">
-                                <button type="submit" class="fa-style" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt"></i></button>
+                                <button type="submit" class="fa-style" onclick="return confirm('با زدن تایید پست کامل پاک میشه!')"><i class="fas fa-trash-alt"></i></button>
                             </div>
                         </form>
-                        <div class="fa-parent-style">
-                            <a href="" class="fa-style"><i class="fas fa-edit"></i></a>
-                        </div>
+{{--                        <div class="fa-parent-style">--}}
+{{--                            <a class="nav-item nav-link fa-style" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-edit"></i></a>--}}
+{{--                        </div>--}}
 
                     </div>
 {{--                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">حذف</a>--}}
@@ -204,7 +207,34 @@
                     </div>
                     {{--    end comments    --}}
                 </div>
-{{--                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ویرایش</div>--}}
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="form-parent">
+                        <form class="" method="post" action="{{route('artist.post.update',['post'=>$post->id])}}">
+                            @csrf
+                            @method('PATCH')
+                            {{---------------------------------------------------------------------------------------------title row--}}
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-8">
+                                    <input class="form-control input-style" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟" value="{{$post->title}}">
+
+                                </div>
+                            </div>
+                            {{---------------------------------------------------------------------------------------------description row--}}
+                            <div class="row justify-content-md-center description-row">
+                                <div class="col-md-8">
+                                    <textarea class="form-control input-style" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
+
+                                </div>
+                            </div>
+                            {{---------------------------------------------------------------------------------------------submit--}}
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-8">
+                                    <button type="submit" class="mt-2 btn btn-outline-success btn-block">ویرایش پست</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 {{--                <div class="tab-pane fade" id="nav-trash" role="tabpanel" aria-labelledby="nav-trash-tab">حذف</div>--}}
             </div>
         </div><!--col-md-6 end-->

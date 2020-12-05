@@ -171,3 +171,16 @@ body{
 .delete-edit-box{
     margin-right: auto;
 }
+
+/*-----------------------------------------edit form tab---------------------------------------------*/
+
+
+.form-parent{
+    margin-top: 30px;
+}
+.description-row {
+    margin-top: 7px;
+}
+.description-row textarea{
+    min-height: 200px;
+}

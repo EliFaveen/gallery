@@ -134,7 +134,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+//        $post=Post::find($id);
+//        return view('artist.pages.posts.edit',compact('post'));
+        //dont have a view
     }
 
     /**
@@ -146,7 +148,17 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post=Post::find($id);
+        $request->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+        ]);
+
+        $post->title=$request->input('title');
+        $post->description=$request->input('description');
+
+        $post->update();
+        return redirect(route('artist.post.show',compact('post')));
     }
 
     /**
