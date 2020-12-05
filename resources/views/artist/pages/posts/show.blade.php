@@ -40,7 +40,7 @@
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <div class="single-post-img-parent">
-                                                <img  class="single-post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                                    <img  class="single-post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
                                             </div>
                                         </div>
                                     </div>
@@ -128,6 +128,7 @@
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش</a>
+                    <a class="nav-item nav-link" id="nav-trash-tab" data-toggle="tab" href="#nav-trash" role="tab" aria-controls="nav-trash" aria-selected="false">حذف</a>
 {{--                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">حذف</a>--}}
                 </div>
             </nav>
@@ -142,55 +143,64 @@
                         {{$post->description}}
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2asdasd</div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3asdasdsd</div>
+                <div class="tab-pane fade tab-2-style" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    {{--      comments      --}}
+                    @auth
+                        <div class="modal fade" id="sendComment">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">ارسال نظر</h5>
+                                        <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form action="{{ route('send.comment') }}" method="post" id="sendCommentForm">
+                                        @csrf
+                                        <div class="modal-body">
+                                            <input type="hidden" name="commentable_id" value="{{$post->id }}" ><!--just change here-->
+                                            <input type="hidden" name="commentable_type" value="{{get_class($post)}}"><!--and here-->
+                                            <input type="hidden" name="parent_id" value="0">
+
+                                            <div class="form-group">
+                                                <label for="message-text" class="col-form-label">پیام دیدگاه:</label>
+                                                <textarea name="comment" class="form-control" id="message-text"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                                            <button type="submit" class="btn btn-primary">ارسال نظر</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    @endauth
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h5 class="mt-2 title-comment-style">بخش نظرات</h5>
+                                @auth
+                                    <div class="comment-btn-parent">
+                                        {{--                                    <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="0">ثبت نظر جدید</span>--}}
+                                        <span class="all-comment-btn comment" data-toggle="modal" data-target="#sendComment" data-id="0"><i class="far fa-comments"></i></span>
+                                    </div>
+
+                                @endauth
+                            </div>
+                            @include('inc.comments',['comments'=>$post->comments()->where('parent_id',0)->orderBy('created_at','desc')->get()])
+                        </div>
+                    </div>
+                    {{--    end comments    --}}
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ویرایش</div>
+                <div class="tab-pane fade" id="nav-trash" role="tabpanel" aria-labelledby="nav-trash-tab">حذف</div>
             </div>
         </div><!--col-md-6 end-->
 
     </div><!--row end-->
 
-    @auth
-        <div class="modal fade" id="sendComment">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">ارسال نظر</h5>
-                        <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form action="{{ route('send.comment') }}" method="post" id="sendCommentForm">
-                        @csrf
-                        <div class="modal-body">
-                            <input type="hidden" name="commentable_id" value="{{$post->id }}" ><!--just change here-->
-                            <input type="hidden" name="commentable_type" value="{{get_class($post)}}"><!--and here-->
-                            <input type="hidden" name="parent_id" value="0">
 
-                            <div class="form-group">
-                                <label for="message-text" class="col-form-label">پیام دیدگاه:</label>
-                                <textarea name="comment" class="form-control" id="message-text"></textarea>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
-                            <button type="submit" class="btn btn-primary">ارسال نظر</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    @endauth
-    <div class="row">
-        <div class="col">
-            <div class="d-flex align-items-center justify-content-between">
-                <h4 class="mt-4">بخش نظرات</h4>
-                @auth
-                    <span class="btn btn-sm btn-primary" data-toggle="modal" data-target="#sendComment" data-id="0">ثبت نظر جدید</span>
-                @endauth
-            </div>
-            @include('inc.comments',['comments'=>$post->comments()->where('parent_id',0)->get()])
-        </div>
-    </div>
 @endsection
 @section('custom-js')
     <script src="{{url('assets/artist/js/show_script.js')}}"></script><!--custom-->
@@ -199,7 +209,19 @@
         var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
     </script>
 
+{{--    toggle replies--}}
+{{--<script>--}}
+{{--    function myFunction() {--}}
+{{--        var x = document.getElementById("myDIV");--}}
+{{--        if (x.style.display === "none") {--}}
+{{--            x.style.display = "block";--}}
+{{--        } else {--}}
+{{--            x.style.display = "none";--}}
+{{--        }--}}
+{{--    }--}}
+{{--</script>--}}
 {{--    comment   --}}
+
     <script>
 {{--    for ajax comment box    --}}
         $('#sendComment').on('show.bs.modal', function (event) {
