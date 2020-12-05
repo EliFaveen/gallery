@@ -157,7 +157,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Post::find($id)->delete();
+        return redirect(route('artist.post.index'));
     }
     public function postLikePost(Request $request){
         $post_id = $request['postId'];

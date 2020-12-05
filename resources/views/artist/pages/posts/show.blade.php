@@ -127,8 +127,19 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش</a>
-                    <a class="nav-item nav-link" id="nav-trash-tab" data-toggle="tab" href="#nav-trash" role="tab" aria-controls="nav-trash" aria-selected="false">حذف</a>
+                    <div class="d-flex delete-edit-box">
+                        <form method="post" action="{{route('artist.post.destroy' , ['post'=>$post->id])}}">
+                            @csrf
+                            @method('DELETE')
+                            <div class="fa-parent-style">
+                                <button type="submit" class="fa-style" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </form>
+                        <div class="fa-parent-style">
+                            <a href="" class="fa-style"><i class="fas fa-edit"></i></a>
+                        </div>
+
+                    </div>
 {{--                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">حذف</a>--}}
                 </div>
             </nav>
@@ -193,8 +204,8 @@
                     </div>
                     {{--    end comments    --}}
                 </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ویرایش</div>
-                <div class="tab-pane fade" id="nav-trash" role="tabpanel" aria-labelledby="nav-trash-tab">حذف</div>
+{{--                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ویرایش</div>--}}
+{{--                <div class="tab-pane fade" id="nav-trash" role="tabpanel" aria-labelledby="nav-trash-tab">حذف</div>--}}
             </div>
         </div><!--col-md-6 end-->
 

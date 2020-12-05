@@ -102,7 +102,7 @@ body{
     color: gray;
 
 }
-.reply-btn-parent .comment {
+.reply-btn-parent .reply {
     /*color: #80808099;*/
     padding: 6px 12px 0px 12px;
 }
@@ -152,4 +152,22 @@ body{
     border: none;
     font-size: 24px;
     color: #80808099;
+}
+/*fontawesom styling*/
+.fa-parent-style{
+    margin: 5px;
+}
+.fa-parent-style .fa-style:hover {
+    color: gray;
+
+}
+.fa-style{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #80808099;
+}
+/*fontawesom styling*/
+.delete-edit-box{
+    margin-right: auto;
 }
