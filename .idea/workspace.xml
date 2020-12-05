@@ -10,10 +10,11 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,14 +290,7 @@
       <workItem from="1606829084443" duration="3067000" />
       <workItem from="1606892859919" duration="9415000" />
       <workItem from="1607065006460" duration="9179000" />
-      <workItem from="1607150568345" duration="11368000" />
-    </task>
-    <task id="LOCAL-00029" summary="a better way to show posts (1) index.blade.php">
-      <created>1603184382744</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1603184382744</updated>
+      <workItem from="1607150568345" duration="13329000" />
     </task>
     <task id="LOCAL-00030" summary="do some changes in index.blade.php&#10;add show.blade.php&#10;and some changes in models for adding like to db">
       <created>1603482713756</created>
@@ -634,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607074831468</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="comments- view design">
+      <created>1607172198110</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1607172198110</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +682,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="done admin category edit and update" />
     <MESSAGE value="done admin category soft delete" />
     <MESSAGE value="done admin category search" />
     <MESSAGE value="done admin category show" />
@@ -706,7 +706,8 @@
     <MESSAGE value="sweetalert doesn't show properly yet" />
     <MESSAGE value="comments- n replies" />
     <MESSAGE value="comments-date and time (morilog/jalali)" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments-date and time (morilog/jalali)" />
+    <MESSAGE value="comments- view design" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments- view design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -717,10 +718,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606033983975" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607074830651">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607172196345">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607074830651" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607172196345" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -733,10 +734,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606470279555" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607157356060">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607172701757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607157356060" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607172701757" />
     <state x="495" y="0" width="1055" height="616" key="dock-window-1" timestamp="1607152919073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -745,9 +746,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607152859556">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607173876765">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607152859556" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607173876765" />
   </component>
 </project>

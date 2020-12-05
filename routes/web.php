@@ -90,3 +90,4 @@ Route::post('/post',function (Request $request){
 
 //---------------->comments
 Route::post('comments',"HomeController@comment")->name('send.comment');
+Route::delete('comments/{comment}',"HomeController@destroyComment")->name('delete.comment');

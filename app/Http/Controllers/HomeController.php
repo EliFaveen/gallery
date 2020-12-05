@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -49,6 +50,11 @@ class HomeController extends Controller
 
 //        alert()->success('نظر با موفقیت ثبت شد');//doesnt show my alert its not sweetalert
 
+        return back();
+    }
+
+    public function destroyComment($id){
+        Comment::find($id)->delete();
         return back();
     }
 }

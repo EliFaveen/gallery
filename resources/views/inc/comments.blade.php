@@ -25,12 +25,19 @@
                         </div>
                     @endauth
                     @if($comment->user_id == auth()->user()->id)
-                        <div class="reply-btn-parent">
-                            <span class="all-reply-btn reply" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product"><i class="fas fa-trash"></i></span>
-                        </div>
-                        <div class="reply-btn-parent">
-                            <span class="all-reply-btn reply" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product"><i class="fas fa-edit"></i></span>
-                        </div>
+{{--                        <div class="reply-btn-parent">--}}
+{{--                            <span class="all-reply-btn reply" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product"><i class="fas fa-trash"></i></span>--}}
+{{--                        </div>--}}
+                        <form method="post" action="{{route('delete.comment' , ['comment'=>$comment->id])}}">
+                            @csrf
+                            @method('DELETE')
+                            <div class="reply-btn-parent">
+                                <button type="submit" class=" delete-btn all-reply-btn reply" onclick="return confirm('مطمئنی؟ پاکش کنم؟')"><i class="fas fa-trash-alt tm-trash-icon"></i></button>
+                            </div>
+                        </form>
+{{--                        <div class="reply-btn-parent">--}}
+{{--                            <span class="all-reply-btn reply" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product"><i class="fas fa-edit"></i></span>--}}
+{{--                        </div>--}}
 
 
                     @endif

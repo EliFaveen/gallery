@@ -147,3 +147,9 @@ body{
     color: gray;
     font-size: 13px;
 }
+.delete-btn{
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #80808099;
+}
