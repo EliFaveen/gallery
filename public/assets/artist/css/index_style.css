@@ -2,56 +2,6 @@
 /*    overflow: visible !important;*/
 /*}*/
 
-/*-------------------------------section 1 sidenav----------------------------------------------*/
-.sidenav a {
-    position: fixed;
-    right: 40px;
-    transition: 0.3s;
-    /* padding: 13px 13px 13px 13px; */
-    /* margin: 45px; */
-    /* width: 75px; */
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    border-radius: 50%;
-    z-index: 99;
-}
-
-.sidenav .all-sidenav:hover {
-    color: #a35d40;
-    background-color: unset;
-
-}
-.sidenav .plus {
-    top: 58px;
-    background-color: #a35d40;
-    padding: 10px 15px 10px 15px;
-}
-
-.sidenav .heart {
-    top: 120px;
-    background-color: #a35d40;
-    padding: 10px 14px 10px 14px
-}
-
-.sidenav .home {
-    top: 180px;
-    background-color: #a35d40;
-    padding: 10px 13px 10px 13px;
-}
-
-.sidenav .search {
-    top: 240px;
-    background-color: #a35d40;
-    padding: 11px 14px 11px 14px;
-}
-
-.sidenav .crown {
-    top: 300px;
-    background-color: #a35d40;
-    padding: 10px 12px 10px 12px;
-
-}
 
 /*-------------------------------my gallery grid responsive----------------------------------------------*/
 .posts-box{

@@ -8,6 +8,8 @@
 @section('title') show post page @endsection
 
 @section('content')
+    @include('inc.sidenav')
+
     @php($i=0)
     @php($j=0)
 

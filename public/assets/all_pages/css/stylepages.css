@@ -1,164 +1,50 @@
-@font-face{
-    font-family: IRSans;
-    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
-}
-@font-face{
-    font-family:Leyla;
-    src: url(../fonts/leyla.ttf);
-}
-
-body{
-    direction: rtl;
-    font-family: IRSans;
-    overflow:visible !important;
-}
-
-ul{
-    padding: 0;/*important*/
-}
-
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ create.blade.php @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-/*-------------------------------image checkbox--------------------------------*/
-ul {
-    list-style-type: none;
-}
-
-li {
-    display: inline-block;
-}
-
-/*input[type="checkbox"][id^="myCheckbox"] {*/
-/*    display: none;*/
-/*}*/
-.image-ckeckbox{
-    display: none;
-}
-
-label {
-    border: 1px solid #fff;
-    padding: 10px;
-    display: block;
-    position: relative;
-    margin: 10px;
-    cursor: pointer;
-}
-
-label:before {
-    background-color: white;
+/*-------------------------------section 1 sidenav----------------------------------------------*/
+.sidenav a {
+    position: fixed;
+    right: 40px;
+    transition: 0.3s;
+    /* padding: 13px 13px 13px 13px; */
+    /* margin: 45px; */
+    /* width: 75px; */
+    text-decoration: none;
+    font-size: 18px;
     color: white;
-    content: " ";
-    display: block;
     border-radius: 50%;
-    border: 1px solid grey;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    transition-duration: 0.4s;
-    transform: scale(0);
+    z-index: 99;
 }
 
-label img {
-    height: 100px;
-    width: 100px;
-    transition-duration: 0.2s;
-    transform-origin: 50% 50%;
+.sidenav .all-sidenav:hover {
+    color: #a35d40;
+    background-color: unset;
+
+}
+.sidenav .plus {
+    top: 58px;
+    background-color: #a35d40;
+    padding: 10px 15px 10px 15px;
 }
 
-:checked + label {
-    border-color: #ddd;
+.sidenav .heart {
+    top: 120px;
+    background-color: #a35d40;
+    padding: 10px 14px 10px 14px
 }
 
-:checked + label:before {
-    content: "✓";
-    background-color: grey;
-    transform: scale(1);
+.sidenav .home {
+    top: 180px;
+    background-color: #a35d40;
+    padding: 10px 13px 10px 13px;
 }
 
-:checked + label img {
-    transform: scale(0.9);
-    /* box-shadow: 0 0 5px #333; */
-    z-index: -1;
-}
-/*-----------------------------------for hashtags-----------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400');
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    font-family: 'Work Sans', sans-serif;
-    background-color: #1a284f;
-    color: white;
+.sidenav .search {
+    top: 240px;
+    background-color: #a35d40;
+    padding: 11px 14px 11px 14px;
 }
 
-.wrapper {
-    padding: 20px 28px;
-    margin: 0;
-    width: 580px;
-    background-color: #273c75;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    flex-flow: row wrap;
-    border: solid 2px white;
-}
+.sidenav .crown {
+    top: 300px;
+    background-color: #a35d40;
+    padding: 10px 12px 10px 12px;
 
-h3 {
-    margin: 10px 14px 10px 0;
-    font-weight: 300;
-    font-size: 36px;
-}
-
-p {
-    margin: 10px 10px;
-    font-weight: 300;
-    font-size: 14px;
-    opacity: 0.8;
-    letter-spacing: 1px;
-}
-
-input {
-    border: none;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 8px;
-    width: 100%;
-    color: #666;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 16px;
-    outline: none;
-}
-
-.tag-container {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.tag{
-    pointer-events: none;
-    background-color: #242424;
-    color: white;
-    padding: 6px;
-    margin: 5px;
-}
-
-.tag::before {
-    pointer-events: all;
-    display: inline-block;
-    content: 'x';
-    height: 20px;
-    width: 20px;
-    margin-right: 6px;
-    text-align: center;
-    color: #ccc;
-    background-color: #111;
-    cursor: pointer;
 }
