@@ -26,17 +26,11 @@
                             {{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
                             <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
                             <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
-                            <input class="search-input" type="text" name="search-phone" placeholder="شماره تلفن را جستجو کنید" value="{{request('search-phone')}}">
-                            <select class="email-state" id="email-state" name="email_verified_at">
-                                <option value="">وضعیت ایمیل</option>
-                                <option value="1" {{request('email_verified_at') == 1 ? 'selected':""}}>فعال</option>
-                                <option value="2" {{request('email_verified_at') == 2 ? 'selected':""}}>غیر فعال</option>
-                            </select>
-                            <select class="select-role" id="select-role" name="role">
-                                <option value="">نقش</option>
-                                <option value="admin" {{request('role') == "admin" ? 'selected':""}}>admin</option>
-                                <option value="artist" {{request('role') == "artist" ? 'selected':""}}>artist</option>
-                                <option value="user" {{request('role') == "user" ? 'selected':""}}>user</option>
+                            <input class="search-input" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">
+                            <select class="email-state" id="email-state" name="search-approved">
+                                <option value="">وضعیت متن</option>
+                                <option value="1" {{request('search-approved') == 1 ? 'selected':""}}>تایید شده</option>
+                                <option value="2" {{request('search-approved') == 2 ? 'selected':""}}>تایید نشده</option>
                             </select>
                             <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
@@ -124,9 +118,8 @@
                         {{$comments->appends([
                             'search-username' =>request('search-username'),
                             'search-email' =>request('search-email'),
-                            'search-phone' =>request('search-phone'),
-                            'email_verified_at' =>request('email_verified_at'),
-                            'role' =>request('role'),
+                            'search-comment' =>request('search-comment'),
+                            'search-approved' =>request('search-approved'),
 
                             ])->links()}}
                     </div>
@@ -135,40 +128,4 @@
 
         </div>
     </div>
-
-
-{{--    script   --}}
-{{--    <script type="text/javascript">--}}
-{{--        // if(){--}}
-{{--            document.getElementById('email-state').value = "<?php echo $_GET['email_verified_at'];?>";--}}
-{{--        // }--}}
-{{--    </script>--}}
-{{--    <script type="text/javascript">--}}
-{{--        // if(){--}}
-{{--        document.getElementById('select-role').value = "<?php echo $_GET['role'];?>";--}}
-{{--        // }--}}
-{{--    </script>--}}
-
-{{--        <script type="text/javascript">--}}
-
-{{--            // $(document).ready(function(){--}}
-{{--            //     $('#select-role').change(function(){--}}
-{{--            //         window.location.href = window.location.href + '&role=' + $(this).val();--}}
-{{--            //         this.form.submit()--}}
-{{--            //     });--}}
-{{--            // });--}}
-{{--            // function myfunction(){--}}
-{{--            //     // document.getElementById("select-role").change(function(){--}}
-{{--            //         var newURLString = window.location.href +--}}
-{{--            //             "&role=" + 'user';--}}
-{{--            //--}}
-{{--            //         window.location.href = newURLString;    // The page will redirect instantly--}}
-{{--            //                                                 // after this assignment--}}
-{{--            //         this.form.submit()--}}
-{{--            //--}}
-{{--            //     // });--}}
-{{--            // }--}}
-
-{{--        </script>--}}
-
 @endsection

@@ -9,11 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/comments/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/comments/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,14 +288,7 @@
       <workItem from="1606892859919" duration="9415000" />
       <workItem from="1607065006460" duration="9179000" />
       <workItem from="1607150568345" duration="20460000" />
-      <workItem from="1607234974453" duration="5875000" />
-    </task>
-    <task id="LOCAL-00035" summary="remove comments and going to start getting number of likes then hashtags">
-      <created>1603820012099</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1603820012099</updated>
+      <workItem from="1607234974453" duration="7808000" />
     </task>
     <task id="LOCAL-00036" summary="a little changes in like to show number of likes but it doesn't work">
       <created>1604138179228</created>
@@ -635,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607180663306</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="admin comment page table done">
+      <created>1607240908557</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1607240908558</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +680,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding owl carousel for artist/posts/create.blade.php part1(problems: check boxing and margin)" />
     <MESSAGE value="working on owlcarousel" />
     <MESSAGE value="unsuccessful try for croppie image plugin" />
     <MESSAGE value="added croppie image in diffrent controller" />
@@ -707,21 +704,22 @@
     <MESSAGE value="add delete for posts in Artist/PostController" />
     <MESSAGE value="add edit for posts in Artist/PostController(just title and description)" />
     <MESSAGE value="make sidnav style global in all-pages stylepages.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="make sidnav style global in all-pages stylepages.css" />
+    <MESSAGE value="admin comment page table done" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin comment page table done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1604164354170" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607179792301">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607241233478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607179792301" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607180662441">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607241233478" />
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607240906960">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607180662441" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607240906960" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
