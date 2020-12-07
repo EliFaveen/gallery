@@ -92,3 +92,11 @@ Route::post('/post',function (Request $request){
 //---------------->comments
 Route::post('comments',"HomeController@comment")->name('send.comment');
 Route::delete('comments/{comment}',"HomeController@destroyComment")->name('delete.comment');
+//--------------->sweetalert testing
+Route::get('my-notification/{type}', 'HomeController@myNotification');
+
+//http://localhost:8000/my-notification/success
+//
+//http://localhost:8000/my-notification/basic
+//
+//http://localhost:8000/my-notification/message

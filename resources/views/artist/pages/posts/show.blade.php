@@ -312,12 +312,12 @@ document.querySelector('#sendCommentForm').addEventListener('submit',function (e
         success:function (data){
              // console.log(data)
             // alert("عکس شما با موفقیت آپلود شد");
-            // Swal.fire({
-            //     title: 'Error!',
-            //     text: 'Do you want to continue',
-            //     icon: 'error',
-            //     confirmButtonText: 'Cool'
-            // })
+            Swal.fire({
+                title: 'با تشکر',
+                text: 'متن شما با موفقیت ارسال شد...پس از تایید در سایت نمایش داده خواهد شد',
+                icon: 'success',
+                confirmButtonText: 'باشه'
+            })
         }
     })
 

@@ -17,7 +17,9 @@
     <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 {{--    <script src="sweetalert2.min.js"></script>--}}
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script><!--extra-->--}}
 {{--    <link rel="stylesheet" href="sweetalert2.min.css">--}}
+{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" /><!--extra-->--}}
 
     @yield('custom-css')
 
