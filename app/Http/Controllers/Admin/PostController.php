@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
@@ -15,7 +16,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts=Post::orderBy('created_at','desc')->paginate(8);
+
+            $posts=Post::orderBy('created_at','desc')->with('categories')
+                ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));})
+                ->paginate(20);
+
         return view('admin.pages.post.index',compact('posts'));
     }
 

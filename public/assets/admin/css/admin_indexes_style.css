@@ -171,7 +171,7 @@ td{
     text-align: justify;
     margin: 55px 0px 55px 0px;
 }
-/*------------tooltip text boxes-------------*/
+/*------------tooltip text boxes-------------not working*/
 .tooltip {
     position: relative;
     display: inline-block;
@@ -206,4 +206,35 @@ td{
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+/*-------------------------------drop down without link---------------------------------*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+
+/*    customize   */
+    bottom: 0px;
+    right: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*-----------------------------------change default tooplate--------------------------------------*/
+.table td, .table th {
+    padding: 9px 9px;
+}
+.btn-small {
+    padding: 5px 15px;
 }

@@ -14,9 +14,9 @@ class Category extends Model
     //------------------------------------------------------------//relation call like product->photos
 
 //    //    relation many to many ...
-//    public function posts(){
-//        return $this->belongsToMany('App\Post')->using('App\CategoryPost');
-//    }
+    public function posts(){
+        return $this->belongsToMany(Post::class ,'category_posts');
+    }
 //    //    relation many to many ...
 //    public function users(){
 //        return $this->belongsToMany('App\User')->using('App\Interest');

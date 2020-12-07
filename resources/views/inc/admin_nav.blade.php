@@ -26,6 +26,7 @@
                             <a class="dropdown-item" href="{{route('admin.users.index')}}">صفحه کاربران</a>
                             <a class="dropdown-item" href="{{route('admin.post.index')}}">صفحه پست ها</a>
                             <a class="dropdown-item" href="{{route('admin.category.index')}}">صفحه دسته بندی ها</a>
+                            <a class="dropdown-item" href="{{route('admin.comments.index')}}">صفحه نظرات</a>
                         </div>
                     </li>
 

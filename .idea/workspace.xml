@@ -10,8 +10,12 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/comments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +154,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/pages/comments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../snapmarket" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -288,14 +292,9 @@
       <workItem from="1606892859919" duration="9415000" />
       <workItem from="1607065006460" duration="9179000" />
       <workItem from="1607150568345" duration="20460000" />
-      <workItem from="1607234974453" duration="7808000" />
-    </task>
-    <task id="LOCAL-00036" summary="a little changes in like to show number of likes but it doesn't work">
-      <created>1604138179228</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1604138179228</updated>
+      <workItem from="1607234974453" duration="11098000" />
+      <workItem from="1607260424092" duration="7858000" />
+      <workItem from="1607323628150" duration="3578000" />
     </task>
     <task id="LOCAL-00037" summary="redesign register.blade.php and locale='fa'">
       <created>1604218036743</created>
@@ -633,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607240908558</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="admin comment page search bar done">
+      <created>1607242864306</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1607242864306</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +686,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="working on owlcarousel" />
     <MESSAGE value="unsuccessful try for croppie image plugin" />
     <MESSAGE value="added croppie image in diffrent controller" />
     <MESSAGE value="like js with mahsa(just view is working not database)" />
@@ -705,7 +710,8 @@
     <MESSAGE value="add edit for posts in Artist/PostController(just title and description)" />
     <MESSAGE value="make sidnav style global in all-pages stylepages.css" />
     <MESSAGE value="admin comment page table done" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin comment page table done" />
+    <MESSAGE value="admin comment page search bar done" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin comment page search bar done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -716,18 +722,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607241233478" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607240906960">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607242863103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607240906960" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607242863103" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605888303094" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606830074247">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607325349805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606830074247" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607325349805" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607180146127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -744,9 +750,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607238121380">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607261569961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607238121380" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607261569961" />
   </component>
 </project>

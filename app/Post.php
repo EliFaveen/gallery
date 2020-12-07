@@ -35,9 +35,9 @@ class Post extends Model
 //        return $this->hasMany('App\Hashtag');
 //    }
 //    //    relation many to many ...
-//    public function categories(){
-//        return $this->belonsToMany('App\Category')->using('App\CategoryPost');
-//    }
+    public function categories(){
+        return $this->belongsToMany(Category::class ,'category_posts');
+    }
     //    relation one to many revers
     public function user(){
         return $this->belongsTo('App\User');
