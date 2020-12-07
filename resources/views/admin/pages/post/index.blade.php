@@ -76,19 +76,79 @@
                             <td >{{Str::limit($post->description, $limit = 20, $end = '...') }}</td>
                             {{----------------------------------categories--}}
                             <td >
-                                @if($post->categories)
-                                <div class="dropdown">
-                                    <span>مشاهده دسته بندی ها</span>
-                                    <div class="dropdown-content">
-                                        @foreach($post->categories as $category)
-                                            <p>{{$category->title}}</p>
-                                        @endforeach
-                                            <p>ویرایش دسته بندی</p>
+{{--                                @if($post->categories)--}}
+{{--                                <div class="dropdown">--}}
+{{--                                    <span>مشاهده دسته بندی ها</span>--}}
+{{--                                    <div class="dropdown-content">--}}
+{{--                                        @foreach($post->categories as $category)--}}
+{{--                                            <p>{{$category->title}}</p>--}}
+{{--                                        @endforeach--}}
+{{--                                            <p>ویرایش دسته بندی</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                @else--}}
+{{--                                    بدون دسته بندی--}}
+{{--                                @endif--}}
+
+                        <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary btn-sm btn-small" data-toggle="modal" data-target="#exampleModal{{$post->id}}">
+                                مشاهده
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal{{$post->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModal{{$post->id}}Label" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModal{{$post->id}}Label">دسته بندی های این پست:</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @if($post->categories)
+                                                <ul class="list-group">
+                                                    @foreach($post->categories as $category)
+                                                        <li class="list-group-item">{{$category->title}}</li>
+                                                    @endforeach
+                                                </ul>
+                                            @else
+                                                بدون دسته بندی
+                                            @endif
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                                            <button type="button" class="btn btn-primary">ویرایش</button>
+                                        </div>
                                     </div>
                                 </div>
-                                @else
-                                    بدون دسته بندی
-                                @endif
+                            </div>
+
+
+
+
+{{--                              <div class="d-flex">--}}
+{{--                                  <button name="show_categories" class="btn btn-info btn-sm btn-small collapsible">--}}
+{{--                                      مشاهده--}}
+{{--                                  </button>--}}
+{{--                                  <div class="content">--}}
+{{--                                      <ul class="category-ul">--}}
+{{--                                          <li class="">Cras justo odio</li>--}}
+{{--                                          <li class="">Dapibus ac facilisis in</li>--}}
+{{--                                          <li class="">Morbi leo risus</li>--}}
+{{--                                          <li class="">Porta ac consectetur ac</li>--}}
+{{--                                          <li class="">Vestibulum at eros</li>--}}
+{{--                                      </ul>--}}
+{{--                                  </div>--}}
+{{--                                  <form method="post" action="">--}}
+{{--                                      @csrf--}}
+{{--                                      @method('PATCH')--}}
+{{--                                      <button name="approved" type="submit" class="btn btn-warning btn-sm btn-small" value="true">--}}
+{{--                                          ویرایش--}}
+{{--                                      </button>--}}
+{{--                                  </form>--}}
+{{--                              </div>--}}
+
                             </td>
                             {{----------------------------------hashtags--}}
                             <td>
@@ -131,4 +191,50 @@
         </div>
     </div>
 
+@endsection
+
+@section('custom-js')
+    <script>
+        function swalFunction() {
+            {{--Swal.fire({--}}
+            {{--    title: 'دسته بندی های این پست:',--}}
+            {{--    text:--}}
+            {{--        '@if($post->categories)'+--}}
+            {{--            '@foreach($post->categories as $category)'+--}}
+            {{--                '<p>'{{$category->title}}'</p>'+--}}
+            {{--            '@endforeach'+--}}
+            {{--        '@else'+--}}
+            {{--            'بدون دسته بندی'+--}}
+            {{--        '@endif',--}}
+            {{--    icon: 'info',--}}
+            {{--    confirmButtonText: 'باشه'--}}
+            {{--})--}}
+
+
+            // var x = document.getElementById("myDIV");
+            // if (x.style.display === "block") {
+            //     x.style.display = "none";
+            // } else {
+            //     x.style.display = "block";
+            // }
+        }
+    </script>
+    <script>
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+    </script>
 @endsection

@@ -23,6 +23,9 @@
 
 {{--    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>--}}
 
+    {{--    sweet alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     @yield('custom-css')
 
 
@@ -81,7 +84,8 @@
 {{--        });--}}
 {{--    })--}}
 {{--</script>--}}
-@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+{{--@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])--}}
+@yield('custom-js')
 </body>
-
+@include('sweet::alert')
 </html>
