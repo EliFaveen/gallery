@@ -163,15 +163,13 @@
                             </td>
                         {{----------------------------------like/dislike--}}
                             <td>
-{{--                                <ul class="list-group">--}}
-{{--                                    <li class="list-group-item d-flex justify-content-between align-items-center">--}}
-                                        <span class="badge badge-success badge-pill ml-2"><i class="far fa-thumbs-up ml-1"></i>{{$post->likes->where('like',1)->count()}}</span>
-                                        <span class="badge badge-danger badge-pill"><i class="far fa-thumbs-down ml-1"></i>{{$post->likes->where('like',0)->count()}}</span>
-{{--                                    </li>--}}
-{{--                                </ul>--}}
+                                <span class="badge badge-success badge-pill ml-2"><i class="far fa-thumbs-up ml-1"></i>{{$post->likes->where('like',1)->count()}}</span>
+                                <span class="badge badge-danger badge-pill"><i class="far fa-thumbs-down ml-1"></i>{{$post->likes->where('like',0)->count()}}</span>
                             </td>
                         {{----------------------------------comments--}}
-                            <td>...</td>
+                            <td>
+                                <span class="badge badge-info badge-pill"><i class="far fa-comment-dots ml-1"></i>{{$post->comments->count()}}</span>
+                            </td>
                         {{----------------------------------able/disable--}}
                             <td>...</td>
                         {{----------------------------------tools--}}
