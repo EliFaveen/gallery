@@ -21,6 +21,10 @@ class PostController extends Controller
                 ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));})
                 ->paginate(20);
 
+//        $post=Post::find(12);
+//        return $post->hashtags;
+
+
         return view('admin.pages.post.index',compact('posts'));
     }
 

@@ -31,9 +31,9 @@ class Post extends Model
         return $this->hasMany('App\Like');
     }
 //    //    relation one to many
-//    public function hashtags(){
-//        return $this->hasMany('App\Hashtag');
-//    }
+    public function hashtags(){
+        return $this->hasMany('App\Hashtag');
+    }
 //    //    relation many to many ...
     public function categories(){
         return $this->belongsToMany(Category::class ,'category_posts');

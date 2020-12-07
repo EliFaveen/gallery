@@ -124,43 +124,47 @@
                                 </div>
                             </div>
 
-
-
-
-{{--                              <div class="d-flex">--}}
-{{--                                  <button name="show_categories" class="btn btn-info btn-sm btn-small collapsible">--}}
-{{--                                      مشاهده--}}
-{{--                                  </button>--}}
-{{--                                  <div class="content">--}}
-{{--                                      <ul class="category-ul">--}}
-{{--                                          <li class="">Cras justo odio</li>--}}
-{{--                                          <li class="">Dapibus ac facilisis in</li>--}}
-{{--                                          <li class="">Morbi leo risus</li>--}}
-{{--                                          <li class="">Porta ac consectetur ac</li>--}}
-{{--                                          <li class="">Vestibulum at eros</li>--}}
-{{--                                      </ul>--}}
-{{--                                  </div>--}}
-{{--                                  <form method="post" action="">--}}
-{{--                                      @csrf--}}
-{{--                                      @method('PATCH')--}}
-{{--                                      <button name="approved" type="submit" class="btn btn-warning btn-sm btn-small" value="true">--}}
-{{--                                          ویرایش--}}
-{{--                                      </button>--}}
-{{--                                  </form>--}}
-{{--                              </div>--}}
-
                             </td>
                             {{----------------------------------hashtags--}}
                             <td>
-                                <div class="dropdown">
-                                    <span>Mouse over me</span>
-                                    <div class="dropdown-content">
-                                        <p>Hello World!</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-sm btn-small" data-toggle="modal" data-target="#exampleModal-{{$post->id}}">
+                                    مشاهده
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-{{$post->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModal-{{$post->id}}Label" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModal-{{$post->id}}Label">دسته بندی های این پست:</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                @if($post->hashtags)
+                                                    <ul class="list-group">
+                                                        @foreach($post->hashtags as $hashtag)
+                                                            <li class="list-group-item">{{$hashtag->hashtag}}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                @else
+                                                   بدون هشتگ
+                                                @endif
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                                                <button type="button" class="btn btn-primary">ویرایش</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </td>
                         {{----------------------------------like/dislike--}}
-                            <td>...</td>
+                            <td>
+
+                            </td>
                         {{----------------------------------comments--}}
                             <td>...</td>
                         {{----------------------------------able/disable--}}
