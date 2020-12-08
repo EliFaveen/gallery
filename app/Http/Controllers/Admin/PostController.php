@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
 
-            $posts=Post::orderBy('created_at','desc')->with('categories')
+            $posts=Post::orderBy('created_at','desc')->withTrashed()->with('categories')
                 ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));})
                 ->paginate(20);
 
@@ -68,7 +68,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //empty
+        dd('hi');
     }
 
     /**
@@ -91,6 +91,14 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //soft delete
+        Post::find($id)->delete();
+        return back();
+    }
+
+    public function restore($id)
+    {
+//        dd('hi');
+        Post::withTrashed()->find($id)->restore();
+        return back();
     }
 }

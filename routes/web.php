@@ -56,6 +56,7 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
     ->group(function (){
         Route::resource('category','CategoryController');
         Route::resource('post','PostController');
+            Route::get('post/restore/{post}','PostController@restore')->name('post.restore');
         Route::resource('users','UserController');
         Route::resource('comments','CommentController');
 

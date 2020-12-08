@@ -1,7 +1,16 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
 
 
 body{
     direction: rtl;
+    font-family: IRSans;
 }
 thead{
     text-align: center;
@@ -39,6 +48,14 @@ tbody{
     color: #9f1321;
 }
 .tm-pen-icon {
+    color: #6e6c6c;
+    cursor: pointer;
+}
+/*restore*/
+.tm-restore-icon:hover {
+    color: #9f1321;
+}
+.tm-restore-icon {
     color: #6e6c6c;
     cursor: pointer;
 }
@@ -170,7 +187,7 @@ td{
 .individual-body{
     text-align: justify;
     margin: 55px 0px 55px 0px;
-}
+}ّّ
 /*-----------------------------------change default tooplate--------------------------------------*/
 .table td, .table th {
     padding: 9px 9px;

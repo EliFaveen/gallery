@@ -171,9 +171,30 @@
                                 <span class="badge badge-info badge-pill"><i class="far fa-comment-dots ml-1"></i>{{$post->comments->count()}}</span>
                             </td>
                         {{----------------------------------able/disable--}}
-                            <td>...</td>
+                            <td>
+                                @if(!$post->deleted_at)
+                                    <p>فعال</p>
+                                @else
+
+                                    <p>حذف شده</p>
+                                @endif
+                            </td>
                         {{----------------------------------tools--}}
-                            <td>...</td>
+                            <td>
+                                @if(!$post->deleted_at)
+                                    <div class="d-flex">
+                                        <form method="post" action="{{route('admin.post.destroy',['post'=>$post->id])}}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="delete-btn" onclick="return confirm('با زدن تایید پست حذف خواهد شد!')"><i class="fas fa-trash-alt tm-trash-icon"></i></button>
+                                        </form>
+                                        <a id="edit-link" href="{{route('admin.post.edit',['post'=>$post->id])}}"><i class="fas fa-pen-alt tm-pen-icon"></i></a>
+                                    </div>
+                                @else
+{{--                                    <i class="fas fa-trash-restore tm-restore-icon"></i>--}}
+                                    <a id="edit-link" href="{{route('admin.post.restore',['post'=>$post->id])}}"><i class="fas fa-recycle tm-restore-icon"></i></a>
+                                @endif
+                            </td>
                     @endforeach
                     </tbody>
                 </table>
