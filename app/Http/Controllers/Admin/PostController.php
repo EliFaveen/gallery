@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
+use App\CategoryPost;
+use App\Hashtag;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
@@ -105,5 +107,54 @@ class PostController extends Controller
 //        dd('hi');
         Post::withTrashed()->find($id)->restore();
         return back();
+    }
+    public function editCategory($id){
+        $post=Post::find($id);
+        return view('admin.pages.post.editCategory',compact('post'));
+    }
+    public function updateCategory(Request $request,$id){
+
+
+        $post=Post::find($id);
+//        if ($request->has('categories')){
+
+        $post_categories=CategoryPost::where('post_id',$id)->get();
+        foreach ($post_categories as $post_category){
+            $post_category->delete();
+        }
+//                return $post_categories;
+        foreach ($request->input('categories') as $category)
+        {
+            CategoryPost::create([
+                'post_id'=>$post->id,
+                'category_id'=>$category,
+            ]);
+        }
+        return redirect(route('admin.post.index'));
+    }
+    public function editHashtag($id){
+        $post=Post::find($id);
+        return view('admin.pages.post.editHashtag',compact('post'));
+    }
+
+    public function updateHashtag(Request $request,$id){
+//        dd('hi');
+//return $request->all();
+        $post=Post::find($id);
+//        if ($request->has('categories')){
+
+        $post_hashtags=Hashtag::where('post_id',$id)->get();
+        foreach ($post_hashtags as $post_hashtag){
+            $post_hashtag->delete();
+        }
+//                return $post_categories;
+        foreach ($request->input('hashtags') as $hashtag)
+        {
+            Hashtag::create([
+                'post_id'=>$post->id,
+                'hashtag'=>$hashtag,
+            ]);
+        }
+        return redirect(route('admin.post.index'));
     }
 }

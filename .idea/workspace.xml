@@ -9,12 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/editCategory.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/editHashtag.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,14 +299,7 @@
       <workItem from="1607323628150" duration="9293000" />
       <workItem from="1607345851451" duration="8769000" />
       <workItem from="1607411752198" duration="8071000" />
-      <workItem from="1607444078546" duration="1330000" />
-    </task>
-    <task id="LOCAL-00044" summary="sweet alert not working">
-      <created>1604917634001</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1604917634001</updated>
+      <workItem from="1607444078546" duration="12826000" />
     </task>
     <task id="LOCAL-00045" summary="soft delete for users admin and add a simple inline delete confirmation onclick">
       <created>1604996671362</created>
@@ -641,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607415545094</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="working on admin post(show post added)">
+      <created>1607445448500</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1607445448500</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +691,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create.blade.php artist styling (DONE!)" />
     <MESSAGE value="simple like is working now" />
     <MESSAGE value="add carousel bootstrap for single post showing with multi photos" />
     <MESSAGE value="comments-table (build a new structure for comments table)" />
@@ -713,21 +715,22 @@
     <MESSAGE value="working on admin post(likes counts added)" />
     <MESSAGE value="working on admin post(comments counts added)" />
     <MESSAGE value="working on admin post(delete and restore added)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on admin post(delete and restore added)" />
+    <MESSAGE value="working on admin post(show post added)" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on admin post(show post added)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1604164354170" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607241233478">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607456487106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607241233478" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607415543642">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607445447076">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607415543642" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607445447076" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -740,10 +743,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607180146127" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607413627992">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607456484459">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607413627992" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1607456484459" />
     <state x="495" y="0" width="1055" height="616" key="dock-window-1" timestamp="1607152919073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -752,9 +755,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607416702764">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607461648489">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607416702764" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607461648489" />
   </component>
 </project>

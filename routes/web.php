@@ -57,6 +57,11 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
         Route::resource('category','CategoryController');
         Route::resource('post','PostController');
             Route::get('post/restore/{post}','PostController@restore')->name('post.restore');
+            Route::get('post/edit-category/{post}','PostController@editCategory')->name('post.editCategory');
+            Route::patch('post/update-category/{post}','PostController@updateCategory')->name('post.updateCategory');
+            Route::get('post/edit-hashtag/{post}','PostController@editHashtag')->name('post.editHashtag');
+            Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');
+
         Route::resource('users','UserController');
         Route::resource('comments','CommentController');
 
