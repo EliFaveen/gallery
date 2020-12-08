@@ -183,6 +183,8 @@
                             <td>
                                 @if(!$post->deleted_at)
                                     <div class="d-flex">
+                                        <a id="edit-link" href="{{route('admin.post.show',['post'=>$post->id])}}"><i class="far fa-eye tm-eye-icon"></i></a>
+
                                         <form method="post" action="{{route('admin.post.destroy',['post'=>$post->id])}}">
                                             @csrf
                                             @method('DELETE')

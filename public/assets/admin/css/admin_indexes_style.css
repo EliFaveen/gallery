@@ -59,6 +59,14 @@ tbody{
     color: #6e6c6c;
     cursor: pointer;
 }
+/*eye*/
+.tm-eye-icon:hover {
+    color: #9f1321;
+}
+.tm-eye-icon {
+    color: #6e6c6c;
+    cursor: pointer;
+}
 .delete-btn{
     background: none;
     border: none;
@@ -186,7 +194,8 @@ td{
 
 .individual-body{
     text-align: justify;
-    margin: 55px 0px 55px 0px;
+    /*margin: 55px 0px 55px 0px;*/
+    margin: 15px;
 }ّّ
 /*-----------------------------------change default tooplate--------------------------------------*/
 .table td, .table th {
@@ -206,4 +215,45 @@ td{
 
 .list-group {
     padding: 0;
+}
+/*----------------------------------show post carousel-------------------------------------------*/
+.single-post-box
+{
+    margin-top: 100px;
+    direction: rtl;
+}
+.single-post-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.single-post-img-parent{
+    width: 330px;
+    height: 330px;
+}
+
+/*------------------------------------------show category and hashtags----------------------------------------------*/
+.list-group-item{
+    background-color:  #ffffff;
+}
+/*section .sidebar .card-header{*/
+/*    background-color:  #f3f3f3;*/
+/*}*/
+/*section .sidebar .card-header img{*/
+
+/*}*/
+.card .list-group a{
+    text-decoration: none;
+    padding-right: 0%;
+    color: #000000;
+}
+
+.card .list-group li:hover {
+    padding-right: 10%;
+    transition: 0.3s;
+}
+.card .list-group .side-fa{
+    color:#bb0000;
 }

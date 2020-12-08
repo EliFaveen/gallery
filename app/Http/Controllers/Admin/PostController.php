@@ -57,7 +57,12 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //empty
+
+//        $post=Post::find($id)->with('categories')
+//            ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));});
+
+        $post=Post::find($id);
+        return view('admin.pages.post.show',compact('post'));
     }
 
     /**

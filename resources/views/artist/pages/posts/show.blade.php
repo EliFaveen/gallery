@@ -61,7 +61,7 @@
 
 
 
-
+{{---------------------------------------------------------------------------------------------like--}}
                             <div class="card-body" data-postid="{{$post->id}}">
 {{--                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>--}}
 {{--                                <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
