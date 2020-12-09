@@ -6,6 +6,7 @@ use App\Category;
 use App\CategoryPost;
 use App\Hashtag;
 use App\Http\Controllers\Controller;
+use App\Photo;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -75,7 +76,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        dd('hi');
+//        dd('hi');
+        $post=Post::find($id);
+        return view('admin.pages.post.edit',compact('post'));
     }
 
     /**
@@ -87,7 +90,24 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //empty
+        //        simple multiple photo upload
+        $post=Post::find($id);
+        if ($request->file('post_pics')){
+            foreach ($request->file('post_pics') as $photo)
+            {
+                $path=$photo->store('postphotos');
+                $fixed_path='storage/'.$path;
+                Photo::create([
+                    'img_url'=>$fixed_path,
+                    'post_id'=>$post->id,
+                ]);
+            }
+        }
+        $post->title=$request->input('title');
+        $post->description=$request->input('description');
+        $post->update();
+
+        return redirect(route('admin.post.show',['post'=>$id]));
     }
 
     /**
@@ -156,5 +176,11 @@ class PostController extends Controller
             ]);
         }
         return redirect(route('admin.post.index'));
+    }
+
+    public function deletePhoto($id){
+//        dd('hi');
+        Photo::find($id)->delete();
+        return back();
     }
 }

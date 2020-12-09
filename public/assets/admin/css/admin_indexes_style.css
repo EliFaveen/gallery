@@ -204,7 +204,9 @@ td{
 .btn-small {
     padding: 5px 15px;
 }
-
+.form-control {
+     padding: 9px !important;
+}
 
 
 /*--------------------------------modal category-----------------------------------*/
@@ -256,4 +258,20 @@ td{
 }
 .card .list-group .side-fa{
     color:#bb0000;
+}
+
+/*------------------------------edit post(delete img)--------------------------------*/
+.post-img-parent-delete{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+.post-img-delete {
+    width: 100%;
+    height: 100%;
+}
+.btn-delete-photo-parent {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

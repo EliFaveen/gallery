@@ -61,6 +61,7 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
             Route::patch('post/update-category/{post}','PostController@updateCategory')->name('post.updateCategory');
             Route::get('post/edit-hashtag/{post}','PostController@editHashtag')->name('post.editHashtag');
             Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');
+            Route::delete('post/delete-photo/{photo}','PostController@deletePhoto')->name('post.deletePhoto');
 
         Route::resource('users','UserController');
         Route::resource('comments','CommentController');
