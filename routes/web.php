@@ -32,7 +32,7 @@ Auth::routes(['verify'=>true]);
 
 //Route::resource('artist\post','Artist\PostController');
 //todo: add middleware auth & is artist
-Route::prefix('artist')->namespace('Artist')->name('artist.')
+Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth','isArtist'])
     ->group(function (){
         Route::resource('post','PostController');
             Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');

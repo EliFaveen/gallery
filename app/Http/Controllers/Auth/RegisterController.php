@@ -46,7 +46,22 @@ class RegisterController extends Controller
 //        }
 //    }
 //    protected $redirectTo = '/artist/post';
-
+    public function redirectTo()
+    {
+        if (auth()->user()->role === 'admin') {
+//            dd(auth()->user()->role);
+            return '/admin/category';
+        } else if (auth()->user()->role === 'artist') {
+//            dd(auth()->user()->role);
+            return '/artist/post';
+        } else if (auth()->user()->role === 'unartist') {
+            return '/';
+        } else if (auth()->user()->role === 'user') {
+            return '/';
+        } else {
+            return '/';
+        }
+    }
 
     /**
      * Create a new controller instance.
