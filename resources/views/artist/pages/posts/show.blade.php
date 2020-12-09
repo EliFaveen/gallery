@@ -99,7 +99,7 @@
     <div class="row single-post-box">
 
 {{--        right      --}}
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+            <div class="col-md-6 right-col-md-6" >
 {{--                <div class="a-tag-parent">--}}
                         <div class="card" >
 
@@ -207,7 +207,7 @@
 
 
 {{--        left       --}}
-        <div class="col-md-6">
+        <div class="col-md-6 left-col-md-6">
             <nav style="font-size: 14px;">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
@@ -380,7 +380,42 @@
                  </div>
                 </div>
 {{--                categories--}}
-                <div class="tab-pane fade" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">sdfddddd</div>
+                <div class="tab-pane fade tab-4-style" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
+                    <h2 class="title-style">سبک های این نقاشی عبارتند از:</h2>
+                    @foreach($post->categories as $category)
+                    <div class="bg-white tm-block">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                {{--                image               --}}
+
+                                    @if($category->category_pic)
+                                        <div class="post-img-parent-large">
+                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                        </div>
+                                    @else
+                                        <div class="post-img-parent-large">
+                                            <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                        </div>
+                                    @endif
+
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                {{--                    <form action="index.html" method="post" class="tm-login-form">--}}
+                                <div class="individual-title">
+                                    <h1>
+                                        {{$category->title}}
+                                    </h1><hr>
+                                </div>
+                                <div class="individual-body">
+                                    {{$category->description}}
+                                </div><hr>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
 {{--                edit--}}
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="form-parent">
@@ -390,14 +425,14 @@
                             {{---------------------------------------------------------------------------------------------title row--}}
                             <div class="row justify-content-md-center">
                                 <div class="col-md-8">
-                                    <input class="form-control input-style" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟" value="{{$post->title}}">
+                                    <input class="form-control" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟" value="{{$post->title}}">
 
                                 </div>
                             </div>
                             {{---------------------------------------------------------------------------------------------description row--}}
                             <div class="row justify-content-md-center description-row">
                                 <div class="col-md-8">
-                                    <textarea class="form-control input-style" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
+                                    <textarea class="form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
 
                                 </div>
                             </div>
