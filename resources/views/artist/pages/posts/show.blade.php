@@ -3,7 +3,90 @@
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/artist/css/show_style.css')}}"><!--custom-->
 {{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--glyphicon-->--}}
-@endsection
+    <style>
+    /*-----------------------------------for hashtags-----------------------------------*/
+    @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400');
+
+    /*body {*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*!*height: 100vh;*!*/
+    /*!*overflow: hidden;*!*/
+    /*font-family: 'Work Sans', sans-serif;*/
+    /*!*background-color: #1a284f;*!*/
+    /*!*color: white;*!*/
+    /*}*/
+
+    .wrapper {
+    padding: 20px 28px;
+    /*margin: 0;*/
+    /*margin: 48px 263px 42px 0px !important;*/
+    /*width: 580px;*/
+    background-color:#869791;
+    color: #fef4e1;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    border: solid 2px white;
+    }
+
+    h3 {
+    margin: 10px 14px 10px 0;
+    font-weight: 300;
+    font-size: 36px;
+    }
+
+    p {
+    margin: 10px 10px;
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    }
+
+    input {
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 8px;
+    width: 100%;
+    color: #666;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    outline: none;
+    }
+
+    .tag-container {
+    display: flex;
+    flex-flow: row wrap;
+    }
+
+    .tag{
+    pointer-events: none;
+    background-color: #505d58;
+    color: white;
+    padding: 6px;
+    margin: 5px;
+    }
+
+    .tag::before {
+    pointer-events: all;
+    display: inline-block;
+    content: 'x';
+    height: 20px;
+    width: 20px;
+    margin-right: 6px;
+    text-align: center;
+    color: #ccc;
+    background-color: #505d58;
+    cursor: pointer;
+    }
+
+    </style>
+
+    @endsection
 
 @section('title') show post page @endsection
 
@@ -125,11 +208,13 @@
 
 {{--        left       --}}
         <div class="col-md-6">
-            <nav>
+            <nav style="font-size: 14px;">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
 {{--                    <div class="fa-parent-style">--}}
+                    <a class="nav-item nav-link " id="nav-hashtag-tab" data-toggle="tab" href="#nav-hashtag" role="tab" aria-controls="nav-hashtag" aria-selected="false">هشتگ</a>
+                    <a class="nav-item nav-link " id="nav-category-tab" data-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">سبک نقاشی</a>
                         <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش پست</a>
 {{--                    </div>--}}
                     <div class="d-flex delete-edit-box">
@@ -209,6 +294,94 @@
                     </div>
                     {{--    end comments    --}}
                 </div>
+{{--                hashtags--}}
+                <div class="tab-pane fade" id="nav-hashtag" role="tabpanel" aria-labelledby="nav-hashtag-tab">
+                 <div class="row hshtag-row">
+                     @if($post->hashtags)
+                         <ul class="list-group">
+                             <div class="col-md-12 d-flex">
+                                 @foreach($post->hashtags as $hashtag)
+                                     <li class="list-group-item ml-2 mt-2"><a href="#">#{{$hashtag->hashtag}}</a></li>
+                                 @endforeach
+                                 <div class="div seprate-a">
+                                     <!-- Button trigger modal -->
+                                    @auth
+                                         <a class="plus" data-toggle="modal" data-target="#editHashtag">
+                                             <i class="fa fa-plus"></i>
+                                         </a>
+                                    @endauth
+                                     <!-- Modal -->
+
+                                     @auth
+                                         <div class="modal fade" id="editHashtag">
+                                             <div class="modal-dialog">
+                                                 <div class="modal-content">
+                                                     <div class="modal-header">
+                                                         <h5 class="modal-title" id="editHashtagLabel">ویرایش هشتگ</h5>
+                                                         <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
+                                                             <span aria-hidden="true">&times;</span>
+                                                         </button>
+                                                     </div>
+                                                     <form action="{{route('artist.post.updateHashtag',['post'=>$post->id])}}" method="post" id="editHashtagForm">
+                                                         @csrf
+                                                         @method('PATCH')
+                                                         <div class="modal-body">
+{{--                                                             <input type="hidden" name="commentable_id" value="{{$post->id }}" ><!--just change here-->--}}
+{{--                                                             <input type="hidden" name="commentable_type" value="{{get_class($post)}}"><!--and here-->--}}
+{{--                                                             <input type="hidden" name="parent_id" value="0">--}}
+
+                                                             <div class="form-group">
+                                                                 <label for="message-text" class="col-form-label">اضافه یا حذف هشتگ:</label>
+{{--                                                                 <textarea name="comment" class="form-control" id="message-text"></textarea>--}}
+                                                                 {{---------------------------------------------------------------------------------------------hashtags row--}}
+                                                                 <div class="row">
+                                                                     <div class="col-md-12">
+                                                                         <div class="wrapper">
+                                                                             <h3>هشتگ های تو</h3>
+                                                                             <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
+                                                                             <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
+                                                                             <div class="tag-container">
+                                                                                 @php($x=0)
+                                                                                 @if($post->hashtags)
+                                                                                     @foreach($post->hashtags as $hashtag)
+                                                                                         <input class="hashtag_input" type="hidden" name="hashtags[]" id="tags_{{$x}}" value="{{$hashtag->hashtag}}">
+                                                                                         <p class="tag" id="tags{{$x++}}">{{$hashtag->hashtag}}</p>
+                                                                                     @endforeach
+                                                                                 @endif
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                         <div class="modal-footer">
+                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                                                             <button type="submit" class="btn btn-primary">ویرایش هشتگ</button>
+                                                         </div>
+                                                     </form>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     @endauth
+                                 </div>
+                             </div>
+                         </ul>
+                     @else
+                         <ul class="list-group">
+                             <div class="col-md-12 d-flex">
+{{--                                 @foreach($post->hashtags as $hashtag)--}}
+                                     <li class="list-group-item">بدون هشتگ</li>
+{{--                                 @endforeach--}}
+                                 <i class="fa fa-plus-circle fa-plus-style"></i>
+                             </div>
+
+                         </ul>
+                     @endif
+                 </div>
+                </div>
+{{--                categories--}}
+                <div class="tab-pane fade" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">sdfddddd</div>
+{{--                edit--}}
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="form-parent">
                         <form class="" method="post" action="{{route('artist.post.update',['post'=>$post->id])}}">
@@ -324,6 +497,64 @@ document.querySelector('#sendCommentForm').addEventListener('submit',function (e
 })
 
 
+    </script>
+    <script>
+        // create.blade.php-----------------------------------------------------------------for hashtags this intrupt my like system
+        let input, hashtagArray, container, t={{$x}};
+
+        input = document.querySelector('#hashtags');
+        container = document.querySelector('.tag-container');
+        hashtagArray = [];
+
+        input.addEventListener('keyup', () => {
+            if (event.which == 13 && input.value.length > 0) {
+                var text = document.createTextNode(input.value);
+                var myinput = document.createElement('input');
+                //var mydiv = document.createElement('div');
+                var p = document.createElement('p');
+
+                //container.appendChild(mydiv);
+                // mydiv.appendChild(myinput);
+                container.appendChild(myinput);
+                myinput.appendChild(text);
+                myinput.classList.add('hashtag_input');
+
+                container.appendChild(p);
+                p.appendChild(text);
+                p.classList.add('tag');
+
+                p.setAttribute("id", 'tags' + t);
+
+                myinput.setAttribute("type", "hidden");
+                myinput.setAttribute('name', 'hashtags[]');
+                myinput.setAttribute('id', 'tags_' + t);
+
+                $('#tags_' + t).val(input.value);
+                t++;
+
+                input.value = '';
+
+
+                //for p tags
+                let deleteTags = document.querySelectorAll('.tag');
+                let deleteInput = document.querySelectorAll('.hashtag_input');
+
+
+                for(let i = 0; i < deleteTags.length; i++) {
+                    deleteTags[i].addEventListener('click', () => {
+                        container.removeChild(deleteTags[i]);
+                        container.removeChild(deleteInput[i]);
+
+
+                    });
+
+                }
+            }
+        });
+        //create.blade.php-------------------------------------------------------------------except enter for texterea
+        $(document).on("keydown", ":input:not(textarea)", function(event) {
+            return event.key != "Enter";
+        });
     </script>
 
 @endsection

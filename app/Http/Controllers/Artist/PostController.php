@@ -241,5 +241,25 @@ class PostController extends Controller
 
 
     }
+    public function updateHashtag(Request $request,$id){
+//        dd('hi');
+//return $request->all();
+        $post=Post::find($id);
+//        if ($request->has('categories')){
+
+        $post_hashtags=Hashtag::where('post_id',$id)->get();
+        foreach ($post_hashtags as $post_hashtag){
+            $post_hashtag->delete();
+        }
+//                return $post_categories;
+        foreach ($request->input('hashtags') as $hashtag)
+        {
+            Hashtag::create([
+                'post_id'=>$post->id,
+                'hashtag'=>$hashtag,
+            ]);
+        }
+        return back();
+    }
 
 }

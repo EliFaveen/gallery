@@ -35,7 +35,7 @@ Auth::routes(['verify'=>true]);
 Route::prefix('artist')->namespace('Artist')->name('artist.')
     ->group(function (){
         Route::resource('post','PostController');
-
+            Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');
 
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET

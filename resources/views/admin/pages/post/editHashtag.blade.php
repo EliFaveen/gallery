@@ -130,7 +130,7 @@
 @section('custom-js')
     <script>
         // create.blade.php-----------------------------------------------------------------for hashtags this intrupt my like system
-        let input, hashtagArray, container, t=0;
+        let input, hashtagArray, container, t={{$i}};
 
         input = document.querySelector('#hashtags');
         container = document.querySelector('.tag-container');

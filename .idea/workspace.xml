@@ -11,6 +11,10 @@
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/editHashtag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/editHashtag.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,14 +297,7 @@
       <workItem from="1607345851451" duration="8769000" />
       <workItem from="1607411752198" duration="8071000" />
       <workItem from="1607444078546" duration="17083000" />
-      <workItem from="1607488867152" duration="3195000" />
-    </task>
-    <task id="LOCAL-00047" summary="simple search for users(some problems i will check with mahsa)">
-      <created>1605168905484</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1605168905484</updated>
+      <workItem from="1607488867152" duration="8258000" />
     </task>
     <task id="LOCAL-00048" summary="admin navbar links(basic)">
       <created>1605172878973</created>
@@ -638,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607491937507</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="only auth user see its posts">
+      <created>1607492715287</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1607492715287</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +689,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="comments-table (build a new structure for comments table)" />
     <MESSAGE value="comments-relationships with polymorphic" />
     <MESSAGE value="comments-send with a normal form" />
     <MESSAGE value="comments-send with ajax(and start showing comments in balde)" />
@@ -710,7 +713,8 @@
     <MESSAGE value="working on admin post(show post added)" />
     <MESSAGE value="working on admin post(edit and update for hashtags and categories for posts added)" />
     <MESSAGE value="done with admin post(edit post infos added)" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with admin post(edit post infos added)" />
+    <MESSAGE value="only auth user see its posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="only auth user see its posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -721,10 +725,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607491936291">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607492714508">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607491936291" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607492714508" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -749,9 +753,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607490397335">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607496915425">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607490397335" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607496915425" />
   </component>
 </project>

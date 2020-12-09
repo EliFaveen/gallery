@@ -184,3 +184,24 @@ body{
 .description-row textarea{
     min-height: 200px;
 }
+
+/*------------------------------------------for hashtags-----------------------------------------*/
+.plus {
+    background-color: #a35d40;
+    padding: 6px 10px 0px 10px;
+}
+.seprate-a .plus:hover {
+    color: #a35d40 !important;
+    background-color: unset;
+
+}
+.seprate-a{
+    margin-top: 21px;
+}
+.hshtag-row .seprate-a a{
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 18px;
+    color: white !important;
+    border-radius: 50%;
+}
