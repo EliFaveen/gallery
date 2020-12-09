@@ -9,11 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,14 +293,7 @@
       <workItem from="1607345851451" duration="8769000" />
       <workItem from="1607411752198" duration="8071000" />
       <workItem from="1607444078546" duration="17083000" />
-      <workItem from="1607488867152" duration="2139000" />
-    </task>
-    <task id="LOCAL-00046" summary="some useless try for sweetalert">
-      <created>1604998442780</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1604998442780</updated>
+      <workItem from="1607488867152" duration="3195000" />
     </task>
     <task id="LOCAL-00047" summary="simple search for users(some problems i will check with mahsa)">
       <created>1605168905484</created>
@@ -641,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607463508534</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="done with admin post(edit post infos added)">
+      <created>1607491937507</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1607491937507</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +685,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add carousel bootstrap for single post showing with multi photos" />
     <MESSAGE value="comments-table (build a new structure for comments table)" />
     <MESSAGE value="comments-relationships with polymorphic" />
     <MESSAGE value="comments-send with a normal form" />
@@ -713,7 +709,8 @@
     <MESSAGE value="working on admin post(delete and restore added)" />
     <MESSAGE value="working on admin post(show post added)" />
     <MESSAGE value="working on admin post(edit and update for hashtags and categories for posts added)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on admin post(edit and update for hashtags and categories for posts added)" />
+    <MESSAGE value="done with admin post(edit post infos added)" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with admin post(edit post infos added)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -724,10 +721,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607463507452">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607491936291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607463507452" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607491936291" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
