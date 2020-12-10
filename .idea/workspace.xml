@@ -9,26 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/default_profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/default_profile_green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/icon-4399701_1280.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/kisspng-user-profile-computer-icons-profile-5ac0924526cda6.172054181522569797159.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/profile-2398782_1920.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/default_profile/profile-2398783_1920.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/header-footer/footer1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/header-footer/footer2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/header-footer/login-bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/css/editProfile_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/logo/rose-gold-1585003_1920.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/logo/rose-gold-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/homeNav/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/login_logout_btns.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/login_logout_btns.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,20 +155,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/all_pages/img/default_profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/all_pages/img/logo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\public\assets\all_pages\img\logo" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\default_profile" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\header-footer" />
       <recent name="D:\zavie\Gallery\resources\views\admin\pages\post" />
       <recent name="D:\zavie\Gallery\resources\views\admin\pages\comments" />
-      <recent name="D:\zavie\Gallery\public\assets\artist\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -312,14 +300,7 @@
       <workItem from="1607411752198" duration="8071000" />
       <workItem from="1607444078546" duration="17083000" />
       <workItem from="1607488867152" duration="36023000" />
-      <workItem from="1607571955765" duration="8563000" />
-    </task>
-    <task id="LOCAL-00051" summary="start admin category index">
-      <created>1605340985746</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1605340985746</updated>
+      <workItem from="1607571955765" duration="13698000" />
     </task>
     <task id="LOCAL-00052" summary="done admin category index with styling">
       <created>1605346046108</created>
@@ -657,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607502806763</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="profile page compeleted">
+      <created>1607580712400</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1607580712401</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +692,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="comments-show in blade single-post-show (but i should refresh the page to see the comments and replies)" />
     <MESSAGE value="sweetalert doesn't show properly yet" />
     <MESSAGE value="comments- n replies" />
     <MESSAGE value="comments-date and time (morilog/jalali)" />
@@ -729,7 +716,8 @@
     <MESSAGE value="edit hashtags for artist added" />
     <MESSAGE value="show categoey for artist added" />
     <MESSAGE value="add some redirects for auth controllers(still have problems)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some redirects for auth controllers(still have problems)" />
+    <MESSAGE value="profile page compeleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile page compeleted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -740,10 +728,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607502805995">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607580710877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607502805995" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607580710877" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
