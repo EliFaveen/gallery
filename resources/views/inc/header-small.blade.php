@@ -2,14 +2,14 @@
 
 <header>
     <div class="header-main-div d-flex header-image">
-        @if(auth()->user()->id === $posts_user)
-        <a href="{{route('artist.post.editProfile',['user'=>auth()->user()->id])}}" id="edit-profile">
-            @endif
-            <div class="image-profile-parent">
+{{--        @if(auth()->user()->id === $posts_user)--}}
+        <a href="{{route('artist.home.index_user',['user'=>$posts_user->id])}}" id="edit-profile">
+{{--            @endif--}}
+            <div class="image-profile-parent-small">
                 @if($posts_user->profile_pic)
-                    <img src="{{url($posts_user->profile_pic)}}" alt="Avatar" class="image image-profile" >
+                    <img src="{{url($posts_user->profile_pic)}}" alt="Avatar" class="image image-profile-small" >
                 @else
-                    <img src="{{url('assets/all_pages/img/default_profile/default_profile.png')}}" alt="Avatar" class="image image-profile" >
+                    <img src="{{url('assets/all_pages/img/default_profile/default_profile.png')}}" alt="Avatar" class="image image-profile-small" >
                 @endif
 
                 {{--        </div>--}}
@@ -20,30 +20,20 @@
                 </div>
                     @endif
             </div>
-            @if(auth()->user()->id === $posts_user)
+{{--            @if(auth()->user()->id === $posts_user)--}}
         </a>
-        @endif
-        <div class="info-flex-with-profile col-md-6">
+{{--        @endif--}}
+        <div class="info-flex-with-profile col-md-7">
             <div class="username">
-                <h1>{{$posts_user->username}}@</h1>
-            </div>
-            <div class="bio d-flex">
-                <h4>بیوگرافی:</h4>
-                @if($posts_user->bio)
-                    <h4>{{$posts_user->bio}}</h4>
-                @else
-                    <h4>راجب خودت بنویس...</h4>
-                @endif
+                <a href="{{route('artist.home.index_user',['user'=>$posts_user->id])}}"><h4>{{$posts_user->username}}@</h4></a>
             </div>
         </div>
 
-        <div class="col-md-3">
-            <div class="follow-box">
-                <a class="btn btn-follow">followers<hr>0</a>
-                <a class="btn btn-follow">following<hr>0</a>
-            </div>
-            <div class="post-box">
-                <a class="btn btn-post">posts<hr>{{$posts_user->posts->count()}}</a>
+        <div class="col-md-4">
+            <div class="follow-box-small d-flex">
+                <a class="btn btn-follow-small">followers<br> 0</a>
+                <a class="btn btn-follow-small middle-btn">following<br> 0</a>
+                <a class="btn btn-follow-small">posts<br> {{$posts_user->posts->count()}}</a>
             </div>
         </div>
     </div>

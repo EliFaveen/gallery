@@ -57,6 +57,56 @@
     background: none;
     border: thin solid white;
 }
+/*----------------------------------------profile--------------------------------------------*/
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000b035e;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.image-profile-parent:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.image-profile-parent{
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+.image-profile{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #a35d40;
+}
+.overlay a{
+    text-decoration: none;
+    color: white;
+}
 
 /*-------------------------------------header-big-------------------------------------*/
 header{
@@ -135,7 +185,46 @@ header{
 .post-box{
     margin-top: 10%;
 }
+/*--------------------------------------header-small-----------------------------------------*/
+.image-profile-parent-small{
+    width: 83px;
+    height: 83px;
+    position: relative;
+}
+.image-profile-small {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid #a35d40;
+}
+.username h4 {
+    background: #a35d40;
+    border-radius: 40px;
+    padding: 14px;
+    margin-bottom: 0;
+    /* position: fixed; */
+    /* left: 499px; */
+    /* top: 103px; */
+    margin: 12px 19px 0px 0px;
 
+}
+.username a{
+    text-decoration: none;
+    color: white;
+}
+.btn-follow-small{
+    background: #a35d4026;
+    color: #a35d40 !important;
+    border-radius: 0px;
+    width: 92px;
+}
+.follow-box-small{
+    margin-top: 10px;
+    margin-right: 35px;
+}
+.middle-btn{
+    border-right: thin solid;
+    border-left: thin solid;}
 /*=============================footer===============================*/
 footer {
     margin-top: 10px;
