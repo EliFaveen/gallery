@@ -1,0 +1,122 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
+body{
+    direction: rtl;
+    font-family: IRSans;
+    overflow:visible !important;
+}
+/*----------------------------------------profile--------------------------------------------*/
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000b035e;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.image-profile-parent:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.image-profile-parent{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+.image-profile{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.overlay a{
+    text-decoration: none;
+    color: white;
+}
+
+/*--------------------custom file input----------------------------*/
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/*--------------------------------card header--------------------------------*/
+.header-image{
+    background-image: url(../../all_pages/img/header-footer/login-bar.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    /* min-height: 281px; */
+    background-size: 100% 276px;
+/*!* padding-top: 3%;*/
+}
+.btn-parent{
+    background: #909c89;
+    border-radius: 10px;
+}
+.btn-parent:hover{
+    background: #66826a;
+}
+
+.btn-parent .btn{
+    color: #ffffff;
+}
+/*-------------------------------customize sidenav----------------------------------------------*/
+.sidenav .all-sidenav:hover {
+    color: #66826a !important;
+    background-color: unset !important;
+
+}
+.sidenav .plus {
+    background-color: #66826a !important;
+}
+
+.sidenav .heart {
+    background-color: #66826a !important;
+}
+
+.sidenav .home {
+    background-color: #66826a !important;
+}
+
+.sidenav .search {
+    background-color: #66826a !important;
+}
+
+.sidenav .crown {
+    background-color: #66826a !important;
+}

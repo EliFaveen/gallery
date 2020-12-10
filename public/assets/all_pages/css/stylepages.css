@@ -21,13 +21,13 @@
 .sidenav .plus {
     top: 58px;
     background-color: #a35d40;
-    padding: 10px 15px 10px 15px;
+    padding: 12px 15px 9px 15px;
 }
 
 .sidenav .heart {
     top: 120px;
     background-color: #a35d40;
-    padding: 10px 14px 10px 14px
+    padding: 12px 14px 7px 14px;
 }
 
 .sidenav .home {
@@ -47,4 +47,13 @@
     background-color: #a35d40;
     padding: 10px 12px 10px 12px;
 
+}
+/*-------------------------------login logout btn inc----------------------------------------------*/
+.logout{
+    position: absolute;
+    left: 30px;
+    z-index: 1;
+    top: 25px;
+    background: none;
+    border: thin solid white;
 }

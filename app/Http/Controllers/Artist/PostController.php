@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Photo;
 use App\Post;
 use App\Like; //i added this
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -261,5 +262,81 @@ class PostController extends Controller
         }
         return back();
     }
+
+    public function editProfile($id){
+//        dd('hi');
+        $user=\App\User::find($id);
+        return view('artist.pages.posts.editProfile',compact('user'));
+    }
+    public function updateProfile(Request $request,$id){
+//        dd($request->all());
+        $user=\App\User::find($id);
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+
+//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+
+            'lastname' => ['required', 'string'],
+
+//            'username' => ['required','alpha_dash','unique:users'],
+
+            'phone' => ['required','numeric','starts_with:09'],
+
+//            'country' => ['string'],
+        ]);
+
+
+        $user->update([
+            'bio' => \request('bio'),
+            'phone' => \request('phone'),
+            'lastname' => \request('lastname'),
+            'name' => \request('name'),
+            'country' => \request('country'),
+        ]);
+
+        if($request->input('email')){
+            $request->validate([
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            ]);
+            $user->update([
+            'email' => $request->input('email'),
+            'email_verified_at'=>null,
+            ]);
+        }
+
+        if($request->input('username')){
+            $request->validate([
+            'username' => ['required','alpha_dash','unique:users'],
+            ]);
+            $user->update([
+                'username' => $request->input('username'),
+            ]);
+        }
+
+
+//        if ($request->input('photo')){
+//            $path=$request->input('photo')->store('profile_pics');
+//            $fixed_path='storage/'.$path;
+//            $user->profile_pic=$fixed_path;
+//            $user->update();
+//        }
+
+//        return redirect(route('artist.post.index'));
+            return back();
+        }
+
+        public function updateProfilePic(Request $request,$id){
+
+//            dd($request->all());
+            $user=\App\User::find($id);
+            $path=$request->file('photo')->store('profile_pics');
+            $fixed_path='storage/'.$path;
+//            $path=$request->input('photo')->store('profile_pics');
+//            $fixed_path='storage/'.$path;
+            $user->profile_pic=$fixed_path;
+            $user->update();
+
+            return back();
+        }
 
 }
