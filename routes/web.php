@@ -35,10 +35,13 @@ Auth::routes(['verify'=>true]);
 Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth','isArtist'])
     ->group(function (){
         Route::resource('post','PostController');
+//-----------post
             Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');
             Route::get('post/edit-profile/{user}','PostController@editProfile')->name('post.editProfile');
             Route::patch('post/update-profile/{user}','PostController@updateProfile')->name('post.updateProfile');
             Route::patch('post/update-profilepic/{user}','PostController@updateProfilePic')->name('post.updateProfilePic');
+//----------home
+        Route::get('home/post','HomeController@index')->name('home.index');//show following users post or all
 
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET

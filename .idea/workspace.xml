@@ -9,14 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/logo/rose-gold-1585003_1920.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/logo/rose-gold-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/artist/pages/homeNav/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Follower.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_151008_create_followers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/homeNav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +302,7 @@
       <workItem from="1607411752198" duration="8071000" />
       <workItem from="1607444078546" duration="17083000" />
       <workItem from="1607488867152" duration="36023000" />
-      <workItem from="1607571955765" duration="13698000" />
-    </task>
-    <task id="LOCAL-00052" summary="done admin category index with styling">
-      <created>1605346046108</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1605346046108</updated>
+      <workItem from="1607571955765" duration="20175000" />
     </task>
     <task id="LOCAL-00053" summary="done admin category edit and update">
       <created>1605515637530</created>
@@ -645,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607580712401</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="adderd footer for artist">
+      <created>1607588341252</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1607588341252</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +694,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="sweetalert doesn't show properly yet" />
     <MESSAGE value="comments- n replies" />
     <MESSAGE value="comments-date and time (morilog/jalali)" />
     <MESSAGE value="comments- view design" />
@@ -717,7 +718,8 @@
     <MESSAGE value="show categoey for artist added" />
     <MESSAGE value="add some redirects for auth controllers(still have problems)" />
     <MESSAGE value="profile page compeleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile page compeleted" />
+    <MESSAGE value="adderd footer for artist" />
+    <option name="LAST_COMMIT_MESSAGE" value="adderd footer for artist" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -728,10 +730,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607580710877">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607588339589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607580710877" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607588339589" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -756,9 +758,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607573131036">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607588385490">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607573131036" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607588385490" />
   </component>
 </project>

@@ -15,17 +15,31 @@
                 </div>
             </div>
         </a>
-        <div class="info-flex-with-profile">
+        <div class="info-flex-with-profile col-md-6">
             <div class="username">
                 <h1>{{auth()->user()->username}}@</h1>
             </div>
             <div class="bio d-flex">
-                <h2>bio:</h2>
+                <h4>بیوگرافی:</h4>
                 @if(auth()->user()->bio)
                     <h4>{{auth()->user()->bio}}</h4>
                 @else
                     <h4>راجب خودت بنویس...</h4>
                 @endif
+            </div>
+            <div class="follow-unfollow">
+                {{--                todo: if following--}}
+                <a href="{{route('artist.home.follow_unfollow')}}" class="btn btn-primary mr-3 ml-3 follow-unfollow-btn">follow</a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="follow-box">
+                <a class="btn btn-follow">followers<hr>0</a>
+                <a class="btn btn-follow">following<hr>0</a>
+            </div>
+            <div class="post-box">
+                <a class="btn btn-post">posts<hr>{{auth()->user()->posts->count()}}</a>
             </div>
         </div>
     </div>
