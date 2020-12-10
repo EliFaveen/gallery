@@ -107,7 +107,7 @@ header{
 }
 .follow-unfollow-btn{
 
-    width: 50%;
+    /*width: 50%;*/
 }
 .header-image{
     background-image: url(../../all_pages/img/header-footer/footer2.png);

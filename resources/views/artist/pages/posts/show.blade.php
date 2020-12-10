@@ -95,7 +95,9 @@
 
     @php($i=0)
     @php($j=0)
+    @include('inc.header-small',['posts_user'=>$post->user])
 
+{{--<a href="{{route('artist.home.index_user',['user'=>$post->user->id])}}">{{$post->user->username}}</a>--}}
     <div class="row single-post-box">
 
 {{--        right      --}}

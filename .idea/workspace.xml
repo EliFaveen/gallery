@@ -9,15 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Follower.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_151008_create_followers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/header-small.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Follower.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Follower.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/homeNav/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,17 +158,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/all_pages/img/logo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/inc" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\resources\views\inc" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\logo" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\default_profile" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\header-footer" />
       <recent name="D:\zavie\Gallery\resources\views\admin\pages\post" />
-      <recent name="D:\zavie\Gallery\resources\views\admin\pages\comments" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
@@ -302,14 +303,7 @@
       <workItem from="1607411752198" duration="8071000" />
       <workItem from="1607444078546" duration="17083000" />
       <workItem from="1607488867152" duration="36023000" />
-      <workItem from="1607571955765" duration="20175000" />
-    </task>
-    <task id="LOCAL-00053" summary="done admin category edit and update">
-      <created>1605515637530</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1605515637531</updated>
+      <workItem from="1607571955765" duration="30921000" />
     </task>
     <task id="LOCAL-00054" summary="done admin category soft delete">
       <created>1605516648590</created>
@@ -647,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607588341252</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="started to add follow">
+      <created>1607604521750</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1607604521938</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +695,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="comments- n replies" />
     <MESSAGE value="comments-date and time (morilog/jalali)" />
     <MESSAGE value="comments- view design" />
     <MESSAGE value="add delete for comments in HomeController.php" />
@@ -719,7 +719,8 @@
     <MESSAGE value="add some redirects for auth controllers(still have problems)" />
     <MESSAGE value="profile page compeleted" />
     <MESSAGE value="adderd footer for artist" />
-    <option name="LAST_COMMIT_MESSAGE" value="adderd footer for artist" />
+    <MESSAGE value="started to add follow" />
+    <option name="LAST_COMMIT_MESSAGE" value="started to add follow" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -730,10 +731,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607588339589">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607604517492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607588339589" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607604517492" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -758,9 +759,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607588385490">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607618918648">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607588385490" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607618918648" />
   </component>
 </project>

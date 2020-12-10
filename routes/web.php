@@ -42,6 +42,8 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
             Route::patch('post/update-profilepic/{user}','PostController@updateProfilePic')->name('post.updateProfilePic');
 //----------home
         Route::get('home/post','HomeController@index')->name('home.index');//show following users post or all
+        Route::get('home/post/{user}','HomeController@index_user')->name('home.index_user');//show following users post or all
+        Route::post('home/follow-unfollow/{follower}/{following}','HomeController@follow_unfollow')->name('home.follow_unfollow');//show following users post or all
 
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET

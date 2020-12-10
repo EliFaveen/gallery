@@ -9,7 +9,23 @@
 
 @section('content')
     @include('inc.sidenav')
-    @include('inc.header-big')
+{{--    problem: this user shouldn't be called like this--}}
+{{--    parametres from controller: posts_user & posts--}}
+
+    @include('inc.header-big',['posts_user'=>$posts_user])
+
+    <div class="follow-unfollow">
+        {{--                todo: if following--}}
+        <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$posts_user->id])}}" method="post">
+            @csrf
+            @if(auth()->user()->following)
+                <button class="btn btn-primary mr-3 ml-3 follow-unfollow-btn" name="followed" value="true">follow</button>
+            @else
+                <button  class="btn btn-success follow-unfollow-btn btn-block" name="unfollowed" value="true">following</button>
+            @endif
+        </form>
+    </div>
+
 
     <div class="row posts-box">
                 @foreach($posts as $post)

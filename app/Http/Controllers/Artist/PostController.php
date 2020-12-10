@@ -24,13 +24,15 @@ class PostController extends Controller
     public function index()
     {
         $posts=Post::orderBy('created_at','desc')->where('user_id',\auth()->user()->id)->paginate(9);
+        $posts_user=\auth()->user();
 //        foreach ($posts as $post)
 //        {
 //            dd($post);
 //        }
+//        dd($posts_user->id);
 
         //$photos=ProductPhoto::get();
-        return view('artist.pages.posts.index',compact('posts'));
+        return view('artist.pages.posts.index',['posts'=>$posts,'posts_user'=>$posts_user]);
     }
 
     /**

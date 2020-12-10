@@ -9,7 +9,7 @@
 
 @section('content')
     @include('inc.sidenav')
-    @include('inc.header-big')
+{{--    @include('inc.header-big')--}}
 
     <div class="row posts-box">
         @foreach($posts as $post)
