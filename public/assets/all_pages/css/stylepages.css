@@ -18,35 +18,64 @@
     background-color: unset;
 
 }
+.sidenav .user {
+    top: 43px;
+    background-color: #a35d40;
+    padding: 12px 15px 9px 15px;
+}
+
 .sidenav .plus {
-    top: 58px;
+    top: 102px;
     background-color: #a35d40;
     padding: 12px 15px 9px 15px;
 }
 
 .sidenav .heart {
-    top: 120px;
+    top: 163px;
     background-color: #a35d40;
     padding: 12px 14px 7px 14px;
 }
 
 .sidenav .home {
-    top: 180px;
+    top: 221px;
     background-color: #a35d40;
     padding: 10px 13px 10px 13px;
 }
 
 .sidenav .search {
-    top: 240px;
+    top: 279px;
     background-color: #a35d40;
     padding: 11px 14px 11px 14px;
 }
 
 .sidenav .crown {
-    top: 300px;
+    top: 340px;
     background-color: #a35d40;
     padding: 10px 12px 10px 12px;
 
+}
+.small-profile-img-parent{
+    /*position: relative;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+}
+.small-profile-img {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    border-radius: 50%;
+    border: 4px solid #a35d40;
+
+    width: 50px;
+    height: 50px;
+}
+.sidenav .small-profile-img:hover {
+    opacity: 0.7;
+
+}
+.sidenav .user-img {
+    top: 43px;
+    background-color: #a35d40;
+    /*padding: 12px 15px 9px 15px;*/
 }
 /*-------------------------------login logout btn inc----------------------------------------------*/
 .logout{
