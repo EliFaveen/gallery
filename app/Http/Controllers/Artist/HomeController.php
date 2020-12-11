@@ -22,7 +22,7 @@ class HomeController extends Controller
         $posts_user=User::find($id);
         return view('artist.pages.posts.index',['posts'=>$posts,'posts_user'=>$posts_user]);//change?
     }
-    public function follow_unfollow(Request $request,$follower_id,$following_id){
+    public function follow_unfollow(Request $request,$following_id,$follower_id){
 //        dd($request->all());
         if ($request->input('followed')){
             User::find($follower_id)->followers()->sync([$following_id]);

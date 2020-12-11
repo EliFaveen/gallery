@@ -13,18 +13,24 @@
 {{--    parametres from controller: posts_user & posts--}}
 
     @include('inc.header-big',['posts_user'=>$posts_user])
+@php($i=0)
+    @if(!(auth()->user()->id === $posts_user->id))
+        <div class="follow-unfollow">
+            {{--                todo: if following--}}
+            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$posts_user->id])}}" method="post">
+                @csrf
+                @foreach (auth()->user()->following as $following) <!--following haye kasi ke logine-->
+                    @if($following->id == $posts_user->id)
+                        <button  class="btn btn-success follow-unfollow-btn btn-block {{$i++}}" name="unfollowed" value="true">following</button>
+                    @endif
+                @endforeach
+                    @if($i == 0)
+                        <button class="btn btn-primary follow-unfollow-btn btn-block" name="followed" value="true">follow</button>
+                    @endif
 
-    <div class="follow-unfollow">
-        {{--                todo: if following--}}
-        <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$posts_user->id])}}" method="post">
-            @csrf
-            @if(auth()->user()->following)
-                <button class="btn btn-primary mr-3 ml-3 follow-unfollow-btn" name="followed" value="true">follow</button>
-            @else
-                <button  class="btn btn-success follow-unfollow-btn btn-block" name="unfollowed" value="true">following</button>
-            @endif
-        </form>
-    </div>
+            </form>
+        </div>
+    @endif
 
 
     <div class="row posts-box">

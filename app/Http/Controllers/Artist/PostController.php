@@ -23,15 +23,27 @@ class PostController extends Controller
      */
     public function index()
     {
+//        $first_user=\auth()->user();
+//
+//        $second_user=\App\User::find(20);
+////        return \auth()->user()->following;//->kasaii ke man daram unaro follow mikonam// 19 20
+//        $first_user->with('following')
+//            ->when(\request('follower_id') > 0,function ($query){$query->where('follower_id',\request('follower_id'));})
+//            ->get();
+////        return $first_user->following;
+//        foreach ($first_user->following as $following){
+//            if ($following->id == $second_user->id){
+//                return true;
+//            }
+//        }
+
+
         $posts=Post::orderBy('created_at','desc')->where('user_id',\auth()->user()->id)->paginate(9);
         $posts_user=\auth()->user();
-//        foreach ($posts as $post)
-//        {
-//            dd($post);
-//        }
-//        dd($posts_user->id);
+//        $followings=\auth()->user()->with('following')
+//        ->when(\request('follower_id') > 0,function ($query){$query->where('follower_id',\request('follower_id'));})
+//        ->get();
 
-        //$photos=ProductPhoto::get();
         return view('artist.pages.posts.index',['posts'=>$posts,'posts_user'=>$posts_user]);
     }
 
