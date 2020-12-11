@@ -47,11 +47,18 @@
                     <div class="flex-main col-md-7" style="margin: auto">
 
                         {{--                        todo: verify email--}}
-                        @if($user->email_verified_at)
+                        @if(!$user->email_verified_at)
                             <div class="alert alert-warning" role="alert" style="text-align: right;">
                                 برای فعالسازی ایمیل بر روی این
-{{--                                <a href="{{route('verification.notice')}}" class="alert-link">لینک</a>--}}
+                                <a href="{{route('verification.notice')}}" class="alert-link">لینک</a>
                                 کلیک کنید!
+                            </div>
+                        @else
+                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="text-align: right;">
+                                <strong class="ml-2 mr-2">باتشکر!</strong>ایمیل شما فعال سازی شده است.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
                         @endif
 

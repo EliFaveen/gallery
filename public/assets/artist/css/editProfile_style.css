@@ -121,3 +121,9 @@ input[type="file"] {
 .sidenav .crown {
     background-color: #66826a !important;
 }
+.small-profile-img {
+    border: 4px solid #66826a !important;
+}
+.sidenav .user-img {
+    background-color: #66826a !important;
+}
