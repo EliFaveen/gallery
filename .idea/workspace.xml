@@ -12,8 +12,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/editProfile_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/editProfile_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header-small.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-small.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,14 +300,7 @@
       <workItem from="1607444078546" duration="17083000" />
       <workItem from="1607488867152" duration="36023000" />
       <workItem from="1607571955765" duration="36723000" />
-      <workItem from="1607662961913" duration="4312000" />
-    </task>
-    <task id="LOCAL-00056" summary="done admin category show">
-      <created>1605603139288</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1605603139288</updated>
+      <workItem from="1607662961913" duration="7781000" />
     </task>
     <task id="LOCAL-00057" summary="logout admin_nav.blade.php">
       <created>1605605232627</created>
@@ -643,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607627345082</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="follow-unfollow btn done">
+      <created>1607667509075</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1607667509075</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +692,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add delete for comments in HomeController.php" />
     <MESSAGE value="add delete for posts in Artist/PostController" />
     <MESSAGE value="add edit for posts in Artist/PostController(just title and description)" />
     <MESSAGE value="make sidnav style global in all-pages stylepages.css" />
@@ -715,7 +716,8 @@
     <MESSAGE value="started to add follow" />
     <MESSAGE value="seeing others post solved(want to add a smaller header for show single post)" />
     <MESSAGE value="small header inc added" />
-    <option name="LAST_COMMIT_MESSAGE" value="small header inc added" />
+    <MESSAGE value="follow-unfollow btn done" />
+    <option name="LAST_COMMIT_MESSAGE" value="follow-unfollow btn done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -726,10 +728,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607627343923">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607667507478">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607627343923" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607667507478" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -754,9 +756,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607628060795">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607671697138">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607628060795" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607671697138" />
   </component>
 </project>

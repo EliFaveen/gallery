@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function follow_unfollow(Request $request,$following_id,$follower_id){
 //        dd($request->all());
         if ($request->input('followed')){
-            User::find($follower_id)->followers()->sync([$following_id]);
+            User::find($follower_id)->followers()->attach([$following_id]);
 //            User::find($follower_id);
 //            Follower::create([
 //
@@ -34,5 +34,15 @@ class HomeController extends Controller
         if ($request->input('unfollowed')){
             User::find($follower_id)->followers()->detach([$following_id]);
         }
+
+        return back();
+    }
+
+    public function showFollowings(){
+        dd('followings');
+    }
+
+    public function showFollowers(){
+        dd('followers');
     }
 }

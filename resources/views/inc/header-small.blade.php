@@ -31,8 +31,8 @@
 
         <div class="col-md-4">
             <div class="follow-box-small d-flex">
-                <a class="btn btn-follow-small">followers<br> 0</a>
-                <a class="btn btn-follow-small middle-btn">following<br> 0</a>
+                <a href="{{route('artist.home.showFollowers')}}" class="btn btn-follow-small">followers<br>{{$posts_user->followers->count()}}</a>
+                <a href="{{route('artist.home.showFollowings')}}" class="btn btn-follow-small middle-btn">following<br>{{$posts_user->following->count()}}</a>
                 <a class="btn btn-follow-small">posts<br> {{$posts_user->posts->count()}}</a>
             </div>
         </div>

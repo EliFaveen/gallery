@@ -96,6 +96,24 @@
     @php($i=0)
     @php($j=0)
     @include('inc.header-small',['posts_user'=>$post->user])
+    @php($i=0)
+    @if(!(auth()->user()->id === $post->user->id))
+        <div class="follow-unfollow">
+            {{--                todo: if following--}}
+            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$post->user->id])}}" method="post">
+            @csrf
+            @foreach (auth()->user()->following as $following) <!--following haye kasi ke logine-->
+                @if($following->id == $post->user->id)
+                    <button  class="btn btn-success follow-unfollow-btn btn-block {{$i++}}" name="unfollowed" value="true">following</button>
+                @endif
+                @endforeach
+                @if($i == 0)
+                    <button class="btn btn-primary follow-unfollow-btn btn-block" name="followed" value="true">follow</button>
+                @endif
+
+            </form>
+        </div>
+    @endif
 
 {{--<a href="{{route('artist.home.index_user',['user'=>$post->user->id])}}">{{$post->user->username}}</a>--}}
     <div class="row single-post-box">

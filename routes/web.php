@@ -40,6 +40,9 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
             Route::get('post/edit-profile/{user}','PostController@editProfile')->name('post.editProfile');
             Route::patch('post/update-profile/{user}','PostController@updateProfile')->name('post.updateProfile');
             Route::patch('post/update-profilepic/{user}','PostController@updateProfilePic')->name('post.updateProfilePic');
+
+            Route::get('home/show-followings','HomeController@showFollowings')->name('home.showFollowings');
+            Route::get('hone/show-followers','HomeController@showFollowers')->name('home.showFollowers');
 //----------home
         Route::get('home/post','HomeController@index')->name('home.index');//show following users post or all
         Route::get('home/post/{user}','HomeController@index_user')->name('home.index_user');//show following users post or all
