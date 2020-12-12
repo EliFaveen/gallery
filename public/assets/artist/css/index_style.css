@@ -167,3 +167,9 @@ body{
 .user-card .card-text{
     color: gray;
 }
+
+
+/*---------------------------for follow-list home--------------------------*/
+.posts-box .user-link{
+    text-decoration: none;
+}

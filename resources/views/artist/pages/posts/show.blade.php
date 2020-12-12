@@ -100,7 +100,7 @@
     @if(!(auth()->user()->id === $post->user->id))
         <div class="follow-unfollow">
             {{--                todo: if following--}}
-            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$poat->user->id])}}" method="post">
+            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$post->user->id])}}" method="post">
             @csrf
             @foreach (auth()->user()->following as $following) <!--following haye kasi ke logine-->
                 @if($following->id == $post->user->id)
