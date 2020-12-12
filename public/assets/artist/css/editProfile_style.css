@@ -102,6 +102,9 @@ input[type="file"] {
     background-color: unset !important;
 
 }
+.sidenav .user {
+    background-color: #66826a !important;
+}
 .sidenav .plus {
     background-color: #66826a !important;
 }

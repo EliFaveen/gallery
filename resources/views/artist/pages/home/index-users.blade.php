@@ -76,17 +76,17 @@
     {{--    main    --}}
     <div class="row posts-box">
         @foreach($users as $user)
-                    <div class="col-12 mt-3">
-                        <div class="card">
+                    <div class="col-md-4 mt-3 mb-3">
+                        <div class="card user-card">
                             <div class="card-horizontal">
                                 <div class="img-square-wrapper">
                                     {{--                image--}}
                                     @if($user->profile_pic)
 
                                         {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
-                                        <div class="post-img-parent">
+                                        <div class="post-img-parent post-img-parent2">
 
-                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($user->profile_pic)}}" alt="{{$user->username}}">
+                                            <img  class="post-img post-img2 pl-0 pr-0 mr-0 ml-0" src="{{url($user->profile_pic)}}" alt="{{$user->username}}">
                                         </div>
                                         {{--                </div>--}}
                                     @else
@@ -95,7 +95,7 @@
                                         </div>
                                     @endif
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body user-card-body">
                                     <h5 class="card-title">{{$user->username}}</h5>
                                     <p class="card-text">{{$user->name}} {{$user->lastname}}</p>
                                 </div>
@@ -105,41 +105,18 @@
 {{--                            </div>--}}
                         </div>
                     </div>
-{{--            <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">--}}
-{{--                <div class="a-tag-parent">--}}
-{{--                    <a href="{{route('artist.home.index_user',['user'=>$user->id])}}" class="show-img-style">--}}
-{{--                        <div class="card card-index" >--}}
-{{--                            --}}{{--                image--}}
-{{--                            @if($user->profile_pic)--}}
 
-{{--                                --}}{{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
-{{--                                <div class="post-img-parent">--}}
-
-{{--                                    <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($user->profile_pic)}}" alt="{{$user->username}}">--}}
-{{--                                </div>--}}
-{{--                                --}}{{--                </div>--}}
-{{--                            @else--}}
-{{--                                <div class="post-img-parent">--}}
-{{--                                    <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">--}}
-{{--                                </div>--}}
-{{--                            @endif--}}
-{{--                            <div class="card-body">--}}
-{{--                                <h5 class="card-title">{{Str::limit($user->username, $limit = 28, $end = '...') }}</h5>--}}
-{{--                                --}}{{--                            <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
-{{--                                --}}{{--                            <a href="#" class="btn btn-primary">Show Post</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
         @endforeach
 
 
-{{--        <div class="row">--}}
-{{--            <div class="col-md-12">--}}
-{{--                {{$users->links()}}--}}
-{{--            </div>--}}
-{{--        </div>--}}
+        <div class="row">
+            <div class="col-md-12">
+                {{$users->appends([
+                    'search-radio' =>request('search-radio'),
+                    'search' =>request('search'),
+                ])->links()}}
+            </div>
+        </div>
 
 
 

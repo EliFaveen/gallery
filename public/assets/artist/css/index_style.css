@@ -17,9 +17,11 @@ body{
 /*-------------------------------my gallery grid responsive----------------------------------------------*/
 .posts-box{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .card-index{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     text-align: center;
 }
 .post-img-parent{
@@ -149,4 +151,19 @@ body{
 }
 .post-img2{
     border-radius: 50%;
+}
+.user-card-body{
+    text-align: center;
+}
+
+.user-card {
+    border: none;
+    background-image: linear-gradient(271deg , #8d9b878f, #ffffff);
+    border-radius: 20px 80px 80px 20px;
+}
+.user-card .card-title{
+    color: #66826a;
+}
+.user-card .card-text{
+    color: gray;
 }
