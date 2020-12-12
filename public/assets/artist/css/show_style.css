@@ -198,14 +198,31 @@ body{
 .seprate-a{
     margin-top: 21px;
 }
-.hshtag-row .seprate-a a{
+.seprate-a a{
     transition: 0.3s;
     text-decoration: none;
     font-size: 18px;
+    border-radius: 50% !important;
     color: white !important;
-    border-radius: 50%;
 }
+/*.list-group-hashtag {*/
 
+/*}*/
+/*.hashtag-row .list-group {*/
+/*    flex-wrap: wrap !important;*/
+/*    flex-direction: row !important;*/
+/*}*/
+/*.hashtag-row .list-group{*/
+/*    width: 100%;*/
+/*}*/
+.hshtag-row  .list-group{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.hashtag-row .col-md-12{
+    flex-wrap: wrap;
+}
 /*----------------------------------------------------for category tab-----------------------------------------------*/
 .tab-4-style{
     overflow-y: scroll;

@@ -1,3 +1,6 @@
+{{--@foreach($users as $user)--}}
+{{--    {{$user->username}}<br>--}}
+{{--@endforeach--}}
 
 @extends('artist.layouts.artist')
 
@@ -9,7 +12,7 @@
 
 @section('content')
     @include('inc.sidenav')
-{{--    @include('inc.header-big')--}}
+    {{--    @include('inc.header-big')--}}
 
     <section class="section2">
         <div class="container">
@@ -70,44 +73,73 @@
     </section><!--end section2-->
 
 
-{{--    main    --}}
+    {{--    main    --}}
     <div class="row posts-box">
-        @foreach($posts as $post)
-            <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
-                <div class="a-tag-parent">
-                    <a href="{{route('artist.post.show',['post'=>$post->id])}}" class="show-img-style">
-                        <div class="card card-index" >
-                            {{--                image--}}
-                            @if($post->photos->first())
+        @foreach($users as $user)
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-horizontal">
+                                <div class="img-square-wrapper">
+                                    {{--                image--}}
+                                    @if($user->profile_pic)
 
-                                {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
-                                <div class="post-img-parent">
+                                        {{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
+                                        <div class="post-img-parent">
 
-                                    <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($post->photos->first()->img_url)}}" alt="{{$post->title}}">
+                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($user->profile_pic)}}" alt="{{$user->username}}">
+                                        </div>
+                                        {{--                </div>--}}
+                                    @else
+                                        <div class="post-img-parent post-img-parent2">
+                                            <img  class=" post-img post-img2 pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                        </div>
+                                    @endif
                                 </div>
-                                {{--                </div>--}}
-                            @else
-                                <div class="post-img-parent">
-                                    <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$user->username}}</h5>
+                                    <p class="card-text">{{$user->name}} {{$user->lastname}}</p>
                                 </div>
-                            @endif
-                            <div class="card-body">
-                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>
-                                {{--                            <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
-                                {{--                            <a href="#" class="btn btn-primary">Show Post</a>--}}
                             </div>
+{{--                            <div class="card-footer">--}}
+{{--                                <small class="text-muted">Last updated 3 mins ago</small>--}}
+{{--                            </div>--}}
                         </div>
-                    </a>
-                </div>
-            </div>
+                    </div>
+{{--            <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">--}}
+{{--                <div class="a-tag-parent">--}}
+{{--                    <a href="{{route('artist.home.index_user',['user'=>$user->id])}}" class="show-img-style">--}}
+{{--                        <div class="card card-index" >--}}
+{{--                            --}}{{--                image--}}
+{{--                            @if($user->profile_pic)--}}
+
+{{--                                --}}{{--                <div class="col-md-3 pl-0 pr-0 mr-0 ml-0">--}}
+{{--                                <div class="post-img-parent">--}}
+
+{{--                                    <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($user->profile_pic)}}" alt="{{$user->username}}">--}}
+{{--                                </div>--}}
+{{--                                --}}{{--                </div>--}}
+{{--                            @else--}}
+{{--                                <div class="post-img-parent">--}}
+{{--                                    <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">--}}
+{{--                                </div>--}}
+{{--                            @endif--}}
+{{--                            <div class="card-body">--}}
+{{--                                <h5 class="card-title">{{Str::limit($user->username, $limit = 28, $end = '...') }}</h5>--}}
+{{--                                --}}{{--                            <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
+{{--                                --}}{{--                            <a href="#" class="btn btn-primary">Show Post</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         @endforeach
 
 
-        <div class="row">
-            <div class="col-md-12">
-                {{$posts->links()}}
-            </div>
-        </div>
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                {{$users->links()}}--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
 
 

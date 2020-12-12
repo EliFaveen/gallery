@@ -100,7 +100,7 @@
     @if(!(auth()->user()->id === $post->user->id))
         <div class="follow-unfollow">
             {{--                todo: if following--}}
-            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$post->user->id])}}" method="post">
+            <form action="{{route('artist.home.follow_unfollow',['follower'=>auth()->user()->id,'following'=>$poat->user->id])}}" method="post">
             @csrf
             @foreach (auth()->user()->following as $following) <!--following haye kasi ke logine-->
                 @if($following->id == $post->user->id)
@@ -319,9 +319,11 @@
                  <div class="row hshtag-row">
                      @if($post->hashtags)
                          <ul class="list-group">
-                             <div class="col-md-12 d-flex">
+{{--                             <div class="col-md-12 d-flex">--}}
                                  @foreach($post->hashtags as $hashtag)
-                                     <li class="list-group-item ml-2 mt-2"><a href="#">#{{$hashtag->hashtag}}</a></li>
+                                     <li class="list-group-item ml-2 mt-2">
+                                         <a href="#">#{{$hashtag->hashtag}}</a>
+                                     </li>
                                  @endforeach
                                  <div class="div seprate-a">
                                      <!-- Button trigger modal -->
@@ -331,7 +333,7 @@
                                          </a>
                                     @endauth
                                      <!-- Modal -->
-
+                                 </div>
                                      @auth
                                          <div class="modal fade" id="editHashtag">
                                              <div class="modal-dialog">
@@ -383,8 +385,8 @@
                                              </div>
                                          </div>
                                      @endauth
-                                 </div>
-                             </div>
+{{--                                 </div>--}}
+{{--                             </div>--}}
                          </ul>
                      @else
                          <ul class="list-group">

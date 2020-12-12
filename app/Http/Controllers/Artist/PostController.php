@@ -353,6 +353,12 @@ class PostController extends Controller
             return back();
         }
 
+        public function search($id){
+
+//        $posts=Post::
+
+        }
+
 
 
 }

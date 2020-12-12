@@ -49,3 +49,104 @@ body{
 
 }
 
+/*---------------------------------------search bar-------------------------------------------*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@section 2@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.section2{
+    background-image: url(../../all_pages/img/header-footer/login-bar.png);
+    /*position: relative;*/
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 260px;
+    background-size: 100% 260px;
+    padding-top: 3%;
+}
+.section2 .signup-suggest{
+    display: inline-block;
+    color: #b1b1a2;
+    font-size: 21px;
+}
+.section2 .signup-link{
+    text-decoration: none;
+    color: #b1b1a2;
+}
+.section2 .search-text{
+    color: #b1b1a2;
+}
+/*.section2 input[type=text] {*/
+/*    width: 136px;*/
+/*    box-sizing: border-box;*/
+/*    border: 2px solid #f4c145;*/
+/*    border-radius: 4px;*/
+/*    background-color: #0000001a;*/
+/*    background-image: url(../images/body/search.png);*/
+/*    background-position: 10px 10px;*/
+/*    background-repeat: no-repeat;*/
+/*    padding: 12px 20px 12px 40px;*/
+/*    -webkit-transition: width 0.4s ease-in-out;*/
+/*    transition: width 0.2s ease-in-out;*/
+/*    border-radius: 34% 34% / 50% 50%;*/
+/*    color: #fff;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.section2 input[type=text]:focus {*/
+/*    width: 70%;*/
+/*    border-radius: 5% 5% / 50% 50%;*/
+/*}*/
+/*.section2 ::placeholder {*/
+/*    color: #fbc764;*/
+/*    opacity: 1; !* Firefox *!*/
+/*}*/
+
+/*.section2 :-ms-input-placeholder { !* Internet Explorer 10-11 *!*/
+/*    color: #fbc764;*/
+/*}*/
+
+/*.section2 ::-ms-input-placeholder { !* Microsoft Edge *!*/
+/*    color: #fbc764;*/
+/*}*/
+.section2 .col{
+    text-align: center;
+}
+
+/*now*/
+.checkbox-search-parent{
+    margin-right: 396px;
+}
+.checkbox-search-parent .form-check-label{
+    margin-right: 20px;
+    color: #b1b1a2;
+}
+
+.btn-search-parent .fa-search{
+    color: white;
+}
+
+/*=================================media section 2===========================*/
+@media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .section2{
+        min-height: 206px;
+        background-size: 100% 207px;
+        padding-top: 6%;
+    }
+
+
+}
+
+
+/*----------------------------only for user searching cards-----------------------------*/
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.post-img-parent2{
+    width: 125px;
+    height: 125px;
+}
+.post-img2{
+    border-radius: 50%;
+}
