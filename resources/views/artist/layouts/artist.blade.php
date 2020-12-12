@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="{{url('assets/all_pages/css/bootstrap.min.css')}}"><!--this is important dont comment it-->
     <link rel="stylesheet" href="{{url('assets/all_pages/css/fontawesom.css')}}">
     <link rel="stylesheet" href="{{url('assets/all_pages/css/stylepages.css')}}"><!--main styles like side nav-->
+    <link rel="stylesheet" href="{{url('assets/all_pages/datepicker/persian-datepicker.css')}}"/><!--datepicker-->
+
+{{--    <script src="assets/all_pages/datepicker/jquery.js"></script><!--datepicker-->--}}
+    <script src="{{url('assets/all_pages/js/jquery.js')}}"></script>
+
+    <script src="{{url('assets/all_pages/datepicker/persian-date.js')}}"></script><!--datepicker-->
+    <script src="{{url('assets/all_pages/datepicker/persian-datepicker.js')}}"></script><!--datepicker-->
+
 {{--    sweet alert --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 {{--    <script src="sweetalert2.all.min.js"></script>--}}
@@ -60,7 +68,7 @@
 
 </div>
 
-<script src="{{url('assets/all_pages/js/jquery.js')}}"></script>
+
 <script src="{{url('assets/all_pages/js/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/all_pages/js/fontawesom.js')}}"></script>
 @yield('custom-js')
@@ -68,6 +76,6 @@
 
 
 </body>
-<script src="{{asset('js/app.js')}}"></script>
-@include('sweet::alert')
+{{--<script src="{{asset('js/app.js')}}"></script>--}}
+{{--@include('sweet::alert')--}}
 </html>

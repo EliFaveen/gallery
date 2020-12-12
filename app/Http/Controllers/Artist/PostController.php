@@ -283,7 +283,21 @@ class PostController extends Controller
         return view('artist.pages.posts.editProfile',compact('user'));
     }
     public function updateProfile(Request $request,$id){
-//        dd($request->all());
+
+//        $birthdate=$request->input('birthdate');
+//        $birthdate=str_replace('۱','1',$birthdate);
+//        dd($birthdate);
+
+        $birthdate = $request->input('birthdate');
+        $exploded_date = explode("/",$birthdate);
+        $year = $exploded_date[0];
+        $month = $exploded_date[1];
+        $day = $exploded_date[2];
+        $miladi = \Morilog\Jalali\CalendarUtils::toGregorian($year, $month, $day);
+        $miladi = implode("-",$miladi);
+
+//        dd($miladi);
+
         $user=\App\User::find($id);
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -306,6 +320,7 @@ class PostController extends Controller
             'lastname' => \request('lastname'),
             'name' => \request('name'),
             'country' => \request('country'),
+            'birthdate' => $miladi,
         ]);
 
         if($request->input('email')){

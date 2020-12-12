@@ -128,7 +128,23 @@
                             </div>
                         </div>
                         {{--                        todo: birthdate--}}
-                        {{--                        todo: country--}}
+                        <div class="form-group row">
+
+                            <label for="phone" class="col-md-2 col-form-label text-md-right">تاریخ تولد</label>
+
+                            <div class="col-md-10">
+                                <input id="birthdate" type="text"  class="form-control example1 @error('birthdate') is-invalid @enderror" name="birthdate" value="{{$user->birthdate}}" autofocus>
+                                @error('birthdate')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+{{--                        <input type="text" class="example1" />--}}
+
                         <div class="form-group row">
                             <label for="phone" class="col-md-2 col-form-label text-md-right">کشور</label>
 
@@ -179,6 +195,15 @@
 @endsection
 
 @section('custom-js')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".example1").pDatepicker({
+                observer: true,
+                format: 'YYYY/MM/DD',
+                altField: '.observer-example-alt'
+            });
+        });
+    </script>
 {{--    <script src="{{url('assets/artist/js/index_script.js')}}"></script><!--custom-->--}}
 {{--    <script>--}}
 {{--        document.getElementById("file").onchange = function() {--}}
