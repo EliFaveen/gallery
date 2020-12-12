@@ -256,10 +256,15 @@
             <div class="tab-content text-right" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="title-style">
-                        <h3>
+                        <h3 >
                             {{$post->title}}
                         </h3>
+                        <div class="post-created-at ml-4">
+                            {{jdate($post->created_at)->format('%B %d، %Y')}}
+                        </div>
+
                     </div>
+                    <hr>
                     <div class="description-style">
                         {{$post->description}}
                     </div>
@@ -472,7 +477,7 @@
         </div><!--col-md-6 end-->
 
     </div><!--row end-->
-
+@include('inc.footer')
 
 @endsection
 @section('custom-js')
