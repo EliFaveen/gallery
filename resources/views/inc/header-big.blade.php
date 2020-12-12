@@ -2,24 +2,24 @@
 
 <header>
     <div class="header-main-div d-flex header-image">
-{{--        @if(auth()->user()->id === $posts_user)--}}
+        @if(auth()->user()->id === $posts_user->id)
         <a href="{{route('artist.post.editProfile',['user'=>auth()->user()->id])}}" id="edit-profile">
-{{--            @endif--}}
+            @endif
             <div class="image-profile-parent">
                 @if($posts_user->profile_pic)
                     <img src="{{url($posts_user->profile_pic)}}" alt="Avatar" class="image image-profile" >
                 @else
                     <img src="{{url('assets/all_pages/img/default_profile/default_profile.png')}}" alt="Avatar" class="image image-profile" >
                 @endif
-{{--                    @if(auth()->user()->id === $posts_user)--}}
+                    @if(auth()->user()->id === $posts_user->id)
                 <div class="overlay">
                     <div class="text">پروفایل من</div>
                 </div>
-{{--                    @endif--}}
+                    @endif
             </div>
-{{--            @if(auth()->user()->id === $posts_user)--}}
+            @if(auth()->user()->id === $posts_user->id)
         </a>
-{{--        @endif--}}
+        @endif
         <div class="info-flex-with-profile col-md-6">
             <div class="username">
                 <h1>{{$posts_user->username}}@</h1>

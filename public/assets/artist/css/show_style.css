@@ -15,8 +15,9 @@ body{
 /*-------------------------------single post showing-------------------------------------------show.blade.php*/
 .single-post-box
 {
-    margin-top: 100px;
+    margin: 23px 0px 25px 1px;
     direction: rtl;
+    box-shadow: 1px 7px 20px #80808042;
 }
 .single-post-img {
     display: block;
@@ -57,6 +58,9 @@ body{
     margin: 25px 10px 25px 10px;
     color: #869791;
     /*font-family: 'Leyla';*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*----------------------------------------comments----------------------------------------------*/
@@ -261,12 +265,11 @@ body{
     padding-right:0px !important;
  }
 .right-col-md-6{
-     box-shadow: 5px 6px 20px #d1d1d1;
      padding-left:0px !important;
      padding-right:0px !important;
+    border-left: thin solid #8080803d;
  }
 .left-col-md-6{
-    box-shadow: -6px 7px 20px #d1d1d1;
     padding-left:0px !important;
     padding-right:0px !important;
 }
