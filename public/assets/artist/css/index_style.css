@@ -173,3 +173,16 @@ body{
 .posts-box .user-link{
     text-decoration: none;
 }
+
+
+/*----------------------------------no post row---------------------------------*/
+.no-post-image-parent{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+.no-post-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}

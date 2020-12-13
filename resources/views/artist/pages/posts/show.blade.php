@@ -232,35 +232,42 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">اطلاعات پست</a>
                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">نظرات</a>
-{{--                    <div class="fa-parent-style">--}}
+
                     <a class="nav-item nav-link " id="nav-hashtag-tab" data-toggle="tab" href="#nav-hashtag" role="tab" aria-controls="nav-hashtag" aria-selected="false">هشتگ</a>
                     <a class="nav-item nav-link " id="nav-category-tab" data-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">سبک نقاشی</a>
                         <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش پست</a>
-{{--                    </div>--}}
-                    <div class="d-flex delete-edit-box">
-                        <form method="post" action="{{route('artist.post.destroy' , ['post'=>$post->id])}}">
-                            @csrf
-                            @method('DELETE')
-                            <div class="fa-parent-style">
-                                <button type="submit" class="fa-style" onclick="return confirm('با زدن تایید پست کامل پاک میشه!')"><i class="fas fa-trash-alt"></i></button>
-                            </div>
-                        </form>
-{{--                        <div class="fa-parent-style">--}}
-{{--                            <a class="nav-item nav-link fa-style" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-edit"></i></a>--}}
-{{--                        </div>--}}
 
-                    </div>
-{{--                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">حذف</a>--}}
+                    @if(auth()->user()->id == $post->user_id)
+                        <div class="d-flex delete-edit-box">
+                            <form method="post" action="{{route('artist.post.destroy' , ['post'=>$post->id])}}">
+                                @csrf
+                                @method('DELETE')
+                                <div class="fa-parent-style">
+                                    <button type="submit" class="fa-style" onclick="return confirm('با زدن تایید پست کامل پاک میشه!')"><i class="fas fa-trash-alt"></i></button>
+                                 </div>
+                            </form>
+                            {{--                        <div class="fa-parent-style">--}}
+                            {{--                            <a class="nav-item nav-link fa-style" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-edit"></i></a>--}}
+                            {{--                        </div>--}}
+
+                        </div>
+                    @endif
+
+
                 </div>
             </nav>
             <div class="tab-content text-right" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="title-style">
-                        <h3 >
-                            {{$post->title}}
-                        </h3>
-                        <div class="post-created-at ml-4">
-                            {{jdate($post->created_at)->format('%B %d، %Y')}}
+                        <div class="col-md-9" style="text-align: center">
+                            <h3 >
+                                {{$post->title}}
+                            </h3>
+                        </div>
+                        <div class="col-md-3" style="text-align: end">
+                            <div class="post-created-at">
+                                {{jdate($post->created_at)->format('%B %d، %Y')}}
+                            </div>
                         </div>
 
                     </div>
@@ -269,8 +276,8 @@
                         {{$post->description}}
                     </div>
                 </div>
+                {{--      comments      --}}
                 <div class="tab-pane fade tab-2-style" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    {{--      comments      --}}
                     @auth
                         <div class="modal fade" id="sendComment">
                             <div class="modal-dialog">
@@ -321,8 +328,9 @@
                 </div>
 {{--                hashtags--}}
                 <div class="tab-pane fade" id="nav-hashtag" role="tabpanel" aria-labelledby="nav-hashtag-tab">
+                    @php($x=0)
                  <div class="row hshtag-row">
-                     @if($post->hashtags)
+                     @if($post->hashtags()->first())
                          <ul class="list-group">
 {{--                             <div class="col-md-12 d-flex">--}}
                                  @foreach($post->hashtags as $hashtag)
@@ -330,15 +338,16 @@
                                          <a href="#">#{{$hashtag->hashtag}}</a>
                                      </li>
                                  @endforeach
-                                 <div class="div seprate-a">
+                                 <div class="div seprate-a" style="cursor: pointer">
                                      <!-- Button trigger modal -->
-                                    @auth
+                                    @if(auth()->user()->id == $post->user_id)
                                          <a class="plus" data-toggle="modal" data-target="#editHashtag">
                                              <i class="fa fa-plus"></i>
                                          </a>
-                                    @endauth
-                                     <!-- Modal -->
+                                    @endif
+
                                  </div>
+                             <!-- Modal -->
                                      @auth
                                          <div class="modal fade" id="editHashtag">
                                              <div class="modal-dialog">
@@ -368,7 +377,7 @@
                                                                              <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
                                                                              <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
                                                                              <div class="tag-container">
-                                                                                 @php($x=0)
+
                                                                                  @if($post->hashtags)
                                                                                      @foreach($post->hashtags as $hashtag)
                                                                                          <input class="hashtag_input" type="hidden" name="hashtags[]" id="tags_{{$x}}" value="{{$hashtag->hashtag}}">
@@ -393,55 +402,127 @@
 {{--                                 </div>--}}
 {{--                             </div>--}}
                          </ul>
+
+
                      @else
                          <ul class="list-group">
                              <div class="col-md-12 d-flex">
-{{--                                 @foreach($post->hashtags as $hashtag)--}}
-                                     <li class="list-group-item">بدون هشتگ</li>
-{{--                                 @endforeach--}}
-                                 <i class="fa fa-plus-circle fa-plus-style"></i>
-                             </div>
+                                 @if(auth()->user()->id == $post->user_id)
+                                     <a data-toggle="modal" data-target="#editHashtag" style="cursor: pointer">
+                                         @endif
+                                         <div class="no-post-image-parent">
+                                             <img class="no-post-image" src="{{url('/assets/all_pages/img/defaults/hashtag-logo.png')}}" alt="enter-post-image" >
+                                         </div>
+                                         @if(auth()->user()->id == $post->user_id)
+                                     </a>
+                                 @endif
+                                 <!-- Modal -->
+                                     @auth
+                                         <div class="modal fade" id="editHashtag">
+                                             <div class="modal-dialog">
+                                                 <div class="modal-content">
+                                                     <div class="modal-header">
+                                                         <h5 class="modal-title" id="editHashtagLabel">ویرایش هشتگ</h5>
+                                                         <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
+                                                             <span aria-hidden="true">&times;</span>
+                                                         </button>
+                                                     </div>
+                                                     <form action="{{route('artist.post.updateHashtag',['post'=>$post->id])}}" method="post" id="editHashtagForm">
+                                                         @csrf
+                                                         @method('PATCH')
+                                                         <div class="modal-body">
+                                                             {{--                                                             <input type="hidden" name="commentable_id" value="{{$post->id }}" ><!--just change here-->--}}
+                                                             {{--                                                             <input type="hidden" name="commentable_type" value="{{get_class($post)}}"><!--and here-->--}}
+                                                             {{--                                                             <input type="hidden" name="parent_id" value="0">--}}
 
+                                                             <div class="form-group">
+                                                                 <label for="message-text" class="col-form-label">اضافه یا حذف هشتگ:</label>
+                                                                 {{--                                                                 <textarea name="comment" class="form-control" id="message-text"></textarea>--}}
+                                                                 {{---------------------------------------------------------------------------------------------hashtags row--}}
+                                                                 <div class="row">
+                                                                     <div class="col-md-12">
+                                                                         <div class="wrapper">
+                                                                             <h3>هشتگ های تو</h3>
+                                                                             <p class="info">مثل نمونه زیر یک هشتگ بنویس و اینتر بزن</p>
+                                                                             <input class="" name="" type="text" id="hashtags" autocomplete="off"  placeholder="#یک_هشتگ_بنویس" >
+                                                                             <div class="tag-container">
+
+                                                                                 @if($post->hashtags)
+                                                                                     @foreach($post->hashtags as $hashtag)
+                                                                                         <input class="hashtag_input" type="hidden" name="hashtags[]" id="tags_{{$x}}" value="{{$hashtag->hashtag}}">
+                                                                                         <p class="tag" id="tags{{$x++}}">{{$hashtag->hashtag}}</p>
+                                                                                     @endforeach
+                                                                                 @endif
+                                                                             </div>
+                                                                         </div>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                         <div class="modal-footer">
+                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                                                             <button type="submit" class="btn btn-primary">ویرایش هشتگ</button>
+                                                         </div>
+                                                     </form>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     @endauth
+                             </div>
                          </ul>
                      @endif
                  </div>
                 </div>
 {{--                categories--}}
                 <div class="tab-pane fade tab-4-style" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
-                    <h2 class="title-style">سبک های این نقاشی عبارتند از:</h2>
-                    @foreach($post->categories as $category)
-                    <div class="bg-white tm-block">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                {{--                image               --}}
+                    @if($post->categories->first())
+                        <h2 class="title-style">سبک های این نقاشی عبارتند از:</h2>
+                        @foreach($post->categories as $category)
+                            <div class="bg-white tm-block">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        {{--                image               --}}
 
-                                    @if($category->category_pic)
-                                        <div class="post-img-parent-large">
-                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
-                                        </div>
-                                    @else
-                                        <div class="post-img-parent-large">
-                                            <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
-                                        </div>
-                                    @endif
+                                        @if($category->category_pic)
+                                            <div class="post-img-parent-large">
+                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                            </div>
+                                        @else
+                                            <div class="post-img-parent-large">
+                                                <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                                            </div>
+                                        @endif
 
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-12">
-                                {{--                    <form action="index.html" method="post" class="tm-login-form">--}}
-                                <div class="individual-title">
-                                    <h1>
-                                        {{$category->title}}
-                                    </h1><hr>
+                                    </div>
                                 </div>
-                                <div class="individual-body">
-                                    {{$category->description}}
-                                </div><hr>
+                                <div class="row mt-2">
+                                    <div class="col-12">
+                                        {{--                    <form action="index.html" method="post" class="tm-login-form">--}}
+                                        <div class="individual-title">
+                                            <h1>
+                                                {{$category->title}}
+                                            </h1><hr>
+                                        </div>
+                                        <div class="individual-body">
+                                            {{$category->description}}
+                                        </div><hr>
+                                    </div>
+                                </div>
                             </div>
+                        @endforeach
+                    @else
+                        <div class="col-md-12 d-flex">
+                            @if(auth()->user()->id == $post->user_id)
+                                <a href="#">
+                                    @endif
+                                    <div class="no-category-image-parent">
+                                        <img class="no-category-image" src="{{url('/assets/all_pages/img/defaults/nothing_logo.png')}}" alt="enter-post-image" >
+                                    </div>
+                                    @if(auth()->user()->id == $post->user_id)
+                                </a>
+                            @endif
                         </div>
-                    </div>
-                    @endforeach
+                    @endif
                 </div>
 {{--                edit--}}
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -472,12 +553,11 @@
                         </form>
                     </div>
                 </div>
-{{--                <div class="tab-pane fade" id="nav-trash" role="tabpanel" aria-labelledby="nav-trash-tab">حذف</div>--}}
             </div>
         </div><!--col-md-6 end-->
 
     </div><!--row end-->
-@include('inc.footer')
+
 
 @endsection
 @section('custom-js')

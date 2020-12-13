@@ -258,6 +258,16 @@ body{
     /*margin: 55px 0px 55px 0px;*/
     margin: 15px;
 }ّّ
+.no-category-image-parent{
+     width: 474px !important;
+     height: 400px !important;
+    /*background-color: red;*/
+ }
+ .no-category-image{
+     width: 100%;
+     height: 100%;
+     display: block;
+ }
 /*--------------------------------------general---------------------------------------*/
 .col-md-6{
      /*padding: 0 !important;*/
