@@ -33,6 +33,7 @@
         </div>
     @endif
 
+<div class="main">
     @if(!$posts->first())
         <div class="row justify-content-center mt-4 mb-4">
             <div class="col-md-6">
@@ -75,19 +76,15 @@
                     </div>
                 </div>
             @endforeach
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    {{$posts->links()}}
-                </div>
+        </div>
+        <div class="row paginate-row d-flex justify-content-center">
+            <div class="col-md-12">
+                {{$posts->links()}}
             </div>
-
-
-
         </div>
     @endif
 
+</div>
 
 
 

@@ -9,11 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/img/defaults/search-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,14 +302,7 @@
       <workItem from="1607662961913" duration="35618000" />
       <workItem from="1607748973663" duration="17633000" />
       <workItem from="1607790338052" duration="6788000" />
-      <workItem from="1607831881634" duration="8117000" />
-    </task>
-    <task id="LOCAL-00067" summary="create.blade.php artist styling (DONE!)">
-      <created>1606471892435</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1606471892436</updated>
+      <workItem from="1607831881634" duration="11485000" />
     </task>
     <task id="LOCAL-00068" summary="simple like is working now">
       <created>1606544076436</created>
@@ -646,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607840015546</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="add defaults for no-seach found">
+      <created>1607842261818</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1607842261818</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,7 +694,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="working on admin post(comments counts added)" />
     <MESSAGE value="working on admin post(delete and restore added)" />
     <MESSAGE value="working on admin post(show post added)" />
     <MESSAGE value="working on admin post(edit and update for hashtags and categories for posts added)" />
@@ -718,7 +718,8 @@
     <MESSAGE value="add footer to show sinle post and created_at" />
     <MESSAGE value="profile pic overlay link fixed" />
     <MESSAGE value="add defaults for no-post no-category no-hashtag" />
-    <option name="LAST_COMMIT_MESSAGE" value="add defaults for no-post no-category no-hashtag" />
+    <MESSAGE value="add defaults for no-seach found" />
+    <option name="LAST_COMMIT_MESSAGE" value="add defaults for no-seach found" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -729,10 +730,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607456487106" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607840014061">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1607842260652">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607840014061" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607842260652" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -757,9 +758,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607840839086">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607843137758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607840839086" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607843137758" />
   </component>
 </project>
