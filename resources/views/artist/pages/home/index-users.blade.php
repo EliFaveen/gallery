@@ -74,7 +74,8 @@
 
 
     {{--    main    --}}
-    <div class="row posts-box">
+    @if($users->first())
+        <div class="row posts-box">
         @foreach($users as $user)
                     <div class="col-md-4 mt-3 mb-3">
                         <div class="card user-card">
@@ -121,6 +122,13 @@
 
 
     </div>
+    @else
+        <div class="col-md-12 d-flex">
+            <div class="no-search-image-parent">
+                <img class="no-search-image" src="{{url('/assets/all_pages/img/defaults/search-icon.png')}}" alt="enter-post-image" >
+            </div>
+        </div>
+    @endif
 
     @include('inc.footer')
 

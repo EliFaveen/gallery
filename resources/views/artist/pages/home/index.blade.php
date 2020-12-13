@@ -92,7 +92,7 @@
                                 </div>
                             @endif
                             <div class="card-body">
-                                <h5 class="card-title">{{Str::limit($post->title, $limit = 28, $end = '...') }}</h5>
+                                <h5 class="card-title">{{Str::limit($post->title, $limit = 24, $end = '...') }}</h5>
                                 {{--                            <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
                                 {{--                            <a href="#" class="btn btn-primary">Show Post</a>--}}
                             </div>
