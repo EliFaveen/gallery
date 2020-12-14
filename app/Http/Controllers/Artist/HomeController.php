@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Artist;
 
 use App\Follower;
+use App\Hashtag;
 use App\Http\Controllers\Controller;
 use App\Post;
 use App\User;
@@ -17,49 +18,44 @@ class HomeController extends Controller
 
         $posts=Post::orderBy('created_at','desc');
 //        hashtag searxh
-        if (\request()->filled('search-radio')){
-            if (\request('search-radio') == 1){
+        if (\request()->filled('search-radio')) {
+            if (\request('search-radio') == 1) {
 //                dd($posts->user); //search in users //return users
 //                $posts=$posts->user->where('username','LIKE',"%".\request('search')."%");
                 //return index users
-                $users=User::orderBy('created_at','desc')->where('username','LIKE',"%".\request('search')."%")->paginate(9);
-                return view('artist.pages.home.index-users',compact('users'));
+                $users = User::orderBy('created_at', 'desc')->where('username', 'LIKE', "%" . \request('search') . "%")->paginate(9);
+                return view('artist.pages.home.index-users', compact('users'));
             }
-            if (\request('search-radio') == 2){
+            if (\request('search-radio') == 2) {
 //                dd('title'); //search in posts return posts
-                $posts=$posts->where('title','LIKE',"%".\request('search')."%");
+                $posts = $posts->where('title', 'LIKE', "%" . \request('search') . "%");
             }
-            if (\request('search-radio') == 3){
-//                dd('hashtag'); //search in hashtags return posts
-//                $posts=$posts->with('hashtags')
-//                    ->when(\request('hashtags') > 0,function ($query){$query->where('hashtags',\request('hashtags'));})->get();
-//                return $posts->first()->hashtags;
+            if (\request('search-radio') == 3) {
 
-
-
-//                return posts;
-
-                foreach ($posts->first()->hashtags as $hashtag){
-                     $messy_tags= $hashtag->where('hashtag','LIKE',"%".\request('search')."%")->get();
-                     return $messy_tags;
-//                     foreach ($messy_tags as $single_tag){
-//                         return $single_tag;
-//                     }
+                //روش 1
+                $hashtags = Hashtag::all();
+                foreach ($hashtags as $hashtag) {
+                    $messy_tags = $hashtag->where('hashtag', 'LIKE', '%' . \request('search') . '%')->get();
 
                 }
-//                با یک کالکشنی مثل این مقایسه کنیمب
+                foreach ($messy_tags as $messy_tag){
+                   $posts_id[]= $messy_tag->post_id;
+                }
+                $posts_id=array_unique($posts_id);
+                foreach ($posts_id as $post_id){
+                    $posts=Post::find($posts_id);
+                }
+//                return $posts;
 
-//                foreach ($posts as $post){
-////                    $taged[]=$post->hashtags->where('hashtag','LIKE',"%".\request('search')."%")->get()->id;
-//                    foreach ($post->hashtags as $hashtag){
-//                        return $hashtag->where('hashtag','LIKE',"%".\request('search')."%")->get();
-//
-//                    }
-//                }
-//                $posts=$posts->where('title','LIKE',"%".\request('search')."%");
+
             }
+
+
+            //روش 2
+//                return $posts->first()->hashtags->first()->where('hashtag','LIKE',"%".\request('search')."%")->first()->post;
+
         }
-        $posts=$posts->paginate(9);
+//        $posts=$posts->paginate(9);
         return view('artist.pages.home.index',compact('posts'));
     }
     public function index_user($id){
