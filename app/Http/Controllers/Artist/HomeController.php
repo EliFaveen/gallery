@@ -42,12 +42,13 @@ class HomeController extends Controller
                    $posts_id[]= $messy_tag->post_id;
                 }
                 $posts_id=array_unique($posts_id);
-                foreach ($posts_id as $post_id){
-                    $posts=Post::find($posts_id);
-                }
+//                foreach ($posts_id as $post_id){
+                    $posts=Post::orderBy('created_at','desc')->find($posts_id);
+//                    $posts=Post::orderBy('created_at','desc')->where($post_id);
+//                }
 //                return $posts;
 
-
+                return view('artist.pages.home.index',compact('posts'));
             }
 
 
@@ -55,7 +56,7 @@ class HomeController extends Controller
 //                return $posts->first()->hashtags->first()->where('hashtag','LIKE',"%".\request('search')."%")->first()->post;
 
         }
-//        $posts=$posts->paginate(9);
+        $posts=$posts->paginate(9);
         return view('artist.pages.home.index',compact('posts'));
     }
     public function index_user($id){

@@ -62,7 +62,10 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
+.title-col-style{
+    text-align: center;
+    word-break: break-all;
+}
 /*----------------------------------------comments----------------------------------------------*/
 .tab-2-style{
     overflow-y: scroll;

@@ -259,7 +259,7 @@
             <div class="tab-content text-right" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="title-style">
-                        <div class="col-md-9" style="text-align: center">
+                        <div class="col-md-9 title-col-style">
                             <h3 >
                                 {{$post->title}}
                             </h3>
@@ -559,6 +559,7 @@
 
     </div><!--row end-->
 
+    @include('inc.footer')
 
 @endsection
 @section('custom-js')
@@ -567,19 +568,6 @@
         var token = '{{ Session::token() }}';
         var urlLike = '{{ route('like') }}'; <!-- in web.php route like -->
     </script>
-
-{{--    toggle replies--}}
-{{--<script>--}}
-{{--    function myFunction() {--}}
-{{--        var x = document.getElementById("myDIV");--}}
-{{--        if (x.style.display === "none") {--}}
-{{--            x.style.display = "block";--}}
-{{--        } else {--}}
-{{--            x.style.display = "none";--}}
-{{--        }--}}
-{{--    }--}}
-{{--</script>--}}
-{{--    comment   --}}
 
     <script>
 {{--    for ajax comment box    --}}
