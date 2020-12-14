@@ -335,7 +335,8 @@
 {{--                             <div class="col-md-12 d-flex">--}}
                                  @foreach($post->hashtags as $hashtag)
                                      <li class="list-group-item ml-2 mt-2">
-                                         <a href="#">#{{$hashtag->hashtag}}</a>
+{{--------------------------------------------------------------------------------send hashtags to search--}}
+                                         <a href="/artist/home/post?search-radio=3&search={{$hashtag->hashtag}}">#{{$hashtag->hashtag}}</a>
                                      </li>
                                  @endforeach
                                  <div class="div seprate-a" style="cursor: pointer">
