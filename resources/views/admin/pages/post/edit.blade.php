@@ -18,7 +18,7 @@
             </div>
 
 
-                <div class="d-flex">
+            <div class="row image-remove-row d-flex">
                     @if($post->photos->first())
                         @foreach($post->photos as $photo)
                             <div class="post-img-parent-delete">

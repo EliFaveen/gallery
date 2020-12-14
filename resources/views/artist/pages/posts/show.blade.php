@@ -321,7 +321,7 @@
 
                                 @endauth
                             </div>
-                            @include('inc.comments',['comments'=>$post->comments()->where('parent_id',0)->orderBy('created_at','desc')->get()])
+                            @include('inc.comments',['comments'=>$post->comments()->where('parent_id',0)->where('approved',1)->orderBy('created_at','desc')->get()])
                         </div>
                     </div>
                     {{--    end comments    --}}

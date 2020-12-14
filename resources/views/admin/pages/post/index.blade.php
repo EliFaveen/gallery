@@ -30,12 +30,12 @@
                         <div class="search-parent">
                             {{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
                             <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
-                            <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
-                            <input class="search-input" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">
+                            <input class="search-input" type="text" name="search-info" placeholder="عنوان یا توضیحات را جستجو کنید" value="{{request('search-email')}}">
+{{--                            <input class="search-input" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">--}}
                             <select class="email-state" id="email-state" name="search-approved">
-                                <option value="">وضعیت متن</option>
-                                <option value="1" {{request('search-approved') == 1 ? 'selected':""}}>تایید شده</option>
-                                <option value="2" {{request('search-approved') == 2 ? 'selected':""}}>تایید نشده</option>
+                                <option value="">وضعیت پست</option>
+                                <option value="1" {{request('search-approved') == 1 ? 'selected':""}}>فعال</option>
+                                <option value="2" {{request('search-approved') == 2 ? 'selected':""}}>غیر فعال</option>
                             </select>
                             <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
@@ -209,8 +209,7 @@
 {{--                                                todo: appends--}}
                         {{$posts->appends([
                             'search-username' =>request('search-username'),
-                            'search-email' =>request('search-email'),
-                            'search-comment' =>request('search-comment'),
+                            'search-info' =>request('search-email'),
                             'search-approved' =>request('search-approved'),
 
                             ])->links()}}

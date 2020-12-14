@@ -21,11 +21,52 @@ class PostController extends Controller
     {
 
             $posts=Post::orderBy('created_at','desc')->withTrashed()->with('categories')
-                ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));})
-                ->paginate(20);
+                ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));});
 
 //        $post=Post::find(12);
 //        return $post->hashtags;
+
+        //        todo:multisearch
+//        $posts=Comment::orderBy('created_at','desc');
+
+        if (\request()->filled('search-username')){
+            //            search in relations
+            $posts=$posts->whereHas('user',function ($query){
+                $query->where('username','LIKE',"%".\request('search-username')."%");
+            });
+
+        }
+//        if (\request()->filled('search-info')){
+//            //            search in relations
+//            $posts=$posts->whereHas('user',function ($query){
+//                $query->where('email','LIKE',"%".\request('search-email')."%");
+//            });
+//
+//        }
+        if (\request()->filled('search-info')){
+            $posts=$posts->where('title','LIKE',"%".\request('search-info')."%")->orWhere('description','LIKE',"%".\request('search-info')."%");
+        }
+
+
+//        if (\request()->filled('role')){
+//            $users=$users->where('role','LIKE',"%".\request('role')."%");
+//        }
+
+        if (\request()->filled('search-approved')){
+            if(\request('search-approved') == 1) {
+                $posts->whereNull('deleted_at');
+
+            }elseif (\request('search-approved') == 2){
+
+                $posts->whereNotNull('deleted_at');
+            }
+            else{
+//                return null;
+            }
+        }
+
+        $posts=$posts->paginate(20);
+
 
 
         return view('admin.pages.post.index',compact('posts'));
@@ -63,6 +104,8 @@ class PostController extends Controller
 
 //        $post=Post::find($id)->with('categories')
 //            ->when(\request('category_id') > 0,function ($query){$query->where('category_id',\request('category_id'));});
+
+
 
         $post=Post::find($id);
         return view('admin.pages.post.show',compact('post'));

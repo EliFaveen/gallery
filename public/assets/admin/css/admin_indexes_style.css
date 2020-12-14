@@ -261,6 +261,9 @@ td{
 }
 
 /*------------------------------edit post(delete img)--------------------------------*/
+.image-remove-row{
+    margin: 0px 0px 55px 0px;
+}
 .post-img-parent-delete{
     width: 200px;
     height: 200px;
