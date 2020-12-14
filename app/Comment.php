@@ -16,7 +16,7 @@ class Comment extends Model
 //    }
 //    //    relation one to many revers
     public function user(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User')->withTrashed();
     }
 //to return post within using $comment->commentable
     public function commentable(){

@@ -15,7 +15,7 @@ class Category extends Model
 
 //    //    relation many to many ...
     public function posts(){
-        return $this->belongsToMany(Post::class ,'category_posts');
+        return $this->belongsToMany(Post::class ,'category_posts')->withTrashed();
     }
 //    //    relation many to many ...
 //    public function users(){

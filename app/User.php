@@ -51,11 +51,11 @@ class User extends Authenticatable implements MustVerifyEmail
 //    }
     //    relation one to many
     public function posts(){
-        return $this->hasMany('App\Post');
+        return $this->hasMany('App\Post')->withTrashed();
     }
 //    //    relation one to many
     public function comments(){
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Comment')->withTrashed();
     }
     //    relation one to many
     public function likes(){
