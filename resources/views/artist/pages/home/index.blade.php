@@ -48,11 +48,11 @@
         @endforeach
     </div>
 
-{{--    <div class="row paginate-row d-flex justify-content-center">--}}
-{{--        <div class="col-md-12">--}}
-{{--            {{$posts->links()}}--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    <div class="row paginate-row d-flex justify-content-center">
+        <div class="col-md-12">
+            {{$posts->links()}}
+        </div>
+    </div>
 
 </div>
 

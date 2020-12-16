@@ -48,7 +48,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
         Route::get('home/post/{user}','HomeController@index_user')->name('home.index_user');//show following users post or all
         Route::post('home/follow-unfollow/{follower}/{following}','HomeController@follow_unfollow')->name('home.follow_unfollow');//show following users post or all
         Route::get('home/show-followings/{user}','HomeController@showFollowings')->name('home.showFollowings');
-        Route::get('hone/show-followers/{user}','HomeController@showFollowers')->name('home.showFollowers');
+        Route::get('home/show-followers/{user}','HomeController@showFollowers')->name('home.showFollowers');
 
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET

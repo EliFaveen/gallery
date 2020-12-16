@@ -87,14 +87,17 @@ class HomeController extends Controller
 //        return view('artist.pages.home.index-users',compact('users'));
 //        $posts_user->followers->count()
         $users=User::find($id)->following;
-        $posts_user=\App\User::find($users->first()->pivot->follower_id); //== $user=User::find($id)
+//        $posts_user=\App\User::find($users->first()->pivot->follower_id); //== $user=User::find($id) //but error pivot
+        $posts_user=\App\User::find($id);
         return view('artist.pages.home.follow-list',['users'=>$users,'posts_user'=>$posts_user]);
     }
 
     public function showFollowers($id){
 //        dd('followers');
-        $users=User::find($id)->followers;
-        $posts_user=\App\User::find($id); //== $user=User::find($id)
+        $users=User::find($id)->followers; //followers
+
+        $posts_user=\App\User::find($id); //== $user=User::find($id) //the page user
+//        return $posts_user;
         return view('artist.pages.home.follow-list',['users'=>$users,'posts_user'=>$posts_user]);
     }
 }
