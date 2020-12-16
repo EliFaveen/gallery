@@ -56,7 +56,7 @@ class CommentController extends Controller
             }
         }
 
-        $comments=$comments->paginate(8);
+        $comments=$comments->paginate(20);
 
         return view('admin.pages.comments.index',compact('comments'));
     }

@@ -59,7 +59,7 @@
                             <td class="table-col-counter">{{$i++}}.</td>
                             <td >{{ $comment->user->username }}</td>
                             <td >{{$comment->user->email}}</td>
-                            <td >{{$comment->comment}}</td>
+                            <td >{{Str::limit($comment->comment, $limit = 40, $end = '...') }}</td>
                             @if($comment->approved)
                                 <td>
                                     <form method="post" action="{{route('admin.comments.update',['comment'=>$comment->id])}}">

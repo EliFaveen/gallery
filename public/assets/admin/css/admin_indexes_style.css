@@ -1,16 +1,17 @@
-@font-face{
-    font-family: IRSans;
-    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
-}
-@font-face{
-    font-family:Leyla;
-    src: url(../fonts/leyla.ttf);
-}
+/*@font-face{*/
+/*    font-family: IRSans;*/
+/*    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);*/
+/*}*/
+/*@font-face{*/
+/*    font-family:Leyla;*/
+/*    src: url(../fonts/leyla.ttf);*/
+/*}*/
 
 
 body{
     direction: rtl;
-    font-family: IRSans;
+    /*font-family: IRSans;*/
+    /*font-size: 13px;*/
 }
 thead{
     text-align: center;
@@ -198,8 +199,15 @@ td{
     margin: 15px;
 }ّّ
 /*-----------------------------------change default tooplate--------------------------------------*/
+.table td{
+    padding: 0 !important;
+}
+.table th{
+    padding: 0 !important;
+}
+
 .table td, .table th {
-    padding: 9px 9px;
+     padding: 9px;
 }
 .btn-small {
     padding: 5px 15px;

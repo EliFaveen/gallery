@@ -86,7 +86,7 @@ class UserController extends Controller
             }
         }
 
-        $users=$users->paginate(8);
+        $users=$users->paginate(20);
 
         return view('admin.pages.users.index',compact('users'));
     }

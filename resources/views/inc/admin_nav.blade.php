@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">صفحه اصلی
+                        <a class="nav-link" href="{{route('admin.home.index')}}">صفحه اصلی
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>

@@ -79,6 +79,8 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
         Route::resource('users','UserController');
         Route::resource('comments','CommentController');
 
+        Route::resource('home','HomeController');
+
         //-------artist        /admin/category---->artist.post.store                     //POST
         //-------artist        /admin/category---->artist.post.index               //POST//no it's GET
         //-------artist        /admin/category/create---->artist.post.create       //GET

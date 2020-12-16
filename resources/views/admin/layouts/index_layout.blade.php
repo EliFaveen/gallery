@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Products Page - Dashboard Template</title>
+{{--    <title>Products Page - Dashboard Template</title>--}}
+    <title>@yield('title')</title>
     <!--
 
     Template 2108 Dashboard
@@ -29,7 +30,7 @@
     @yield('custom-css')
 
 
-    <title>@yield('title')</title>
+
 </head>
 
 <body id="reportsPage" class="bg02">
