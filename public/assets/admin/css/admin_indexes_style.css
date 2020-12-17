@@ -13,6 +13,10 @@ body{
     /*font-family: IRSans;*/
     /*font-size: 13px;*/
 }
+.bg-white {
+    /*bootstrap options*/
+    text-align: center;
+}
 thead{
     text-align: center;
 }

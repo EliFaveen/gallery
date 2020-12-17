@@ -35,7 +35,7 @@
 <script src="{{url('assets/admin/js/moment.min.js')}}"></script>
 <!-- https://momentjs.com/ -->
 <script src="{{url('assets/admin/js/utils.js')}}"></script>
-<script src="{{url('assets/admin/js/Chart.min.js')}}"></script>
+<script src="{{url('assets/admin/js/Chart.min.js')}}"></script><!--added in video too + bootstrap-->
 <!-- http://www.chartjs.org/docs/latest/ -->
 <script src="{{url('assets/admin/js/fullcalendar.min.js')}}"></script>
 <!-- https://fullcalendar.io/ -->
