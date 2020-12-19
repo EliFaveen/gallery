@@ -18,6 +18,8 @@
     <!-- https://getbootstrap.com/ -->
     <link rel="stylesheet" href="{{url('assets/admin/css/tooplate.css')}}">
 
+
+
     @yield('custom-css')
 </head>
 
@@ -30,7 +32,8 @@
 
     </div>
 </div>
-<script src="{{url('assets/admin/js/jquery-3.3.1.min.js')}}"></script>
+
+{{--<script src="{{url('assets/admin/js/jquery-3.3.1.min.js')}}"></script>--}}
 <!-- https://jquery.com/download/ -->
 <script src="{{url('assets/admin/js/moment.min.js')}}"></script>
 <!-- https://momentjs.com/ -->
@@ -42,6 +45,8 @@
 <script src="{{url('assets/admin/js/bootstrap.min.js')}}"></script>
 <!-- https://getbootstrap.com/ -->
 <script src="{{url('assets/admin/js/tooplate-scripts.js')}}"></script>
+
+
 
 @yield('custom-js')
 </body>

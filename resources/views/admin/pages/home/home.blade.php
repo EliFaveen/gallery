@@ -3,6 +3,13 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{url('assets/admin/css/admin_indexes_style.css')}}">
+
+    <link rel="stylesheet" href="{{url('assets/all_pages/datepicker/persian-datepicker.css')}}"/><!--datepicker-->
+    {{--    <script src="assets/all_pages/datepicker/jquery.js"></script><!--datepicker-->--}}
+    <script src="{{url('assets/all_pages/js/jquery.js')}}"></script>
+
+    <script src="{{url('assets/all_pages/datepicker/persian-date.js')}}"></script><!--datepicker-->
+    <script src="{{url('assets/all_pages/datepicker/persian-datepicker.js')}}"></script><!--datepicker-->
 @endsection
 
 @section('title')
@@ -81,14 +88,12 @@
         </div>
         <div class="tm-col tm-col-big">
             <div class="bg-white tm-block h-100">
-                <h2 class="tm-block-title">Calendar</h2>
-                <div id="calendar"></div>
-                <div class="row mt-4">
-                    <div class="col-12 text-right">
-                        <a href="#" class="tm-link-black">View Schedules</a>
-                    </div>
-                </div>
+                <h2 class="tm-block-title">تقویم شمسی</h2>
+                <div style="margin-top: 50px">
+{{--                    <div id="calendar"></div>--}}
+                    <div class="locale-fa" style="direction: initial"></div>
 
+                </div>
             </div>
         </div>
         <div class="tm-col tm-col-small">
@@ -305,5 +310,20 @@
             },
         });
 
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".example1").pDatepicker({
+                observer: true,
+                format: 'YYYY/MM/DD',
+                altField: '.observer-example-alt'
+            });
+        });
+
+        $('.locale-fa').persianDatepicker({
+            inline: true,
+
+        });
     </script>
 @endsection
