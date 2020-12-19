@@ -9,16 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/cropper.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/cropper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/js/tinymce/tinymce.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/js/create_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/js/create_script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,14 +310,7 @@
       <workItem from="1608104150050" duration="15312000" />
       <workItem from="1608190458962" duration="12050000" />
       <workItem from="1608222513450" duration="1001000" />
-      <workItem from="1608361516758" duration="10064000" />
-    </task>
-    <task id="LOCAL-00078" summary="comments- view design">
-      <created>1607172198110</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1607172198110</updated>
+      <workItem from="1608361516758" duration="13286000" />
     </task>
     <task id="LOCAL-00079" summary="add delete for comments in HomeController.php">
       <created>1607174225620</created>
@@ -657,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608365796109</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="added tinymce and download cdns with vpn">
+      <created>1608383393003</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1608383393003</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +702,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="started to add follow" />
     <MESSAGE value="seeing others post solved(want to add a smaller header for show single post)" />
     <MESSAGE value="small header inc added" />
     <MESSAGE value="follow-unfollow btn done" />
@@ -729,7 +726,8 @@
     <MESSAGE value="added home page template for admin" />
     <MESSAGE value="charts compeleted" />
     <MESSAGE value="added perisan calender to admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="added perisan calender to admin" />
+    <MESSAGE value="added tinymce and download cdns with vpn" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tinymce and download cdns with vpn" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -740,10 +738,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607955532590" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1608365794203">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1608383391569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608365794203" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608383391569" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -768,9 +766,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608373866578">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608385430951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608373866578" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608385430951" />
   </component>
 </project>

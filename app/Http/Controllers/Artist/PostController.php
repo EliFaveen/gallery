@@ -66,6 +66,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['required'],
+
+            'description' => ['required'],
+
+        ]);
 //        $fixed_path=Session::get('fixed_path');
 //        dd($fixed_path);
         $post=Post::create([

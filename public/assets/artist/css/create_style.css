@@ -262,3 +262,45 @@ input {
 .description-style{
     min-height: 130px;
 }
+/*--------------------------------remove category owl carousel and add scrollable category----------------------------------*/
+.scroll-category{
+    text-align: center;
+    height: 176px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/*-------------------------------customize sidenav----------------------------------------------*/
+.sidenav .all-sidenav:hover {
+    color: #66826a !important;
+    background-color: unset !important;
+
+}
+.sidenav .user {
+    background-color: #66826a !important;
+}
+.sidenav .plus {
+    background-color: #66826a !important;
+}
+
+.sidenav .heart {
+    background-color: #66826a !important;
+}
+
+.sidenav .home {
+    background-color: #66826a !important;
+}
+
+.sidenav .search {
+    background-color: #66826a !important;
+}
+
+.sidenav .crown {
+    background-color: #66826a !important;
+}
+.small-profile-img {
+    border: 4px solid #66826a !important;
+}
+.sidenav .user-img {
+    background-color: #66826a !important;
+}
+

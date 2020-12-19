@@ -50,7 +50,7 @@ class RegisterController extends Controller
     {
         if (auth()->user()->role === 'admin') {
 //            dd(auth()->user()->role);
-            return '/admin/category';
+            return '/admin/home';
         } else if (auth()->user()->role === 'artist') {
 //            dd(auth()->user()->role);
             return '/artist/post';
