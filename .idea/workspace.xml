@@ -9,9 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/cropper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/cropper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/cropper/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/all_pages/js/tinymce/tinymce.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/home_layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/home_layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,20 +157,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/all_pages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\public\assets\all_pages" />
+      <recent name="D:\zavie\Gallery\public\assets\all_pages\js\tinymce" />
       <recent name="D:\zavie\Gallery\public\assets\admin" />
       <recent name="D:\zavie\Gallery\public\assets" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\defaults" />
-      <recent name="D:\zavie\Gallery\public\assets\artist\img\default_for_posts" />
-      <recent name="D:\zavie\Gallery\public\assets\all_pages\img\add-post" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -305,14 +312,7 @@
       <workItem from="1608104150050" duration="15312000" />
       <workItem from="1608190458962" duration="12050000" />
       <workItem from="1608222513450" duration="1001000" />
-      <workItem from="1608361516758" duration="4049000" />
-    </task>
-    <task id="LOCAL-00077" summary="comments-date and time (morilog/jalali)">
-      <created>1607074831468</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1607074831468</updated>
+      <workItem from="1608361516758" duration="10064000" />
     </task>
     <task id="LOCAL-00078" summary="comments- view design">
       <created>1607172198110</created>
@@ -650,7 +650,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608223516310</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="added perisan calender to admin">
+      <created>1608365796109</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1608365796109</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,7 +704,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adderd footer for artist" />
     <MESSAGE value="started to add follow" />
     <MESSAGE value="seeing others post solved(want to add a smaller header for show single post)" />
     <MESSAGE value="small header inc added" />
@@ -722,7 +728,8 @@
     <MESSAGE value="add some detailsfor user not found and default pics ..." />
     <MESSAGE value="added home page template for admin" />
     <MESSAGE value="charts compeleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="charts compeleted" />
+    <MESSAGE value="added perisan calender to admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="added perisan calender to admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -733,18 +740,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607955532590" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1608223514905">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1608365794203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608223514905" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608365794203" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605888303094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605888303094" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607327383264">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608365889404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607327383264" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608365889404" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607503982282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -761,9 +768,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608362251827">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608373866578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608362251827" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608373866578" />
   </component>
 </project>

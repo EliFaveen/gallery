@@ -24,10 +24,11 @@
             <div class="username">
                 <h1>{{$posts_user->username}}@</h1>
             </div>
-            <div class="bio d-flex">
+            <div class="bio d-flex" style="height: 149px ;overflow: hidden;">
                 <h4>بیوگرافی:</h4>
                 @if($posts_user->bio)
-                    <h4>{{$posts_user->bio}}</h4>
+{{--                    <h4>{{strip_tags($posts_user->bio)}}</h4>--}}
+                    <h4>{!!$posts_user->bio!!}</h4>
                 @else
                     <h4>راجب خودت بنویس...</h4>
                 @endif

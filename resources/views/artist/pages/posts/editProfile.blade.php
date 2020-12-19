@@ -164,8 +164,11 @@
                             <label for="phone" class="col-md-2 col-form-label text-md-right">بیوگرافی</label>
 
                             <div class="col-md-10">
-{{--                                <input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>--}}
-                                <textarea id="bio" type="text" class="form-control @error('bio') is-invalid @enderror" name="bio" autocomplete="bio" autofocus>{{$user->bio}}</textarea>
+{{--                                <textarea id="bio" type="text" class="form-control @error('bio') is-invalid @enderror" name="bio" autocomplete="bio" autofocus>{{$user->bio}}</textarea>--}}
+
+{{--                                tinymce--}}
+                                <textarea id="bio" class="description @error('bio') is-invalid @enderror" name="bio">{{$user->bio}}</textarea>
+
                                 @error('bio')
                                 <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -202,6 +205,14 @@
                 format: 'YYYY/MM/DD',
                 altField: '.observer-example-alt'
             });
+        });
+    </script>
+    <script src="{{url('assets/all_pages/js/tinymce/tinymce.min.js')}}"></script>
+    <script>
+        tinymce.init({
+            selector:'textarea.description',
+            width: 'auto',
+            height: 300
         });
     </script>
 {{--    <script src="{{url('assets/artist/js/index_script.js')}}"></script><!--custom-->--}}
