@@ -1,0 +1,47 @@
+.alert{
+    direction: rtl;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.alert button{
+    left: 19px;
+    position: absolute;
+}
+.alert .alert-link{
+    text-decoration: none;
+}
+
+.no-notify-image-parent{
+    width: 474px !important;
+    height: 400px !important;
+    /*background-color: red;*/
+}
+.no-notify-image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*-----------main------------*/
+.header-flex{
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+.mentioned-post-parent{
+    width: 100px !important;
+    height: 100px !important;
+
+}
+.mentioned-post{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50% !important;
+}
+.heart-post-parent{
+    font-size: 23px;
+}
+.heart-post{
+    color: #91b08d;
+}

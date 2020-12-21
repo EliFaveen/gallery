@@ -43,7 +43,7 @@
         {{---------------------------------------------------------------------------------------------description row--}}
         <div class="row justify-content-md-center">
             <div class="col-md-10">
-                <textarea class="form-control input-style description-style @error('description') is-invalid @enderror" name="description" id="description" placeholder="یک کپشن راجبش بنویس" ></textarea>
+                <textarea class="tinymce form-control input-style description-style  @error('description') is-invalid @enderror" name="description" id="description" placeholder="یک کپشن راجبش بنویس" ></textarea>
                 @error('description')
                 <span class="invalid-feedback" role="alert" style="text-align: right">
                     <strong>{{ $message }}</strong>

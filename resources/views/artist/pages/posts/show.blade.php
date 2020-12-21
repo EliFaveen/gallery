@@ -257,7 +257,7 @@
                 </div>
             </nav>
             <div class="tab-content text-right" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane tab-style fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="title-style">
                         <div class="col-md-9 title-col-style">
                             <h3 >
@@ -273,11 +273,11 @@
                     </div>
                     <hr>
                     <div class="description-style">
-                        {{$post->description}}
+                        {!! $post->description !!}
                     </div>
                 </div>
                 {{--      comments      --}}
-                <div class="tab-pane fade tab-2-style" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane fade tab-style" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     @auth
                         <div class="modal fade" id="sendComment">
                             <div class="modal-dialog">
@@ -327,7 +327,7 @@
                     {{--    end comments    --}}
                 </div>
 {{--                hashtags--}}
-                <div class="tab-pane fade" id="nav-hashtag" role="tabpanel" aria-labelledby="nav-hashtag-tab">
+                <div class="tab-pane tab-style fade" id="nav-hashtag" role="tabpanel" aria-labelledby="nav-hashtag-tab">
                     @php($x=0)
                  <div class="row hshtag-row">
                      @if($post->hashtags()->first())
@@ -475,7 +475,7 @@
                  </div>
                 </div>
 {{--                categories--}}
-                <div class="tab-pane fade tab-4-style" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
+                <div class="tab-pane fade tab-style" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
                     @if($post->categories->first())
                         <h2 class="title-style">سبک های این نقاشی عبارتند از:</h2>
                         @foreach($post->categories as $category)
@@ -526,7 +526,7 @@
                     @endif
                 </div>
 {{--                edit--}}
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="tab-pane tab-style fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     <div class="form-parent">
                         <form class="" method="post" action="{{route('artist.post.update',['post'=>$post->id])}}">
                             @csrf
@@ -541,7 +541,7 @@
                             {{---------------------------------------------------------------------------------------------description row--}}
                             <div class="row justify-content-md-center description-row">
                                 <div class="col-md-8">
-                                    <textarea class="form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
+                                    <textarea class="tinymce form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
 
                                 </div>
                             </div>

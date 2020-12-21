@@ -71,6 +71,16 @@
 
 <script src="{{url('assets/all_pages/js/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/all_pages/js/fontawesom.js')}}"></script>
+<script src="{{url('assets/all_pages/js/tinymce/tinymce.min.js')}}"></script>
+
+<script>
+    tinymce.init({
+        selector:'textarea.tinymce',
+        width: 'auto',
+        height: 300
+    });
+
+</script>
 @yield('custom-js')
 
 

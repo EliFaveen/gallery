@@ -50,6 +50,9 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
         Route::get('home/show-followings/{user}','HomeController@showFollowings')->name('home.showFollowings');
         Route::get('home/show-followers/{user}','HomeController@showFollowers')->name('home.showFollowers');
 
+//-----------notifications
+        Route::get('notifications','NotifiyController@index')->name('notification');
+        Route::get('like_visited/{like}','NotifiyController@like_visited')->name('like_visited');
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET
         //-------artist        /artist/post/create---->artist.post.create       //GET

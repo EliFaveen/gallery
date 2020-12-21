@@ -47,7 +47,13 @@ body{
 }
 
 /*-----------------------------post infos left col-md-6----------------------------------*/
-
+.tab-style {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* width: 540px; */
+    height: 424px;
+    padding: 10px;
+}
 .description-style {
     text-align: justify;
     margin: 25px;
@@ -67,13 +73,13 @@ body{
     word-break: break-all;
 }
 /*----------------------------------------comments----------------------------------------------*/
-.tab-2-style{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    /*width: 540px;*/
-    height: 438px;
-    padding: 10px;
-}
+/*.tab-2-style{*/
+/*    overflow-y: scroll;*/
+/*    overflow-x: hidden;*/
+/*    !*width: 540px;*!*/
+/*    height: 424px;*/
+/*    padding: 10px;*/
+/*}*/
 .title-comment-style{
     color: #869791;
 }
@@ -231,13 +237,13 @@ body{
     flex-wrap: wrap;
 }
 /*----------------------------------------------------for category tab-----------------------------------------------*/
-.tab-4-style{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    /*width: 540px;*/
-    height: 438px;
-    padding: 10px;
-}
+/*.tab-4-style {*/
+/*    overflow-y: scroll;*/
+/*    overflow-x: hidden;*/
+/*    !* width: 540px; *!*/
+/*    height: 424px;*/
+/*    padding: 10px;*/
+/*}*/
 
 .post-img-parent-large{
     width: 300px;
@@ -292,3 +298,4 @@ input{
 .card{
     border: 0 !important;
 }
+
