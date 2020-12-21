@@ -10,7 +10,7 @@
                     </div>
                 @else
                     <div class="profile-img-parent">
-                        <img class="profile-img "  src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
+                        <img class="profile-img "  src="{{url('assets/all_pages/img/default_profile/default_profile_green.png')}}" alt="default image">
                     </div>
                 @endif
                 <div class="header-card-infos d-flex">

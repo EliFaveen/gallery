@@ -39,8 +39,10 @@ class HomeController extends Controller
             'commentable_id' => 'required',
             'commentable_type' => 'required',
             'parent_id' => 'required',
-            'comment' => 'required'
+            'comment' => 'required',
+//            'visited' => '0',
         ]);
+
 
         auth()->user()->comments()->create($validData);
 

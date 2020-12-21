@@ -40,6 +40,6 @@ class Post extends Model
     }
     //    relation one to many revers
     public function user(){
-        return $this->belongsTo('App\User')->withTrashed();
+        return $this->belongsTo('App\User');
     }
 }
