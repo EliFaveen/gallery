@@ -10,7 +10,7 @@ class Photo extends Model
     //------------------------------------------------------------//relation call like product->photos
 
 //    //    relation one to many revers
-//    public function post(){
-//        return $this->belongsTo('App\Post');
-//    }
+    public function post(){
+        return $this->belongsTo('App\Post')->withTrashed();
+    }
 }

@@ -12,6 +12,6 @@ class Hashtag extends Model
 
 //    //    relation one to many revers
     public function post(){
-        return $this->belongsTo('App\Post');
+        return $this->belongsTo('App\Post')->withTrashed();
     }
 }
