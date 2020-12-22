@@ -15,7 +15,7 @@ class HomeController extends Controller
         //index for showing everyones post
         //homenav
 //        dd(\request()->all());
-
+        $without_paginate=false;
         $posts=Post::orderBy('created_at','desc');
 //        hashtag searxh
         if (\request()->filled('search-radio')) {
@@ -47,8 +47,9 @@ class HomeController extends Controller
 //                    $posts=Post::orderBy('created_at','desc')->where($post_id);
 //                }
 //                return $posts;
+                $without_paginate=true;
 
-                return view('artist.pages.home.index',compact('posts'));
+                return view('artist.pages.home.index',['posts'=>$posts, 'without_paginate'=>$without_paginate]);
             }
 
 
@@ -57,7 +58,7 @@ class HomeController extends Controller
 
         }
         $posts=$posts->paginate(9);
-        return view('artist.pages.home.index',compact('posts'));
+        return view('artist.pages.home.index',['posts'=>$posts, 'without_paginate'=>$without_paginate]);
     }
     public function index_user($id){
         //index for showing a user post from a link

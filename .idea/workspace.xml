@@ -10,11 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Hashtag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Hashtag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Photo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,14 +308,7 @@
       <workItem from="1608361516758" duration="16884000" />
       <workItem from="1608535011634" duration="13345000" />
       <workItem from="1608576671146" duration="4989000" />
-      <workItem from="1608621338181" duration="1454000" />
-    </task>
-    <task id="LOCAL-00082" summary="make sidnav style global in all-pages stylepages.css">
-      <created>1607180631082</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1607180631082</updated>
+      <workItem from="1608621338181" duration="2464000" />
     </task>
     <task id="LOCAL-00083" summary="make sidnav style global in all-pages stylepages.css">
       <created>1607180663306</created>
@@ -656,7 +646,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608581218878</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="again...added with trashed to child to parent relationships">
+      <created>1608625141121</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1608625141122</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +700,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add follow following details to headers artist" />
     <MESSAGE value="add profile like to sidenav" />
     <MESSAGE value="a little details in editProfile.blade.php and editProfile_style.css" />
     <MESSAGE value="working on search hashtags logic and search-user view(still not compelete)" />
@@ -728,7 +724,8 @@
     <MESSAGE value="add some changes for create post artist" />
     <MESSAGE value="add like visited" />
     <MESSAGE value="search hashtags and sending comments didnt work...i deleted all with trashed from models... comments works but hashtags not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="search hashtags and sending comments didnt work...i deleted all with trashed from models... comments works but hashtags not working" />
+    <MESSAGE value="again...added with trashed to child to parent relationships" />
+    <option name="LAST_COMMIT_MESSAGE" value="again...added with trashed to child to parent relationships" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -739,10 +736,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607955532590" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1608581217400">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608625139842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608581217400" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608625139842" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
