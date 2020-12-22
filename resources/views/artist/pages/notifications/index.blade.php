@@ -14,7 +14,7 @@
     @if(!($posts_new_likes[0]->first() == null))
         @foreach($posts_new_likes as $post_new_likes)
             @foreach($post_new_likes as $post_new_like)
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success " role="alert">
 {{--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
 {{--                        <span aria-hidden="true">&times;</span>--}}
 {{--                    </button>--}}
@@ -50,6 +50,40 @@
                             نداشته
                         @endif
                         </p>
+
+
+                </div>
+            @endforeach
+        @endforeach
+
+        @foreach($posts_new_comments as $post_new_comments)
+            @foreach($post_new_comments as $post_new_comment)
+                <div class="alert alert-info " role="alert">
+                    <a href="{{route('artist.comment_visited',['comment'=>$post_new_comment->id])}}" class="alert-link">
+                        <div class=header-flex>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mentioned-post-parent">
+                                        <img class="mentioned-post" src="{{url(\App\Post::find($post_new_comment->commentable_id)->photos->first()->img_url)}}" alt="enter-post-image" >
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="alert-heading mr-3 ml-3">پست شما یک دیدگاه جدید دارد!</h4>
+                            <div class="comment-post-parent">
+                                <i class="fa fa-comment comment-post"></i>
+                            </div>
+
+
+                        </div>
+                    </a>
+
+                    {{--                    <p>کاربر <a href="#" class="alert-link">{{$post_new_like->user->username}}</a> پست شما را لایک کرده</p>--}}
+                    <hr>
+                    <p class="mb-0"><a href="{{route('artist.home.index_user',['user'=>$post_new_comment->user_id])}}" class="alert-link">{{$post_new_comment->user->username}}</a> : <br>
+
+                        {{Str::limit($post_new_comment->comment, $limit = 100, $end = '...') }}
+
+                    </p>
 
 
                 </div>

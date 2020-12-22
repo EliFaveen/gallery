@@ -54,7 +54,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany('App\Post');
     }
 //    //    relation one to many
-    public function comments(){
+    public function comments(){ ///////////i dont know if its nessecery
         return $this->hasMany('App\Comment');
     }
     //    relation one to many

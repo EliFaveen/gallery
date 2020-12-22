@@ -53,6 +53,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
 //-----------notifications
         Route::get('notifications','NotifiyController@index')->name('notification');
         Route::get('like_visited/{like}','NotifiyController@like_visited')->name('like_visited');
+        Route::get('comment_visited/{comment}','NotifiyController@comment_visited')->name('comment_visited');
         //-------artist        /artist/post---->artist.post.store                     //POST
         //-------artist        /artist/post---->artist.post.index               //POST//no it's GET
         //-------artist        /artist/post/create---->artist.post.create       //GET
