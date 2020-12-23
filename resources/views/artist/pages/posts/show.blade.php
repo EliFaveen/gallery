@@ -235,7 +235,9 @@
 
                     <a class="nav-item nav-link " id="nav-hashtag-tab" data-toggle="tab" href="#nav-hashtag" role="tab" aria-controls="nav-hashtag" aria-selected="false">هشتگ</a>
                     <a class="nav-item nav-link " id="nav-category-tab" data-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">سبک نقاشی</a>
-                        <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش پست</a>
+                    @if(auth()->user()->id == $post->user_id)
+                    <a class="nav-item nav-link " id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ویرایش پست</a>
+                    @endif
 
                     @if(auth()->user()->id == $post->user_id)
                         <div class="d-flex delete-edit-box">
@@ -526,34 +528,36 @@
                     @endif
                 </div>
 {{--                edit--}}
-                <div class="tab-pane tab-style fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <div class="form-parent">
-                        <form class="" method="post" action="{{route('artist.post.update',['post'=>$post->id])}}">
-                            @csrf
-                            @method('PATCH')
-                            {{---------------------------------------------------------------------------------------------title row--}}
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-8">
-                                    <input class="form-control" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟" value="{{$post->title}}">
+                @if($post->user_id == auth()->user()->id)
+                    <div class="tab-pane tab-style fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="form-parent">
+                            <form class="" method="post" action="{{route('artist.post.update',['post'=>$post->id])}}">
+                                @csrf
+                                @method('PATCH')
+                                {{---------------------------------------------------------------------------------------------title row--}}
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-8">
+                                        <input class="form-control" name="title" id="title" type="text" placeholder="اسم نقاشیت رو چی میزاری؟" value="{{$post->title}}">
 
+                                    </div>
                                 </div>
-                            </div>
-                            {{---------------------------------------------------------------------------------------------description row--}}
-                            <div class="row justify-content-md-center description-row">
-                                <div class="col-md-8">
-                                    <textarea class="tinymce form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
+                                {{---------------------------------------------------------------------------------------------description row--}}
+                                <div class="row justify-content-md-center description-row">
+                                    <div class="col-md-8">
+                                        <textarea class="tinymce form-control" name="description" id="description" placeholder="یک کپشن راجبش بنویس">{{$post->description}}</textarea>
 
+                                    </div>
                                 </div>
-                            </div>
-                            {{---------------------------------------------------------------------------------------------submit--}}
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-8">
-                                    <button type="submit" class="mt-2 btn btn-outline-success btn-block">ویرایش پست</button>
+                                {{---------------------------------------------------------------------------------------------submit--}}
+                                <div class="row justify-content-md-center">
+                                    <div class="col-md-8">
+                                        <button type="submit" class="mt-2 btn btn-outline-success btn-block">ویرایش پست</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div><!--col-md-6 end-->
 

@@ -24,7 +24,7 @@
                             {{--                @endif--}}
                         </div>
                     @endauth
-                    @if($comment->user_id == auth()->user()->id)
+                    @if($comment->user_id == auth()->user()->id || $post->user_id == auth()->user()->id)
 {{--                        <div class="reply-btn-parent">--}}
 {{--                            <span class="all-reply-btn reply" data-toggle="modal" data-target="#sendComment" data-id="{{$comment->id}}" data-type="product"><i class="fas fa-trash"></i></span>--}}
 {{--                        </div>--}}
