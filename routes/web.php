@@ -49,6 +49,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
         Route::post('home/follow-unfollow/{follower}/{following}','HomeController@follow_unfollow')->name('home.follow_unfollow');//show following users post or all
         Route::get('home/show-followings/{user}','HomeController@showFollowings')->name('home.showFollowings');
         Route::get('home/show-followers/{user}','HomeController@showFollowers')->name('home.showFollowers');
+        Route::get('home/popular','HomeController@index_popular')->name('home.index_popular');
 
 //-----------notifications
         Route::get('notifications','NotifiyController@index')->name('notification');

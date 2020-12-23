@@ -9,11 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/inc/card_body.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/NotifiyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/NotifiyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/notifications_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/notifications_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/notifications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/notifications/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,15 +161,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\zavie\Gallery\public\assets\all_pages\img\defaults" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages" />
       <recent name="D:\zavie\Gallery\public\assets\all_pages\js\tinymce" />
       <recent name="D:\zavie\Gallery\public\assets\admin" />
       <recent name="D:\zavie\Gallery\public\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -311,14 +314,8 @@
       <workItem from="1608361516758" duration="16884000" />
       <workItem from="1608535011634" duration="13345000" />
       <workItem from="1608576671146" duration="4989000" />
-      <workItem from="1608621338181" duration="7652000" />
-    </task>
-    <task id="LOCAL-00084" summary="admin comment page table done">
-      <created>1607240908557</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1607240908558</updated>
+      <workItem from="1608621338181" duration="10658000" />
+      <workItem from="1608706706597" duration="4872000" />
     </task>
     <task id="LOCAL-00085" summary="admin comment page search bar done">
       <created>1607242864306</created>
@@ -656,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608626105520</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="added notifications for comment">
+      <created>1608643060687</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1608643060687</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -703,7 +707,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="a little details in editProfile.blade.php and editProfile_style.css" />
     <MESSAGE value="working on search hashtags logic and search-user view(still not compelete)" />
     <MESSAGE value="birthdate added to editProfile.blade.php(shamsi datepicker)" />
     <MESSAGE value="index-users.blade.php for searching username" />
@@ -728,7 +731,8 @@
     <MESSAGE value="search hashtags and sending comments didnt work...i deleted all with trashed from models... comments works but hashtags not working" />
     <MESSAGE value="again...added with trashed to child to parent relationships" />
     <MESSAGE value="solve pagination error for searching hashtags" />
-    <option name="LAST_COMMIT_MESSAGE" value="solve pagination error for searching hashtags" />
+    <MESSAGE value="added notifications for comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added notifications for comment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -739,10 +743,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607955532590" />
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608626104728">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608643059642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608626104728" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608643059642" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -767,9 +771,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608642707265">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608711471697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608642707265" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608711471697" />
   </component>
 </project>

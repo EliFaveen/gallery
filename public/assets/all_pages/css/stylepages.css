@@ -395,3 +395,19 @@ footer a:hover{
     }
 
 }
+
+/*------------------------- indexes cart body------------------------*/
+/*--------------------------show likes count-------------------------*/
+.flex-card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+    color: #7a7676;
+}
+.heart-fa-parent{
+    color: #b8b8b8;
+}
+.card-title , .h5{
+    margin-bottom: 0;
+}

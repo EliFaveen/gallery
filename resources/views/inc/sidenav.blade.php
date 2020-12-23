@@ -18,6 +18,6 @@
     <a href="{{route('artist.notification')}}" class="all-sidenav heart"><i class="fas fa-heart"></i></a>
     <a href="{{route('artist.home.index')}}" class="all-sidenav home"><i class="fas fa-home"></i></a>
 {{--    <a href="#" class="all-sidenav search"><i class="fas fa-search"></i></a>--}}
-    <a href="#" class="all-sidenav crown"><i class="fas fa-crown"></i></a>
+    <a href="{{route('artist.home.index_popular')}}" class="all-sidenav crown"><i class="fas fa-crown"></i></a>
 
 </div>

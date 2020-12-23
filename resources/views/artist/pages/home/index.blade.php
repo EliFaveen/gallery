@@ -36,11 +36,7 @@
                                     <img  class=" post-img pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/default_for_posts/image-01.jpg')}}" alt="default image">
                                 </div>
                             @endif
-                            <div class="card-body">
-                                <h5 class="card-title">{{Str::limit($post->title, $limit = 24, $end = '...') }}</h5>
-                                {{--                            <p class="card-text">{{Str::limit($post->description, $limit = 28, $end = '...') }}</p>--}}
-                                {{--                            <a href="#" class="btn btn-primary">Show Post</a>--}}
-                            </div>
+                            @include('inc.card_body',['post'=>$post])
                         </div>
                     </a>
                 </div>

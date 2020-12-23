@@ -1,6 +1,6 @@
 <section class="section2">
     <div class="container">
-        <form action="">
+        <form action="{{route('artist.home.index')}}">
             <div class="row row2-1">
                 <!------------------------------------------------------------------------------------------------1---جستجو-->
                 <div class="col">

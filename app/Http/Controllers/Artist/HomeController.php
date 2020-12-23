@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -100,5 +101,30 @@ class HomeController extends Controller
         $posts_user=\App\User::find($id); //== $user=User::find($id) //the page user
 //        return $posts_user;
         return view('artist.pages.home.follow-list',['users'=>$users,'posts_user'=>$posts_user]);
+    }
+
+    public function index_popular(){
+
+        $without_paginate=false;
+//        $posts=Post::get();
+//        foreach ($posts as $post){
+//            $most_liked_posts[$post->id]=$post->likes->where('like',1)->count();
+//        }
+
+//        $posts = Post::withCount('likes',function ($query){
+//            $query->where('like',1);
+//        })->orderBy('likes_count','desc')->paginate(9);
+
+        $posts = Post::withCount('likes')->orderBy('likes_count','desc')->orderBy('created_at','desc')->paginate(9);
+
+//        foreach ($posts as $post) {
+//            echo $post->likes_count ;
+//        }
+
+
+//        sort($most_liked_posts);
+//        dd($posts);
+//        return $posts;
+        return view('artist.pages.home.index',['posts'=>$posts, 'without_paginate'=>$without_paginate]);
     }
 }
