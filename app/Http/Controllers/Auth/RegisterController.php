@@ -82,17 +82,19 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'alpha', 'max:255'],
 
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
 
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed','not_regex:/^.*(?=.*[;,"\']).*$/'],
 
-            'lastname' => ['required', 'string'],
+            'lastname' => ['required', 'alpha'],
 
             'username' => ['required','alpha_dash','unique:users'],
 
             'phone' => ['required','numeric','starts_with:09'],
+        ],[
+            'regex'=> 'پسورد باید حداقل شامل یک حرف یک عدد و یک کاراکتر معتبر باشد',
         ]);
     }
 

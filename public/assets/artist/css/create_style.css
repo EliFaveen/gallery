@@ -304,3 +304,16 @@ input {
     background-color: #66826a !important;
 }
 
+@media only screen and (max-width:600px) {
+
+    .input-style {
+        margin: 0 !important;
+    }
+    .form-parent {
+        padding: 10px;
+    }
+    .wrapper {
+        margin: 0px !important;
+        width: 100%;
+    }
+}

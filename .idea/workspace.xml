@@ -10,8 +10,15 @@
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/create_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/layouts/artist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/header-big.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,14 +316,8 @@
       <workItem from="1608535011634" duration="13345000" />
       <workItem from="1608576671146" duration="4989000" />
       <workItem from="1608621338181" duration="10658000" />
-      <workItem from="1608706706597" duration="5922000" />
-    </task>
-    <task id="LOCAL-00086" summary="working in admin-posts (many to many relationship worked for categories)">
-      <created>1607327347367</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1607327347368</updated>
+      <workItem from="1608706706597" duration="10217000" />
+      <workItem from="1608749022208" duration="11334000" />
     </task>
     <task id="LOCAL-00087" summary="sweet alert dosent work in controller but it works with js swal(artist/posts/show.blade.php)">
       <created>1607329925827</created>
@@ -654,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608711898299</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="some mistakes solved(post owner can delete all comments and no one can edit her post)">
+      <created>1608712907504</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1608712907504</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,7 +709,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="birthdate added to editProfile.blade.php(shamsi datepicker)" />
     <MESSAGE value="index-users.blade.php for searching username" />
     <MESSAGE value="following-followers lists" />
     <MESSAGE value="add footer to show sinle post and created_at" />
@@ -726,7 +733,8 @@
     <MESSAGE value="solve pagination error for searching hashtags" />
     <MESSAGE value="added notifications for comment" />
     <MESSAGE value="added crown sidenav (popular posts)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added crown sidenav (popular posts)" />
+    <MESSAGE value="some mistakes solved(post owner can delete all comments and no one can edit her post)" />
+    <option name="LAST_COMMIT_MESSAGE" value="some mistakes solved(post owner can delete all comments and no one can edit her post)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604164354170">
@@ -737,10 +745,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607955532590" />
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608711896763">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608712905505">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608711896763" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608712905505" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -753,10 +761,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607503982282" />
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608642787656">
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608757122284">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1608642787656" />
+    <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1608757122284" />
     <state x="495" y="0" width="1055" height="616" key="dock-window-1" timestamp="1607152919073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -765,9 +773,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608711471697">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608756879477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608711471697" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608756879477" />
   </component>
 </project>

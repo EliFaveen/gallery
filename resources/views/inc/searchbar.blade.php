@@ -38,13 +38,13 @@
 
             <div class="row row2-3 justify-content-center">
                 <!---------------------------------------------------------------------------------------------------جستجو فرم-->
-                <div class="col-md-4">
+                <div class="col-md-4 col-10 p-0">
                     <!-- Search form -->
                     <div class="md-form mt-0">
                         <input name="search" class="form-control" type="text" placeholder="جستجو کن..." aria-label="Search">
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-2 p-0">
                     <!-- Search btn -->
                     <div class="btn-search-parent">
                         <button type="submit" class="btn btn-warning btn-block"><i class="fas fa-search"></i></button>

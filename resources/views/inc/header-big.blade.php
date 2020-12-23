@@ -28,14 +28,14 @@
                 <h4>بیوگرافی:</h4>
                 @if($posts_user->bio)
 {{--                    <h4>{{strip_tags($posts_user->bio)}}</h4>--}}
-                    <h4>{!!$posts_user->bio!!}</h4>
+                    <h4 class="bio-style">{!!$posts_user->bio!!}</h4>
                 @else
-                    <h4>راجب خودت بنویس...</h4>
+                    <h4 class="bio-style">راجب خودت بنویس...</h4>
                 @endif
             </div>
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-3 follow-post">
             <div class="follow-box">
                 <a href="{{route('artist.home.showFollowers',['user'=>$posts_user->id])}}" class="btn btn-follow">followers<hr>{{$posts_user->followers->count()}}</a>
                 <a href="{{route('artist.home.showFollowings',['user'=>$posts_user->id])}}" class="btn btn-follow">following<hr>{{$posts_user->following->count()}}</a>

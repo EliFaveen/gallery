@@ -216,5 +216,139 @@ body{
     border: none !important;
     box-shadow: 3px 4px 20px 0px #80808073;
 }
+/*-------------------------------------header-big-------------------------------------*/
+header{
+    background-color: #fcefe7;
+    direction: rtl;
+}
+.header-main-div{
+    padding: 10px;
+    color: snow;
+}
+.username h1{
+    background: #a35d40;
+    border-radius: 40px;
+    padding: 14px;
+    margin-bottom: 0;
+    /* position: fixed; */
+    /* left: 499px; */
+    /* top: 103px; */
+    margin: 12px 19px 0px 0px;
+}
+/*.bio h2{*/
+/*    text-align: center;*/
+/*    background: #a35d40;*/
+/*    border-radius: 40px;*/
+/*    padding: 14px;*/
+/*    margin-bottom: 0;*/
+/*    !* position: fixed; *!*/
+/*    !* left: 499px; *!*/
+/*    !* top: 103px; *!*/
+/*    margin: 12px 19px 0px 0px;*/
+/*    !* margin-top: 22px; *!*/
+/*    width: 80px;*/
+/*    height: 78px;*/
+/*}*/
+.bio h4{
+    /* font-family: Leyla; */
+    color: #a35d40;
+    /* margin-top: revert; */
+    /* margin-right: auto; */
+    margin: 10px 10px 10px 10px;
+    padding: 11px;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: right;
+}
+.follow-unfollow{
+    text-align: center;
+}
+.follow-unfollow-btn{
 
+    /*width: 50%;*/
+}
+.header-image{
+    background-image: url(../../all_pages/img/header-footer/footer2.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    /* min-height: 281px; */
+    background-size: 100% 276px;
+    /*!* padding-top: 3%;*/
+}
+.info-flex-with-profile{
+    border-left: thin solid #a35d40;
+}
+.btn-follow{
+    background: #a35d4026;
+    color: #a35d40 !important;
+}
+.follow-box{
+    margin-top: 10%;
+}
+.btn-post{
+    background: #a35d4026;
+    color: #a35d40 !important;
+    width: 81%;
+}
+.post-box{
+    margin-top: 10%;
+}
 
+@media only screen and (max-width:600px){
+    .image-profile-parent {
+        width: 170px;
+        height: 170px;
+    }
+    .overlay{
+        /*opacity: 1;*/
+        width: 170px;
+        height: 170px;
+    }
+    .info-flex-with-profile {
+        border: 0;
+    }
+    .username h1 {
+        font-size: 15px;
+        padding: 10px;
+        text-align: center;
+    }
+    .bio {
+        height: 200px !important;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio-style{
+        text-align: center !important;
+    }
+    .follow-post{
+        display: flex;
+    }
+    .btn-post {
+        width: 100%;
+        margin: 0 5px;
+    }
+    .header-main-div{
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+    }
+    .post-box {
+        flex: 1 1 auto!important;
+    }
+/*    --------------popular---------------   */
+    .checkbox-search-parent{
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        /* padding: 10px; */
+    }
+    .pagination {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .row2-3{
+        padding: 10px;
+    }
+
+}

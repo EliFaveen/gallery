@@ -306,26 +306,28 @@ class PostController extends Controller
 
         $user=\App\User::find($id);
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'alpha', 'max:255'],
 
 //            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
 
-            'lastname' => ['required', 'string'],
+            'lastname' => ['required', 'alpha'],
 
 //            'username' => ['required','alpha_dash','unique:users'],
 
             'phone' => ['required','numeric','starts_with:09'],
 
-//            'country' => ['string'],
+            'country' => ['alpha'],
+
+//            'bio' => [ 'max:100' ]
         ]);
 
 
         $user->update([
-            'bio' => \request('bio'),
-            'phone' => \request('phone'),
-            'lastname' => \request('lastname'),
-            'name' => \request('name'),
-            'country' => \request('country'),
+            'bio' => $request->input('bio'),
+            'phone' => $request->input('phone'),
+            'lastname' => $request->input('lastname'),
+            'name' => $request->input('name'),
+            'country' => $request->input('country'),
             'birthdate' => $miladi,
         ]);
 
@@ -363,6 +365,7 @@ class PostController extends Controller
         public function updateProfilePic(Request $request,$id){
 
 //            dd($request->all());
+
             $user=\App\User::find($id);
             $path=$request->file('photo')->store('profile_pics');
             $fixed_path='storage/'.$path;

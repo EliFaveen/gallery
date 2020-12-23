@@ -1,6 +1,7 @@
 /*----tiny mce warning-----*/
 .mce-notification.mce-in {
     opacity: 0 !important;
+    position: fixed;
 }
 b, strong {
     font-weight: bold;
@@ -146,7 +147,8 @@ b, strong {
     color: white;
 }
 
-/*-------------------------------------header-big-------------------------------------*/
+
+/*--------------------------------------header-small-----------------------------------------*/
 header{
     background-color: #fcefe7;
     direction: rtl;
@@ -155,75 +157,6 @@ header{
     padding: 10px;
     color: snow;
 }
-.username h1{
-    background: #a35d40;
-    border-radius: 40px;
-    padding: 14px;
-    margin-bottom: 0;
-    /* position: fixed; */
-    /* left: 499px; */
-    /* top: 103px; */
-    margin: 12px 19px 0px 0px;
-}
-/*.bio h2{*/
-/*    text-align: center;*/
-/*    background: #a35d40;*/
-/*    border-radius: 40px;*/
-/*    padding: 14px;*/
-/*    margin-bottom: 0;*/
-/*    !* position: fixed; *!*/
-/*    !* left: 499px; *!*/
-/*    !* top: 103px; *!*/
-/*    margin: 12px 19px 0px 0px;*/
-/*    !* margin-top: 22px; *!*/
-/*    width: 80px;*/
-/*    height: 78px;*/
-/*}*/
-.bio h4{
-    /* font-family: Leyla; */
-    color: #a35d40;
-    /* margin-top: revert; */
-    /* margin-right: auto; */
-    margin: 10px 10px 10px 10px;
-    padding: 11px;
-    font-size: 15px;
-    line-height: 26px;
-    text-align: right;
-}
-.follow-unfollow{
-    text-align: center;
-}
-.follow-unfollow-btn{
-
-    /*width: 50%;*/
-}
-.header-image{
-    background-image: url(../../all_pages/img/header-footer/footer2.png);
-    background-position: top right;
-    background-repeat: no-repeat;
-    /* min-height: 281px; */
-    background-size: 100% 276px;
-    /*!* padding-top: 3%;*/
-}
-.info-flex-with-profile{
-    border-left: thin solid #a35d40;
-}
-.btn-follow{
-    background: #a35d4026;
-    color: #a35d40 !important;
-}
-.follow-box{
-    margin-top: 10%;
-}
-.btn-post{
-    background: #a35d4026;
-    color: #a35d40 !important;
-    width: 81%;
-}
-.post-box{
-    margin-top: 10%;
-}
-/*--------------------------------------header-small-----------------------------------------*/
 .image-profile-parent-small{
     width: 83px;
     height: 83px;
@@ -263,6 +196,16 @@ header{
 .middle-btn{
     border-right: thin solid;
     border-left: thin solid;}
+@media only screen and (max-width:600px){
+    .username h4{
+        font-size: 16px;
+        text-align: center;
+    }
+    .header-main-div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /*=============================footer===============================*/
 footer {
     margin-top: 10px;
@@ -329,6 +272,7 @@ footer  .link .fa-map-marker-alt:hover{
 }
 footer .column_left
 {
+    direction: rtl;
     margin: auto;
     text-align:right;
     padding: 0% 1% 0% 0%;
@@ -411,3 +355,24 @@ footer a:hover{
 .card-title , .h5{
     margin-bottom: 0;
 }
+@media only screen and (max-width:600px){
+
+
+    .sidenav {
+        position: fixed;
+        bottom: 0;
+        z-index: 10000000;
+        background-color: #dfdfdf;
+        right: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 12px;
+    }
+
+    .sidenav a {
+        position: initial;
+    }
+
+    }

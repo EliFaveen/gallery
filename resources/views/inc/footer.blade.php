@@ -29,7 +29,7 @@
                 </div>
                 <div class="row row-3">
                     <div class="col"><div class="row"><a class="link" href="#"><i class="fas fa-envelope my-fa fa-2x"></i>Goldtida@gmail.com</a></div></div>
-                    <div class="col p-0">
+                    <div class="col col-md-6 col-12 p-0">
                         <a class="link" href="#"><i class="far fa-envelope my-fa fa-2x"></i></a>
                         <a class="link" href="#"><i class="fab fa-telegram-plane my-fa fa-2x"></i></a>
                         <a class="link" href="#"><i class="fab fa-whatsapp my-fa fa-2x"></i></a>
