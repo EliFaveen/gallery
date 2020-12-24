@@ -11,9 +11,9 @@
     @include('inc.sidenav')
     @include('inc.header-small',['posts_user'=>auth()->user()])
 
-    @if(!($posts_new_likes[0]->first() == null))
-        @foreach($posts_new_likes as $post_new_likes)
-            @foreach($post_new_likes as $post_new_like)
+    @if(!($singleArray_likes == null) || !($singleArray_comments == null))
+{{--        @foreach($posts_new_likes as $post_new_likes)--}}
+            @foreach($singleArray_likes as $post_new_like)
                 <div class="alert alert-success " role="alert">
 {{--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
 {{--                        <span aria-hidden="true">&times;</span>--}}
@@ -54,10 +54,10 @@
 
                 </div>
             @endforeach
-        @endforeach
+{{--        @endforeach--}}
 
-        @foreach($posts_new_comments as $post_new_comments)
-            @foreach($post_new_comments as $post_new_comment)
+{{--        @foreach($posts_new_comments as $post_new_comments)--}}
+            @foreach($singleArray_comments as $post_new_comment)
                 <div class="alert alert-info " role="alert">
                     <a href="{{route('artist.comment_visited',['comment'=>$post_new_comment->id])}}" class="alert-link">
                         <div class=header-flex>
@@ -88,7 +88,7 @@
 
                 </div>
             @endforeach
-        @endforeach
+{{--        @endforeach--}}
     @else
         <div class="row justify-content-center mt-4 mb-4">
             <div class="col-md-6">

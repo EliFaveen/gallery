@@ -10,22 +10,52 @@ use Illuminate\Http\Request;
 
 class NotifiyController extends Controller
 {
+
+
     public function index(){
         $auth_user_id=auth()->user()->id;
+        $posts_new_likes = [];
+        $posts_new_comments = [];
         $posts=Post::where('user_id',$auth_user_id)->with('likes')->get();
-        foreach ($posts as $post) {
-            $posts_new_likes[]=$post->likes->where('visited',0);
+
+        if ($posts->first()){
+            foreach ($posts as $post) {
+                $posts_new_likes[]=$post->likes->where('visited',0);
+            }
         }
+        $singleArray_likes = array();
+        foreach ($posts_new_likes as $values){
+            foreach ($values as $value)
+            {
+                $singleArray_likes[] = $value;
+            }
+
+        }
+
+//        return $singleArray_likes;
+
         $posts=Post::where('user_id',$auth_user_id)->with('comments')->get();
-        foreach ($posts as $post) {
-            $posts_new_comments[]=$post->comments->where('visited',0);
+        if ($posts->first()){
+            foreach ($posts as $post) {
+                $posts_new_comments[]=$post->comments->where('visited',0);
 //            $comments_posts_id[]=$post->comments->where('visited',0)->first()->first()->comment;
+            }
         }
-//        return $comments_posts_id;
+        $singleArray_comments = array();
+        foreach ($posts_new_comments as $values){
+            foreach ($values as $value)
+            {
+                $singleArray_comments[] = $value;
+            }
+
+        }
+//               return $singleArray_comments;
+
+
         return view('artist.pages.notifications.index',
             [
-                'posts_new_likes'=>$posts_new_likes,
-                'posts_new_comments' =>$posts_new_comments,
+                'singleArray_likes'=>$singleArray_likes,
+                'singleArray_comments' =>$singleArray_comments,
 
             ]);
     }

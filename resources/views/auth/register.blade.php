@@ -84,22 +84,23 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label for="role" class="col-md-4 col-form-label text-md-right">نوع فعالیت شما</label>
+{{-------------------------------------------------------disable role--}}
+{{--                            <div class="form-group row">--}}
+{{--                                <label for="role" class="col-md-4 col-form-label text-md-right">نوع فعالیت شما</label>--}}
 
-                                <div class="col-md-6 pt-2 pl-0 pr-3 radios-parent">
-                                    <div class="radio1">
-                                        <input class="radio" id="artist" type="radio" class="" name="role" value="artist">
-                                        <label for="artist" class="pl-2">هنرمند</label>
-                                    </div>
-                                    <div class="radio2">
-                                        <input class="radio" id="user" type="radio" class="" name="role" value="user">
-                                        <label for="user">هنر دوست</label>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--                        todo: birthdate--}}
-                            {{--                        todo: country--}}
+{{--                                <div class="col-md-6 pt-2 pl-0 pr-3 radios-parent">--}}
+{{--                                    <div class="radio1">--}}
+{{--                                        <input class="radio" id="artist" type="radio" class="" name="role" value="artist">--}}
+{{--                                        <label for="artist" class="pl-2">هنرمند</label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="radio2">--}}
+{{--                                        <input class="radio" id="user" type="radio" class="" name="role" value="user">--}}
+{{--                                        <label for="user">هنر دوست</label>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+
+{{-----------------------------------------------------------password--}}
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">رمز عبور</label>
 

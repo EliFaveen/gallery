@@ -51,14 +51,18 @@ class RegisterController extends Controller
         if (auth()->user()->role === 'admin') {
 //            dd(auth()->user()->role);
             return '/admin/home';
-        } else if (auth()->user()->role === 'artist') {
+        }
+        else if (auth()->user()->role === 'artist') {
 //            dd(auth()->user()->role);
             return '/artist/post';
-        } else if (auth()->user()->role === 'unartist') {
-            return '/';
-        } else if (auth()->user()->role === 'user') {
-            return '/';
-        } else {
+        }
+//        else if (auth()->user()->role === 'unartist') {
+//            return '/';
+//        }
+//        else if (auth()->user()->role === 'user') {
+//            return '/';
+//        }
+        else {
             return '/';
         }
     }
@@ -94,7 +98,7 @@ class RegisterController extends Controller
 
             'phone' => ['required','numeric','starts_with:09'],
         ],[
-            'regex'=> 'پسورد باید حداقل شامل یک حرف یک عدد و یک کاراکتر معتبر باشد',
+//            'regex'=> 'پسورد باید حداقل شامل یک حرف یک عدد و یک کاراکتر معتبر باشد',
         ]);
     }
 
@@ -114,7 +118,7 @@ class RegisterController extends Controller
             'lastname' => $data['lastname'],
             'username' => $data['username'],
             'phone' => $data['phone'],
-            'role' => $data['role'],
+            'role' => 'artist',
             //todo: add other fields
         ]);
         //it redirects to home controller

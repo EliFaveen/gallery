@@ -36,11 +36,14 @@ class LoginController extends Controller
         } else if (auth()->user()->role === 'artist') {
 //            dd(auth()->user()->role);
             return '/artist/post';
-        } else if (auth()->user()->role === 'unartist') {
-            return '/';
-        } else if (auth()->user()->role === 'user') {
-            return '/';
-        } else {
+        }
+//        else if (auth()->user()->role === 'unartist') {
+//            return '/';
+//        }
+//        else if (auth()->user()->role === 'user') {
+//            return '/';
+//        }
+        else {
             return '/';
         }
     }
