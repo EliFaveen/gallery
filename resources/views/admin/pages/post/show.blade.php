@@ -119,7 +119,7 @@
                         </section>
 
                         <div class="input-group mt-3">
-                            <a href="{{route('admin.post.index')}}" type="button" class="btn btn-primary d-inline-block mx-auto">بازگشت</a>
+                            <a href="{{route('admin.post.index')}}" type="button" class="btn btn-primary d-inline-block mx-auto">صفحه مدیدیت پست ها</a>
                         </div>
 {{--                    </form>--}}
                 </div>

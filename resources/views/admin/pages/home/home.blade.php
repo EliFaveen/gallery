@@ -54,35 +54,28 @@
             <div class="bg-white tm-block h-100">
                 <div class="row">
                     <div class="col-8">
-                        <h2 class="tm-block-title d-inline-block">Top Product List</h2>
+                        <h2 class="tm-block-title d-inline-block">پست های برتر</h2>
 
                     </div>
-                    <div class="col-4 text-right">
-                        <a href="products.html" class="tm-link-black">View All</a>
-                    </div>
+{{--                    <div class="col-4 text-right">--}}
+{{--                        <a href="products.html" class="tm-link-black">View All</a>--}}
+{{--                    </div>--}}
                 </div>
-                <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big">
-                    <li class="tm-list-group-item">
-                        Donec eget libero
-                    </li>
-                    <li class="tm-list-group-item">
-                        Nunc luctus suscipit elementum
-                    </li>
-                    <li class="tm-list-group-item">
-                        Maecenas eu justo maximus
-                    </li>
-                    <li class="tm-list-group-item">
-                        Pellentesque auctor urna nunc
-                    </li>
-                    <li class="tm-list-group-item">
-                        Sit amet aliquam lorem efficitur
-                    </li>
-                    <li class="tm-list-group-item">
-                        Pellentesque auctor urna nunc
-                    </li>
-                    <li class="tm-list-group-item">
-                        Sit amet aliquam lorem efficitur
-                    </li>
+                <ol class="tm-list-group tm-list-group-alternate-color tm-list-group-pad-big text-right">
+                    @foreach($top_posts as $top_post)
+
+
+                        <li class="tm-list-group-item top-posts-parent">
+                            {{Str::limit($top_post->title, $limit = 28, $end = '...') }}
+                            <a href="{{route('admin.post.show',['post'=>$top_post->id])}}" class="a-show-top-post">
+                                <div class="left-angle-parent">
+                                    مشاهده پست
+                                    <i class="fas fa-angle-left"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                    @endforeach
                 </ol>
             </div>
         </div>
@@ -98,20 +91,17 @@
         </div>
         <div class="tm-col tm-col-small">
             <div class="bg-white tm-block h-100">
-                <h2 class="tm-block-title">Upcoming Tasks</h2>
-                <ol class="tm-list-group">
-                    <li class="tm-list-group-item">List of tasks</li>
-                    <li class="tm-list-group-item">Lorem ipsum doloe</li>
-                    <li class="tm-list-group-item">Read reports</li>
-                    <li class="tm-list-group-item">Write email</li>
-
-                    <li class="tm-list-group-item">Call customers</li>
-                    <li class="tm-list-group-item">Go to meeting</li>
-                    <li class="tm-list-group-item">Weekly plan</li>
-                    <li class="tm-list-group-item">Ask for feedback</li>
-
-                    <li class="tm-list-group-item">Meet Supervisor</li>
-                    <li class="tm-list-group-item">Company trip</li>
+                <h2 class="tm-block-title">گزارشات</h2>
+                <ol class="note-ol">
+                    <li class="note note-1">
+                        تعداد کاربران:{{{$artist_count}}}
+                    </li>
+                    <li class="note note-2">
+                        تعداد ادمین ها:{{$admin_count}}
+                    </li>
+                    <li class="note note-3">
+                        تعداد پست ها:{{$post_count}}
+                    </li>
                 </ol>
             </div>
         </div>

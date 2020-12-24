@@ -6,6 +6,7 @@ use App\Category;
 use App\CategoryPost;
 use App\Http\Controllers\Controller;
 use App\Like;
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -28,15 +29,27 @@ class HomeController extends Controller
         for ($this->const=1 ;$this->const<=12 ; $this->const++){
             $cnt[$this->const] = count(array_filter($all_months,function($a) {return $a==$this->const;}));
         }
+
         //lineChart data
         $categories=Category::with('posts')->get();
         foreach ($categories as $category) {
             $cat_posts_count[]=$category->posts->count();
         }
-        //pieChart data
 
+        //pieChart data
         $like_count=Like::where('like',1)->count();
         $dislike_count=Like::where('like',0)->count();
+
+        //top posts
+        $top_posts = Post::withCount('likes')->orderBy('likes_count','desc')->orderBy('created_at','desc')->paginate(7);
+
+        //notes
+        $artist_count=User::where('role','artist')->get()->count();
+
+        $admin_count=User::where('role','admin')->get()->count();
+
+        $post_count=Post::get()->count();
+
 
         return view('admin.pages.home.home', [
             'all_months'=>$cnt ,
@@ -44,6 +57,10 @@ class HomeController extends Controller
             'cat_posts_count'=>$cat_posts_count,
             'likes'=>$like_count,
             'dislikes'=>$dislike_count,
+            'top_posts'=>$top_posts,
+            'artist_count'=>$artist_count,
+            'admin_count'=>$admin_count,
+            'post_count'=>$post_count,
         ]);
     }
 
