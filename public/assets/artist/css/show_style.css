@@ -299,3 +299,45 @@ input{
     border: 0 !important;
 }
 
+
+
+
+
+
+.like_btn{
+    background:url('../img/like/heart.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: rgba(255, 255, 255, 0) !important;
+    width: 50px;
+    height: 50px;
+}
+.dislike_btn{
+    background:url('../img/like/heart_broken.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: rgba(255, 255, 255, 0) !important;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+/*.dislike_btn::after{*/
+/*    content: '';*/
+/*    background-color: gray;*/
+/*    width: 5px;*/
+/*    !*height: 100%;*!*/
+/*    top: -10px;*/
+/*    bottom: -10px;*/
+/*    position: absolute;*/
+/*    transform: rotate(-45deg);*/
+/*}*/
+.like_ui{
+    filter: grayscale(1);
+}
+.like.active{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    transition: 0.3s;
+}

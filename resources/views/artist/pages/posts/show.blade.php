@@ -172,7 +172,7 @@
 
 {{--                  test 3              --}}
                                 <div class="interaction">
-                                    <a id="likeBtn" href="#" class="btn like heart ">
+                                    <a id="likeBtn" href="#" class="btn like heart like_btn like_ui  {{Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1 ? ' active' : 'deactive' : 'deactive'}}">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 1)
 
@@ -194,7 +194,7 @@
                                         @endif
 {{--                                            <div id="numberOfLikes"></div>--}}
                                     </a>
-                                    <a id="dislikeBtn" href="#" class="btn like broken-heart">
+                                    <a id="dislikeBtn" href="#" class="btn like broken-heart like_ui dislike_btn {{ Auth::user()->likes()->where('post_id', $post->id)->first() ? Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0 ? 'active' : 'deactive' : 'deactive'  }}">
                                         @if(Auth::user()->likes()->where('post_id', $post->id)->first())
                                             @if(Auth::user()->likes()->where('post_id', $post->id)->first()->like == 0)
 

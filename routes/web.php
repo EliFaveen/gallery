@@ -14,12 +14,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 */
 
 Route::get('/', function () {
-//    \alert()->success('welcome','message');
-    return view('welcome');
-//    return \Carbon\Carbon::now()->subDay(2);
-//    return \Morilog\Jalali\Jalalian::now();
-//    return jdate()->subDays(2);
-
+    return view('site');
 });
 
 Auth::routes(['verify'=>true]);
@@ -98,9 +93,16 @@ Route::prefix('admin')->namespace('Admin')->name('admin.')->middleware(['auth','
     });
 //Route::get('/artist/post', 'HomeController@index')->name('artist.post.index');//== artist.post.index
 
+//---------------->comments
+Route::post('comments',"HomeController@comment")->name('send.comment');
+Route::delete('comments/{comment}',"HomeController@destroyComment")->name('delete.comment');
 
 
 
+
+
+
+//--------------------------------------------------trash
 Route::get('/secret',function (){
      Alert::success('hello');
     return view('welcome');
@@ -116,9 +118,6 @@ Route::post('/post',function (Request $request){
     return redirect('/')->with('success','here is redirection');
 });//
 
-//---------------->comments
-Route::post('comments',"HomeController@comment")->name('send.comment');
-Route::delete('comments/{comment}',"HomeController@destroyComment")->name('delete.comment');
 //--------------->sweetalert testing
 Route::get('my-notification/{type}', 'HomeController@myNotification');
 

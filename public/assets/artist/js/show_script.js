@@ -62,5 +62,13 @@ $('.like').on('click' , function (event) {
                 // }
 
             });
+    if($(this).hasClass("active")){
+        $(this).removeClass("active")
+    }
+    else{
+        $(".like").removeClass("active");
+        $(this).addClass("active")
+    }
+
 
 });
