@@ -1,0 +1,136 @@
+@font-face{
+    font-family: IRSans;
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf);
+}
+@font-face{
+    font-family:Leyla;
+    src: url(../fonts/leyla.ttf);
+}
+
+
+body{
+    background-image:url("../img/background-rose.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    direction: rtl;
+    font-family: IRSans;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+header{
+    height: 494px;
+    background-color: #ffff0030;
+}
+.logo-img-parent{
+    width: 270px;
+    display: block;
+    position: absolute;
+    /*bottom: 0;*/
+    top: 50%;
+    right: 40%;
+}
+.logo-img{
+    width: 100%;
+    height: 100%;
+
+}
+
+h1 {
+    position: absolute;
+    top: 43%;
+    right: 32%;
+    margin: 0;
+
+    font-size: 60px;
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: 700;
+    /*position: relative;*/
+
+    background: linear-gradient(178deg, #c0a878 0%,#fce494 38%,#7d5b36 76%,#5b5228 100%); /* W3C */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1:after {
+    background: none;
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    text-shadow: 0px -1px #5b5228, 0px 1px 1px #fce494;
+    top: 0;
+    z-index: -1;
+}
+
+
+h1:before {
+    background: url(https://i.stack.imgur.com/8Jeyb.png);
+    content: attr(data-text);
+    left: 0;
+    opacity: 0.35;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.welcome{
+    padding: 20px;
+}
+.welcome h2{
+    margin: 0;
+    color: #b0b28e;
+}
+.welcome p{
+    color: #c2c1a7;
+}
+
+footer{
+    position: fixed;
+    bottom: 24px;
+    right: 43%;
+    font-size: 26px;
+}
+footer a {
+    color: #656565;
+}
+
+footer .all-sidenav:hover {
+    color: #2b2a2a;
+}
+
+footer h6{
+    margin-bottom: 16px;
+    color: gray;
+}
+.login-register-box{
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    color: white;
+}
+
+@media only screen and (max-width:600px){
+    .col-md-4{
+        margin: 10px;
+    }
+    .logo-img-parent{
+        position: unset;
+        width: 100%;
+    }
+    h1{
+        top: 163px;
+        right: 10px;
+        /*margin: 0;*/
+        font-size: 37px;
+    }
+    footer{
+        right: 25%;
+    }
+}
