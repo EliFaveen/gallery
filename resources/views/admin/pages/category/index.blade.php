@@ -25,11 +25,11 @@
                                         <div class="col-md-2 col-sm-12 search-align">
                                             <div class="search-parent">
 {{--                                                <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
-                                                <input class="search-input" type="text" name="search-title" placeholder="عنوان دسته را جستجو کنید" value="{{request('search-title')}}">
+                                                <input class="search-input media-search" type="text" name="search-title" placeholder="عنوان دسته را جستجو کنید" value="{{request('search-title')}}">
 {{--                                                <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">--}}
 {{--                                                <input class="search-input" type="text" name="search-phone" placeholder="شماره تلفن را جستجو کنید" value="{{request('search-phone')}}">--}}
 
-                                                <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
+                                                <button type="submit" class="search-btn media-search"><i class="fas fa-search tm-search-icon"></i></button>
                                             </div>
                                         </div>
 
@@ -151,14 +151,13 @@
                             <div class="inline-col2 col-md-6">
                                 {{--           category_pic   out of form!!!             --}}
                                 <div class="col-xl-9 col-lg-4 col-md-12 mx-auto mb-4">
-                                    <div class="tm-product-img-dummy mx-auto" style=" max-width: initial;">
+                                    <div class="tm-product-img-dummy mx-auto" >
                                         <i class="fas fa-5x fa-cloud-upload-alt" onclick="document.getElementById('fileInput').click();"></i>
                                     </div>
                                     <div class="custom-file mt-3 mb-3">
                                         {{--                                    <input id="fileInput" type="file" style="display:none;" />--}}
                                         <input  name="category_pic" id="fileInput" type="file" style="display:none;" multiple>
-                                        <input type="button" class="btn btn-primary d-block mx-auto" value="انتخاب عکس" onclick="document.getElementById('fileInput').click();"
-                                        />
+                                        <input type="button" class="btn btn-primary d-block mx-auto" value="انتخاب عکس" onclick="document.getElementById('fileInput').click();">
                                     </div>
                                 </div>
 
@@ -167,7 +166,7 @@
                         {{--           submit             --}}
                         <div class="input-group mb-3">
                             <div class="ml-auto col-xl-9 col-lg-8 col-md-8 col-sm-7 pl-0">
-                                <button type="submit" class="btn btn-primary" style="margin-top: 55px;">ایجاد دسته بندی جدید
+                                <button type="submit" class="btn btn-primary" >ایجاد دسته بندی جدید
                                 </button>
                             </div>
                         </div>

@@ -331,3 +331,51 @@ td{
 .note-3{
     background: #5fe199;
 }
+.calendar-style{
+    margin-top: 50px;
+}
+.tm-product-img-dummy{
+    max-width: initial;
+}
+.input-group .btn-primary{
+    margin-top: 55px;
+}
+/*---------------------------------medias---------------------------------------*/
+@media only screen and (max-width:600px){
+    .single-post-img-parent {
+        width: 267px;
+        height: 267px;
+    }
+    .search-parent {
+        flex-direction: column;
+         height: auto;
+    }
+    .media-search{
+        margin: 5px;
+    }
+    .tm-site-title {
+        font-size: 22px;
+    }
+    .navbar-brand{
+        font-size: 16px;
+    }
+    .navbar-nav{
+        text-align: center;
+        padding: 0;
+    }
+    .navbar-collapse {
+        top: 61px;
+    }
+    .calendar-style{
+        /*margin-bottom: 50px;*/
+    }
+    .inline-col-main{
+        flex-direction: column;
+    }
+    .tm-product-img-dummy{
+        max-width: -webkit-fill-available;
+    }
+    .input-group .btn-primary{
+        margin-top: 0px !important;
+    }
+}

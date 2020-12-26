@@ -24,15 +24,15 @@
                     <div class="col-md-9 col-sm-12 search-align">
                         <div class="search-parent">
                             {{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
-                            <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
-                            <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
-                            <input class="search-input" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">
-                            <select class="email-state" id="email-state" name="search-approved">
+                            <input class="search-input media-search" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
+                            <input class="search-input media-search" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
+                            <input class="search-input media-search" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">
+                            <select class="email-state media-search" id="email-state" name="search-approved">
                                 <option value="">وضعیت متن</option>
                                 <option value="1" {{request('search-approved') == 1 ? 'selected':""}}>تایید شده</option>
                                 <option value="2" {{request('search-approved') == 2 ? 'selected':""}}>تایید نشده</option>
                             </select>
-                            <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
+                            <button type="submit" class="search-btn media-search"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
                     </div>
 

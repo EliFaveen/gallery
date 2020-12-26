@@ -24,21 +24,21 @@
                     <div class="col-md-9 col-sm-12 search-align">
                         <div class="search-parent">
                             {{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
-                            <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
-                            <input class="search-input" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
-                            <input class="search-input" type="text" name="search-phone" placeholder="شماره تلفن را جستجو کنید" value="{{request('search-phone')}}">
-                            <select class="email-state" id="email-state" name="email_verified_at">
+                            <input class="search-input media-search" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
+                            <input class="search-input media-search" type="text" name="search-email" placeholder="ایمیل را جستجو کنید" value="{{request('search-email')}}">
+                            <input class="search-input media-search" type="text" name="search-phone" placeholder="شماره تلفن را جستجو کنید" value="{{request('search-phone')}}">
+                            <select class="email-state media-search" id="email-state" name="email_verified_at">
                                 <option value="">وضعیت ایمیل</option>
                                 <option value="1" {{request('email_verified_at') == 1 ? 'selected':""}}>فعال</option>
                                 <option value="2" {{request('email_verified_at') == 2 ? 'selected':""}}>غیر فعال</option>
                             </select>
-                            <select class="select-role" id="select-role" name="role">
+                            <select class="select-role media-search" id="select-role" name="role">
                                 <option value="">نقش</option>
                                 <option value="admin" {{request('role') == "admin" ? 'selected':""}}>admin</option>
                                 <option value="artist" {{request('role') == "artist" ? 'selected':""}}>artist</option>
                                 <option value="user" {{request('role') == "user" ? 'selected':""}}>user</option>
                             </select>
-                            <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
+                            <button type="submit" class="search-btn media-search"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
                     </div>
 

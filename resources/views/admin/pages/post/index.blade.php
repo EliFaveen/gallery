@@ -29,15 +29,15 @@
                     <div class="col-md-9 col-sm-12 search-align">
                         <div class="search-parent">
                             {{--                            <input class="search-input" type="text" name="search" placeholder=" جستجو کنید" value="{{request('search')}}">--}}
-                            <input class="search-input" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
-                            <input class="search-input" type="text" name="search-info" placeholder="عنوان یا توضیحات را جستجو کنید" value="{{request('search-email')}}">
+                            <input class="search-input media-search" type="text" name="search-username" placeholder="نام کاربری را جستجو کنید" value="{{request('search-username')}}">
+                            <input class="search-input media-search" type="text" name="search-info" placeholder="عنوان یا توضیحات را جستجو کنید" value="{{request('search-email')}}">
 {{--                            <input class="search-input" type="text" name="search-comment" placeholder="متن نظر را جستجو کنید" value="{{request('search-comment')}}">--}}
-                            <select class="email-state" id="email-state" name="search-approved">
+                            <select class="email-state media-search" id="email-state" name="search-approved">
                                 <option value="">وضعیت پست</option>
                                 <option value="1" {{request('search-approved') == 1 ? 'selected':""}}>فعال</option>
                                 <option value="2" {{request('search-approved') == 2 ? 'selected':""}}>غیر فعال</option>
                             </select>
-                            <button type="submit" class="search-btn"><i class="fas fa-search tm-search-icon"></i></button>
+                            <button type="submit" class="search-btn media-search"><i class="fas fa-search tm-search-icon"></i></button>
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@
                             {{----------------------------------title--}}
                             <td >{{Str::limit($post->title, $limit = 15, $end = '...') }}</td>
                             {{----------------------------------description--}}
-                            <td >{{Str::limit($post->description, $limit = 20, $end = '...') }}</td>
+                            <td >{{strip_tags(Str::limit($post->description, $limit = 20, $end = '...')) }}</td>
                             {{----------------------------------categories--}}
                             <td >
 {{--                                @if($post->categories)--}}

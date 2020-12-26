@@ -82,7 +82,7 @@
         <div class="tm-col tm-col-big">
             <div class="bg-white tm-block h-100">
                 <h2 class="tm-block-title">تقویم شمسی</h2>
-                <div style="margin-top: 50px">
+                <div class="calendar-style">
 {{--                    <div id="calendar"></div>--}}
                     <div class="locale-fa" style="direction: initial"></div>
 
@@ -93,13 +93,13 @@
             <div class="bg-white tm-block h-100">
                 <h2 class="tm-block-title">گزارشات</h2>
                 <ol class="note-ol">
-                    <li class="note note-1">
+                    <li class="note note-1 mx-auto">
                         تعداد کاربران:{{{$artist_count}}}
                     </li>
-                    <li class="note note-2">
+                    <li class="note note-2 mx-auto">
                         تعداد ادمین ها:{{$admin_count}}
                     </li>
-                    <li class="note note-3">
+                    <li class="note note-3 mx-auto">
                         تعداد پست ها:{{$post_count}}
                     </li>
                 </ol>

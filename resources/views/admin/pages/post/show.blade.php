@@ -12,10 +12,10 @@
     @php($i=0)
     @php($j=0)
 
-    <div class="col-8 mx-auto">
+    <div class="col-md-8 mx-auto">
         <div class="bg-white tm-block">
             <div class="row">
-                <div class="col-5 text-center mx-auto">
+                <div class="col-md-5 text-center mx-auto">
 {{--                                    image--}}
 {{--                    @if($post->photos->first())--}}
 {{--                        @foreach($post->photos as $photo)--}}
@@ -80,7 +80,7 @@
 
                                 {{---------------------------------------------------------------------------------------------description--}}
                                 <div class="individual-body">
-                                    <p style="text-align: center;">{{$post->description}}</p><hr class="mb-5">
+                                    <p style="text-align: center;">{!! $post->description !!}</p><hr class="mb-5">
                                 </div>
 
                         {{---------------------------------------------------------------------------------------------categories--}}

@@ -31,6 +31,7 @@ class HomeController extends Controller
         }
 
         //lineChart data
+        $cat_posts_count=[];
         $categories=Category::with('posts')->get();
         foreach ($categories as $category) {
             $cat_posts_count[]=$category->posts->count();
