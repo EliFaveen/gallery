@@ -24,7 +24,7 @@ class HomeController extends Controller
 //                dd($posts->user); //search in users //return users
 //                $posts=$posts->user->where('username','LIKE',"%".\request('search')."%");
                 //return index users
-                $users = User::orderBy('created_at', 'desc')->where('username', 'LIKE', "%" . \request('search') . "%")->paginate(9);
+                $users = User::orderBy('created_at', 'desc')->where('role','artist')->where('username', 'LIKE', "%" . \request('search') . "%")->paginate(9);
                 return view('artist.pages.home.index-users', compact('users'));
             }
             if (\request('search-radio') == 2) {
@@ -52,12 +52,17 @@ class HomeController extends Controller
 
                 return view('artist.pages.home.index',['posts'=>$posts, 'without_paginate'=>$without_paginate]);
             }
-
-
-            //روش 2
-//                return $posts->first()->hashtags->first()->where('hashtag','LIKE',"%".\request('search')."%")->first()->post;
-
         }
+
+//        return \request('categories');
+        if (\request('categories')){
+            $posts=$posts->whereHas('categories',function ($query){
+                $query->where('category_id','LIKE',"%".\request('categories')."%");
+            });
+        }
+//        return $posts;
+
+
         $posts=$posts->paginate(9);
         return view('artist.pages.home.index',['posts'=>$posts, 'without_paginate'=>$without_paginate]);
     }

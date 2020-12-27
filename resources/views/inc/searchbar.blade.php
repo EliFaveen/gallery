@@ -52,6 +52,25 @@
                 </div>
                 <!-------------------------------------------------------------------------------------------------------جستجو فرم-->
             </div><!--end row2-3-->
+
+
         </form>
+
+        <form action="{{route('artist.home.index')}}">
+            <div class="row row3-3 justify-content-center">
+                <div class="col-md-6 col-10 p-0">
+                    <div class="wrapper">
+                        <select class="search-category" name="categories" id="cars" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur(); this.form.submit()'>
+                            <option value="">سبک اثر</option>
+                            @foreach( \App\Category::get() as $category)
+                                <option value="{{$category->id}}">{{$category->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div><!--end row3-3-->
+        </form>
+
+
     </div><!--end container2-->
 </section><!--end section2-->

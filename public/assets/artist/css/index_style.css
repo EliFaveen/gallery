@@ -134,6 +134,26 @@ body{
     color: white;
 }
 
+.search-category {
+    width: 100%;
+    margin-top: 20px;
+    /* text-align: center; */
+    background: unset;
+    border: 0;
+    border-bottom: 4px solid #FFC101;
+    color: #ffc107;
+}
+.search-category option{
+    color: black;
+    border: 0;
+    /*text-align: center;*/
+    background: #ffffffa1;
+}
+.wrapper{
+    /*width:200px;*/
+    /*padding:20px;*/
+    /*height: 150px;*/
+}
 /*=================================media section 2===========================*/
 @media only screen and (max-width: 992px) {
     /* For mobile phones: */
@@ -349,6 +369,12 @@ header{
     }
     .row2-3{
         padding: 10px;
+    }
+    .section2 .signup-suggest {
+        font-size: 12px;
+    }
+    .search-category {
+        margin: 0;
     }
 
 }

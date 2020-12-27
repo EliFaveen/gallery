@@ -8,17 +8,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="added edit category for post">
-      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/icon/add-logo.png" afterDir="false" />
+    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,14 +321,7 @@
       <workItem from="1608903044591" duration="6995000" />
       <workItem from="1608913631172" duration="4213000" />
       <workItem from="1608969152694" duration="6459000" />
-      <workItem from="1609053666582" duration="7840000" />
-    </task>
-    <task id="LOCAL-00093" summary="working on admin post(show post added)">
-      <created>1607445448500</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1607445448500</updated>
+      <workItem from="1609053666582" duration="12704000" />
     </task>
     <task id="LOCAL-00094" summary="working on admin post(edit and update for hashtags and categories for posts added)">
       <created>1607463508534</created>
@@ -670,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609003514844</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="added edit category for post">
+      <created>1609063426687</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1609063426687</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +713,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix paginating for artist" />
     <MESSAGE value="search for hashtags fixed with mahsa" />
     <MESSAGE value="add links to hashtags" />
     <MESSAGE value="some details added" />
@@ -742,7 +737,8 @@
     <MESSAGE value="like styling (fixed by mahsa)" />
     <MESSAGE value="homepage added for site" />
     <MESSAGE value="responsive admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive admin" />
+    <MESSAGE value="added edit category for post" />
+    <option name="LAST_COMMIT_MESSAGE" value="added edit category for post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609060999793">
@@ -753,10 +749,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608828633692" />
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1609063078131">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1609063424826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609063078131" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609063424826" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -781,9 +777,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609062639064">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609063814323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609062639064" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609063814323" />
   </component>
 </project>
