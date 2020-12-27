@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Artist;
 
+use App\Category;
 use App\CategoryPost;
 use App\Comment;
 use App\Hashtag;
@@ -335,10 +336,10 @@ class PostController extends Controller
             $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             ]);
-            $user->update([
-            'email' => $request->input('email'),
-            'email_verified_at'=>null,
-            ]);
+            $user->email = $request->input('email');
+            $user->email_verified_at = null;
+
+            $user->update();
         }
 
         if($request->input('username')){
@@ -381,6 +382,28 @@ class PostController extends Controller
 
 //        $posts=Post::
 
+        }
+        public function updateCategory(Request $request,$id){
+
+            $post=Post::find($id);
+//        if ($request->has('categories')){
+
+            $post_categories=CategoryPost::where('post_id',$id)->get();
+            foreach ($post_categories as $post_category){
+                $post_category->delete();
+            }
+//                return $post_categories;
+            if ($request->input('categories')){
+                foreach ($request->input('categories') as $category)
+                {
+                    CategoryPost::create([
+                        'post_id'=>$post->id,
+                        'category_id'=>$category,
+                    ]);
+                }
+            }
+
+            return back();
         }
 
 

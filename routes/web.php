@@ -32,6 +32,7 @@ Route::prefix('artist')->namespace('Artist')->name('artist.')->middleware(['auth
         Route::resource('post','PostController');
 //-----------post
             Route::patch('post/update-hashtag/{post}','PostController@updateHashtag')->name('post.updateHashtag');
+            Route::patch('post/update-category/{post}','PostController@updateCategory')->name('post.updateCategory');
             Route::get('post/edit-profile/{user}','PostController@editProfile')->name('post.editProfile');
             Route::patch('post/update-profile/{user}','PostController@updateProfile')->name('post.updateProfile');
             Route::patch('post/update-profilepic/{user}','PostController@updateProfilePic')->name('post.updateProfilePic');

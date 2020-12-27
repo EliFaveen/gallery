@@ -85,6 +85,9 @@
     </div>
 
 </div>
+{{--    sweet alert --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 <script>
 
     var $modal = $('#modal');
@@ -158,7 +161,13 @@
                     data: {'_token': $('meta[name="_token"]').attr('content'), 'image': base64data},
                     success: function(data){
                         $modal.modal('hide');
-                        alert("عکس شما با موفقیت آپلود شد");
+                        // alert("عکس شما با موفقیت آپلود شد");
+                        Swal.fire({
+                            title: 'تبریک',
+                            text: 'عکس شما با موفقیت آپلود شد',
+                            icon: 'success',
+                            confirmButtonText: 'باشه'
+                        })
                     }
                 });
             }

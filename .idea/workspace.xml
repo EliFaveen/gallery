@@ -8,15 +8,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+    <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="added edit category for post">
+      <change afterPath="$PROJECT_DIR$/public/assets/artist/img/icon/add-logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/admin/css/admin_indexes_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/home/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/post/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/post/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/all_pages/css/stylepages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/show_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,21 +157,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/site/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/artist/img/icon" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\public\assets\site\css" />
+      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zavie\Gallery\public\assets\artist\img\icon" />
       <recent name="D:\zavie\Gallery\public\assets\site\css" />
       <recent name="D:\zavie\Gallery\public\assets\site" />
       <recent name="D:\zavie\Gallery\public\assets\site\img" />
       <recent name="D:\zavie\Gallery\public\assets\artist\img\like" />
-      <recent name="D:\zavie\Gallery\public\assets\all_pages\img\defaults" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zavie\Gallery\public\assets\site\css" />
-      <recent name="D:\zavie\Gallery\resources\views\artist\pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -322,14 +324,8 @@
       <workItem from="1608806924576" duration="16289000" />
       <workItem from="1608903044591" duration="6995000" />
       <workItem from="1608913631172" duration="4213000" />
-      <workItem from="1608969152694" duration="5002000" />
-    </task>
-    <task id="LOCAL-00092" summary="working on admin post(delete and restore added)">
-      <created>1607415545093</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1607415545094</updated>
+      <workItem from="1608969152694" duration="6459000" />
+      <workItem from="1609053666582" duration="7840000" />
     </task>
     <task id="LOCAL-00093" summary="working on admin post(show post added)">
       <created>1607445448500</created>
@@ -667,7 +663,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608910033442</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="responsive admin">
+      <created>1609003514843</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1609003514844</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +717,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add defaults for no-seach found" />
     <MESSAGE value="fix paginating for artist" />
     <MESSAGE value="search for hashtags fixed with mahsa" />
     <MESSAGE value="add links to hashtags" />
@@ -739,21 +741,22 @@
     <MESSAGE value="admin homepage compeleted" />
     <MESSAGE value="like styling (fixed by mahsa)" />
     <MESSAGE value="homepage added for site" />
-    <option name="LAST_COMMIT_MESSAGE" value="homepage added for site" />
+    <MESSAGE value="responsive admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive admin" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608903615762">
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609060999793">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1608903615762" />
+    <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1609060999793" />
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608828633692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608828633692" />
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1608910032110">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1609063078131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608910032110" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609063078131" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -778,9 +781,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609003023982">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609062639064">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609003023982" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609062639064" />
   </component>
 </project>

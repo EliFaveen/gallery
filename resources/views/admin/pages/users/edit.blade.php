@@ -97,10 +97,10 @@
                                             <input class="radio" id="artist" type="radio" class="" name="role" value="artist" @if($user->role == 'artist') checked @endif>
                                             <label for="artist" class="pl-2">هنرمند</label>
                                         </div>
-                                        <div class="radio2">
-                                            <input class="radio" id="user" type="radio" class="" name="role" value="user" @if($user->role == 'user') checked @endif>
-                                            <label for="user">هنر دوست</label>
-                                        </div>
+{{--                                        <div class="radio2">--}}
+{{--                                            <input class="radio" id="user" type="radio" class="" name="role" value="user" @if($user->role == 'user') checked @endif>--}}
+{{--                                            <label for="user">هنر دوست</label>--}}
+{{--                                        </div>--}}
                                         <div class="radio3">
                                             <input class="radio" id="admin" type="radio" class="" name="role" value="admin" @if($user->role == 'admin') checked @endif>
                                             <label for="admin">ادمین</label>

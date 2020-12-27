@@ -340,6 +340,9 @@ td{
 .input-group .btn-primary{
     margin-top: 55px;
 }
+.dropdown-menu{
+    text-align: center;
+}
 /*---------------------------------medias---------------------------------------*/
 @media only screen and (max-width:600px){
     .single-post-img-parent {

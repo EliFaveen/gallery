@@ -498,6 +498,7 @@
 
                                     </div>
                                 </div>
+                                {{--                title description                --}}
                                 <div class="row mt-2">
                                     <div class="col-12">
                                         {{--                    <form action="index.html" method="post" class="tm-login-form">--}}
@@ -511,19 +512,154 @@
                                         </div><hr>
                                     </div>
                                 </div>
+
+
                             </div>
                         @endforeach
+                        {{--                edit_category                --}}
+                        <div class="div seprate-a" style="cursor: pointer">
+                            <!-- Button trigger modal -->
+                            @if(auth()->user()->id == $post->user_id)
+                                <a data-toggle="modal" data-target="#editCategory">
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            {{--              edit  image               --}}
+                                            <div class="post-img-parent-large">
+                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url('assets/artist/img/icon/add-logo.png')}}" alt="{{$category->title}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            @endif
+                        <!-- Modal -->
+                            @auth
+                                <div class="modal fade" id="editCategory">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="editCategoryLabel">ویرایش دسته بندی</h5>
+                                                <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form action="{{route('artist.post.updateCategory',['post'=>$post->id])}}" method="post" id="editCategoryForm">
+                                                @csrf
+                                                @method('PATCH')
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="col-form-label">اضافه یا حذف سبک نقاشی:</label>
+                                                        {{---------------------------------------------------------------------------------------------category row--}}
+                                                        {{-------------------------------------------------------category basic--}}
+                                                        <section class="section4 p-0">
+                                                            <div class="row">
+                                                                <div class="container-fluid">
+                                                                    <div class="col-md-12 scroll-category">
+                                                                        <ul>
+
+                                                                            @foreach(\App\Category::get() as $category)
+                                                                                <li>
+
+                                                                                    <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                                                                                    <label for="Checkbox{{$category->id}}">
+                                                                                        <div class="post-img-parent">
+                                                                                            <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                                                                        </div>
+                                                                                        <div style="color: black">{{$category->title}}</div>
+                                                                                    </label>
+
+
+                                                                                </li>
+                                                                            @endforeach
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                                                    <button type="submit" class="btn btn-primary">ویرایش دسته بندی</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endauth
+
+                        </div>
+
                     @else
+                        {{--                edit_category                --}}
+                        <div class="div seprate-a" style="cursor: pointer">
                         <div class="col-md-12 d-flex">
                             @if(auth()->user()->id == $post->user_id)
-                                <a href="#">
+                                <a data-toggle="modal" data-target="#editCategory">
                                     @endif
                                     <div class="no-category-image-parent">
                                         <img class="no-category-image" src="{{url('/assets/all_pages/img/defaults/nothing_logo.png')}}" alt="enter-post-image" >
                                     </div>
                                     @if(auth()->user()->id == $post->user_id)
                                 </a>
+                                <!-- Modal -->
+                                @auth
+                                    <div class="modal fade" id="editCategory">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editCategoryLabel">ویرایش دسته بندی</h5>
+                                                    <button type="button" class="close mr-auto ml-0" data-dismiss="modal">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <form action="{{route('artist.post.updateCategory',['post'=>$post->id])}}" method="post" id="editCategoryForm">
+                                                    @csrf
+                                                    @method('PATCH')
+                                                    <div class="modal-body">
+                                                        <div class="form-group">
+                                                            <label for="message-text" class="col-form-label">اضافه یا حذف سبک نقاشی:</label>
+                                                            {{---------------------------------------------------------------------------------------------category row--}}
+                                                            {{-------------------------------------------------------category basic--}}
+                                                            <section class="section4 p-0">
+                                                                <div class="row">
+                                                                    <div class="container-fluid">
+                                                                        <div class="col-md-12 scroll-category">
+                                                                            <ul>
+
+                                                                                @foreach(\App\Category::get() as $category)
+                                                                                    <li>
+
+                                                                                        <input class="image-checkbox" type="checkbox" id="Checkbox{{$category->id}}" name="categories[]" value="{{$category->id}}" />
+                                                                                        <label for="Checkbox{{$category->id}}">
+                                                                                            <div class="post-img-parent">
+                                                                                                <img  class="post-img  pl-0 pr-0 mr-0 ml-0" src="{{url($category->category_pic)}}" alt="{{$category->title}}">
+                                                                                            </div>
+                                                                                            <div style="color: black">{{$category->title}}</div>
+                                                                                        </label>
+
+
+                                                                                    </li>
+                                                                                @endforeach
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">لغو</button>
+                                                        <button type="submit" class="btn btn-primary">ویرایش دسته بندی</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endauth
                             @endif
+                        </div>
                         </div>
                     @endif
                 </div>
