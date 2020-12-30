@@ -334,7 +334,7 @@ class PostController extends Controller
 
         if($request->input('email')){
             $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users' ,'ends_with:.com'],
             ]);
             $user->email = $request->input('email');
             $user->email_verified_at = null;

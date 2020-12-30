@@ -110,13 +110,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'alpha', 'max:255'],
 
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users','ends_with:.com'], //,'regex:/\.com/i'
 
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed','not_regex:/^.*(?=.*[;,"\']).*$/'],
 
-            'lastname' => ['required', 'string'],
+            'lastname' => ['required', 'alpha'],
 
             'username' => ['required','alpha_dash','unique:users'],
 
@@ -181,7 +181,7 @@ class UserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
 
-            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'email' => ['required', 'string', 'email', 'max:255','ends_with:.com', Rule::unique('users')->ignore($user->id)],
 
 //            'password' => ['required', 'string', 'min:8', 'confirmed'],
 
@@ -204,7 +204,7 @@ class UserController extends Controller
 
         if (! is_null($request->password)){
             $request->validate([
-                'password' => ['required', 'string', 'min:8', 'confirmed'],
+                'password' => ['required', 'string', 'min:8', 'confirmed','not_regex:/^.*(?=.*[;,"\']).*$/'],
             ]);
 
             $user->update([

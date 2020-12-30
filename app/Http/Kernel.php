@@ -25,6 +25,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
     ];
 
     /**
@@ -43,6 +44,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \RealRashid\SweetAlert\ToSweetAlert::class,
             PersianNumberFormatter::class,
+            \App\Http\Middleware\DisablePreventBack::class,
         ],
 
         'api' => [
@@ -72,5 +74,7 @@ class Kernel extends HttpKernel
         'isAdmin' => CheckAdmin::class,
         'isArtist' => CheckArtist::class,
         'isUser' => CheckUser::class,
+        'checkPageOwner' => \App\Http\Middleware\CheckPageOwner::class,
+//        'disablepreventback' => \App\Http\Middleware\DisablePreventBack::class,
     ];
 }

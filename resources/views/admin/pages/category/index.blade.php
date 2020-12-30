@@ -156,13 +156,32 @@
                                     </div>
                                     <div class="custom-file mt-3 mb-3">
                                         {{--                                    <input id="fileInput" type="file" style="display:none;" />--}}
-                                        <input  name="category_pic" id="fileInput" type="file" style="display:none;" multiple>
+                                        <input  name="category_pic" id="fileInput" type="file" style="display:none;">
                                         <input type="button" class="btn btn-primary d-block mx-auto" value="انتخاب عکس" onclick="document.getElementById('fileInput').click();">
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+{{--                        @if (count($errors) > 0)--}}
+
+{{--                            <div class="alert alert-danger">--}}
+
+{{--                                <strong>Whoops!</strong> There were some problems with your input.--}}
+
+{{--                                <ul>--}}
+
+{{--                                    @foreach ($errors->all() as $error)--}}
+
+{{--                                        <li>{{ $error }}</li>--}}
+
+{{--                                    @endforeach--}}
+
+{{--                                </ul>--}}
+
+{{--                            </div>--}}
+
+{{--                        @endif--}}
                         {{--           submit             --}}
                         <div class="input-group mb-3">
                             <div class="ml-auto col-xl-9 col-lg-8 col-md-8 col-sm-7 pl-0">

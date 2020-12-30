@@ -133,11 +133,13 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+//        return $request->all();
         //        simple multiple photo upload
         $post=Post::find($id);
         if ($request->file('post_pics')){
             foreach ($request->file('post_pics') as $photo)
             {
+
                 $path=$photo->store('postphotos');
                 $fixed_path='storage/'.$path;
                 Photo::create([

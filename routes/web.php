@@ -16,8 +16,11 @@ use RealRashid\SweetAlert\Facades\Alert;
 Route::get('/', function () {
     return view('site');
 });
+//Route::group(['middleware' => 'disablepreventback'],function(){
+    Auth::routes(['verify'=>true]);
 
-Auth::routes(['verify'=>true]);
+//});
+
 
 //Route::get('/home', 'HomeController@index')->name('home');
 

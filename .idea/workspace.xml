@@ -9,12 +9,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aad2c0e1-185c-4eb8-a560-d33c380519e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckPageOwner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/DisablePreventBack.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/artist/css/index_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/home/index-users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/searchbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/sidenav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/ImageCropperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/ImageCropperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Artist/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckArtist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckArtist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pages/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/cropper.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artist/pages/posts/editProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/admin_nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,14 +333,13 @@
       <workItem from="1608903044591" duration="6995000" />
       <workItem from="1608913631172" duration="4213000" />
       <workItem from="1608969152694" duration="6459000" />
-      <workItem from="1609053666582" duration="12704000" />
-    </task>
-    <task id="LOCAL-00094" summary="working on admin post(edit and update for hashtags and categories for posts added)">
-      <created>1607463508534</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1607463508534</updated>
+      <workItem from="1609053666582" duration="13321000" />
+      <workItem from="1609086548795" duration="6296000" />
+      <workItem from="1609135724420" duration="4294000" />
+      <workItem from="1609186827795" duration="969000" />
+      <workItem from="1609222858020" duration="3261000" />
+      <workItem from="1609264347528" duration="6146000" />
+      <workItem from="1609308748383" duration="1618000" />
     </task>
     <task id="LOCAL-00095" summary="done with admin post(edit post infos added)">
       <created>1607491937507</created>
@@ -666,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609063426687</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="added search category">
+      <created>1609071907269</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1609071907269</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,7 +731,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="search for hashtags fixed with mahsa" />
     <MESSAGE value="add links to hashtags" />
     <MESSAGE value="some details added" />
     <MESSAGE value="search post admin added and approve comment" />
@@ -738,7 +755,8 @@
     <MESSAGE value="homepage added for site" />
     <MESSAGE value="responsive admin" />
     <MESSAGE value="added edit category for post" />
-    <option name="LAST_COMMIT_MESSAGE" value="added edit category for post" />
+    <MESSAGE value="added search category" />
+    <option name="LAST_COMMIT_MESSAGE" value="added search category" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609060999793">
@@ -749,10 +767,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608828633692" />
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1609063424826">
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2" timestamp="1609071905012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609063424826" />
+    <state x="111" y="0" width="1091" height="824" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609071905012" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1608578714570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -777,9 +795,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605255784950" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609063814323">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609310028616">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609063814323" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609310028616" />
   </component>
 </project>

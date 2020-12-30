@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class CheckAdmin
+class CheckPageOwner
 {
     /**
      * Handle an incoming request.
@@ -15,12 +15,6 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        if ($request->user()->role=='admin')
-        {
-            return $next($request);
-        }
-        else{
-            return back();
-        }
+        return $next($request);
     }
 }
